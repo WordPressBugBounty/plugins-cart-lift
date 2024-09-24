@@ -1,0 +1,1293 @@
+# Copyright (C) 2024 RexTheme
+# This file is distributed under the GPL-2.0+.
+msgid ""
+msgstr ""
+"Project-Id-Version: Cart Lift - Abandoned Cart Recovery for WooCommerce and "
+"EDD 3.1.12\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/cart-lift\n"
+"Last-Translator: \n"
+"Language-Team: Hebrew\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2024-03-27T09:45:58+00:00\n"
+"PO-Revision-Date: 2024-04-27 10:18+0000\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Domain: cart-lift\n"
+"Language: he_IL\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Loco-Version: 2.6.7; wp-6.4.3"
+
+#: includes/class-cart-lift-dependency-checker.php:277
+#: includes/class-cart-lift-dependency-checker.php:302
+#, php-format
+msgid ""
+" any of the following plugins : %s. Please activate any of these plugins."
+msgstr ""
+
+#: admin/partials/cart-lift-carts-tab.php:346
+msgid " Product"
+msgstr "מוצר"
+
+#: admin/partials/cart-lift-carts-tab.php:346
+msgid " Products"
+msgstr "מוצרים"
+
+#: admin/partials/cart-lift-carts-tab.php:384
+msgid " Upgrade to Pro"
+msgstr "שדרוג לפרו"
+
+#: admin/partials/settings-component/general-tab.php:984
+msgid ""
+"<b>Hints:</b> It will ignore selected user roles from abandonment process "
+"when they logged in, so they will not receive mail for cart abandonment."
+msgstr ""
+"<b>רמז:</b> זה יתעלם מתפקידי משתמש נבחרים מתהליך הנטישה כאשר הם התחברו, כך "
+"שהם לא יקבלו דואר על נטישת העגלה."
+
+#: admin/partials/cart-lift-email-templates-tab.php:146
+#, php-format
+msgid "<span class=\"text\">Send %s %s after cart is abandoned</span>"
+msgstr "<span class=\"text\">שלח %s %s לאחר נטישת העגלה</span>"
+
+#: admin/partials/cart-lift-edit-email-template.php:25
+msgid ""
+"A campaign is simply an automated email. You give us the basic details for "
+"the email, tell us how long to wait before we send it, and we'll do the rest."
+" You can change all these edit later if you need to."
+msgstr ""
+"קמפיין הוא פשוט מייל אוטומטי. אתה נותן לנו את הפרטים הבסיסיים למייל, תגיד "
+"לנו כמה זמן לחכות לפני שנשלח אותו, ואנחנו נעשה את השאר. אתה יכול לשנות את כל "
+"העריכות האלה מאוחר יותר אם תצטרך."
+
+#: admin/class-cart-lift-admin.php:121
+#: admin/partials/cart-lift-analytics.php:16
+#: admin/partials/cart-lift-analytics.php:22
+#: admin/partials/cart-lift-carts-tab.php:37
+msgid "Abandoned"
+msgstr "נָטוּשׁ"
+
+#: includes/wc-email/class-cart-lift-abandoned-email-template.php:26
+msgid "Abandoned cart to admin"
+msgstr "עגלה נטושה למנהל"
+
+#: admin/partials/cart-lift-carts-tab.php:278
+msgid "Abandoned Date:"
+msgstr "תאריך נטוש:"
+
+#: admin/partials/settings-component/general-tab.php:911
+msgid "Abandoned orders will be deleted. Minimum time limit 7 Days."
+msgstr "הזמנות שננטשו יימחקו. מגבלת זמן מינימלית 7 ימים."
+
+#: admin/partials/cart-lift-email-templates-tab.php:92
+msgid "ACTION"
+msgstr "פעולה"
+
+#: admin/partials/cart-lift-carts-tab.php:99
+msgid "Action"
+msgstr "פעולה"
+
+#: admin/partials/cart-lift-email-templates-tab.php:179
+#: admin/partials/cart-lift-carts-tab.php:142
+msgid "Action :"
+msgstr "פעולה :"
+
+#: admin/partials/cart-lift-dashboard-templates-tab.php:273
+msgid "Actionable Abandoned Carts"
+msgstr "עגלות נטושות שניתן לפעול"
+
+#: admin/class-cart-lift-ajax.php:93
+msgid "Activated"
+msgstr "מוּפעָל"
+
+#: admin/partials/cart-lift-email-templates-tab.php:50
+#: admin/partials/cart-lift-email-templates-tab.php:76
+msgid "add campaign"
+msgstr "להוסיף מסע פרסום"
+
+#: admin/partials/settings-component/general-tab.php:242
+msgid "Admin will get an email notification when cart is abandoned."
+msgstr "מנהל המערכת יקבל הודעת דוא\"ל כאשר העגלה נטושה."
+
+#: admin/partials/settings-component/general-tab.php:289
+msgid "Admin will get an email notification when cart is recovered."
+msgstr "מנהל המערכת יקבל הודעת דוא\"ל כאשר העגלה תתאושש."
+
+#: admin/partials/cart-lift-edit-email-template.php:619
+msgid "After cart is abandoned."
+msgstr "לאחר עגלה נטושה."
+
+#: includes/actions.php:158
+#: includes/wc-email/templates/emails/cl-admin-abandoned-cart.php:14
+#: includes/wc-email/templates/emails/plain/cl-admin-abandoned-cart.php:25
+#, php-format
+msgid ""
+"Alas. Just to let you know &mdash; cart belonging to %1$s has been abandoned:"
+msgstr "אבוי. רק כדי ליידע אותך &mdash; העגלה השייכת ל-%1$s ננטשה:"
+
+#: admin/partials/cart-lift-carts-tab.php:35
+#: admin/partials/cart-lift-analytics-tab.php:61
+msgid "All"
+msgstr "את כל"
+
+#: admin/class-cart-lift-admin.php:240 admin/class-cart-lift-admin.php:241
+msgid "All Carts"
+msgstr "כל העגלות"
+
+#: admin/partials/settings-component/general-tab.php:126
+msgid "Allow Cart Lift to track abandoned carts."
+msgstr "אפשר להרים עגלה לעקוב אחר עגלות נטושות."
+
+#: admin/partials/settings-component/general-tab.php:421
+msgid "Allows to connect with 3rd-party services."
+msgstr "מאפשר להתחבר לשירותי צד שלישי."
+
+#: admin/partials/settings-component/email-tab.php:47
+msgid "Allows you to connect SMTP using Cart Lift."
+msgstr "מאפשר לך לחבר SMTP באמצעות Cart Lift."
+
+#: admin/partials/settings-component/general-tab.php:550
+msgid "Allows you to get the weekly report."
+msgstr "מאפשר לך לקבל את הדוח השבועי."
+
+#: admin/partials/cart-lift-edit-email-template.php:315
+msgid ""
+"Allows you to grant free shipping. A free shipping method must be enabled in "
+"your shipping zone and be set to require \"a valid free shipping coupon\""
+msgstr ""
+"מאפשר לך להעניק משלוח חינם. יש להפעיל שיטת משלוח חינם באזור המשלוח שלך "
+"ולהיות מוגדר לדרוש \"קופון משלוח חינם תקף\""
+
+#: admin/partials/cart-lift-edit-email-template.php:470
+#: admin/partials/cart-lift-edit-email-template.php:504
+msgid "Allows you to send mobile SMS through Twilio."
+msgstr "מאפשר לשלוח SMS נייד דרך Twilio."
+
+#: admin/partials/cart-lift-edit-email-template.php:157
+msgid "Allows you to send new coupon only for this template."
+msgstr "מאפשר לשלוח קופון חדש רק עבור תבנית זו."
+
+#: admin/partials/cart-lift-carts-tab.php:96
+msgid "Amount"
+msgstr "כמות"
+
+#: admin/partials/cart-lift-carts-tab.php:120
+msgid "Amount :"
+msgstr "כמות :"
+
+#: includes/wc-email/class-cart-lift-abandoned-email-template.php:27
+msgid "An email sent to the admin when a cart is abandoned."
+msgstr "הודעת אימייל שנשלחה למנהל המערכת כאשר עגלה נטושה."
+
+#: admin/partials/cart-lift-tabs-display.php:106
+msgid "Analytics"
+msgstr "ניתוח"
+
+#: admin/partials/cart-lift-email-templates-tab.php:369
+#: admin/partials/cart-lift-carts-tab.php:456
+msgid "Are you sure?"
+msgstr "האם אתה בטוח?"
+
+#: admin/partials/settings-component/general-tab.php:859
+msgid "Ask confirmation from the user/customer before tracking data."
+msgstr "בקש אישור מהמשתמש/לקוח לפני מעקב אחר נתוני."
+
+#: admin/partials/settings-component/smtp-tab.php:90
+msgid "Authentication:"
+msgstr "אימות:"
+
+#: admin/partials/cart-lift-edit-email-template.php:404
+msgid "Auto apply coupon"
+msgstr "החלת קופון אוטומטית"
+
+#: admin/partials/cart-lift-edit-email-template.php:22
+msgid "Back to Campaign"
+msgstr "חזרה לקמפיין"
+
+#: admin/class-cart-lift-admin.php:168 admin/class-cart-lift-admin.php:249
+#: admin/class-cart-lift-admin.php:250
+#: admin/partials/cart-lift-email-templates-tab.php:27
+#: admin/partials/cart-lift-tabs-display.php:138
+msgid "Campaigns"
+msgstr "מסעות פרסום"
+
+#: admin/partials/cart-lift-email-templates-tab.php:371
+#: admin/partials/cart-lift-carts-tab.php:458
+msgid "Cancel"
+msgstr "לְבַטֵל"
+
+#: includes/wc-email/class-cart-lift-abandoned-email-template.php:30
+msgid "Cart Abandoned"
+msgstr "עגלה נטושה"
+
+#: admin/partials/cart-lift-compare-templates-tab.php:44
+msgid ""
+"Cart Abandoned Cut-Off Time (Minimum time limit to consider a cart is "
+"abandoned)"
+msgstr "זמן הפסקה של עגלה נטושה (מגבלת זמן מינימלית לשקול עגלה נטושה)"
+
+#: admin/partials/settings-component/general-tab.php:916
+msgid "Cart abandoned cut-off time:"
+msgstr "זמן הפסקת עגלה נטושה:"
+
+#: admin/partials/cart-lift-dashboard-templates-tab.php:237
+msgid "Cart Abandoned Rate"
+msgstr "שיעור נטישת עגלה"
+
+#: admin/partials/cart-lift-carts-tab.php:343
+msgid "Cart Contents:"
+msgstr "תכולת העגלה:"
+
+#: admin/class-cart-lift-tab-view.php:157
+#: admin/class-cart-lift-tab-view.php:169
+msgid "Cart data has been successfully deleted."
+msgstr "נתוני העגלה נמחקו בהצלחה."
+
+#: includes/wc-email/templates/emails/cl-admin-abandoned-cart.php:16
+msgid "Cart details: "
+msgstr "פרטי העגלה:"
+
+#: admin/partials/settings-component/general-tab.php:878
+msgid "Cart Expiration Time:"
+msgstr "זמן תפוגה של העגלה:"
+
+#: admin/partials/cart-lift-view-cart-data.php:11
+msgid "Cart items"
+msgstr "פריטי עגלה"
+
+#: admin/class-cart-lift-admin.php:221
+msgid "Cart Lift"
+msgstr "הרמת עגלה"
+
+#. Name of the plugin
+msgid "Cart Lift - Abandoned Cart Recovery for WooCommerce and EDD"
+msgstr "Cart Lift - שחזור עגלה נטושה עבור WooCommerce ו-EDD"
+
+#: admin/partials/cart-lift-compare-templates-tab.php:3
+msgid "Cart Lift Feature Comparison"
+msgstr "השוואת תכונות הרמת עגלה"
+
+#: admin/class-cart-lift-admin.php:123
+#: admin/partials/cart-lift-analytics.php:35
+msgid "Cart Overview"
+msgstr "סקירת עגלה"
+
+#: admin/class-cart-lift-db.php:160
+msgid "Cart reminder"
+msgstr "תזכורת לעגלה"
+
+#: admin/partials/cart-lift-view-cart-data.php:12
+msgid "Cart total"
+msgstr "סה\"כ עגלה"
+
+#: admin/partials/cart-lift-carts-tab.php:274
+msgid "Cart Total:"
+msgstr "סה\"כ עגלה:"
+
+#: admin/class-cart-lift-admin.php:166
+#: admin/partials/cart-lift-tabs-display.php:94
+msgid "Carts"
+msgstr "עגלות"
+
+#: admin/partials/cart-lift-edit-email-template.php:378
+msgid ""
+"Check this box if the coupon cannot be used in conjunction with other "
+"coupons."
+msgstr "סמן תיבה זו אם לא ניתן להשתמש בקופון בשילוב עם קופונים אחרים."
+
+#: includes/helper.php:253 includes/helper.php:260
+msgid "Checkout"
+msgstr "לבדוק"
+
+#: admin/partials/cart-lift-analytics-tab.php:58
+msgid "Choose an option:"
+msgstr "בחר אפשרות:"
+
+#: admin/partials/settings-component/general-tab.php:559
+#: admin/partials/settings-component/general-tab.php:692
+msgid "Choose Week Day:"
+msgstr "בחר יום שבוע:"
+
+#: admin/partials/cart-lift-dashboard-templates-tab.php:79
+#: admin/partials/cart-lift-email-templates-tab.php:56
+#: admin/partials/cart-lift-email-templates-tab.php:119
+#: admin/partials/cart-lift-email-templates-tab.php:154
+#: admin/partials/cart-lift-email-templates-tab.php:165
+#: admin/partials/cart-lift-carts-tab.php:81
+#: admin/partials/cart-lift-carts-tab.php:310
+#: admin/partials/cart-lift-carts-tab.php:362
+#: admin/partials/cart-lift-carts-tab.php:384
+#: admin/partials/cart-lift-carts-tab.php:410
+#: admin/partials/cart-lift-edit-email-template.php:285
+#: admin/partials/cart-lift-edit-email-template.php:348
+#: admin/partials/cart-lift-edit-email-template.php:411
+#: admin/partials/cart-lift-edit-email-template.php:480
+#: admin/partials/settings-component/email-popup.php:16
+#: admin/partials/settings-component/twilio-sms.php:15
+#: admin/partials/settings-component/general-tab.php:256
+#: admin/partials/settings-component/general-tab.php:303
+#: admin/partials/settings-component/general-tab.php:350
+#: admin/partials/settings-component/general-tab.php:517
+msgid "Click to Upgrade Pro"
+msgstr "לחץ כדי לשדרג Pro"
+
+#: admin/partials/cart-lift-carts-tab.php:38
+msgid "Completed"
+msgstr "הושלם"
+
+#: admin/partials/cart-lift-email-templates-tab.php:90
+msgid "CONVERSIONS"
+msgstr "המרות"
+
+#: admin/partials/cart-lift-email-templates-tab.php:172
+msgid "Conversions :"
+msgstr "המרות:"
+
+#: public/cart-lift-cart-actions.php:786
+msgid "Coupon"
+msgstr "קוּפּוֹן"
+
+#: admin/partials/cart-lift-edit-email-template.php:223
+msgid "Coupon amount"
+msgstr "סכום הקופון"
+
+#: admin/partials/cart-lift-edit-email-template.php:441
+msgid "Coupon code will be automatically applied to checkout."
+msgstr "קוד קופון יוחל אוטומטית בקופה."
+
+#: admin/partials/cart-lift-edit-email-template.php:234
+msgid "Coupon expiration frequency"
+msgstr "תדירות תפוגת הקופון"
+
+#: admin/partials/cart-lift-edit-email-template.php:163
+msgid "Coupon Type"
+msgstr "סוג קופון"
+
+#: admin/class-cart-lift-tab-view.php:510
+msgid "Create a New Campaign"
+msgstr "צור מסע פרסום חדש"
+
+#: admin/partials/cart-lift-compare-templates-tab.php:282
+msgid ""
+"Create unlimited email templates to be sent at intervals that you set – "
+"Intervals start from 15 minutes after cart is abandoned. Free -- limit to 2."
+msgstr ""
+"צור תבניות אימייל ללא הגבלה שיישלחו במרווחי זמן שתקבע - מרווחים מתחילים מ-15 "
+"דקות לאחר נטישת העגלה. חינם - הגבלה ל-2."
+
+#: admin/class-cart-lift-admin.php:220 admin/class-cart-lift-admin.php:231
+#: admin/class-cart-lift-admin.php:232 admin/class-cart-lift-admin.php:309
+msgid "Dashboard"
+msgstr "לוּחַ מַחווָנִים"
+
+#: admin/partials/cart-lift-carts-tab.php:98
+msgid "Date"
+msgstr "תַאֲרִיך"
+
+#: admin/partials/cart-lift-carts-tab.php:122
+msgid "Date :"
+msgstr "תאריך:"
+
+#: admin/partials/cart-lift-edit-email-template.php:243
+msgid "Day (s)"
+msgstr "יום (ימים)"
+
+#: admin/partials/cart-lift-edit-email-template.php:582
+msgid "Day(s)"
+msgstr "ימים"
+
+#: admin/partials/settings-component/general-tab.php:881
+msgid "Days"
+msgstr "ימים"
+
+#: admin/class-cart-lift-ajax.php:93
+msgid "Deactivated"
+msgstr "מושבת"
+
+#. placeholder is {blogname}, a variable that will be substituted when email is sent out
+#: includes/wc-email/class-cart-lift-abandoned-email-template.php:32
+#, php-format
+msgctxt "default email subject for abandoned emails sent to the admin"
+msgid "[%s] Cart abandoned"
+msgstr "[%s] העגלה נטושה"
+
+#: admin/partials/cart-lift-email-templates-tab.php:275
+#: admin/partials/cart-lift-email-templates-tab.php:300
+#: admin/partials/cart-lift-email-templates-tab.php:385
+#: admin/partials/cart-lift-carts-tab.php:171
+#: admin/partials/cart-lift-carts-tab.php:472
+msgid "Delete"
+msgstr "מושבת"
+
+#: admin/partials/cart-lift-carts-tab.php:143
+msgid "Details"
+msgstr "פרטים"
+
+#: admin/partials/cart-lift-compare-templates-tab.php:241
+msgid "Disable Branding (From email footer)."
+msgstr "השבת מיתוג (מתוך הכותרת התחתונה של האימייל)."
+
+#: admin/partials/settings-component/general-tab.php:341
+msgid "Disable branding:"
+msgstr "השבת מיתוג:"
+
+#: admin/partials/settings-component/general-tab.php:171
+msgid "Disable campaign emails for purchased products:"
+msgstr "השבת הודעות דוא\"ל של מסע פרסום עבור מוצרים שנרכשו:"
+
+#: admin/partials/settings-component/general-tab.php:204
+msgid ""
+"Disable campaign emails if the abandoned product is already purchased by the "
+"user."
+msgstr "השבת מיילים של מסע פרסום אם המוצר הנטוש כבר נרכש על ידי המשתמש."
+
+#: admin/partials/settings-component/general-tab.php:953
+msgid "Disable Tracking For:"
+msgstr "השבת את המעקב עבור:"
+
+#: admin/class-cart-lift-admin.php:314
+msgid "Documentation"
+msgstr "תיעוד"
+
+#: admin/partials/cart-lift-tabs-display.php:257
+msgid "documentation"
+msgstr "תיעוד"
+
+#: admin/partials/cart-lift-carts-tab.php:76
+#: admin/partials/cart-lift-carts-tab.php:82
+msgid "Download Report"
+msgstr "הורד דוח"
+
+#: admin/partials/cart-lift-email-templates-tab.php:182
+msgid "Duplicate"
+msgstr "לְשַׁכְפֵּל"
+
+#: admin/partials/cart-lift-email-templates-tab.php:209
+#: admin/partials/cart-lift-email-templates-tab.php:235
+msgid "Edit"
+msgstr "לַעֲרוֹך"
+
+#: admin/class-cart-lift-tab-view.php:543 admin/class-cart-lift-admin.php:162
+msgid "Edit Campaign"
+msgstr "ערוך מסע פרסום"
+
+#: admin/partials/cart-lift-view-cart-data.php:10
+#: admin/partials/cart-lift-carts-tab.php:94
+#: admin/partials/settings-component/email-tab.php:16
+msgid "Email"
+msgstr "אימייל"
+
+#: admin/partials/cart-lift-carts-tab.php:118
+msgid "Email :"
+msgstr "אימייל :"
+
+#: admin/partials/cart-lift-edit-email-template.php:125
+msgid "Email body"
+msgstr "גוף האימייל"
+
+#: admin/partials/settings-component/general-tab.php:669
+#: admin/partials/settings-component/general-tab.php:802
+msgid "Email Body:"
+msgstr "גוף האימייל:"
+
+#: admin/partials/cart-lift-edit-email-template.php:562
+msgid "Email checkout button color"
+msgstr "צבע כפתור התשלום באימייל"
+
+#: admin/partials/cart-lift-edit-email-template.php:553
+msgid "Email checkout button text"
+msgstr "טקסט לחצן התשלום בדוא\"ל"
+
+#: admin/partials/settings-component/general-tab.php:635
+#: admin/partials/settings-component/general-tab.php:768
+msgid "Email From:"
+msgstr "אי מייל מ:"
+
+#: admin/class-cart-lift-ajax.php:420
+msgid "Email has been sent successfully."
+msgstr "דוא\"ל נשלח בהצלחה."
+
+#: admin/partials/cart-lift-edit-email-template.php:544
+msgid "Email header color"
+msgstr "צבע כותרת הדוא\"ל"
+
+#: admin/partials/cart-lift-edit-email-template.php:535
+msgid "Email header text"
+msgstr "טקסט כותרת דוא\"ל"
+
+#: admin/partials/settings-component/email-popup.php:2
+msgid "Email Popup"
+msgstr "דוא\"ל קופץ"
+
+#: admin/partials/cart-lift-dashboard-templates-tab.php:117
+#: admin/partials/cart-lift-email-templates-tab.php:86
+msgid "Email Sent"
+msgstr "הדוא\"ל נשלח"
+
+#: admin/partials/cart-lift-email-templates-tab.php:150
+msgid "Email Sent :"
+msgstr "הדוא\"ל נשלח :"
+
+#: admin/partials/cart-lift-edit-email-template.php:88
+msgid "Email subject"
+msgstr "נושא האימייל"
+
+#: admin/partials/settings-component/general-tab.php:601
+#: admin/partials/settings-component/general-tab.php:734
+msgid "Email To:"
+msgstr "שלח דואר אלקטרוני אל:"
+
+#: admin/partials/cart-lift-carts-tab.php:267
+msgid "Email:"
+msgstr "אימייל:"
+
+#: admin/partials/settings-component/general-tab.php:93
+msgid "Enable abandoned cart tracking:"
+msgstr "אפשר מעקב אחר עגלה נטושה:"
+
+#: admin/partials/settings-component/email-popup.php:12
+msgid "Enable Cart Lift Popup:"
+msgstr "אפשר חלון קופץ להרמת עגלה:"
+
+#: admin/partials/settings-component/email-tab.php:19
+msgid "Enable Cart Lift SMTP for this site:"
+msgstr "הפעל SMTP של הרמת עגלה עבור אתר זה:"
+
+#: admin/partials/cart-lift-edit-email-template.php:184
+msgid "Enable conditional discount"
+msgstr "אפשר הנחה מותנית"
+
+#: admin/partials/cart-lift-edit-email-template.php:147
+msgid "Enable coupon?"
+msgstr "להפעיל קופון?"
+
+#: admin/partials/settings-component/general-tab.php:388
+msgid "Enable external webhook:"
+msgstr "אפשר ה-webhook חיצוני:"
+
+#: admin/partials/settings-component/general-tab.php:826
+msgid "Enable GDPR integration:"
+msgstr "אפשר שילוב GDPR:"
+
+#: admin/partials/settings-component/general-tab.php:294
+msgid "Enable Manual Recovery Process:"
+msgstr "אפשר תהליך שחזור ידני:"
+
+#: admin/partials/settings-component/twilio-sms.php:13
+msgid "Enable Twilio SMS Notification:"
+msgstr "הפעל את התראת SMS של Twilio:"
+
+#: admin/partials/cart-lift-edit-email-template.php:449
+msgid "Enable Twilio SMS?"
+msgstr "להפעיל את Twilio SMS?"
+
+#: admin/partials/settings-component/general-tab.php:508
+msgid "Enable Weekly Report:"
+msgstr "הפעל דוח שבועי:"
+
+#: admin/partials/settings-component/general-tab.php:631
+#: admin/partials/settings-component/general-tab.php:764
+msgid "Enter recipients (comma separated) for this email."
+msgstr "הזן נמענים (מופרדים בפסיק) עבור דוא\"ל זה."
+
+#: admin/partials/settings-component/general-tab.php:665
+msgid "Enter sender email."
+msgstr "הזן אימייל של השולח."
+
+#: admin/partials/settings-component/general-tab.php:798
+msgid "Enter sender this email."
+msgstr "הזן השולח את האימייל הזה."
+
+#: admin/partials/settings-component/general-tab.php:460
+#: admin/partials/settings-component/general-tab.php:499
+msgid "Enter url here."
+msgstr "הזן כאן כתובת אתר."
+
+#: admin/partials/settings-component/smtp-tab.php:114
+msgid "Enter Your Email"
+msgstr "הכנס את האימייל שלך"
+
+#: admin/class-cart-lift-admin.php:361
+msgid "Every %d Minutes"
+msgstr "כל %d דקות"
+
+#: admin/partials/cart-lift-compare-templates-tab.php:12
+msgid "features"
+msgstr "מאפיינים"
+
+#: admin/partials/cart-lift-carts-tab.php:30
+msgid "Filter:"
+msgstr "לְסַנֵן:"
+
+#: admin/class-cart-lift-db.php:181
+msgid "Follow up"
+msgstr "מעקב"
+
+#: admin/partials/cart-lift-compare-templates-tab.php:13
+msgid "free"
+msgstr "חינם"
+
+#: admin/partials/cart-lift-edit-email-template.php:278
+msgid "Free Shipping"
+msgstr "משלוח חינם"
+
+#: admin/class-cart-lift-admin.php:172
+msgid "Free vs Pro"
+msgstr "חינם לעומת פרו"
+
+#: admin/partials/cart-lift-tabs-display.php:209
+msgid "free vs pro"
+msgstr "חינם לעומת מקצוען"
+
+#: admin/partials/settings-component/general-tab.php:566
+#: admin/partials/settings-component/general-tab.php:699
+msgid "Friday"
+msgstr "יוֹם שִׁישִׁי"
+
+#: admin/partials/settings-component/smtp-tab.php:52
+msgid "from"
+msgstr "מ"
+
+#: admin/partials/cart-lift-dashboard-templates-tab.php:10
+msgid "From:"
+msgstr "מ:"
+
+#: admin/partials/settings-component/general-tab.php:864
+msgid "GDPR message:"
+msgstr "הודעת GDPR:"
+
+#: admin/partials/cart-lift-settings-tab.php:15
+#: admin/partials/settings-component/general-tab.php:89
+msgid "General"
+msgstr "כללי"
+
+#: admin/class-cart-lift-admin.php:268 admin/class-cart-lift-admin.php:321
+msgid "Go Pro"
+msgstr "להתמקצע"
+
+#: admin/partials/cart-lift-edit-email-template.php:242
+msgid "Hour (s)"
+msgstr "שעה (ות)"
+
+#: admin/partials/cart-lift-edit-email-template.php:581
+msgid "Hour(s)"
+msgstr "שעה (ות)"
+
+#. URI of the plugin
+#. Author URI of the plugin
+msgid "https://rextheme.com/cart-lift"
+msgstr "https://rextheme.com/cart-lift"
+
+#: admin/partials/cart-lift-view-cart-data.php:8
+msgid "ID"
+msgstr "תְעוּדַת זֶהוּת"
+
+#: admin/class-cart-lift-admin.php:409
+msgid ""
+"If you are using Paddle Payment Gateway, please ensure that you have "
+"disabled Abandoned Cart Recovery from there."
+msgstr ""
+"אם אתה משתמש ב-Padle Payment Gateway, אנא ודא שהשבתת משם את 'שחזור עגלה "
+"נטושה'."
+
+#: admin/partials/cart-lift-carts-tab.php:373
+msgid "Image"
+msgstr "תמונה"
+
+#: admin/partials/cart-lift-compare-templates-tab.php:122
+msgid "Individual Campaign conversion"
+msgstr "המרת מסע פרסום בודד"
+
+#: admin/partials/cart-lift-compare-templates-tab.php:364
+msgid "Individual Campaign sent emails."
+msgstr "מסע פרסום בודד נשלח אימיילים."
+
+#: admin/partials/cart-lift-compare-templates-tab.php:405
+msgid "Individual order items -- Email log, Cart Contents, Unsubscribe order."
+msgstr "פריטי הזמנה בודדים -- יומן דוא\"ל, תוכן העגלה, הזמנה לביטול רישום."
+
+#: admin/partials/cart-lift-compare-templates-tab.php:148
+msgid "Individual order items -- User Details"
+msgstr "פריטי הזמנה בודדים -- פרטי משתמש"
+
+#: admin/partials/cart-lift-edit-email-template.php:341
+msgid "Individual use only"
+msgstr "שימוש פרטני בלבד"
+
+#: admin/partials/cart-lift-compare-templates-tab.php:446
+msgid "Initiate popup to take email when guest user adds product to cart."
+msgstr ""
+"הפעל חלון קופץ כדי לקבל אימייל כאשר משתמש אורח מוסיף מוצר לעגלת הקניות."
+
+#: admin/partials/cart-lift-analytics-tab.php:63
+msgid "Last 30 Days"
+msgstr "30 הימים האחרונים"
+
+#: admin/partials/cart-lift-analytics-tab.php:62
+msgid "Last 7 Days"
+msgstr "7 הימים האחרונים"
+
+#: admin/partials/cart-lift-tabs-display.php:239
+msgid "License"
+msgstr "רישיון"
+
+#: admin/partials/settings-component/email-tab.php:115
+msgid "Mailchimp"
+msgstr "Mailchimp"
+
+#: admin/class-cart-lift-admin.php:174
+msgid "Manage License"
+msgstr "ניהול רישיון"
+
+#: admin/partials/cart-lift-edit-email-template.php:617
+msgid "Minimum time limit 15 minutes."
+msgstr "הגבלת זמן מינימלית 15 דקות."
+
+#: admin/partials/settings-component/general-tab.php:948
+msgid ""
+"Minimum time to consider a cart as abandoned. Minimum time limit 15 minutes."
+msgstr "זמן מינימלי להתייחס לעגלה כנטושה. הגבלת זמן מינימלית 15 דקות."
+
+#: admin/partials/cart-lift-edit-email-template.php:580
+msgid "Minute(s)"
+msgstr "דקות)"
+
+#: admin/partials/settings-component/general-tab.php:918
+msgid "Minutes"
+msgstr "דקות"
+
+#: admin/partials/settings-component/general-tab.php:562
+#: admin/partials/settings-component/general-tab.php:695
+msgid "Monday"
+msgstr "יוֹם שֵׁנִי"
+
+#: admin/partials/cart-lift-view-cart-data.php:9
+#: admin/partials/cart-lift-email-templates-tab.php:85
+msgid "Name"
+msgstr "שֵׁם"
+
+#: admin/partials/cart-lift-email-templates-tab.php:125
+msgid "Name :"
+msgstr "שם:"
+
+#: admin/partials/cart-lift-edit-email-template.php:81
+msgid "Name of the campaign."
+msgstr "שם הקמפיין."
+
+#: admin/partials/cart-lift-carts-tab.php:263
+msgid "Name:"
+msgstr "שֵׁם:"
+
+#: admin/partials/settings-component/smtp-tab.php:93
+msgid "No"
+msgstr "לא"
+
+#: admin/partials/cart-lift-email-templates-tab.php:398
+msgid "No Campaign Found"
+msgstr "לא נמצא קמפיין"
+
+#: admin/partials/cart-lift-carts-tab.php:486
+msgid "No Data Found"
+msgstr "לא נמצאו נתונים"
+
+#: admin/class-cart-lift-ajax.php:426
+msgid "No email found to send."
+msgstr "לא נמצא אימייל לשלוח."
+
+#: public/class-cart-lift-edd-actions.php:147
+#: public/class-cart-lift-public.php:132
+msgid "No thanks"
+msgstr "לא תודה"
+
+#: admin/partials/settings-component/smtp-tab.php:77
+msgid "None"
+msgstr "אף אחד"
+
+#: includes/helper.php:1537 includes/helper.php:1538 includes/helper.php:1551
+#: includes/helper.php:1552
+msgid "NOT FOUND"
+msgstr "לא נמצא"
+
+#: admin/partials/settings-component/general-tab.php:867
+msgid ""
+"Note: This confirmation message will show below the email field on checkout "
+"page."
+msgstr "הערה: הודעת אישור זו תוצג מתחת לשדה האימייל בדף התשלום."
+
+#: admin/partials/settings-component/general-tab.php:209
+msgid "Notify admin for abandoned cart:"
+msgstr "הודע למנהל המערכת על עגלה נטושה:"
+
+#: admin/partials/settings-component/general-tab.php:247
+msgid "Notify admin for recovered cart:"
+msgstr "הודע למנהל המערכת על העגלה ששוחזרה:"
+
+#: admin/partials/cart-lift-compare-templates-tab.php:18
+msgid "Notify Admin when a abandoned cart is abandoned"
+msgstr "הודע למנהל המערכת כאשר עגלה נטושה ננטשת"
+
+#: admin/partials/cart-lift-compare-templates-tab.php:200
+msgid "Notify Admin when a abandoned cart is recovered."
+msgstr "הודע למנהל המערכת כאשר עגלה נטושה מתאוששת."
+
+#: admin/partials/cart-lift-email-templates-tab.php:370
+msgid "Once deleted, you will not be able to recover this Campaign!"
+msgstr "לאחר המחיקה, לא תוכל לשחזר את הקמפיין הזה!"
+
+#: admin/partials/cart-lift-carts-tab.php:457
+msgid "Once deleted, you will not be able to recover this Cart!"
+msgstr "לאחר המחיקה, לא תוכל לשחזר את העגלה הזו!"
+
+#: admin/partials/settings-component/email-tab.php:177
+msgid "Other SMTP"
+msgstr "SMTP אחר"
+
+#: admin/class-cart-lift-db.php:174 admin/class-cart-lift-db.php:195
+#: admin/class-cart-lift-db.php:216
+msgid "Please consider this cart"
+msgstr "אנא שקול את העגלה הזו"
+
+#: admin/class-cart-lift-tab-view.php:538
+#: admin/class-cart-lift-tab-view.php:758
+msgid "Please Consider Your Cart"
+msgstr "אנא שקול את העגלה שלך"
+
+#: admin/partials/cart-lift-edit-email-template.php:472
+msgid "Please enable SMS notification from settings menu."
+msgstr "אנא הפעל הודעת SMS מתפריט ההגדרות."
+
+#: includes/class-cart-lift-activator.php:66 includes/helper.php:1880
+#: includes/helper.php:2163
+#: admin/partials/settings-component/general-tab.php:85
+msgid "Please find the attached weekly report"
+msgstr "מצא את הדו\"ח השבועי המצורף"
+
+#: admin/partials/cart-lift-settings-tab.php:16
+msgid "Popup Editor"
+msgstr "עורך קופצים"
+
+#: includes/helper.php:929 admin/partials/cart-lift-carts-tab.php:375
+msgid "Price"
+msgstr "מחיר"
+
+#: admin/partials/cart-lift-dashboard-templates-tab.php:79
+#: admin/partials/cart-lift-compare-templates-tab.php:14
+#: admin/partials/cart-lift-email-templates-tab.php:119
+#: admin/partials/cart-lift-email-templates-tab.php:154
+#: admin/partials/cart-lift-email-templates-tab.php:165
+#: admin/partials/cart-lift-carts-tab.php:83
+#: admin/partials/cart-lift-carts-tab.php:364
+#: admin/partials/cart-lift-edit-email-template.php:348
+#: admin/partials/cart-lift-edit-email-template.php:411
+#: admin/partials/cart-lift-edit-email-template.php:480
+#: admin/partials/settings-component/email-popup.php:17
+#: admin/partials/settings-component/twilio-sms.php:16
+#: admin/partials/settings-component/general-tab.php:256
+#: admin/partials/settings-component/general-tab.php:303
+#: admin/partials/settings-component/general-tab.php:350
+#: admin/partials/settings-component/general-tab.php:517
+msgid "pro"
+msgstr "מִקצוֹעָן"
+
+#: admin/partials/cart-lift-carts-tab.php:36
+msgid "Processing"
+msgstr "מעבד"
+
+#: includes/helper.php:921
+msgid "Product"
+msgstr "מוצר"
+
+#: admin/partials/cart-lift-carts-tab.php:119
+msgid "Product :"
+msgstr "מוצר :"
+
+#: admin/partials/cart-lift-carts-tab.php:374
+msgid "Product Name"
+msgstr "שם מוצר"
+
+#: admin/partials/cart-lift-carts-tab.php:95
+msgid "Products on Cart"
+msgstr "מוצרים בעגלה"
+
+#: admin/class-cart-lift-db.php:202
+msgid "Promotional discount"
+msgstr "הנחה לקידום מכירות"
+
+#: admin/partials/cart-lift-view-cart-data.php:15
+msgid "Provider"
+msgstr "ספק"
+
+#: includes/helper.php:925 admin/partials/cart-lift-carts-tab.php:376
+msgid "Quantity"
+msgstr "כַּמוּת"
+
+#: admin/partials/cart-lift-carts-tab.php:23
+msgid "Real Time Updates"
+msgstr "עדכונים בזמן אמת"
+
+#: admin/partials/cart-lift-dashboard-templates-tab.php:70
+msgid "Recoverable Revenue"
+msgstr "הכנסה הניתנת להחזר"
+
+#: admin/class-cart-lift-admin.php:122
+#: admin/partials/cart-lift-analytics.php:16
+#: admin/partials/cart-lift-analytics.php:22
+#: admin/partials/cart-lift-carts-tab.php:39
+msgid "Recovered"
+msgstr "התאושש"
+
+#: admin/partials/cart-lift-dashboard-templates-tab.php:149
+msgid "Recovered Revenue"
+msgstr "הכנסות מוחזרות"
+
+#: admin/partials/settings-component/general-tab.php:166
+msgid "Remove abandoned cart information if no email is captured."
+msgstr "הסר מידע על עגלה נטושה אם לא נקלט אימייל."
+
+#: admin/partials/settings-component/general-tab.php:383
+msgid "Remove Cart Lift branding from footer."
+msgstr "הסר את מיתוג הרמת עגלה מהכותרת התחתונה."
+
+#: admin/partials/settings-component/general-tab.php:133
+msgid "Remove non-actionable carts:"
+msgstr "הסר עגלות שאינן ניתנות לפעולה:"
+
+#: admin/partials/cart-lift-tabs-display.php:60
+msgid "Reports"
+msgstr "דיווחים"
+
+#: admin/partials/cart-lift-compare-templates-tab.php:174
+msgid ""
+"Reports: Calendar, Recoverable Revenue, Recovered Revenue, Number of "
+"Abandoned Carts, Total Abandoned Revenue, Cart Abandoned Rate, Actionable "
+"Abandoned Carts."
+msgstr ""
+"דוחות: לוח שנה, הכנסה ניתנת להחזר, הכנסה מוחזרת, מספר עגלות נטושות, סך "
+"הכנסות נטושות, שיעור נטישת עגלה, עגלות נטושות שניתן לפעול."
+
+#: admin/partials/cart-lift-compare-templates-tab.php:487
+msgid "Reports: Number of email sent."
+msgstr "דוחות: מספר האימייל שנשלח."
+
+#: admin/partials/cart-lift-compare-templates-tab.php:70
+msgid "Restriction settings -- Disable tracking for specific user role"
+msgstr "הגדרות הגבלה - השבת מעקב עבור תפקיד משתמש ספציפי"
+
+#: admin/partials/cart-lift-email-templates-tab.php:91
+msgid "REVENUE"
+msgstr "הַכנָסָה"
+
+#: admin/partials/cart-lift-email-templates-tab.php:176
+msgid "Revenue :"
+msgstr "הכנסה:"
+
+#. Author of the plugin
+msgid "RexTheme"
+msgstr "RexTheme"
+
+#: admin/partials/settings-component/general-tab.php:567
+#: admin/partials/settings-component/general-tab.php:700
+msgid "Saturday"
+msgstr "יום שבת"
+
+#: admin/class-cart-lift-tab-view.php:512
+msgid "Save Campaign"
+msgstr "שמור מסע פרסום"
+
+#: admin/partials/settings-component/smtp-tab.php:104
+#: admin/partials/settings-component/general-tab.php:991
+msgid "save change"
+msgstr "לשמור שינוי"
+
+#: admin/partials/cart-lift-carts-tab.php:52
+msgid "Search by customer email..."
+msgstr "חפש לפי אימייל של לקוח..."
+
+#: admin/partials/settings-component/smtp-tab.php:71
+msgid "security"
+msgstr "בִּטָחוֹן"
+
+#: admin/partials/settings-component/smtp-tab.php:74
+msgid "security:"
+msgstr "בִּטָחוֹן:"
+
+#: admin/partials/cart-lift-dashboard-templates-tab.php:41
+msgid "Select date range to show reports."
+msgstr "בחר טווח תאריכים כדי להציג דוחות."
+
+#: admin/partials/settings-component/general-tab.php:597
+#: admin/partials/settings-component/general-tab.php:730
+msgid "Select week start day"
+msgstr "בחר את יום תחילת השבוע"
+
+#: admin/partials/cart-lift-edit-email-template.php:630
+msgid "Send a test email"
+msgstr "שלח מייל לבדיקה"
+
+#: admin/partials/settings-component/smtp-tab.php:139
+msgid "send a test email"
+msgstr "לשלוח מייל לבדיקה"
+
+#: admin/partials/cart-lift-carts-tab.php:353
+#: admin/partials/cart-lift-carts-tab.php:363
+msgid "Send Recovery Email Now"
+msgstr "שלח דוא\"ל שחזור עכשיו"
+
+#: admin/partials/cart-lift-edit-email-template.php:626
+msgid "Send Test Email To"
+msgstr "שלח דוא\"ל בדיקה אל"
+
+#: admin/partials/cart-lift-edit-email-template.php:572
+msgid "Send this email"
+msgstr "שלח את המייל הזה"
+
+#: admin/partials/settings-component/email-tab.php:86
+msgid "Sendgrid"
+msgstr "Sendgrid"
+
+#: admin/partials/settings-component/email-tab.php:148
+msgid "SES"
+msgstr "SES"
+
+#: admin/partials/cart-lift-compare-templates-tab.php:323
+msgid "Set Conditional Coupon -- Product or category based."
+msgstr "הגדר קופון מותנה -- מבוסס מוצר או קטגוריה."
+
+#: admin/partials/cart-lift-compare-templates-tab.php:96
+msgid "Set Coupon for Individual templates"
+msgstr "הגדר קופון עבור תבניות בודדות"
+
+#: admin/class-cart-lift-admin.php:170 admin/class-cart-lift-admin.php:258
+#: admin/class-cart-lift-admin.php:259
+#: admin/partials/cart-lift-tabs-display.php:179
+msgid "Settings"
+msgstr "הגדרות"
+
+#: admin/partials/cart-lift-email-templates-tab.php:101
+#: admin/partials/cart-lift-carts-tab.php:117
+msgid "SL No :"
+msgstr "SL לא:"
+
+#: admin/partials/cart-lift-settings-tab.php:17
+msgid "SMS"
+msgstr "סמס"
+
+#: admin/partials/settings-component/twilio-sms.php:2
+msgid "SMS Notification"
+msgstr "הודעת SMS"
+
+#: admin/partials/cart-lift-email-templates-tab.php:88
+msgid "SMS Sent"
+msgstr "SMS נשלח"
+
+#: admin/partials/cart-lift-email-templates-tab.php:161
+msgid "SMS Sent :"
+msgstr "SMS נשלח:"
+
+#: admin/partials/settings-component/smtp-tab.php:63
+msgid "SMTP"
+msgstr "SMTP"
+
+#: admin/partials/settings-component/smtp-tab.php:81
+msgid "SSL"
+msgstr "SSL"
+
+#: admin/partials/cart-lift-carts-tab.php:97
+msgid "Status"
+msgstr "סטָטוּס"
+
+#: admin/partials/cart-lift-email-templates-tab.php:84
+msgid "status"
+msgstr "סטָטוּס"
+
+#: admin/partials/cart-lift-carts-tab.php:121
+msgid "Status :"
+msgstr "סטטוס:"
+
+#: admin/partials/cart-lift-email-templates-tab.php:102
+msgid "status :"
+msgstr "סטטוס:"
+
+#: admin/class-cart-lift-mailer.php:55
+msgid "Successfully Saved"
+msgstr "נשמר בהצלחה"
+
+#: admin/class-cart-lift-ajax.php:218 admin/class-cart-lift-ajax.php:240
+#: admin/class-cart-lift-ajax.php:259 admin/class-cart-lift-ajax.php:276
+msgid "Successfully saved"
+msgstr "נשמר בהצלחה"
+
+#: admin/partials/settings-component/general-tab.php:561
+#: admin/partials/settings-component/general-tab.php:694
+msgid "Sunday"
+msgstr "יוֹם רִאשׁוֹן"
+
+#: admin/partials/cart-lift-edit-email-template.php:53
+msgid "Template name"
+msgstr "שם התבנית"
+
+#: admin/partials/cart-lift-edit-email-template.php:31
+msgid "Template status"
+msgstr "סטטוס תבנית"
+
+#: admin/partials/settings-component/general-tab.php:431
+#: admin/partials/settings-component/general-tab.php:470
+msgid "Test"
+msgstr "מִבְחָן"
+
+#: admin/class-cart-lift-tab-view.php:181
+msgid "The email template has been successfully created."
+msgstr "תבנית האימייל נוצרה בהצלחה."
+
+#: admin/class-cart-lift-tab-view.php:207
+msgid "The email template has been successfully deleted."
+msgstr "תבנית האימייל נמחקה בהצלחה."
+
+#: admin/class-cart-lift-tab-view.php:194
+msgid "The email template has been successfully updated."
+msgstr "תבנית האימייל עודכנה בהצלחה."
+
+#: admin/class-cart-lift-tab-view.php:220
+msgid "The email templates has been successfully deleted."
+msgstr "תבניות האימייל נמחקו בהצלחה."
+
+#: admin/partials/settings-component/general-tab.php:336
+msgid ""
+"This will enable the process of manually recovering abandoned carts in the "
+"cart view popup."
+msgstr ""
+"זה יאפשר את התהליך של שחזור ידני של עגלות נטושות בחלון הקופץ של תצוגת העגלה."
+
+#: admin/partials/settings-component/twilio-sms.php:52
+msgid "This will enable twilio sms notification."
+msgstr "זה יאפשר הודעת sms twilio."
+
+#: admin/partials/settings-component/email-popup.php:53
+msgid ""
+"This will initiate a pop-up and prompt users to provide email addresses when "
+"they intend to leave from the cart page."
+msgstr ""
+"פעולה זו תפעיל חלון קופץ ותבקש מהמשתמשים לספק כתובות דוא\"ל כאשר הם מתכוונים "
+"לצאת מדף העגלה."
+
+#: admin/partials/settings-component/general-tab.php:565
+#: admin/partials/settings-component/general-tab.php:698
+msgid "Thursday"
+msgstr "יוֹם חֲמִישִׁי"
+
+#: admin/partials/cart-lift-view-cart-data.php:13
+msgid "Time"
+msgstr "זְמַן"
+
+#: admin/partials/cart-lift-carts-tab.php:304
+msgid "Time Log:"
+msgstr "יומן זמן:"
+
+#: admin/partials/settings-component/smtp-tab.php:85
+msgid "TLS"
+msgstr "TLS"
+
+#: admin/partials/cart-lift-dashboard-templates-tab.php:15
+msgid "To:"
+msgstr "ל:"
+
+#: admin/partials/cart-lift-dashboard-templates-tab.php:179
+msgid "Total Abandoned Carts"
+msgstr "סך הכל עגלות נטושות"
+
+#: admin/partials/cart-lift-dashboard-templates-tab.php:212
+msgid "Total Abandoned Revenue"
+msgstr "סך הכנסות נטושות"
+
+#: includes/helper.php:1044
+msgid "Total:"
+msgstr "סה\"כ:"
+
+#: admin/partials/settings-component/general-tab.php:563
+#: admin/partials/settings-component/general-tab.php:696
+msgid "Tuesday"
+msgstr "יוֹם שְׁלִישִׁי"
+
+#: admin/partials/cart-lift-edit-email-template.php:513
+msgid "Twilio SMS body"
+msgstr "גוף SMS של Twilio"
+
+#: includes/helper.php:1539
+msgid "UNKNOWN"
+msgstr "לא ידוע"
+
+#: includes/helper.php:264
+msgid "Unsubscribe"
+msgstr "בטל את המנוי"
+
+#: admin/partials/cart-lift-carts-tab.php:406
+#: admin/partials/cart-lift-carts-tab.php:410
+msgid "unsubscribe"
+msgstr "לבטל את המנוי"
+
+#: public/class-cart-lift-wc-actions.php:119
+#: admin/partials/cart-lift-view-cart-data.php:14
+msgid "Unsubscribed"
+msgstr "בוטל מנוי"
+
+#: admin/class-cart-lift-tab-view.php:545
+msgid "Update Campaign"
+msgstr "עדכן מסע פרסום"
+
+#: admin/class-cart-lift-tab-view.php:544
+msgid "update_template"
+msgstr "update_template"
+
+#: admin/partials/cart-lift-compare-templates-tab.php:5
+#: admin/partials/cart-lift-compare-templates-tab.php:6
+#: admin/partials/cart-lift-compare-templates-tab.php:569
+#: admin/partials/cart-lift-compare-templates-tab.php:570
+#: admin/partials/cart-lift-carts-tab.php:310
+msgid "Upgrade to Pro"
+msgstr "שדרוג לפרו"
+
+#: admin/partials/cart-lift-edit-email-template.php:116
+msgid "Use an engaging subject line that is personalized."
+msgstr "השתמש בשורת נושא מרתקת מותאמת אישית."
+
+#: admin/partials/cart-lift-carts-tab.php:260
+msgid "User Details:"
+msgstr "פרטי המשתמש:"
+
+#: admin/partials/settings-component/general-tab.php:429
+#: admin/partials/settings-component/general-tab.php:468
+msgid "Webhook URL:"
+msgstr "כתובת אתר של Webhook:"
+
+#: admin/partials/settings-component/general-tab.php:564
+#: admin/partials/settings-component/general-tab.php:697
+msgid "Wednesday"
+msgstr "יום רביעי"
+
+#. Description of the plugin
+msgid ""
+"Win back your abandoned cart customers with automated email recovery "
+"campaign."
+msgstr "זכה בחזרה ללקוחות העגלה הנטושה שלך עם מסע פרסום אוטומטי לשחזור דוא\"ל."
+
+#: admin/partials/settings-component/smtp-tab.php:97
+msgid "Yes"
+msgstr "כן"
+
+#: public/class-cart-lift-wc-actions.php:119
+msgid "You have successfully unsubscribed from our email list."
+msgstr "ביטלת בהצלחה את המנוי מרשימת הדוא\"ל שלנו."
+
+#: includes/class-cart-lift-activator.php:68 includes/helper.php:1882
+#: includes/helper.php:2165 admin/class-cart-lift-ajax.php:199
+msgid ""
+"Your email address will help us support your shopping experience throughout "
+"the site. Please check our Privacy Policy to see how we use your personal "
+"data."
+msgstr ""
+"כתובת הדוא\"ל שלך תעזור לנו לתמוך בחוויית הקנייה שלך ברחבי האתר. אנא עיין "
+"במדיניות הפרטיות שלנו כדי לראות כיצד אנו משתמשים בנתונים האישיים שלך."
+
+#: admin/partials/cart-lift-compare-templates-tab.php:528
+msgid "Zapier Integration."
+msgstr "שילוב Zapier."
