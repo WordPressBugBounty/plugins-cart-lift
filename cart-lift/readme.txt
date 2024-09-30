@@ -1,6 +1,6 @@
 === Cart Lift - Abandoned Cart Recovery for WooCommerce and EDD ===
 Contributors: rextheme, coderexltd, coderexco
-Tags: woocommerce abandoned cart, abandoned cart recovery, exit popup, edd abandoned cart, abandoned cart email, cart abandonment, woocommerce abandoned cart email, woocommerce abandoned cart recovery, easy digital downloads, woocommerce, recover abandoned cart
+Tags: woocommerce abandoned cart, abandoned cart recovery, exit popup, edd abandoned cart, abandoned cart email, cart abandonment, woocommerce abandoned cart email, woocommerce abandoned cart recovery, easy digital downloads, woocommerce, recover abandoned cart, abandoned cart emails woocommerce
 Donate link: https://rextheme.com/cart-lift/
 Requires at least: 5.0
 Tested up to: 6.6
@@ -26,35 +26,35 @@ No more wasted hours and unreasonable expenses on other tools. Grow 🚀 **your 
 [youtube https://www.youtube.com/watch?v=7wSNirOde6k]
 
 == 🌟 Why Cart Lift? 🌟 ==
+
 Cart Lift has everything you need to set up and run a successful abandoned cart recovery campaign for your WooCommerce or Easy Digital download-based shopping cart.
 
-Using Cart Lift, you can create engaging email campaigns easily, to automatically reach customers who abandoned shopping carts on your site.
+You can create engaging abandoned cart email campaigns easily, to automatically reach customers who left shopping carts on your site.
 
-Thus, winning them back to complete purchases and boosting your revenue💰.
+Thus, winning them back to complete purchases and boosting your revenue. 💰
 
 You can:
 
-*👍 Set strategic intervals between emails to recover abandoned carts, resulting in better sales.*
+- 👍 Set strategic intervals between abandoned cart email campaigns to recover abandoned carts, resulting in better sales.*
 
-*👍 Use proven abandoned cart e-mail templates with multiple follow-ups.*
+- 👍 Use proven templates of **abandoned cart emails** with multiple follow-ups.
 
-*👍 Get exclusive reports on your campaign and recover sales profit.*
-
-
+- 👍 Get exclusive reports on your abandoned cart email campaign and recover sales profit.
 
 
->The plugin is aimed at helping you win back abandoned customers and increase revenue significantly. 💸
+The plugin is aimed at helping you win back abandoned customers and increase revenue significantly. 💸
 
 Plus you can get exclusive features that are easy to use and take only a few minutes to configure.
 
 ==⌛ Track Abandoned Cart Automatically (GDPR compatible) ⌛==
 
-The plugin can automatically track the abandoned carts on your site. Every time a person leaves your site with their shopping carts full, the plugin collects the data for that cart and initiates the recovery campaign on your set time intervals.
+The plugin can automatically track the abandoned carts on your site.
+
+Every time a person leaves your site with their shopping carts full, the plugin collects the data for that cart and initiates the recovery campaign on your set time intervals.
 
 **📧 Set Up Your Abandoned Cart Recovery Campaign In A Few Clicks 📧**
 You can set up your recovery campaign real quick. Simply decide on the Subject line and a compelling email copy, and activate the campaign. The plugin will do the rest.
 
->*A super easy interface for editing email copy.*
 
 ==📩 Set Strategic Intervals To Send Emails 📩==
 Set up multiple emails to be sent as a reminder for the cart abandonment. Set the amount of time after which each recovery email will be sent since the cart abandonment.
@@ -158,7 +158,7 @@ The plugin has the option to integrate with external marketing automation tools 
 = How to add an unsubscribe link to the email?
 When creating the email, you will find custom variables (on the right side of the text format panel).
 
-From there, you can add the unsubscribe variable, which will work as the unsubscribe link for people to opt-out of the abandoned cart email campaign(s).
+From there, you can add the unsubscribe variable, which will work as the unsubscribe link for people to opt-out of the abandoned cart emails.
 = Why aren't emails being sent out? =
 First of all, make sure you have at least one email campaign activated.
 Second, make sure you have WP Cron enabled for your site.
