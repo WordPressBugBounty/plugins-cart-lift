@@ -247,9 +247,9 @@
 
               #cart_webhook {
                 display: grid;
-                grid-template-columns: auto 830px;
+                grid-template-columns: auto 1fr;
                 align-items: center;
-                gap:10px;
+                gap:270px;
 
                 .cl-cart-webhook-area {
                   display: flex;
@@ -279,24 +279,54 @@
                   width: calc(100% - 50%);
                 }
 
+                .cl-form-weekly-report-area-left {
+
+                }
+
                 .cl-form-weekly-report-area-right {
                   margin-right: -30px;
 
                   .cl-form-group-weekly-email-body {
+
+                    .wp-editor-tabs {
+
+                     button {
+                      padding: 2px 5px;
+                      line-height: 1;
+                     }
+
+                    }
+
+                    label {
+                      margin-bottom: 20px;
+                    }
+
                     display: grid;
-                    grid-template-columns: auto 410px;
+                    grid-template-columns: 1fr;
+                    padding: 0;
+                    margin: 0;
+                    box-sizing: border-box;
                   }
                 }
 
                 .cl-form-group-weekly {
                   position: relative;
                   display: grid;
-                  grid-template-columns: 184px 310px auto;
+                  grid-template-columns: 184px auto;
                   align-items: center;
-                  justify-content: space-between;
 
                   .tooltip {
                     position: relative;
+                  }
+
+                  .cl-form-group-weekly-area {
+                    display: flex;
+                    align-items: center;
+
+                    select {
+                      max-width: 100%;
+                    }
+
                   }
 
                 }
@@ -305,36 +335,37 @@
 
               .cl-form-select-product {
                 display: grid;
-                grid-template-columns: 358px 1fr;
+                grid-template-columns: 360px 1fr;
               }
 
             }
 
             &.tracking {
               display: grid;
-              grid-template-columns: auto 470px;
+              grid-template-columns: auto 1fr;
               align-items: flex-start;
-              max-width: 900px;
+              gap:230px;
               border-bottom: 0;
 
               .cl-tracking-checkbox {
                 display: flex;
-                gap: 10px;
+                gap: 20px;
                 flex-direction: column;
               }
 
               ul {
-                max-width: 560px;
+                // max-width: 560px;
                 display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                gap: 14px;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 20px;
               }
 
             }
 
             .cl-gdpr-message {
               display: grid;
-              grid-template-columns: auto 830px;
+              grid-template-columns: auto 1fr;
+              gap: 260px;
 
               div {
                 margin-right: -30px;
@@ -345,7 +376,7 @@
             .cl-cut-off-time {
               position: relative;
               display: grid;
-              grid-template-columns: 348px 213px auto;
+              grid-template-columns: 350px 213px auto;
               align-items: center;
               gap: 10px;
               max-width: 700px;
@@ -382,25 +413,26 @@
 
             .cl-form-expiration-status {
               position: relative;
-              display: flex;
-              flex-flow: row;
+              display: grid;
+              grid-template-columns: auto 1fr;
+              gap: 220px;
               align-items: center;
-              justify-content: space-between;
+              // justify-content: space-between;
               padding-top: 22px;
-              max-width: 792px;
+              // max-width: 792px;
 
               div {
-                max-width: 560px;
+                // max-width: 560px;
                 ul {
                   display: grid;
-                  grid-template-columns: repeat(3, 1fr);
-                  row-gap: 16px;
+                  grid-template-columns: repeat(4, 1fr);
+                  row-gap: 20px;
                   column-gap: 40px;
                 }
               }
 
               .hints {
-                margin-top: 10px;
+                margin-top: 15px;
               }
 
             }
@@ -1001,6 +1033,10 @@
     padding: 12px 16px;
   }
 
+  .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group .cl-form-expiration-status div ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
   .cl-settings .cl-settings__tab-wrapper .cl-settings__content-wrapper,
   .cl-settings__tab-wrapper .cl-settings .cl-settings__content-wrapper,
   .cl-settings .cl-settings__tab-wrapper .cl-settings__nav-items,
@@ -1016,32 +1052,58 @@
     width: calc(100% - 214px);
   }
 
-  .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group .cl-gdpr-message {
-    grid-template-columns: auto 700px;
-  } 
-
-  .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-webhook #cart_webhook {
-    grid-template-columns: auto 550px 126px;
-    gap: 10px;
-  }
-
   .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-weekly #enable_weekly_report {
     gap: 30px;
   }
 
-  .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-weekly #enable_weekly_report .cl-form-group-weekly {
-    grid-template-columns: 125px 270px auto;
-  }
-  
-  .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-weekly #enable_weekly_report .cl-form-weekly-report-area-right .cl-form-group-weekly-email-body {
-    grid-template-columns: auto 340px;
-  }
 
 }
 
 @media only screen and (max-width: 1399px) {
+
+  .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-select-area #enable_weekly_report .cl-form-group-weekly, 
+  .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-cart-expiration-area #enable_weekly_report .cl-form-group-weekly,
+  .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-gdpr-integration #enable_weekly_report .cl-form-group-weekly,
+  .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-weekly #enable_weekly_report .cl-form-group-weekly, 
+  .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-webhook #enable_weekly_report .cl-form-group-weekly {
+    grid-template-columns: 130px auto;
+  }
+ 
+  .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group .cl-form-expiration-status {
+    gap: 30px;
+    grid-template-columns: 250px 1fr;
+  }
+
   .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group .cl-gdpr-message {
-    grid-template-columns: auto 550px;
+    gap: 180px;
+  }
+
+  .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group .cl-form-expiration-status div ul {
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 20px;
+    column-gap: 40px;
+  }
+
+  .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group .cl-form-expiration {
+    grid-template-columns: 270px 213px auto;
+  }
+
+  .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-select-area #cart_webhook, .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-cart-expiration-area #cart_webhook, .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-gdpr-integration #cart_webhook, .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-weekly #cart_webhook, .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-webhook #cart_webhook {
+    gap: 190px;
+  }
+
+  .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.tracking {
+    grid-template-columns: 240px 1fr;
+    gap: 40px;
+  }
+
+  .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.tracking ul {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group .cl-cut-off-time {
+    grid-template-columns: 268px 213px auto;
   }
 
   .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.logo-upload {
@@ -1063,35 +1125,28 @@
     width: calc(100% - 120px);
   }
 
-  .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-webhook #cart_webhook {
-    grid-template-columns: auto 450px 126px;
-  }
-
   .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-weekly #enable_weekly_report {
-    gap: 30px;
-  }
-
-  .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-weekly #enable_weekly_report .cl-form-group-weekly {
-    grid-template-columns: 125px 195px auto;
-  }
-  
-  .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-weekly #enable_weekly_report .cl-form-weekly-report-area-right .cl-form-group-weekly-email-body {
-    grid-template-columns: auto 250px;
+    gap: 25px;
   }
 
   .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-select-area .cl-form-select-product {
     grid-template-columns: 280px 1fr;
   }
+
 }
 
 @media (max-width: 1199px) {
 
-  .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group .cl-gdpr-message {
-      grid-template-columns: auto 700px;
+  .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-select-area #enable_weekly_report .cl-form-group-weekly, 
+  .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-cart-expiration-area #enable_weekly_report .cl-form-group-weekly,
+  .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-gdpr-integration #enable_weekly_report .cl-form-group-weekly,
+  .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-weekly #enable_weekly_report .cl-form-group-weekly, 
+  .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-webhook #enable_weekly_report .cl-form-group-weekly {
+    grid-template-columns: 155px auto;
   }
 
-  .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group .cl-gdpr-message {
-    grid-template-columns: auto 350px;
+  .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-webhook #cart_webhook {
+    gap: 75px;
   }
 
   .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-cut-time-area {
@@ -1099,15 +1154,19 @@
   }
 
   .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group .cl-cut-off-time {
-    grid-template-columns: auto 210px auto;
+    grid-template-columns: auto 274px auto;
+  }
+
+  .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group .cl-form-expiration-status {
+    gap: 15px;
+    grid-template-columns: 145px 1fr;
   }
 
   .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.tracking {
     align-items: flex-start;
-    grid-template-columns: auto 300px;
+    grid-template-columns: auto 370px;
     padding: 22px 30px 22px 22px;
   }
-
 
   .cl-settings__tab-wrapper .cl-settings__content-wrapper .btn-area {
     padding-bottom: 15px;
@@ -1153,18 +1212,15 @@
     grid-template-columns: 1fr;
   }
 
-  .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-webhook #cart_webhook {
-    grid-template-columns: auto 350px;
-  }
 
   .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-weekly #enable_weekly_report {
     gap: 20px;
     flex-direction: column;
   }
 
-  .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-weekly #enable_weekly_report .cl-form-group-weekly {
-    grid-template-columns: 125px 340px auto;
-  }
+  .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group .cl-gdpr-message {
+    gap: 70px;
+  } 
 
   .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-weekly #enable_weekly_report .cl-form-weekly-report-area-left,
   .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-weekly #enable_weekly_report .cl-form-weekly-report-area-right {
@@ -1172,7 +1228,7 @@
   }
   
   .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-weekly #enable_weekly_report .cl-form-weekly-report-area-right .cl-form-group-weekly-email-body {
-    grid-template-columns: auto 390px;
+    grid-template-columns: auto 358px;
   }
 
   .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group .cl-form-expiration-status div {
@@ -1195,7 +1251,7 @@
   }
 
   .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group .cl-form-expiration {
-    grid-template-columns: 156px 213px auto;
+    grid-template-columns: 150px 280px auto;
   }
 
   .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-select-area .cl-form-select-product {
@@ -1211,16 +1267,25 @@
     }
 
     .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-weekly #enable_weekly_report .cl-form-group-weekly {
-      grid-template-columns: 125px 240px auto;
+      grid-template-columns: 125px 300px auto;
     }
 
     .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-webhook #cart_webhook {
-      grid-template-columns: auto 330px;
+      gap: 50px;
+    }
+
+    .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.tracking {
+      grid-template-columns: auto 325px;
+      gap: 26px;
     }
 
     .cl-form-group .select2-container.select2-container--default {
       max-width: 290px !important;
       width: 100% !important;
+    }
+
+    .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group .cl-cut-off-time {
+      grid-template-columns: auto 225px auto;
     }
 
    
@@ -1233,8 +1298,8 @@
 
 @media (max-width: 768px) {
   .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group .cl-gdpr-message {
-    grid-template-columns: 1fr;
-    gap:10px;
+    grid-template-columns: 1fr 310px;
+    gap: 10px;
   }
 
   .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group .cl-form-expiration-status div {
@@ -1242,7 +1307,7 @@
   }
 
   .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-weekly #enable_weekly_report .cl-form-weekly-report-area-right .cl-form-group-weekly-email-body {
-    grid-template-columns: auto 340px;
+    grid-template-columns: auto 315px;
   } 
 
   .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-select-area .cl-form-select-product {

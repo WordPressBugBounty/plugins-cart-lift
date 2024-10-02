@@ -5,7 +5,7 @@ Donate link: https://rextheme.com/cart-lift/
 Requires at least: 5.0
 Tested up to: 6.6
 Requires PHP: 7.4
-Stable tag: 3.1.19
+Stable tag: 3.1.20
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -181,8 +181,11 @@ Follow the steps in this guide: [How to upgrade to Cart Lift Pro](https://rexthe
 8. Analytics
 
 == Changelog ==
+= 3.1.20 (2024-10-02) =
+* Fix: Beaver builder compatibilty.
+* Fix: Settings panel design issue.
 
-= 3.1.19 (2024-09-20) =
+= 3.1.19 (2024-09-19) =
 * Fix: Compatibility with EDD Pro.
 
 = 3.1.18 (2024-09-19) =

@@ -602,147 +602,7 @@ $get_wc_and_edd_countries = get_wc_and_edd_countries();
                 <div class="cl-form-weekly-report-area-left">
                     <div class="cl-form-group-weekly">
                         <span class="title"><?php echo __('Choose Week Day:', 'cart-lift'); ?></span>
-                        <select id="chart-option" name="weekly_report_start_day">
-                            <option value="0" <?php echo isset($week_start_day) && $week_start_day == '0' ? 'selected' : ''; ?>><?php echo __('Sunday', 'cart-lift'); ?></option>
-                            <option value="1" <?php echo isset($week_start_day) && $week_start_day == '1' ? 'selected' : ''; ?>><?php echo __('Monday', 'cart-lift'); ?></option>
-                            <option value="2" <?php echo isset($week_start_day) && $week_start_day == '2' ? 'selected' : ''; ?>><?php echo __('Tuesday', 'cart-lift'); ?></option>
-                            <option value="3" <?php echo isset($week_start_day) && $week_start_day == '3' ? 'selected' : ''; ?>><?php echo __('Wednesday', 'cart-lift'); ?></option>
-                            <option value="4" <?php echo isset($week_start_day) && $week_start_day == '4' ? 'selected' : ''; ?>><?php echo __('Thursday', 'cart-lift'); ?></option>
-                            <option value="5" <?php echo isset($week_start_day) && $week_start_day == '5' ? 'selected' : ''; ?>><?php echo __('Friday', 'cart-lift'); ?></option>
-                            <option value="6" <?php echo isset($week_start_day) && $week_start_day == '6' ? 'selected' : ''; ?>><?php echo __('Saturday', 'cart-lift'); ?></option>
-                        </select>
-                        <div class="tooltip">
-                            <span class="icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 19" width="18" height="19">
-                                    <defs>
-                                        <clipPath clipPathUnits="userSpaceOnUse" id="cp1">
-                                            <path d="M-941 -385L379 -385L379 866L-941 866Z" />
-                                        </clipPath>
-                                    </defs>
-                                    <style>
-                                        tspan {
-                                            white-space: pre
-                                        }
-
-                                        .shp0 {
-                                            fill: #6e42d3
-                                        }
-                                    </style>
-                                    <g id="Final Create New Abandoned Cart Campaign " clip-path="url(#cp1)">
-                                        <g id="name">
-                                            <g id="question">
-                                                <path id="Shape" fill-rule="evenodd" class="shp0" d="M18 10C18 14.97 13.97 19 9 19C4.03 19 0 14.97 0 10C0 5.03 4.03 1 9 1C13.97 1 18 5.03 18 10ZM16.8 10C16.8 5.7 13.3 2.2 9 2.2C4.7 2.2 1.2 5.7 1.2 10C1.2 14.3 4.7 17.8 9 17.8C13.3 17.8 16.8 14.3 16.8 10Z" />
-                                                <path id="Path" class="shp0" d="M8.71 11.69C8.25 11.69 7.87 12.07 7.87 12.53C7.87 12.98 8.24 13.37 8.71 13.37C9.19 13.37 9.56 12.98 9.56 12.53C9.56 12.07 9.18 11.69 8.71 11.69Z" />
-                                                <path id="Path" class="shp0" d="M8.64 6.06C7.35 6.06 6.75 6.85 6.75 7.38C6.75 7.77 7.07 7.94 7.33 7.94C7.84 7.94 7.63 7.19 8.61 7.19C9.09 7.19 9.48 7.4 9.48 7.86C9.48 8.39 8.94 8.69 8.62 8.97C8.34 9.21 7.98 9.62 7.98 10.47C7.98 10.98 8.11 11.12 8.51 11.12C8.98 11.12 9.07 10.91 9.07 10.72C9.07 10.21 9.08 9.91 9.61 9.49C9.87 9.28 10.69 8.61 10.69 7.69C10.69 6.76 9.87 6.06 8.64 6.06Z" />
-                                            </g>
-                                        </g>
-                                    </g>
-                                </svg>
-                            </span>
-                            <p><?php echo __('Select week start day', 'cart-lift'); ?></p>
-                        </div>
-                    </div>
-                    <div class="cl-form-group-weekly">
-                        <span class="title"><?php echo __('Email To:', 'cart-lift'); ?></span>
-                        <input type="text" id="weekly_report_email" name="weekly_report_email" value="<?php echo isset($weekly_report_admin_email) ? $weekly_report_admin_email : ''; ?>">
-                        <div class="tooltip">
-                            <span class="icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 19" width="18" height="19">
-                                    <defs>
-                                        <clipPath clipPathUnits="userSpaceOnUse" id="cp1">
-                                            <path d="M-941 -385L379 -385L379 866L-941 866Z" />
-                                        </clipPath>
-                                    </defs>
-                                    <style>
-                                        tspan {
-                                            white-space: pre
-                                        }
-
-                                        .shp0 {
-                                            fill: #6e42d3
-                                        }
-                                    </style>
-                                    <g id="Final Create New Abandoned Cart Campaign " clip-path="url(#cp1)">
-                                        <g id="name">
-                                            <g id="question">
-                                                <path id="Shape" fill-rule="evenodd" class="shp0" d="M18 10C18 14.97 13.97 19 9 19C4.03 19 0 14.97 0 10C0 5.03 4.03 1 9 1C13.97 1 18 5.03 18 10ZM16.8 10C16.8 5.7 13.3 2.2 9 2.2C4.7 2.2 1.2 5.7 1.2 10C1.2 14.3 4.7 17.8 9 17.8C13.3 17.8 16.8 14.3 16.8 10Z" />
-                                                <path id="Path" class="shp0" d="M8.71 11.69C8.25 11.69 7.87 12.07 7.87 12.53C7.87 12.98 8.24 13.37 8.71 13.37C9.19 13.37 9.56 12.98 9.56 12.53C9.56 12.07 9.18 11.69 8.71 11.69Z" />
-                                                <path id="Path" class="shp0" d="M8.64 6.06C7.35 6.06 6.75 6.85 6.75 7.38C6.75 7.77 7.07 7.94 7.33 7.94C7.84 7.94 7.63 7.19 8.61 7.19C9.09 7.19 9.48 7.4 9.48 7.86C9.48 8.39 8.94 8.69 8.62 8.97C8.34 9.21 7.98 9.62 7.98 10.47C7.98 10.98 8.11 11.12 8.51 11.12C8.98 11.12 9.07 10.91 9.07 10.72C9.07 10.21 9.08 9.91 9.61 9.49C9.87 9.28 10.69 8.61 10.69 7.69C10.69 6.76 9.87 6.06 8.64 6.06Z" />
-                                            </g>
-                                        </g>
-                                    </g>
-                                </svg>
-                            </span>
-                            <p><?php echo __('Enter recipients (comma separated) for this email.', 'cart-lift'); ?></p>
-                        </div>
-                    </div>
-                    <div class="cl-form-group-weekly">
-                        <span class="title"><?php echo __('Email From:', 'cart-lift'); ?></span>
-                        <input type="text" id="weekly_report_email_form" name="weekly_report_email_from" value="<?php echo isset($weekly_report_email_from) ? $weekly_report_email_from : ''; ?>">
-                        <div class="tooltip">
-                            <span class="icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 19" width="18" height="19">
-                                    <defs>
-                                        <clipPath clipPathUnits="userSpaceOnUse" id="cp1">
-                                            <path d="M-941 -385L379 -385L379 866L-941 866Z" />
-                                        </clipPath>
-                                    </defs>
-                                    <style>
-                                        tspan {
-                                            white-space: pre
-                                        }
-
-                                        .shp0 {
-                                            fill: #6e42d3
-                                        }
-                                    </style>
-                                    <g id="Final Create New Abandoned Cart Campaign " clip-path="url(#cp1)">
-                                        <g id="name">
-                                            <g id="question">
-                                                <path id="Shape" fill-rule="evenodd" class="shp0" d="M18 10C18 14.97 13.97 19 9 19C4.03 19 0 14.97 0 10C0 5.03 4.03 1 9 1C13.97 1 18 5.03 18 10ZM16.8 10C16.8 5.7 13.3 2.2 9 2.2C4.7 2.2 1.2 5.7 1.2 10C1.2 14.3 4.7 17.8 9 17.8C13.3 17.8 16.8 14.3 16.8 10Z" />
-                                                <path id="Path" class="shp0" d="M8.71 11.69C8.25 11.69 7.87 12.07 7.87 12.53C7.87 12.98 8.24 13.37 8.71 13.37C9.19 13.37 9.56 12.98 9.56 12.53C9.56 12.07 9.18 11.69 8.71 11.69Z" />
-                                                <path id="Path" class="shp0" d="M8.64 6.06C7.35 6.06 6.75 6.85 6.75 7.38C6.75 7.77 7.07 7.94 7.33 7.94C7.84 7.94 7.63 7.19 8.61 7.19C9.09 7.19 9.48 7.4 9.48 7.86C9.48 8.39 8.94 8.69 8.62 8.97C8.34 9.21 7.98 9.62 7.98 10.47C7.98 10.98 8.11 11.12 8.51 11.12C8.98 11.12 9.07 10.91 9.07 10.72C9.07 10.21 9.08 9.91 9.61 9.49C9.87 9.28 10.69 8.61 10.69 7.69C10.69 6.76 9.87 6.06 8.64 6.06Z" />
-                                            </g>
-                                        </g>
-                                    </g>
-                                </svg>
-                            </span>
-                            <p><?php echo __('Enter sender email.', 'cart-lift'); ?></p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="cl-form-weekly-report-area-right">
-                    <div class="cl-form-group-weekly-email-body">
-                        <label class="title" for="weekly-report-email-body">
-                            <?php echo __('Email Body:', 'cart-lift'); ?>
-                        </label>
-                        <?php
-                            wp_editor(
-                                $weekly_report_email_body,
-                                'weekly_report_email_body',
-                                array(
-                                    'media_buttons' => true,
-                                    'textarea_rows' => 15,
-                                    'tabindex' => 4,
-                                    'tinymce'  => array(
-                                        'theme_advanced_buttons1' => 'bold,italic,underline,|,bullist,numlist,blockquote,|,link,unlink,|,spellchecker,fullscreen,|,formatselect,styleselect',
-                                    ),
-                                )
-                            );
-                        ?>
-                        
-                    </div>
-                </div>
-                <p id="weekly-report-notice" class="cl-weekly-report-notice" style="margin-left:5px; display:none;"></p>
-            </div>
-
-            <?php } else { ?>
-                
-                <div id="enable_weekly_report" style="display:none;">
-                    <div class="cl-form-weekly-report-area-left">
-                        <div class="cl-form-group-weekly">
-                            <span class="title"><?php echo __('Choose Week Day:', 'cart-lift'); ?></span>
+                        <div class="cl-form-group-weekly-area">
                             <select id="chart-option" name="weekly_report_start_day">
                                 <option value="0" <?php echo isset($week_start_day) && $week_start_day == '0' ? 'selected' : ''; ?>><?php echo __('Sunday', 'cart-lift'); ?></option>
                                 <option value="1" <?php echo isset($week_start_day) && $week_start_day == '1' ? 'selected' : ''; ?>><?php echo __('Monday', 'cart-lift'); ?></option>
@@ -782,10 +642,12 @@ $get_wc_and_edd_countries = get_wc_and_edd_countries();
                                 </span>
                                 <p><?php echo __('Select week start day', 'cart-lift'); ?></p>
                             </div>
-                        </div>
 
-                        <div class="cl-form-group-weekly">
-                            <span class="title"><?php echo __('Email To:', 'cart-lift'); ?></span>
+                        </div>
+                    </div>
+                    <div class="cl-form-group-weekly">
+                        <span class="title"><?php echo __('Email To:', 'cart-lift'); ?></span>
+                        <div class="cl-form-group-weekly-area">
                             <input type="text" id="weekly_report_email" name="weekly_report_email" value="<?php echo isset($weekly_report_admin_email) ? $weekly_report_admin_email : ''; ?>">
                             <div class="tooltip">
                                 <span class="icon">
@@ -817,11 +679,12 @@ $get_wc_and_edd_countries = get_wc_and_edd_countries();
                                 </span>
                                 <p><?php echo __('Enter recipients (comma separated) for this email.', 'cart-lift'); ?></p>
                             </div>
-                        </div>
-
-                        <div class="cl-form-group-weekly">
-                            <span class="title"><?php echo __('Email From:', 'cart-lift'); ?></span>
-                            <input type="text" id="weekly_report_email_form" name="weekly_report_email_from" value="<?php echo isset($weekly_report_admin_email_from) ? $weekly_report_admin_email_from : ''; ?>">
+                       </div>
+                    </div>
+                    <div class="cl-form-group-weekly">
+                        <span class="title"><?php echo __('Email From:', 'cart-lift'); ?></span>
+                        <div class="cl-form-group-weekly-area">
+                            <input type="text" id="weekly_report_email_form" name="weekly_report_email_from" value="<?php echo isset($weekly_report_email_from) ? $weekly_report_email_from : ''; ?>">
                             <div class="tooltip">
                                 <span class="icon">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 19" width="18" height="19">
@@ -850,7 +713,158 @@ $get_wc_and_edd_countries = get_wc_and_edd_countries();
                                         </g>
                                     </svg>
                                 </span>
-                                <p><?php echo __('Enter sender this email.', 'cart-lift'); ?></p>
+                                <p><?php echo __('Enter sender email.', 'cart-lift'); ?></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cl-form-weekly-report-area-right">
+                    <div class="cl-form-group-weekly-email-body">
+                        <label class="title" for="weekly-report-email-body">
+                            <?php echo __('Email Body:', 'cart-lift'); ?>
+                        </label>
+                        <?php
+                            wp_editor(
+                                $weekly_report_email_body,
+                                'weekly_report_email_body',
+                                array(
+                                    'media_buttons' => true,
+                                    'textarea_rows' => 15,
+                                    'tabindex' => 4,
+                                    'tinymce'  => array(
+                                        'theme_advanced_buttons1' => 'bold,italic,underline,|,bullist,numlist,blockquote,|,link,unlink,|,spellchecker,fullscreen,|,formatselect,styleselect',
+                                    ),
+                                )
+                            );
+                        ?>
+                        
+                    </div>
+                </div>
+                <p id="weekly-report-notice" class="cl-weekly-report-notice" style="margin-left:5px; display:none;"></p>
+            </div>
+
+            <?php } else { ?>
+                
+                <div id="enable_weekly_report" style="display:none;">
+                    <div class="cl-form-weekly-report-area-left">
+                        <div class="cl-form-group-weekly">
+                            <span class="title"><?php echo __('Choose Week Day:', 'cart-lift'); ?></span>
+                            <div class="cl-form-group-weekly-area">
+                                <select id="chart-option" name="weekly_report_start_day">
+                                    <option value="0" <?php echo isset($week_start_day) && $week_start_day == '0' ? 'selected' : ''; ?>><?php echo __('Sunday', 'cart-lift'); ?></option>
+                                    <option value="1" <?php echo isset($week_start_day) && $week_start_day == '1' ? 'selected' : ''; ?>><?php echo __('Monday', 'cart-lift'); ?></option>
+                                    <option value="2" <?php echo isset($week_start_day) && $week_start_day == '2' ? 'selected' : ''; ?>><?php echo __('Tuesday', 'cart-lift'); ?></option>
+                                    <option value="3" <?php echo isset($week_start_day) && $week_start_day == '3' ? 'selected' : ''; ?>><?php echo __('Wednesday', 'cart-lift'); ?></option>
+                                    <option value="4" <?php echo isset($week_start_day) && $week_start_day == '4' ? 'selected' : ''; ?>><?php echo __('Thursday', 'cart-lift'); ?></option>
+                                    <option value="5" <?php echo isset($week_start_day) && $week_start_day == '5' ? 'selected' : ''; ?>><?php echo __('Friday', 'cart-lift'); ?></option>
+                                    <option value="6" <?php echo isset($week_start_day) && $week_start_day == '6' ? 'selected' : ''; ?>><?php echo __('Saturday', 'cart-lift'); ?></option>
+                                </select>
+                                <div class="tooltip">
+                                    <span class="icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 19" width="18" height="19">
+                                            <defs>
+                                                <clipPath clipPathUnits="userSpaceOnUse" id="cp1">
+                                                    <path d="M-941 -385L379 -385L379 866L-941 866Z" />
+                                                </clipPath>
+                                            </defs>
+                                            <style>
+                                                tspan {
+                                                    white-space: pre
+                                                }
+
+                                                .shp0 {
+                                                    fill: #6e42d3
+                                                }
+                                            </style>
+                                            <g id="Final Create New Abandoned Cart Campaign " clip-path="url(#cp1)">
+                                                <g id="name">
+                                                    <g id="question">
+                                                        <path id="Shape" fill-rule="evenodd" class="shp0" d="M18 10C18 14.97 13.97 19 9 19C4.03 19 0 14.97 0 10C0 5.03 4.03 1 9 1C13.97 1 18 5.03 18 10ZM16.8 10C16.8 5.7 13.3 2.2 9 2.2C4.7 2.2 1.2 5.7 1.2 10C1.2 14.3 4.7 17.8 9 17.8C13.3 17.8 16.8 14.3 16.8 10Z" />
+                                                        <path id="Path" class="shp0" d="M8.71 11.69C8.25 11.69 7.87 12.07 7.87 12.53C7.87 12.98 8.24 13.37 8.71 13.37C9.19 13.37 9.56 12.98 9.56 12.53C9.56 12.07 9.18 11.69 8.71 11.69Z" />
+                                                        <path id="Path" class="shp0" d="M8.64 6.06C7.35 6.06 6.75 6.85 6.75 7.38C6.75 7.77 7.07 7.94 7.33 7.94C7.84 7.94 7.63 7.19 8.61 7.19C9.09 7.19 9.48 7.4 9.48 7.86C9.48 8.39 8.94 8.69 8.62 8.97C8.34 9.21 7.98 9.62 7.98 10.47C7.98 10.98 8.11 11.12 8.51 11.12C8.98 11.12 9.07 10.91 9.07 10.72C9.07 10.21 9.08 9.91 9.61 9.49C9.87 9.28 10.69 8.61 10.69 7.69C10.69 6.76 9.87 6.06 8.64 6.06Z" />
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </svg>
+                                    </span>
+                                    <p><?php echo __('Select week start day', 'cart-lift'); ?></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cl-form-group-weekly">
+                            <span class="title"><?php echo __('Email To:', 'cart-lift'); ?></span>
+                            <div class="cl-form-group-weekly-area">
+                                <input type="text" id="weekly_report_email" name="weekly_report_email" value="<?php echo isset($weekly_report_admin_email) ? $weekly_report_admin_email : ''; ?>">
+                                <div class="tooltip">
+                                <span class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 19" width="18" height="19">
+                                        <defs>
+                                            <clipPath clipPathUnits="userSpaceOnUse" id="cp1">
+                                                <path d="M-941 -385L379 -385L379 866L-941 866Z" />
+                                            </clipPath>
+                                        </defs>
+                                        <style>
+                                            tspan {
+                                                white-space: pre
+                                            }
+
+                                            .shp0 {
+                                                fill: #6e42d3
+                                            }
+                                        </style>
+                                        <g id="Final Create New Abandoned Cart Campaign " clip-path="url(#cp1)">
+                                            <g id="name">
+                                                <g id="question">
+                                                    <path id="Shape" fill-rule="evenodd" class="shp0" d="M18 10C18 14.97 13.97 19 9 19C4.03 19 0 14.97 0 10C0 5.03 4.03 1 9 1C13.97 1 18 5.03 18 10ZM16.8 10C16.8 5.7 13.3 2.2 9 2.2C4.7 2.2 1.2 5.7 1.2 10C1.2 14.3 4.7 17.8 9 17.8C13.3 17.8 16.8 14.3 16.8 10Z" />
+                                                    <path id="Path" class="shp0" d="M8.71 11.69C8.25 11.69 7.87 12.07 7.87 12.53C7.87 12.98 8.24 13.37 8.71 13.37C9.19 13.37 9.56 12.98 9.56 12.53C9.56 12.07 9.18 11.69 8.71 11.69Z" />
+                                                    <path id="Path" class="shp0" d="M8.64 6.06C7.35 6.06 6.75 6.85 6.75 7.38C6.75 7.77 7.07 7.94 7.33 7.94C7.84 7.94 7.63 7.19 8.61 7.19C9.09 7.19 9.48 7.4 9.48 7.86C9.48 8.39 8.94 8.69 8.62 8.97C8.34 9.21 7.98 9.62 7.98 10.47C7.98 10.98 8.11 11.12 8.51 11.12C8.98 11.12 9.07 10.91 9.07 10.72C9.07 10.21 9.08 9.91 9.61 9.49C9.87 9.28 10.69 8.61 10.69 7.69C10.69 6.76 9.87 6.06 8.64 6.06Z" />
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </span>
+                                <p><?php echo __('Enter recipients (comma separated) for this email.', 'cart-lift'); ?></p>
+                                </div>
+                          </div>
+                        </div>
+
+                        <div class="cl-form-group-weekly">
+                            <span class="title"><?php echo __('Email From:', 'cart-lift'); ?></span>
+                            <div class="cl-form-group-weekly-area">
+                                <input type="text" id="weekly_report_email_form" name="weekly_report_email_from" value="<?php echo isset($weekly_report_admin_email_from) ? $weekly_report_admin_email_from : ''; ?>">
+                   
+                                <div class="tooltip">
+                                    <span class="icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 19" width="18" height="19">
+                                            <defs>
+                                                <clipPath clipPathUnits="userSpaceOnUse" id="cp1">
+                                                    <path d="M-941 -385L379 -385L379 866L-941 866Z" />
+                                                </clipPath>
+                                            </defs>
+                                            <style>
+                                                tspan {
+                                                    white-space: pre
+                                                }
+
+                                                .shp0 {
+                                                    fill: #6e42d3
+                                                }
+                                            </style>
+                                            <g id="Final Create New Abandoned Cart Campaign " clip-path="url(#cp1)">
+                                                <g id="name">
+                                                    <g id="question">
+                                                        <path id="Shape" fill-rule="evenodd" class="shp0" d="M18 10C18 14.97 13.97 19 9 19C4.03 19 0 14.97 0 10C0 5.03 4.03 1 9 1C13.97 1 18 5.03 18 10ZM16.8 10C16.8 5.7 13.3 2.2 9 2.2C4.7 2.2 1.2 5.7 1.2 10C1.2 14.3 4.7 17.8 9 17.8C13.3 17.8 16.8 14.3 16.8 10Z" />
+                                                        <path id="Path" class="shp0" d="M8.71 11.69C8.25 11.69 7.87 12.07 7.87 12.53C7.87 12.98 8.24 13.37 8.71 13.37C9.19 13.37 9.56 12.98 9.56 12.53C9.56 12.07 9.18 11.69 8.71 11.69Z" />
+                                                        <path id="Path" class="shp0" d="M8.64 6.06C7.35 6.06 6.75 6.85 6.75 7.38C6.75 7.77 7.07 7.94 7.33 7.94C7.84 7.94 7.63 7.19 8.61 7.19C9.09 7.19 9.48 7.4 9.48 7.86C9.48 8.39 8.94 8.69 8.62 8.97C8.34 9.21 7.98 9.62 7.98 10.47C7.98 10.98 8.11 11.12 8.51 11.12C8.98 11.12 9.07 10.91 9.07 10.72C9.07 10.21 9.08 9.91 9.61 9.49C9.87 9.28 10.69 8.61 10.69 7.69C10.69 6.76 9.87 6.06 8.64 6.06Z" />
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </svg>
+                                    </span>
+                                    <p><?php echo __('Enter sender this email.', 'cart-lift'); ?></p>
+                                </div>
                             </div>
                         </div>
                     </div>
