@@ -5,7 +5,7 @@ Donate link: https://rextheme.com/cart-lift/
 Requires at least: 5.0
 Tested up to: 6.6
 Requires PHP: 7.4
-Stable tag: 3.1.20
+Stable tag: 3.1.21
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -21,7 +21,9 @@ With Cart Lift, you can recover around **20% of your abandoned carts** without e
 
 No more wasted hours and unreasonable expenses on other tools. Grow 🚀 **your revenue** with a result-driven tool.
 
-<h4><a href="https://rextheme.com/cart-lift/?utm_source=repo-CTA&utm_medium=CartLift-repo&utm_campaign=eid-ul-adha-24#pricing" target="_blank">🔥 Get Cart Lift - Abandoned Cart Recovery For WooCommerce & EDD (Pro) at 20% Off! 🔥</a> </h4>
+<h4>🎃 Halloween Special Sale - 30% Off! 🎃 </h4>
+
+<h4><a href="https://rextheme.com/cart-lift/?utm_source=repo-CTA&utm_medium=CartLift-repo&utm_campaign=halloween-2024" target="_blank">🔥 Get Cart Lift - Abandoned Cart Recovery For WooCommerce & EDD (Pro) at 30% Discount! 🔥</a> </h4>
 
 [youtube https://www.youtube.com/watch?v=7wSNirOde6k]
 
@@ -181,26 +183,31 @@ Follow the steps in this guide: [How to upgrade to Cart Lift Pro](https://rexthe
 8. Analytics
 
 == Changelog ==
+
+
+= 3.1.21 (2024-10-11) =
+* Fixed: PHP warning fixed from cart dashboard
+
 = 3.1.20 (2024-10-02) =
-* Fix: Beaver builder compatibilty.
-* Fix: Settings panel design issue.
+* Fixed: Beaver builder compatibilty.
+* Fixed: Settings panel design issue.
 
 = 3.1.19 (2024-09-19) =
-* Fix: Compatibility with EDD Pro.
+* Fixed: Compatibility with EDD Pro.
 
 = 3.1.18 (2024-09-19) =
 * New: Redesign setting page
 
 = 3.1.17 (2024-08-21) =
-* Fix: PHP warnings
-* Fix: Exit intent pop-up issue
+* Fixed: PHP warnings
+* Fixed: Exit intent pop-up issue
 * New: Exclude carts from abandoned cart recovery based on specific products
 * New: Exclude carts from abandoned cart recovery based on specific product categories
 * New: Pause / Resume individual abandoned cart recovery
 * Improvement: WooCommerce Block support
 
 = 3.1.16 (2024-08-21) =
-* Fix: Fix Google reCAPTCHA v3 in WooCommerce and EDD checkout
+* Fixed: Fix Google reCAPTCHA v3 in WooCommerce and EDD checkout
 
 = 3.1.15 (2024-08-15) =
 * Added: Google reCAPTCHA v3 support for WooCommerce checkout

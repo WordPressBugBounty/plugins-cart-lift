@@ -57,33 +57,14 @@ class Cart_Lift_Ajax
 		                ->with_callback( array( 'Cart_Lift_Ajax', 'run_manual_recovery' ) )
 		                ->with_validation( $validations );
 
-        wp_ajax_helper()->handle( 'rex-feed-hide-deal-notice' )
-            ->with_callback( array( 'Cart_Lift_Ajax', 'hide_special_deal_notice' ) )
-            ->with_validation( $validations );
-
         wp_ajax_helper()->handle( 'cl-recaptcha-v3' )
-            ->with_callback( array( 'Cart_Lift_Ajax', 'set_or_update_recaptcha_settings' ) )
-            ->with_validation( $validations );
+			            ->with_callback( array( 'Cart_Lift_Ajax', 'set_or_update_recaptcha_settings' ) )
+			            ->with_validation( $validations );
 
         wp_ajax_helper()->handle( 'cl-update-schedular-status' )
-            ->with_callback( array( 'Cart_Lift_Ajax', 'cl_update_schedular_status' ) )
-            ->with_validation( $validations );
+			            ->with_callback( array( 'Cart_Lift_Ajax', 'cl_update_schedular_status' ) )
+			            ->with_validation( $validations );
 	}
-
-    /**
-     * Hide special deal notice
-     *
-     * @param array $payload Payload data for ajax call.
-     * @return array
-     */
-    public static function hide_special_deal_notice( $payload ) {
-        $occasion = $payload[ 'occasion' ] ?? null;
-        if ( $occasion ) {
-            update_option( $occasion, 'hidden' );
-            return [ 'status' => true ];
-        }
-        return [ 'status' => false ];
-    }
 
 	/**
 	 * Chart data

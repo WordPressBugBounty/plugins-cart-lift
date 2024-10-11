@@ -156,9 +156,9 @@ class Cart_Lift
         $plugin_cron_job = new Cart_Lift_Cron();
         $cl_db_action    = new Cart_Lift_DB();
         $special_banner = new Rex_CartLift_Special_Occasion_Banner(
-            'cartlift_eid_ul_azaha_24',
-            '2024-06-14 00:00:00',
-            '2024-06-25 00:00:00'
+            'halloween_first_deal_2024',
+            '2024-10-09 00:00:00',
+            '2024-10-25 00:00:00'
         ); // Date format: YYYY-MM-DD HH:MM:SS
 
         if ( !defined( 'CART_LIFT_PRO_VERSION' ) && 'no' === get_option( 'rex_cl_hide_sales_notification_bar', 'no' ) ) {

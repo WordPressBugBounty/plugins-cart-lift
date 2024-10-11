@@ -17,9 +17,9 @@ class Rex_CartLift_Sales_Notification_Bar
     public function __construct()
     {
         // Hook into the admin_notices action to display the banner
-        add_action( 'admin_notices', [ $this, 'display_banner' ] );
+        // add_action( 'admin_notices', [ $this, 'display_banner' ] );
         // Add styles
-        add_action( 'admin_head', [ $this, 'enqueue_css' ] );
+        // add_action( 'admin_head', [ $this, 'enqueue_css' ] );
         add_action( 'wp_ajax_cart_lift_sales_notification_notice', [ $this, 'cart_lift_sales_notification_notice' ] );
         add_action( 'wp_ajax_nopriv_cart_lift_sales_notification_notice', [ $this, 'cart_lift_sales_notification_notice' ] );
     }
