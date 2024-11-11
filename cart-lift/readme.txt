@@ -5,11 +5,11 @@ Donate link: https://rextheme.com/cart-lift/
 Requires at least: 5.0
 Tested up to: 6.6
 Requires PHP: 7.4
-Stable tag: 3.1.21
+Stable tag: 3.1.22
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-Cart Lift is an abandoned cart recovery plugin for WooCommerce and EDD stores that lets you implement an automated email recovery campaign to win back abandon cart customers and lost sales.
+Track abandoned carts and send automated, customizable abandoned cart recovery emails. Get more leads, reduce cart abandonment, and increase revenue.
 
 == Description ==
 
@@ -21,9 +21,9 @@ With Cart Lift, you can recover around **20% of your abandoned carts** without e
 
 No more wasted hours and unreasonable expenses on other tools. Grow 🚀 **your revenue** with a result-driven tool.
 
-<h4>🎃 Halloween Special Sale - 30% Off! 🎃 </h4>
+**🙌 Special Black Friday Sale 🙌**
 
-<h4><a href="https://rextheme.com/cart-lift/?utm_source=repo-CTA&utm_medium=CartLift-repo&utm_campaign=halloween-2024" target="_blank">🔥 Get Cart Lift - Abandoned Cart Recovery For WooCommerce & EDD (Pro) at 30% Discount! 🔥</a> </h4>
+<h4><a href="https://rextheme.com/cart-lift/?utm_source=Repo-CTA&utm_medium=CartLift-Repo&utm_campaign=bfcm-2024" target="_blank">🔥 Get Cart Lift - Abandoned Cart Recovery For WooCommerce & EDD (Pro) at a 40% Discount Today! 💸 🔥 </a> </h4>
 
 [youtube https://www.youtube.com/watch?v=7wSNirOde6k]
 
@@ -48,7 +48,7 @@ The plugin is aimed at helping you win back abandoned customers and increase rev
 
 Plus you can get exclusive features that are easy to use and take only a few minutes to configure.
 
-==⌛ Track Abandoned Cart Automatically (GDPR compatible) ⌛==
+==⌛ Track Cart Abandonment Automatically (GDPR compatible) ⌛==
 
 The plugin can automatically track the abandoned carts on your site.
 
@@ -78,6 +78,8 @@ A great way to grow your mailing list and increase the abandoned cart recovery r
 
 ==🛑 Exit-Intent popup (Pro) 🛑==
 Use this feature to prevent customers from abandoning the cart before they leave your site and recover the cart even before it gets abandoned
+
+[youtube https://youtu.be/tcSEygbZFZ4?si=bd5gASX1fSdY04D3]
 
 
 == Fully Compatible ==
@@ -184,6 +186,8 @@ Follow the steps in this guide: [How to upgrade to Cart Lift Pro](https://rexthe
 
 == Changelog ==
 
+= 3.1.22 (2024-11-11) =
+* Fixed: Deprecated PHP function issue resolved in cart dashboard
 
 = 3.1.21 (2024-10-11) =
 * Fixed: PHP warning fixed from cart dashboard

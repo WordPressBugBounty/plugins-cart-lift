@@ -5,7 +5,7 @@
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '03927ebc3373934bcab3dfb7c130b0c0aa872dd7',
+        'reference' => '29b28ef86b346700f6f4026ab7d948796cf00db0',
         'name' => '__root__',
         'dev' => false,
     ),
@@ -16,7 +16,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '03927ebc3373934bcab3dfb7c130b0c0aa872dd7',
+            'reference' => '29b28ef86b346700f6f4026ab7d948796cf00db0',
             'dev_requirement' => false,
         ),
         'appsero/client' => array(
