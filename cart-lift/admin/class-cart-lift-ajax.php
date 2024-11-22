@@ -226,6 +226,8 @@ class Cart_Lift_Ajax
         $options[ 'cl_excluded_products' ] = $params[ 'cl_excluded_products' ] ?? [];
         $options[ 'cl_excluded_categories' ] = $params[ 'cl_excluded_categories' ] ?? [];
         $options[ 'cl_excluded_countries' ] = $params[ 'cl_excluded_countries' ] ?? [];
+        $options['enable_gdpr'] = isset($params['enable_gdpr']) ? 1 : 0;
+
 
         update_option( 'cl_general_settings', $options );
         

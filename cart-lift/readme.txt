@@ -5,7 +5,7 @@ Donate link: https://rextheme.com/cart-lift/
 Requires at least: 5.0
 Tested up to: 6.6
 Requires PHP: 7.4
-Stable tag: 3.1.22
+Stable tag: 3.1.23
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -185,6 +185,9 @@ Follow the steps in this guide: [How to upgrade to Cart Lift Pro](https://rexthe
 8. Analytics
 
 == Changelog ==
+
+= 3.1.23 (2024-11-22) =
+* Fixed: "Enable GDPR Integration" disable button does not work.
 
 = 3.1.22 (2024-11-11) =
 * Fixed: Deprecated PHP function issue resolved in cart dashboard
