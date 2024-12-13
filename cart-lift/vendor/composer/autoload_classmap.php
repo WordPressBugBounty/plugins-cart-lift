@@ -9,7 +9,6 @@ return array(
     'Appsero\\Client' => $vendorDir . '/appsero/client/src/Client.php',
     'Appsero\\Insights' => $vendorDir . '/appsero/client/src/Insights.php',
     'Appsero\\License' => $vendorDir . '/appsero/client/src/License.php',
-    'Appsero\\Updater' => $vendorDir . '/appsero/client/src/Updater.php',
     'Cart_Lift_Admin' => $baseDir . '/admin/class-cart-lift-admin.php',
     'Cart_Lift_Ajax' => $baseDir . '/admin/class-cart-lift-ajax.php',
     'Cart_Lift_Cart_Actions' => $baseDir . '/public/cart-lift-cart-actions.php',

@@ -37,7 +37,6 @@ class ComposerStaticInitcfac919658ea0b0d628b52d5745c8a22
         'Appsero\\Client' => __DIR__ . '/..' . '/appsero/client/src/Client.php',
         'Appsero\\Insights' => __DIR__ . '/..' . '/appsero/client/src/Insights.php',
         'Appsero\\License' => __DIR__ . '/..' . '/appsero/client/src/License.php',
-        'Appsero\\Updater' => __DIR__ . '/..' . '/appsero/client/src/Updater.php',
         'Cart_Lift_Admin' => __DIR__ . '/../..' . '/admin/class-cart-lift-admin.php',
         'Cart_Lift_Ajax' => __DIR__ . '/../..' . '/admin/class-cart-lift-ajax.php',
         'Cart_Lift_Cart_Actions' => __DIR__ . '/../..' . '/public/cart-lift-cart-actions.php',

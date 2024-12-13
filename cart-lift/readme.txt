@@ -5,7 +5,7 @@ Donate link: https://rextheme.com/cart-lift/
 Requires at least: 5.0
 Tested up to: 6.6
 Requires PHP: 7.4
-Stable tag: 3.1.23
+Stable tag: 3.1.24
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -21,17 +21,16 @@ With Cart Lift, you can recover around **20% of your abandoned carts** without e
 
 No more wasted hours and unreasonable expenses on other tools. Grow 🚀 **your revenue** with a result-driven tool.
 
-**🙌 Special Black Friday Sale 🙌**
+<h4><a href="https://rextheme.com/cart-lift/?utm_source=Repo-CTA&utm_medium=CartLift-Repo&utm_campaign=CartLift-repo-to-Landing" target="_blank">🔥 Get Cart Lift - Abandoned Cart Recovery For WooCommerce & EDD (Pro) Now! 🔥</a> </h4>
 
-<h4><a href="https://rextheme.com/cart-lift/?utm_source=Repo-CTA&utm_medium=CartLift-Repo&utm_campaign=bfcm-2024" target="_blank">🔥 Get Cart Lift - Abandoned Cart Recovery For WooCommerce & EDD (Pro) at a 40% Discount Today! 💸 🔥 </a> </h4>
 
-[youtube https://www.youtube.com/watch?v=7wSNirOde6k]
+[https://youtu.be/mIYQjLsIm04?si=n8TRxqid8IBjntvp]
 
 == 🌟 Why Cart Lift? 🌟 ==
 
 Cart Lift has everything you need to set up and run a successful abandoned cart recovery campaign for your WooCommerce or Easy Digital download-based shopping cart.
 
-You can create engaging abandoned cart email campaigns easily, to automatically reach customers who left shopping carts on your site.
+You can create engaging abandoned cart email campaigns easily, to reach customers who left shopping carts on your site automatically.
 
 Thus, winning them back to complete purchases and boosting your revenue. 💰
 
@@ -185,6 +184,9 @@ Follow the steps in this guide: [How to upgrade to Cart Lift Pro](https://rexthe
 8. Analytics
 
 == Changelog ==
+
+= 3.1.24 (2024-12-13) =
+* Enhancement: Update pricing on setup wizard
 
 = 3.1.23 (2024-11-22) =
 * Fixed: "Enable GDPR Integration" disable button does not work.
