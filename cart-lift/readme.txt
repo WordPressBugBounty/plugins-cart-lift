@@ -3,9 +3,9 @@ Contributors: rextheme, coderexltd, coderexco
 Tags: woocommerce abandoned cart, abandoned cart recovery, exit popup, edd abandoned cart, abandoned cart email, cart abandonment, woocommerce abandoned cart email, woocommerce abandoned cart recovery, easy digital downloads, woocommerce, recover abandoned cart, abandoned cart emails woocommerce
 Donate link: https://rextheme.com/cart-lift/
 Requires at least: 5.0
-Tested up to: 6.6
+Tested up to: 6.7.1
 Requires PHP: 7.4
-Stable tag: 3.1.24
+Stable tag: 3.1.25
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -22,7 +22,6 @@ With Cart Lift, you can recover around **20% of your abandoned carts** without e
 No more wasted hours and unreasonable expenses on other tools. Grow 🚀 **your revenue** with a result-driven tool.
 
 <h4><a href="https://rextheme.com/cart-lift/?utm_source=Repo-CTA&utm_medium=CartLift-Repo&utm_campaign=CartLift-repo-to-Landing" target="_blank">🔥 Get Cart Lift - Abandoned Cart Recovery For WooCommerce & EDD (Pro) Now! 🔥</a> </h4>
-
 
 [https://youtu.be/mIYQjLsIm04?si=n8TRxqid8IBjntvp]
 
@@ -184,6 +183,10 @@ Follow the steps in this guide: [How to upgrade to Cart Lift Pro](https://rexthe
 8. Analytics
 
 == Changelog ==
+
+= 3.1.25 (2024-12-19) =
+* Fix: Easy Digital Downloads(EDD) Pro Carts Not Being Captured
+* Fix: Function _load_textdomain_just_in_time was called incorrectly
 
 = 3.1.24 (2024-12-13) =
 * Enhancement: Update pricing on setup wizard

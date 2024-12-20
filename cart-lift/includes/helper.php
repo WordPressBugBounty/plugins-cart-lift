@@ -9,7 +9,7 @@ if( !function_exists( 'cl_is_edd_active' ) ) {
      */
     function cl_is_edd_active()
     {
-        if( is_plugin_active( 'easy-digital-downloads/easy-digital-downloads.php' ) ) {
+        if( is_plugin_active( 'easy-digital-downloads/easy-digital-downloads.php' ) || is_plugin_active( 'easy-digital-downloads-pro/easy-digital-downloads.php' ) ) {
             return true;
         }
         return false;
