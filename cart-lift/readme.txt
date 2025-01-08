@@ -5,7 +5,7 @@ Donate link: https://rextheme.com/cart-lift/
 Requires at least: 5.0
 Tested up to: 6.7.1
 Requires PHP: 7.4
-Stable tag: 3.1.27
+Stable tag: 3.1.28
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -23,7 +23,8 @@ No more wasted hours and unreasonable expenses on other tools. Grow 🚀 **your 
 
 <h4><a href="https://rextheme.com/cart-lift/?utm_source=Repo-CTA&utm_medium=CartLift-Repo&utm_campaign=CartLift-repo-to-Landing" target="_blank">🔥 Get Cart Lift - Abandoned Cart Recovery For WooCommerce & EDD (Pro) Now! 🔥</a> </h4>
 
-[https://youtu.be/mIYQjLsIm04?si=n8TRxqid8IBjntvp]
+
+[youtube https://youtu.be/mIYQjLsIm04?si=n8TRxqid8IBjntvp]
 
 == 🌟 Why Cart Lift? 🌟 ==
 
@@ -184,7 +185,10 @@ Follow the steps in this guide: [How to upgrade to Cart Lift Pro](https://rexthe
 
 == Changelog ==
 
-= 3.1.27 (2025-01-03) =
+= 3.1.28 (2025-01-07) =
+* Enhancement: Update pricing on setup wizard
+
+= 3.1.27 (2025-01-02) =
 * Enhancement: Update pricing on setup wizard
 
 = 3.1.26 (2024-12-20) =
