@@ -416,11 +416,11 @@ if( !function_exists( 'cl_send_email_templates' ) ) {
                         include_once WC_ABSPATH . 'includes/emails/class-wc-email.php';
                     }
                     $wc_email     = new WC_Email();
-                    $is_mail_sent = $wc_email->send( $email_data->email, $email_subject, $body_email_preview, $wc_email->get_headers(), $wc_email->get_attachments() );
+                    $is_mail_sent = $wc_email->send( $email_data->email, html_entity_decode($email_subject, ENT_QUOTES, 'UTF-8'), $body_email_preview, $wc_email->get_headers(), $wc_email->get_attachments() );
                 }
 
                 if( $email_data->provider === 'edd' ) {
-                    $is_mail_sent = EDD()->emails->send( $email_data->email, $email_subject, $body_email_preview );
+                    $is_mail_sent = EDD()->emails->send( $email_data->email, html_entity_decode($email_subject, ENT_QUOTES, 'UTF-8'), $body_email_preview );
                 }
                 return $is_mail_sent ?? false;
             }
@@ -2498,4 +2498,17 @@ if( !function_exists('cl_get_edd_countries')){
 
         return $countries_array;
     }
+}
+
+if( !function_exists('cl_is_woosb_active')){
+    /**
+     * Check if Woo Smart Bundle plugin is active.
+     *
+     * @return bool
+     * @since 3.1.29
+     */
+    function cl_is_woosb_active(){
+        return defined('WOOSB_VERSION');
+    }
+
 }

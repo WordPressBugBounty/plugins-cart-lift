@@ -146,7 +146,6 @@ class Cart_Lift_Cart_Actions
 
                     $cart_details = $this->prepare_cart_data( $user_email, $provider );
 
-
                     //check excluded products
                     if ( !empty( $excluded_products ) && $general_settings[ 'enable_cl_exclude_products' ] == '1' ) {
                         $cart_products    = !empty( $cart_details[ 'cart_contents' ] ) ? unserialize( $cart_details[ 'cart_contents' ] ) : [];
@@ -252,9 +251,28 @@ class Cart_Lift_Cart_Actions
             $cart_contents = array();
             $cart_total    = 0;
             $cart_items = WC()->cart->get_cart();
-
+            $formatted_woosb_product_ids = array();
             if( !empty( $cart_items ) ) {
                 foreach( $cart_items as $key => $item ) {
+                    $product = wc_get_product($item['product_id']);
+                    $product_type = $product->get_type();
+                    $item_product_id = $product->get_id();
+                    if (
+                        cl_is_woosb_active() && !empty($formatted_woosb_product_ids) && in_array((string)$item_product_id, $formatted_woosb_product_ids, true) && isset($item['woosb_parent_id'])
+                    ) {
+                        continue;
+                    }
+                    if( cl_is_woosb_active() &&  'woosb' === $product_type){
+                        $woosb_instance = new WC_Product_Woosb($item['product_id']);
+                        $woosb_product_ids[] = $woosb_instance->get_items();
+                        if(!empty($woosb_product_ids[0])){
+                            foreach ($woosb_product_ids[0] as $key => $internal_item) {
+                                if (isset($internal_item['id']) && !in_array($internal_item['id'], $formatted_woosb_product_ids)) {
+                                    $formatted_woosb_product_ids[] = (string)$internal_item['id'];
+                                }
+                            }
+                        }
+                    }
                     $product_id   = isset( $item[ 'product_id' ] ) ? (int)$item[ 'product_id' ] : 0;
                     $variation_id = $item[ 'variation_id' ] ?? '';
                     $price        = get_post_meta( !empty( $variation_id ) ? $variation_id : $product_id, '_price', true );
