@@ -46,7 +46,7 @@ class Rex_CartLift_Sales_Notification_Bar
                 <div class="cart-lift-promo-banner__container">
                     <h2 class="cart-lift-promo-banner__title" id="cart-lift-promo-banner-title">
                         <a href="<?php echo esc_url($btn_link); ?>" target ="_blank" class="cart-lift-promo-banner__link" aria-label="Get Special Discount">
-                            <?php echo esc_html__('Get ', 'cart-lift'); ?><strong class="cart-lift-promo-banner__discount"><?php echo esc_html__(' 20% ', 'cart-lift'); ?></strong><?php echo esc_html__(' Discount On ', 'cart-lift'); ?><strong class="cart-lift-promo-banner__discount"><?php echo esc_html__('Cart Lift', 'cart-lift'); ?></strong>
+                            <?php echo esc_html__('Get ', 'cart-lift'); ?><strong class="cart-lift-promo-banner__discount"><?php echo esc_html__(' 15% ', 'cart-lift'); ?></strong><?php echo esc_html__(' Discount On ', 'cart-lift'); ?><strong class="cart-lift-promo-banner__discount"><?php echo esc_html__('Cart Lift', 'cart-lift'); ?></strong>
                             <span class="cart-lift-promo-banner__icon" aria-hidden="true">
                                 <svg class="cart-lift-promo-banner__svg" xmlns="http://www.w3.org/2000/svg" width="12"
                                     height="12" viewBox="0 0 12 12" fill="none">

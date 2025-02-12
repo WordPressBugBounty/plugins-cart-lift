@@ -5,7 +5,7 @@ Donate link: https://rextheme.com/cart-lift/
 Requires at least: 5.0
 Tested up to: 6.7.1
 Requires PHP: 7.4
-Stable tag: 3.1.29
+Stable tag: 3.1.30
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -17,7 +17,7 @@ Track abandoned carts and send automated, customizable abandoned cart recovery e
 
 Are you concerned about the high abandoned rate on your site? Did you waste time and money trying to stop abandoned carts 🛒  or recover them?
 
-With Cart Lift, you can recover around **20% of your abandoned carts** without effort.
+With Cart Lift, you can recover around **15% of your abandoned carts** without effort.
 
 No more wasted hours and unreasonable expenses on other tools. Grow 🚀 **your revenue** with a result-driven tool.
 
@@ -184,6 +184,9 @@ Follow the steps in this guide: [How to upgrade to Cart Lift Pro](https://rexthe
 8. Analytics
 
 == Changelog ==
+
+= 3.1.30 (2025-02-12) =
+* Enhancement: Update pricing on setup wizard
 
 = 3.1.29 (2025-01-16) =
 * Fix: Compatibility with WPC Product Bundles for WooCommerce

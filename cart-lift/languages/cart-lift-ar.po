@@ -20,7 +20,7 @@ msgstr ""
 "X-Loco-Version: 2.6.11; wp-6.6.1"
 
 #: admin/class-cart-lift-sales-notification-bar.php:49
-msgid " 20% "
+msgid " 15% "
 msgstr ""
 
 #: includes/class-cart-lift-dependency-checker.php:277
@@ -1011,7 +1011,7 @@ msgstr "فشل التحقق من reCAPTCHA."
 
 #: admin/partials/cart-lift-setup-wizard.php:60
 msgid ""
-"Recover over 20% of your abandoned cart customers with automated e-mail "
+"Recover over 15% of your abandoned cart customers with automated e-mail "
 "campaigns. Enjoy immediate increase in your ROI."
 msgstr ""
 "استرد أكثر من 20% من عملاء عربة التسوق المهجورة باستخدام حملات البريد "
