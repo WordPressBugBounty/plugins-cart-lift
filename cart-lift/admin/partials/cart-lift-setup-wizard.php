@@ -57,7 +57,7 @@
                 __("Cart Lift", "cart-lift"),
             ),
             'strong_description' => __("Product Feed Manager for WooCommerce,", "cart-lift"),
-            'description' => __("Recover over 15% of your abandoned cart customers with automated e-mail campaigns. Enjoy immediate increase in your ROI.", "cart-lift"),
+            'description' => __("Recover over 25% of your abandoned cart customers with automated e-mail campaigns. Enjoy immediate increase in your ROI.", "cart-lift"),
             'img_alt' => __("Preview video image ", "cart-lift"),
             'button_text' => array(
                 __("Let’s create your first Campaign", "cart-lift"),
