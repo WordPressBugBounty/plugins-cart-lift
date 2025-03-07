@@ -15,7 +15,7 @@
  * Plugin Name:       Cart Lift - Abandoned Cart Recovery for WooCommerce and EDD
  * Plugin URI:        https://rextheme.com/cart-lift
  * Description:       Win back your abandoned cart customers with automated email recovery campaign.
- * Version:           3.1.31
+ * Version:           3.1.32
  * Author:            RexTheme
  * Author URI:        https://rextheme.com/cart-lift
  * License:           GPL-2.0+
@@ -25,12 +25,12 @@
  *
  * WP Requirement & Test
  * Requires at least: 5.0
- * Tested up to: 6.6
+ * Tested up to: 6.7.2
  * Requires PHP: 7.4
  *
  * WC Requirement & Test
  * WC requires at least: 3.8.0
- * WC tested up to: 8.8.2
+ * WC tested up to: 9.7.1
  */
 
 // If this file is called directly, abort.
@@ -44,7 +44,7 @@ if ( ! defined( 'WPINC' ) ) {
  * Rename this for your plugin and update it as you release new versions.
  */
 
-define('CART_LIFT_VERSION', '3.1.31' );
+define('CART_LIFT_VERSION', '3.1.32' );
 define('CART_LIFT_FILE', __FILE__ );
 define('CART_LIFT_BASE', plugin_basename( CART_LIFT_FILE ) );
 define('CART_LIFT_DIR', plugin_dir_path(CART_LIFT_FILE));

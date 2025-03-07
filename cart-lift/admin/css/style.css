@@ -950,7 +950,7 @@
   font-size: 20px;
 }
 .wp-cart-lift-setup-wizard__container .setup-wizard__inner-container .setup-wizard__features-section-container .setup-wizard__pro-features-section-container .setup-wizard__pro-features-price .setup-wizard__discount-price-label::before {
-  content: "Save 25%";
+  content: "Save 15%";
   position: absolute;
   background: #EF7E32;
   border-radius: 16px 16px 16px 0;
