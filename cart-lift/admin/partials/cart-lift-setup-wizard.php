@@ -49,6 +49,25 @@
     wp_enqueue_media(); // add media
     wp_print_scripts(); // window.wp
     do_action('admin_footer');
+
+    $current_date = date('Y-m-d');
+    $start_date = '2025-03-24';
+    $end_date = '2025-04-07';
+    $discount_percentage = '';
+    $discount_price = '';
+    if ($current_date >= $start_date && $current_date <= $end_date) {
+        $discount_percentage = "Save 20%";
+        $discount_price = "$39.99";
+    } else {
+        $discount_percentage = "Save 15%";
+        $discount_price = "$42.49";
+    }
+
+    $setup_wizard_price = array(
+        'discount_price'        => $discount_price,
+        'discount_percentage_text' => $discount_percentage
+    );
+
     $data = array(
         'stepOne' => array(
             'step_text' => __("Welcome", "cart-lift"),
@@ -165,8 +184,18 @@
         const eddUrl = <?php echo json_encode(esc_url(CART_LIFT_ASSET_PATH . 'setup-wizard-images/edd.webp')); ?>;
         const wcStatus = <?php echo json_encode( defined( 'WC_VERSION' ) ? 'Active' : 'Inactive' ); ?>;
         const eddStatus = <?php echo json_encode( defined( 'EDD_VERSION' ) ? 'Active' : 'Inactive' ); ?>;
+        const discount_information = <?php echo wp_json_encode($setup_wizard_price)?>;
     </script>
     <script src="<?php echo  CART_LIFT_ADMIN_JS_PATH . '/setup-wizard/setup_wizard.js'; ?>'"></script>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var discountLabel = document.querySelector(".setup-wizard__discount-price-label");
+            if (discountLabel) discountLabel.style.setProperty("--discount-content-value", `"${discountLabel.getAttribute('data-discount') || "Save 15%"}"`);
+        });
+    </script>
+
 </body>
 
 </html>
