@@ -255,8 +255,8 @@ class Cart_Lift_Cart_Actions
             if( !empty( $cart_items ) ) {
                 foreach( $cart_items as $key => $item ) {
                     $product = wc_get_product($item['product_id']);
-                    $product_type = $product->get_type();
-                    $item_product_id = $product->get_id();
+                    $product_type = $product && is_a($product, 'WC_Product') ? $product->get_type() : '';
+                    $item_product_id = $product && is_a($product, 'WC_Product') ? $product->get_id() : 0;
                     if (
                         cl_is_woosb_active() && !empty($formatted_woosb_product_ids) && in_array((string)$item_product_id, $formatted_woosb_product_ids, true) && isset($item['woosb_parent_id'])
                     ) {
