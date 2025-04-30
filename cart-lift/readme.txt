@@ -3,9 +3,9 @@ Contributors: rextheme, coderexltd, coderexco
 Tags: woocommerce abandoned cart, abandoned cart recovery, exit popup, edd abandoned cart, abandoned cart email, cart abandonment, woocommerce abandoned cart email, woocommerce abandoned cart recovery, easy digital downloads, woocommerce, recover abandoned cart, abandoned cart emails woocommerce, cart abandonment recovery
 Donate link: https://rextheme.com/cart-lift/
 Requires at least: 5.0
-Tested up to: 6.7.2
+Tested up to: 6.8
 Requires PHP: 7.4
-Stable tag: 3.1.35
+Stable tag: 3.1.36
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -184,6 +184,9 @@ Follow the steps in this guide: [How to upgrade to Cart Lift Pro](https://rexthe
 8. Analytics
 
 == Changelog ==
+
+= 3.1.36 (2025-04-30) =
+* Compatibility: Compatible with WordPress 6.8
 
 = 3.1.35 (2025-04-24) =
 * Fix: Fatal error when getting type of invalid product
