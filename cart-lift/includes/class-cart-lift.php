@@ -156,10 +156,10 @@ class Cart_Lift
         $plugin_cron_job = new Cart_Lift_Cron();
         $cl_db_action    = new Cart_Lift_DB();
         $special_banner = new Rex_CartLift_Special_Occasion_Banner(
-            'eid_ul_fitr_deal_2025',
-		   	'2025-03-24 00:00:00',
-		   	'2025-04-07 23:59:59'
-        ); // Date format: YYYY-MM-DD HH:MM:SS
+            'wp_anniversary_deal_2025',
+		   	'2025-05-26 00:00:00',
+		   	'2025-05-30 23:59:59'
+        ); // Date format: YYYY-MM-DD HH:MM:SS 
 
         if ( !defined( 'CART_LIFT_PRO_VERSION' ) && 'no' === get_option( 'rex_cl_hide_sales_notification_bar', 'no' ) ) {
             new Rex_CartLift_Sales_Notification_Bar();

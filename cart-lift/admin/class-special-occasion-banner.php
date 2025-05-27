@@ -127,11 +127,11 @@ class Rex_CartLift_Special_Occasion_Banner
                         <div class="rex-notification-counter__container">
                             <div class="rex-notification-counter__content">
                                 <figure class="rex-notification-counter__figure-logo">
-                                    <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '/images/banner-images/eid-mubarak.webp'); ?>" alt="<?php esc_attr_e('Eid Mubarak special offer logo', 'cart-lift'); ?>" class="rex-notification-counter__img" >
+                                    <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '/images/banner-images/wordpress-anniversary.webp'); ?>" alt="<?php esc_attr_e('Eid WordPress anniversary offer logo', 'cart-lift'); ?>" class="rex-notification-counter__img" >
                                 </figure>
 
                                 <figure class="rex-notification-counter__biggest-sale">
-                                    <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '/images/banner-images/eid-ul-fitr-twenty.webp'); ?>" alt="<?php esc_attr_e('Biggest sale of the year!', 'cart-lift'); ?>" class="rex-notification-counter__img" >
+                                    <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '/images/banner-images/wordpress-annniversary-twenty-two-percent-discount.webp'); ?>" alt="<?php esc_attr_e('Biggest sale of the year!', 'cart-lift'); ?>" class="rex-notification-counter__img" >
                                 </figure>
 
                                 <figure class="rex-notification-counter__figure-percentage">
@@ -304,7 +304,7 @@ class Rex_CartLift_Special_Occasion_Banner
                 background-color: #00B4FF;
                 width: calc(100% - 20px);
                 margin: 50px 0 20px;
-                background-image: url(<?php echo "{$plugin_dir_url}/images/banner-images/eid-mubarak-bg.webp"; ?>);
+                background-image: url(<?php echo "{$plugin_dir_url}/images/banner-images/wordpress-anniversary-banner-bg.webp"; ?>);
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: cover;
@@ -341,10 +341,10 @@ class Rex_CartLift_Special_Occasion_Banner
                 gap: 20px;
             }
             .cartlift-banner .rex-notification-counter__biggest-sale {
-                max-width: 210px;
+                max-width: 180px;
             }
             .cartlift-banner .rex-notification-counter__figure-logo {
-                max-width: 226px;
+                max-width: 220px;
             }
             .cartlift-banner .rex-notification-counter__figure-percentage {
                 max-width: 108px;
@@ -527,23 +527,12 @@ class Rex_CartLift_Special_Occasion_Banner
                     max-width: 1170px;
                 }
 
-                .cartlift-banner .rex-notification-counter__figure-logo {
-                    max-width: 200px;
-                }
-                .cartlift-banner .rex-notification-counter__figure-percentage {
-                    max-width: 90px;
-                }
-
                 .cartlift-banner .rex-notification-counter__btn {
                     font-size: 16px;
                 }
 
                 .cartlift-banner .rex-notification-counter__stroke-font {
                     font-size: 22px;
-                }
-
-                .cartlift-banner .rex-notification-counter__biggest-sale {
-                    max-width: 190px;
                 }
 
             }
@@ -557,13 +546,7 @@ class Rex_CartLift_Special_Occasion_Banner
                     max-width: 1140px;
                 }
                 .cartlift-banner .rex-notification-counter__biggest-sale {
-                    max-width: 170px;
-                }
-                .cartlift-banner .rex-notification-counter__figure-logo {
                     max-width: 160px;
-                }
-                .cartlift-banner .rex-notification-counter__figure-percentage {
-                    max-width: 85px;
                 }
 
                 .cartlift-banner .rex-notification-counter__list {
@@ -627,10 +610,6 @@ class Rex_CartLift_Special_Occasion_Banner
 
                 .rex-feed-tb__notification.cartlift-banner {
                     background-position: right;
-                }
-
-                .cartlift-banner .rex-notification-counter__btn {
-                    padding: 10px 18px;
                 }
 
             }

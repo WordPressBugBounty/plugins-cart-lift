@@ -5,7 +5,7 @@ Donate link: https://rextheme.com/cart-lift/
 Requires at least: 5.0
 Tested up to: 6.8
 Requires PHP: 7.4
-Stable tag: 3.1.36
+Stable tag: 3.1.37
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -184,6 +184,9 @@ Follow the steps in this guide: [How to upgrade to Cart Lift Pro](https://rexthe
 8. Analytics
 
 == Changelog ==
+
+= 3.1.37 (2025-05-27) =
+* Enhancement: Update pricing on setup wizard
 
 = 3.1.36 (2025-04-30) =
 * Compatibility: Compatible with WordPress 6.8
