@@ -396,7 +396,7 @@ class Cart_Lift_Cart_Actions
                     'session_id'    => $session_id,
                     'order_id'      => $order_id,
                     'status'        => $status,
-                    'cart_totall'   => $cart_details->cart_total,
+                    'cart_total'   => $cart_details->cart_total,
                     'provider'      => $cart_details->provider,
                     'product_table' => cl_get_email_product_table( $cart_details->cart_contents, $cart_details->cart_total, $cart_details->provider, false, false ),
                 );
@@ -422,7 +422,7 @@ class Cart_Lift_Cart_Actions
                     'session_id'    => $session_id,
                     'order_id'      => $order_id,
                     'status'        => $status,
-                    'cart_totall'   => $cart_details->cart_total,
+                    'cart_total'   => $cart_details->cart_total,
                     'provider'      => $cart_details->provider,
                     'product_table' => cl_get_email_product_table( $cart_details->cart_contents, $cart_details->cart_total, $cart_details->provider, false, false ),
                 );
