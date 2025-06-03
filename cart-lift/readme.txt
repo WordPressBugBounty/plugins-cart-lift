@@ -5,7 +5,7 @@ Donate link: https://rextheme.com/cart-lift/
 Requires at least: 5.0
 Tested up to: 6.8
 Requires PHP: 7.4
-Stable tag: 3.1.38
+Stable tag: 3.1.39
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -184,6 +184,9 @@ Follow the steps in this guide: [How to upgrade to Cart Lift Pro](https://rexthe
 8. Analytics
 
 == Changelog ==
+
+= 3.1.39 (2025-06-03) =
+* Enhancement: Icon alignment in WP admin menu
 
 = 3.1.38 (2025-05-28) =
 * Enhancement: Display notification banner conditionally

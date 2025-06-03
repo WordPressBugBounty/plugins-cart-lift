@@ -110,143 +110,135 @@ class Rex_CartLift_Special_Occasion_Banner
      */
     public function display_banner()
     {
+        $screen = get_current_screen();
 
-        if( ! defined( 'REX_SPECIAL_OCCASION_BANNER_SHOWN' )){
-            define( 'REX_SPECIAL_OCCASION_BANNER_SHOWN', true );
-            $screen          = get_current_screen();
-            $allowed_screens = ['dashboard', 'plugins', 'cart_lift'];
-            $time_remaining  = $this->end_date - current_time('timestamp');
+        $plugin_banner_constant = 'REX_SPECIAL_OCCASION_BANNER_SHOWN_CARTLIFT';
 
-            if (in_array($screen->base, $allowed_screens) || in_array($screen->parent_base, $allowed_screens) || in_array($screen->post_type, $allowed_screens) || in_array($screen->parent_file, $allowed_screens)) {
-                echo '<input type="hidden" id="rex_cl_special_occasion" name="rex_cl_special_occasion" value="' . $this->occasion . '">';
+        $allowed_screens = ['dashboard', 'plugins', 'cart_lift'];
 
-                $countdown = $this->rex_get_halloween_countdown();
-                ?>
+        $should_show_banner = false;
 
-                <!-- Name: Eid Mubarak Notification Banner -->
-                <div class="rex-feed-tb__notification cartlift-banner" id="rex_cl_deal_notification">
-                    <div class="banner-overflow">
-                        <div class="rex-notification-counter">
-                            <div class="rex-notification-counter__container">
-                                <div class="rex-notification-counter__content">
-                                    <figure class="rex-notification-counter__figure-logo">
-                                        <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '/images/banner-images/wordpress-anniversary.webp'); ?>" alt="<?php esc_attr_e('Eid WordPress anniversary offer logo', 'cart-lift'); ?>" class="rex-notification-counter__img" >
-                                    </figure>
+        if ($screen->base === 'plugins' || $screen->base === 'dashboard') {
+            if (!defined('REX_SPECIAL_OCCASION_BANNER_SHOWN_GLOBAL')) {
+                $should_show_banner = true;
+                define('REX_SPECIAL_OCCASION_BANNER_SHOWN_GLOBAL', true);
+            }
+        } elseif (in_array($screen->base, $allowed_screens) ||
+            in_array($screen->parent_base, $allowed_screens) ||
+            in_array($screen->post_type, $allowed_screens) ||
+            in_array($screen->parent_file, $allowed_screens)) {
+            if (!defined($plugin_banner_constant)) {
+                $should_show_banner = true;
+                define($plugin_banner_constant, true);
+            }
+        }
 
-                                    <figure class="rex-notification-counter__biggest-sale">
-                                        <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '/images/banner-images/wordpress-annniversary-twenty-two-percent-discount.webp'); ?>" alt="<?php esc_attr_e('Biggest sale of the year!', 'cart-lift'); ?>" class="rex-notification-counter__img" >
-                                    </figure>
+        if ($should_show_banner) {
+            $time_remaining = $this->end_date - current_time('timestamp');
+            $countdown = $this->rex_get_halloween_countdown();
 
-                                    <figure class="rex-notification-counter__figure-percentage">
-                                        <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '/images/banner-images/cartlift-logo.webp'); ?>" alt="<?php esc_attr_e('Eid Mubarak special discount', 'cart-lift'); ?>" class="rex-notification-counter__img" >
-                                    </figure>
+            echo '<input type="hidden" id="rex_cl_special_occasion" name="rex_cl_special_occasion" value="' . $this->occasion . '">';
+            ?>
 
-                                    <div id="rex-halloween-countdown" class="rex-notification-counter__countdown" aria-live="polite">
+            <!-- Name: Eid Mubarak Notification Banner -->
+            <div class="rex-feed-tb__notification cartlift-banner" id="rex_cl_deal_notification">
+                <div class="banner-overflow">
+                    <div class="rex-notification-counter">
+                        <div class="rex-notification-counter__container">
+                            <div class="rex-notification-counter__content">
+                                <figure class="rex-notification-counter__figure-logo">
+                                    <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '/images/banner-images/eid-mubarak.webp'); ?>" alt="<?php esc_attr_e('Eid Ul Adha offer logo', 'cart-lift'); ?>" class="rex-notification-counter__img" >
+                                </figure>
+
+                                <figure class="rex-notification-counter__biggest-sale">
+                                    <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '/images/banner-images/eid-adha-twenty-percent-discount.webp'); ?>" alt="<?php esc_attr_e('Biggest sale of the year!', 'cart-lift'); ?>" class="rex-notification-counter__img" >
+                                </figure>
+
+                                <figure class="rex-notification-counter__figure-percentage">
+                                    <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '/images/banner-images/cartlift-logo.webp'); ?>" alt="<?php esc_attr_e('Eid Mubarak special discount', 'cart-lift'); ?>" class="rex-notification-counter__img" >
+                                </figure>
+
+                                <div id="rex-halloween-countdown" class="rex-notification-counter__countdown" aria-live="polite">
+                                <span class="screen-reader-text">
+                                    <?php esc_html_e('Offer Countdown', 'cart-lift'); ?>
+                                </span>
+                                    <ul class="rex-notification-counter__list">
+                                        <?php foreach (['days', 'hours', 'mins','secs'] as $unit): ?>
+                                            <li class="rex-notification-counter__item">
+                                            <span id="rex-cl-halloween-<?php echo esc_attr($unit); ?>" class="rex-notification-counter__time">
+                                                <?php echo esc_html($countdown[$unit]); ?>
+                                            </span>
+                                                <span class="rex-notification-counter__label">
+                                                <?php echo esc_html($unit); ?>
+                                            </span>
+                                            </li>
+                                        <?php endforeach; ?>
+                                    </ul>
+                                </div>
+
+                                <div class="rex-notification-counter__btn-area">
+                                    <a href="<?php echo esc_url('https://rextheme.com/cart-lift/?utm_source=plugin-notification-bar-CTA&utm_medium=free-plugin-notification-bar&utm_campaign=eid25adha#pricing' ); ?>" class="rex-notification-counter__btn" target="_blank">
                                     <span class="screen-reader-text">
-                                        <?php esc_html_e('Offer Countdown', 'cart-lift'); ?>
+                                        <?php esc_html_e('Click to view Eid Mubarak sale products', 'cart-lift'); ?>
                                     </span>
-                                        <ul class="rex-notification-counter__list">
-                                            <?php foreach (['days', 'hours', 'mins','secs'] as $unit): ?>
-                                                <li class="rex-notification-counter__item">
-                                                <span id="rex-cl-halloween-<?php echo esc_attr($unit); ?>" class="rex-notification-counter__time">
-                                                    <?php echo esc_html($countdown[$unit]); ?>
-                                                </span>
-                                                    <span class="rex-notification-counter__label">
-                                                    <?php echo esc_html($unit); ?>
-                                                </span>
-                                                </li>
-                                            <?php endforeach; ?>
-                                        </ul>
-                                    </div>
-
-                                    <div class="rex-notification-counter__btn-area">
-                                        <a
-                                                href="<?php echo esc_url('https://rextheme.com/cart-lift/?utm_source=plugin-notification-bar-CTA&utm_medium=free-plugin-notification-bar&utm_campaign=eid-sale2025#pricing' ); ?>"
-                                                class="rex-notification-counter__btn"
-                                                target="_blank"
-                                        >
-
-                                        <span class="screen-reader-text">
-                                            <?php esc_html_e('Click to view Eid Mubarak sale products', 'cart-lift'); ?>
-                                        </span>
-
-                                            <?php esc_html_e('Get The Deal Now', 'cart-lift'); ?>
-                                            <!-- <strong class="rex-notification-counter__stroke-font">30%</strong>  -->
-                                            <?php //esc_html_e('OFF', 'cart-lift'); ?>
-                                        </a>
-                                    </div>
+                                        <?php esc_html_e('Get The Deal Now', 'cart-lift'); ?>
+                                    </a>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                    <div class="rex-feed-tb__cross-top" id="rex_cl_deal_close">
-                        <svg width="12" height="13" fill="none" viewBox="0 0 12 13" xmlns="http://www.w3.org/2000/svg"><path stroke="#7A8B9A" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 1.97L1 11.96m0-9.99l10 9.99" /></svg>
-                    </div>
                 </div>
-                <!-- .rex-feed-tb-notification end -->
 
-                <script>
-                    rex_cl_deal_countdown_handler();
-                    /**
-                     * Handles count down on deal notice
-                     *
-                     * @since 7.3.18
-                     */
-                    function rex_cl_deal_countdown_handler() {
-                        // Pass the calculated time remaining to JavaScript
-                        let timeRemaining = <?php echo $time_remaining; ?>;
+                <div class="rex-feed-tb__cross-top" id="rex_cl_deal_close">
+                    <svg width="12" height="13" fill="none" viewBox="0 0 12 13" xmlns="http://www.w3.org/2000/svg"><path stroke="#7A8B9A" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 1.97L1 11.96m0-9.99l10 9.99" /></svg>
+                </div>
+            </div>
 
-                        // Update the countdown every second
-                        setInterval(function() {
-                            const daysElement = document.getElementById('rex-cl-halloween-days');
-                            const hoursElement = document.getElementById('rex-cl-halloween-hours');
-                            const minutesElement = document.getElementById('rex-cl-halloween-mins');
-                            const secondsElement = document.getElementById('rex-cl-halloween-secs');
+            <script>
+                rex_cl_deal_countdown_handler();
 
-                            timeRemaining--;
+                function rex_cl_deal_countdown_handler() {
+                    let timeRemaining = <?php echo $time_remaining; ?>;
 
-                            if (daysElement && hoursElement && minutesElement) {
-                                // Decrease the remaining time
+                    setInterval(function() {
+                        const daysElement = document.getElementById('rex-cl-halloween-days');
+                        const hoursElement = document.getElementById('rex-cl-halloween-hours');
+                        const minutesElement = document.getElementById('rex-cl-halloween-mins');
+                        const secondsElement = document.getElementById('rex-cl-halloween-secs');
 
-                                // Calculate new days, hours, minutes, and seconds
-                                let days = Math.floor(timeRemaining / (60 * 60 * 24)).toString().padStart(2, '0');
-                                let hours = Math.floor((timeRemaining % (60 * 60 * 24)) / (60 * 60)).toString().padStart(2, '0');
-                                let minutes = Math.floor((timeRemaining % (60 * 60)) / 60).toString().padStart(2, '0');
-                                let seconds = (timeRemaining % 60).toString().padStart(2, '0');
+                        timeRemaining--;
 
-                                // Update the HTML
-                                daysElement.textContent = days;
-                                hoursElement.textContent = hours;
-                                minutesElement.textContent = minutes;
-                                secondsElement.textContent = seconds;
-                            }
-                            // Check if the countdown has ended
-                            if (timeRemaining <= 0) {
-                                rex_cl_hide_deal_notice();
-                            }
-                        }, 1000); // Update every second
-                    }
+                        if (daysElement && hoursElement && minutesElement && secondsElement) {
+                            let days = Math.floor(timeRemaining / (60 * 60 * 24)).toString().padStart(2, '0');
+                            let hours = Math.floor((timeRemaining % (60 * 60 * 24)) / (60 * 60)).toString().padStart(2, '0');
+                            let minutes = Math.floor((timeRemaining % (60 * 60)) / 60).toString().padStart(2, '0');
+                            let seconds = (timeRemaining % 60).toString().padStart(2, '0');
 
-                    document.getElementById('rex_cl_deal_close').addEventListener('click', rex_cl_hide_deal_notice);
-
-                    /**
-                     * Hide deal notice and save parameter to keep it hidden for future
-                     *
-                     * @since 7.3.2
-                     */
-                    function rex_cl_hide_deal_notice() {
-                        document.getElementById('rex_cl_deal_notification').style.display = 'none';
-                        const payload = {
-                            occasion: document.getElementById('rex_cl_special_occasion')?.value
+                            daysElement.textContent = days;
+                            hoursElement.textContent = hours;
+                            minutesElement.textContent = minutes;
+                            secondsElement.textContent = seconds;
                         }
 
-                        wpAjaxHelperRequest('rex-cl-hide-deal-notice', payload);
-                    }
-                </script>
+                        if (timeRemaining <= 0) {
+                            rex_cl_hide_deal_notice();
+                        }
+                    }, 1000);
+                }
 
-                <?php
-            }
+                document.getElementById('rex_cl_deal_close').addEventListener('click', rex_cl_hide_deal_notice);
+
+                function rex_cl_hide_deal_notice() {
+                    document.getElementById('rex_cl_deal_notification').style.display = 'none';
+                    const payload = {
+                        occasion: document.getElementById('rex_cl_special_occasion')?.value
+                    }
+
+                    wpAjaxHelperRequest('rex-cl-hide-deal-notice', payload);
+                }
+            </script>
+
+            <?php
         }
     }
 
@@ -308,7 +300,7 @@ class Rex_CartLift_Special_Occasion_Banner
                 background-color: #00B4FF;
                 width: calc(100% - 20px);
                 margin: 50px 0 20px;
-                background-image: url(<?php echo "{$plugin_dir_url}/images/banner-images/wordpress-anniversary-banner-bg.webp"; ?>);
+                background-image: url(<?php echo "{$plugin_dir_url}/images/banner-images/eid-adha-banner-bg.webp"; ?>);
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: cover;
@@ -345,10 +337,10 @@ class Rex_CartLift_Special_Occasion_Banner
                 gap: 20px;
             }
             .cartlift-banner .rex-notification-counter__biggest-sale {
-                max-width: 180px;
+                max-width: 228px;
             }
             .cartlift-banner .rex-notification-counter__figure-logo {
-                max-width: 220px;
+                max-width: 175px;
             }
             .cartlift-banner .rex-notification-counter__figure-percentage {
                 max-width: 108px;
@@ -546,11 +538,15 @@ class Rex_CartLift_Special_Occasion_Banner
                     background-position: left center;
                 }
 
+                .cartlift-banner .rex-notification-counter__figure-logo {
+                    max-width: 160px;
+                }
+
                 .cartlift-banner .rex-notification-counter__container {
                     max-width: 1140px;
                 }
                 .cartlift-banner .rex-notification-counter__biggest-sale {
-                    max-width: 160px;
+                    max-width: 210px;
                 }
 
                 .cartlift-banner .rex-notification-counter__list {
@@ -588,10 +584,10 @@ class Rex_CartLift_Special_Occasion_Banner
                     max-width: 820px;
                 }
                 .cartlift-banner .rex-notification-counter__biggest-sale {
-                    max-width: 110px;
+                    max-width: 140px;
                 }
                 .cartlift-banner .rex-notification-counter__figure-logo {
-                    max-width: 130px;
+                    max-width: 105px;
                 }
                 .cartlift-banner .rex-notification-counter__figure-percentage {
                     max-width: 60px;
@@ -607,28 +603,25 @@ class Rex_CartLift_Special_Occasion_Banner
                 }
                 .cartlift-banner .rex-notification-counter__btn {
                     font-size: 13px;
+                    padding: 12px 20px;
                 }
                 .cartlift-banner .rex-notification-counter__stroke-font {
                     font-size: 20px;
                 }
 
                 .rex-feed-tb__notification.cartlift-banner {
-                    background-position: right;
+                    background-position: bottom center;
                 }
 
             }
 
             @media only screen and (max-width: 991px) {
 
-                .cartlift-banner .rex-notification-counter__content {
-                    padding: 5px 0;
-                }
-
                 .cartlift-banner .rex-notification-counter__biggest-sale {
-                    max-width: 100px;
+                    max-width: 130px;
                 }
                 .cartlift-banner .rex-notification-counter__figure-logo {
-                    max-width: 120px;
+                    max-width: 100px;
                 }
 
                 .rex-feed-tb__notification.cartlift-banner {
