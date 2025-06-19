@@ -112,11 +112,10 @@ $add_new_template_url = wp_nonce_url( add_query_arg( array(
                             ?>
                             <span class="cl-switcher">
                                 <?php if( !$pro_campaign_list && $i > 2 ){
-                                    $pro_url = add_query_arg( 'cl-dashboard', '1', 'https://rextheme.com/cart-lift' );
                                     $status_disable = 'disabled';
                                     $checked = '';
                                     ?>
-                                    <a class="pro-tag" href="<?php echo $pro_url; ?>" title="<?php _e('Click to Upgrade Pro', 'cart-lift'); ?>" target="_blank" ><?php echo __( 'pro', 'cart-lift' ); ?></a>
+                                    <span class="pro-tag"><?php echo __( 'pro', 'cart-lift' ); ?></span>
                                 <?php } ?>
                                 <input class="cl-toggle-email-template-status-list" type="checkbox" id="status_id_<?php echo $campaign['id']; ?>" data-status="<?php echo $status; ?>" data-template-id="<?php echo $campaign['id']; ?>" name="active_email" value="" <?php echo $checked .' '.$status_disable; ?>/>
                                 <label for="status_id_<?php echo $campaign['id']; ?>" class="<?php echo $status_disable; ?>"></label>
@@ -149,9 +148,9 @@ $add_new_template_url = wp_nonce_url( add_query_arg( array(
                         </li>
                         <li class="sent" data-title="<?php _e('Email Sent :', 'cart-lift'); ?>">
                             <?php if( !$pro_campaign_list ){
-                                $pro_url = add_query_arg( 'cl-dashboard', '1', 'https://rextheme.com/cart-lift' );
+                                // $pro_url = add_query_arg( 'cl-dashboard', '1', 'https://rextheme.com/cart-lift' );
                             ?>
-                                <a class="pro-tag" href="<?php echo $pro_url; ?>" title="<?php _e('Click to Upgrade Pro', 'cart-lift'); ?>" target="_blank" ><?php echo __( 'pro', 'cart-lift' ); ?></a>
+                                <span class="pro-tag"><?php echo __( 'pro', 'cart-lift' ); ?></span>
                             <?php }else{ 
                                 echo $campaign['total_emails'];
                             }
@@ -160,9 +159,9 @@ $add_new_template_url = wp_nonce_url( add_query_arg( array(
                         <?php if ( cl_is_twilio_enabled() ): ?>
                         <li class="sent" data-title="<?php _e('SMS Sent :', 'cart-lift'); ?>">
                             <?php if( !$pro_campaign_list ){
-                                $pro_url = add_query_arg( 'cl-dashboard', '1', 'https://rextheme.com/cart-lift' );
+                                // $pro_url = add_query_arg( 'cl-dashboard', '1', 'https://rextheme.com/cart-lift' );
                             ?>
-                                <a class="pro-tag" href="<?php echo $pro_url; ?>" title="<?php _e('Click to Upgrade Pro', 'cart-lift'); ?>" target="_blank" ><?php echo __( 'pro', 'cart-lift' ); ?></a>
+                                <span class="pro-tag"><?php echo __( 'pro', 'cart-lift' ); ?></span>
                             <?php }else{
                                 echo $campaign['total_sms'];
                             }

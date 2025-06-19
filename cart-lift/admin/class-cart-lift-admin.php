@@ -52,6 +52,9 @@ class Cart_Lift_Admin {
 		$this->plugin_name = $plugin_name;
 		$this->version = $version;
 
+        // Display confirmation alert
+		add_action('admin_footer', array($this, 'cart_lift_cro_display'));
+
 	}
 
 	/**
@@ -308,6 +311,16 @@ class Cart_Lift_Admin {
             'manage_options',
             'admin.php?page=cart_lift&action=settings'
         );
+        
+        if(!apply_filters('is_cl_pro_active', false))  {
+            add_submenu_page(
+                'cart_lift',
+                __('Free vs Pro', 'cart-lift'),
+                __('Free vs Pro', 'cart-lift'),
+                'manage_options',
+                'admin.php?page=cart_lift&action=compare'
+            );
+        }
 
         add_submenu_page( 'cart_lift', 'Cart Lift setup wizard', __('Setup Wizard','cart-lift'),'manage_options', 'rex-cart-lift-setup-wizard', array( $this, 'cart_lift_setup_wizard'));
 
@@ -351,6 +364,15 @@ class Cart_Lift_Admin {
         $tab_view = new Cart_Lift_Tab_View();
         require_once CART_LIFT_DIR . '/admin/partials/cart-lift-tabs-display.php';
     }
+
+    /**
+	 * Provide cro confirmation alert for events
+	 * 
+	 * @since 8.0.0
+	 */
+	function cart_lift_cro_display() {
+        require_once CART_LIFT_DIR . '/admin/partials/cart-lift-cro.php';
+	}
 
 
     /**

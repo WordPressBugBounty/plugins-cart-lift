@@ -76,12 +76,12 @@ $manually_recovered_cart = isset($general_settings['manually_recovered_cart']) ?
                         <a class="cl-btn report-download" href="<?php echo CART_LIFT_PRO_URL . 'report.xlsx'; ?>" download><?php echo __( 'Download Report', 'cart-lift' ); ?></a>
                         <?php
                     }else {
-                        $pro_url = add_query_arg( 'cl-dashboard', '1', 'https://rextheme.com/cart-lift' );
+                       
                         ?>
-                            <a class="cl-btn report-download disabled" href="<?php echo $pro_url; ?>" target="_blank" title="<?php _e( 'Click to Upgrade Pro', 'cart-lift' ); ?>">
+                            <button class="cl-btn report-download disabled">
                                 <?php echo __( 'Download Report', 'cart-lift' ); ?>
                                 <span class="pro-tag"><?php echo __( 'pro', 'cart-lift' ); ?></span>
-                            </a>
+                            </button>
                         <?php
                     }
                 ?>
@@ -420,8 +420,7 @@ $manually_recovered_cart = isset($general_settings['manually_recovered_cart']) ?
                                                 printf('<a href="%s" class="cl-btn unsubscribe">' . __('unsubscribe', 'cart-lift') . '</a>', esc_url($unsubscribe_url));
                                         ?>
                                     <?php }else {
-                                        $pro_url = add_query_arg( 'cl-dashboard', '1', 'https://rextheme.com/cart-lift' );
-                                        printf('<a href="'.$pro_url.'" class="cl-btn unsubscribe cl-free" target="_blank" title="'.__('Click to Upgrade Pro', 'cart-lift').'">' . __('unsubscribe', 'cart-lift') . '</a>');
+                                        printf('<button  class="cl-btn unsubscribe cl-free">' . __('unsubscribe', 'cart-lift') . '</button>');
                                     } ?>
                                 </div>
                             </div>

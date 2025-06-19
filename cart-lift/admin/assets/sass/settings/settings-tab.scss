@@ -176,8 +176,18 @@
             flex-flow: row;
             align-items: center;
             justify-content: space-between;
-            padding: 22px 50px 22px 22px;
+            padding: 25px 32px 25px 24px;
             border-bottom: 1px solid #EBE8F5;
+
+            &:last-child {
+              border-bottom: 0;
+            }
+
+            .cl-global-tooltip-area {
+              display: flex;
+              align-items: center;
+              line-height: 1;
+            }
 
             &.logo-upload {
               align-items: flex-start;
@@ -277,10 +287,6 @@
                   flex-direction: column;
                   gap: 20px;
                   width: calc(100% - 50%);
-                }
-
-                .cl-form-weekly-report-area-left {
-
                 }
 
                 .cl-form-weekly-report-area-right {
@@ -417,12 +423,9 @@
               grid-template-columns: auto 1fr;
               gap: 220px;
               align-items: center;
-              // justify-content: space-between;
               padding-top: 22px;
-              // max-width: 792px;
 
               div {
-                // max-width: 560px;
                 ul {
                   display: grid;
                   grid-template-columns: repeat(4, 1fr);
@@ -452,21 +455,20 @@
             }
 
             .tooltip {
-              position: absolute;
-              right: 11px;
-              margin-left: 10px;
-
               p {
-                left: calc(100% - 272px);
+                right: calc(100% - 272px);
 
                 &::before {
-                  left: calc(100% - 4px);
+                  right: calc(100% - 4px);
                 }
+
               }
             }
 
             .pro-tag {
               z-index: 0;
+              top: -22px;
+              right: -14px;
             }
             
           }
@@ -918,11 +920,7 @@
                   font-weight: 500;
                   line-height: normal;
                   text-decoration: none;
-                  color: #535963;
-                  // margin: 0px 10px 13px;
-                  // margin-left: 50px;
-
-                
+                  color: #535963;            
       
                   &.active-a {
                     color: #6E42D3;
@@ -959,6 +957,7 @@
     }
     // Element: cl-integrations-area
 
+
     .cl-settings__content {
 
       .inner-wrapper {
@@ -977,6 +976,7 @@
             margin-bottom: 0;
             border-bottom: 1px solid #EBE8F5;
           }
+
           
           #cl_recaptcha_v3,
           #twilio_sms_setting_fields {
@@ -992,10 +992,6 @@
                 width: 100%;
                 background-color: transparent;
                 border-radius: 6px;
-              }
-
-              .tooltip {
-                top: 50px;
               }
 
             }

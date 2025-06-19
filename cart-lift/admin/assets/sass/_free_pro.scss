@@ -1,0 +1,271 @@
+/* ----------wpvr-compare (free vs pro)-------- */
+
+.rex-cart-lift-onboarding {
+    border-radius: 15px;
+    background-color: #fff;
+    box-shadow: 0px 5px 30px 0px rgba(2, 0, 105, 0.05);
+    width: calc(100% - 15px);
+    margin-top: 20px;
+
+    .cart-lift-block-wrapper {
+        padding: 40px 30px;
+    }
+}
+
+.cart-lift-compare .compare-tbl-wrapper {
+    max-width: 1300px;
+    margin: 0 auto;
+    border-radius: 20px;
+    border: 1px solid #eee9ff;
+}
+
+.rex-cart-lift-onboarding .compare-tbl-wrapper {
+    position: relative;
+    margin-bottom: 75px;
+}
+
+.cart-lift-compare .compare-tbl-wrapper .comparison-tbl-body .free,
+.cart-lift-compare .compare-tbl-wrapper .comparison-tbl-body .pro {
+    width: 305px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.cart-lift-compare .compare-tbl-wrapper .comparison-tbl-footer .feature,
+.cart-lift-compare .compare-tbl-wrapper .comparison-tbl-body .feature {
+    width: calc(100% - 610px);
+    display: flex;
+    align-items: center;
+}
+
+.cart-lift-compare .compare-tbl-wrapper .comparison-tbl-body .feature::before {
+    position: absolute;
+    content: '';
+    width: 2px;
+    height: 24px;
+    background: #3f04fe;
+    left: 0;
+}
+
+.cart-lift-compare .compare-tbl-wrapper .list-header {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(110.56deg, #E4D9FF 6.36%, #F3EEFF 34.38%, #FFF6EF 71.36%, #FFE8D9 98.08%);
+    padding: 21px 30px;
+    border-radius: 20px 20px 0 0;
+    position: sticky;
+    top: 22px;
+    z-index: 1;
+    line-height: 0;
+    border: 1px solid #fff;
+    margin: -2px;
+    transition: all 0.3s ease;
+}
+
+.cart-lift-compare .compare-tbl-wrapper .list-header.sticked {
+    border-radius: 0;
+}
+
+.cart-lift-compare .compare-tbl-wrapper .list-header .free,
+.cart-lift-compare .compare-tbl-wrapper .list-header .pro {
+    width: 245px;
+    text-align: center;
+}
+
+.cart-lift-compare .compare-tbl-wrapper .list-header .feature {
+    width: calc(100% - 610px);
+}
+
+.cart-lift-compare .compare-tbl-wrapper .list-header .comparison-tbl-col {
+    font-family: 'Inter', sans-serif;
+    color: #0e003c;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.cart-lift-compare .compare-tbl-wrapper .list-header .comparison-tbl-col.pro,
+.cart-lift-compare .compare-tbl-wrapper .list-header .comparison-tbl-col.free {
+    text-align: center;
+}
+
+.cart-lift-compare .compare-tbl-wrapper .comparison-tbl-footer .single-feature,
+.cart-lift-compare .compare-tbl-wrapper .comparison-tbl-body .single-feature {
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 0;
+    margin-bottom: 12px;
+    border-top: 1px solid #eee9ff;
+    border-bottom: 1px solid #eee9ff;
+}
+
+.cart-lift-compare .compare-tbl-wrapper .comparison-tbl-footer .single-feature:first-child,
+.cart-lift-compare .compare-tbl-wrapper .comparison-tbl-body .single-feature:first-child {
+    border-top: none;
+}
+
+.cart-lift-compare .compare-tbl-wrapper .comparison-tbl-footer .single-feature:last-child,
+.cart-lift-compare .compare-tbl-wrapper .comparison-tbl-body .single-feature:last-child {
+    margin-bottom: 0;
+}
+
+.cart-lift-compare .compare-tbl-wrapper .comparison-tbl-footer .comparison-tbl-col,
+.cart-lift-compare .compare-tbl-wrapper .comparison-tbl-body .comparison-tbl-col {
+    padding: 22px 30px;
+    border-right: 1px solid #eee9ff;
+    margin-bottom: 0;
+}
+
+.cart-lift-compare .compare-tbl-wrapper .comparison-tbl-footer .comparison-tbl-col:last-child,
+.cart-lift-compare .compare-tbl-wrapper .comparison-tbl-body .comparison-tbl-col:last-child {
+    border-right: none;
+}
+
+.cart-lift-compare .compare-tbl-wrapper .comparison-tbl-footer .feature p,
+.cart-lift-compare .compare-tbl-wrapper .comparison-tbl-body .feature p {
+    /* font-family: 'Inter', sans-serif; */
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.44;
+    margin: 0;
+    color: #0e003c;
+}
+
+.cart-lift-compare .compare-tbl-wrapper .comparison-tbl-footer .single-feature {
+    justify-content: flex-end;
+    border: none;
+}
+
+.cart-lift-compare .compare-tbl-wrapper .comparison-tbl-footer .comparison-tbl-col {
+    margin: 0 0 0 auto;
+    text-align: center;
+    max-width: 306px;
+    border-left: 1px solid #eee9ff;
+}
+
+.cart-lift-compare .compare-tbl-wrapper .comparison-tbl-footer .single-feature .comparison-tbl-col:last-child {
+    border-left: none;
+}
+
+.cart-lift-compare .compare-tbl-wrapper .comparison-tbl-footer .single-feature::before {
+    display: none;
+}
+
+
+@media (max-width: 1199px) {
+
+    .cart-lift-compare .compare-tbl-wrapper .list-header {
+        padding: 18px 25px;
+    }
+
+    .cart-lift-compare .compare-tbl-wrapper .comparison-tbl-footer .comparison-tbl-col {
+        max-width: 201px;
+    }
+
+    .rex-cart-lift-onboarding .cart-lift-compare .wpvr-btn {
+        padding: 0 22px;
+    }
+
+    .cart-lift-compare .compare-tbl-wrapper .comparison-tbl-body .comparison-tbl-col,
+    .cart-lift-compare .compare-tbl-wrapper .comparison-tbl-footer .comparison-tbl-col {
+        padding: 17px 25px;
+    }
+
+    .cart-lift-compare .compare-tbl-wrapper .comparison-tbl-body .feature p,
+    .cart-lift-compare .compare-tbl-wrapper .comparison-tbl-footer .feature p {
+        font-size: 16px;
+    }
+
+    .cart-lift-compare .compare-tbl-wrapper .list-header .comparison-tbl-col {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+    .comparison-tbl-body .comparison-tbl-col {
+        padding: 18px 25px;
+    }
+
+    .cart-lift-compare .compare-tbl-wrapper .comparison-tbl-footer .comparison-tbl-col {
+        padding: 18px 6px;
+    }
+
+    .cart-lift-compare .compare-tbl-wrapper .comparison-tbl-body .feature,
+    .cart-lift-compare .compare-tbl-wrapper .comparison-tbl-footer .feature {
+        width: calc(100% - 400px);
+    }
+
+    .cart-lift-compare .compare-tbl-wrapper .list-header .feature {
+        width: calc(100% - 400px);
+    }
+
+    .cart-lift-compare .compare-tbl-wrapper .list-header .free,
+    .cart-lift-compare .compare-tbl-wrapper .list-header .pro {
+        width: 150px;
+    }
+
+    .cart-lift-compare .compare-tbl-wrapper .comparison-tbl-body .free,
+    .cart-lift-compare .compare-tbl-wrapper .comparison-tbl-body .pro,
+    .cart-lift-compare .compare-tbl-wrapper .comparison-tbl-footer .free,
+    .cart-lift-compare .compare-tbl-wrapper .comparison-tbl-footer .pro {
+        width: 200px;
+    }
+
+}
+
+@media (max-width: 767px) {
+    .cart-lift-compare .compare-tbl-wrapper .list-header {
+        padding: 12px 12px;
+    }
+
+    .cart-lift-compare .compare-tbl-wrapper .list-header .feature {
+        width: calc(100% - 98px);
+    }
+
+    .cart-lift-compare .compare-tbl-wrapper .list-header .comparison-tbl-col {
+        font-size: 14px;
+    }
+
+    .cart-lift-compare .compare-tbl-wrapper .comparison-tbl-body .comparison-tbl-col {
+        padding: 10px 11px;
+    }
+
+    .cart-lift-compare .compare-tbl-wrapper .comparison-tbl-footer .comparison-tbl-col {
+        padding: 5px 11px;
+        width: 100%;
+    }
+
+    .cart-lift-compare .compare-tbl-wrapper .comparison-tbl-body .feature,
+    .cart-lift-compare .compare-tbl-wrapper .comparison-tbl-footer .feature {
+        width: calc(100% - 100px);
+    }
+
+    .cart-lift-compare .compare-tbl-wrapper .comparison-tbl-footer {
+        padding: 10px 0;
+        display: none;
+   }
+    .cart-lift-compare .compare-tbl-wrapper .comparison-tbl-body .single-feature:last-child {
+        border-bottom: none;
+   }
+    .cart-lift-compare .compare-tbl-wrapper .comparison-tbl-body .feature p, .cart-lift-compare .compare-tbl-wrapper .comparison-tbl-footer .feature p {
+        font-size: 14px;
+   }
+    .cart-lift-compare .compare-tbl-wrapper .comparison-tbl-body .comparison-tbl-col svg {
+        width: 14px;
+   }
+    .cart-lift-compare .compare-tbl-wrapper .list-header .free, .cart-lift-compare .compare-tbl-wrapper .list-header .pro {
+        width: 35px;
+   }
+    .cart-lift-compare .compare-tbl-wrapper .comparison-tbl-body .free, .cart-lift-compare .compare-tbl-wrapper .comparison-tbl-body .pro {
+        width: 50px;
+   }
+    .cart-lift-compare .compare-tbl-wrapper .comparison-tbl-footer .single-feature .comparison-tbl-col {
+        border-left: none;
+   }
+}

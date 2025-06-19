@@ -73,10 +73,10 @@
 
     <div class="single-report email-send <?php echo $pro_email_sent == true ? 'email-send-pro' : ''; ?>">
         <?php
-            $pro_url = add_query_arg( 'cl-dashboard', '1', 'https://rextheme.com/cart-lift' );
+          
             if ($pro_email_sent) {
         ?>
-            <a href="<?php echo $pro_url; ?>" target="_blank" title="<?php _e( 'Click to Upgrade Pro', 'cart-lift' ); ?>" class="pro-tag"><?php echo __( 'pro', 'cart-lift' ); ?></a>
+            <span  class="pro-tag"><?php echo __( 'pro', 'cart-lift' ); ?></span>
         <?php } ?>
 
         <div class="icon">

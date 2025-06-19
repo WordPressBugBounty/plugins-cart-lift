@@ -1632,7 +1632,8 @@
 }
 
 .cl-add-campaign-form .form-table .coupon-fields .discount-pro .pro-tag {
-  left: -40px;
+  left: -16px;
+  top: -18px;
 }
 
 .cl-add-campaign-form .form-table .coupon-fields .discount-pro label {
@@ -3187,8 +3188,7 @@
 
 .cl-tabs .twilio-pro-disabled-container .pro-tag {
   left: inherit;
-  right: 36px;
-  top: 5px;
+  right: 16px;
 }
 
 .cl-tabs .twilio-pro-disabled-container .tooltip .icon {

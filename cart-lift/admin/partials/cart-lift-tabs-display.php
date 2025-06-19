@@ -256,6 +256,7 @@ $tab_view->show_messages();
             ?>
             <a href="<?php echo $doc_link; ?>" class="cl-btn" target="_blank"><?php _e( 'documentation', 'cart-lift' ); ?></a>
         </div>
+        
     </div>
 
     <div id="content" style="margin-top: 20px; ">
@@ -273,7 +274,6 @@ $tab_view->show_messages();
             }elseif ($action == 'compare' && !$get_pro_tab) {
                 $tab_view->print_compare_tab_contents();
             }
-
 
             do_action('cl_pro_tabs_render', $action);
         ?>

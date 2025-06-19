@@ -44,4 +44,31 @@
     }
     $(document).on('click', '.cl-paddle-notice .notice-dismiss', hide_notice);
 
+
+     // ------window on scroll add class to comparison table header------
+     $(window).on('scroll', function() {
+        var $header = $('.cart-lift-compare .list-header');
+
+        if ($header.length > 0) {
+            var headerOffset = $header.offset().top - $(window).scrollTop();
+    
+            if (headerOffset < 27) {
+                $header.addClass('sticked');
+            } else {
+                $header.removeClass('sticked');
+            }
+        }
+    });
+
+
+    $(document).on("click", ".twilio-disabled,.cl-btn.unsubscribe.cl-free,.cl-btn.disabled,.cl-switcher .disabled,.email-info .pro-tag,.cart-info .pro-tag,.cl-switcher .pro-tag ~ label", function (event) {
+        event.preventDefault();
+        $("#cartlift_premium_feature_popup").show();
+    });
+
+
+    $(document).on("click", "#cartlift_premium_feature_close", function () {
+        $("#cartlift_premium_feature_popup").hide();
+    });
+
 })( jQuery );

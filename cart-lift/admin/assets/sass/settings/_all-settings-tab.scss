@@ -235,7 +235,7 @@
 
 .cl-tabs .tooltip .icon {
     display: inline-block;
-    padding: 10px;
+    // padding: 10px;
     cursor: pointer;
     position: relative;
     top: 2px;
@@ -244,11 +244,12 @@
 .cl-tabs .tooltip p {
     position: absolute;
     top: 50%;
-    left: 40px;
+    left: 25px;
     transform: translateY(-50%);
     font-size: 15px;
     line-height: 24px;
     color: #363b4e;
+    z-index: 1;
     font-weight: normal;
     background: #f8f5fd;
     padding: 10px 15px;
@@ -393,14 +394,15 @@
     position: absolute;
     right: 4px;
     top: 4px;
-    color: #fff;
-    background: #6e41d3;
-    line-height: normal;
-    text-transform: uppercase;
-    font-weight: normal;
-    font-size: 12px;
+    color: #6e41d3;
+    border-radius: 6px 6px 6px 0px;
+    border: 1px solid #6E42D3;
+    background: #FFF;
+    line-height: 1;
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 13px;
     padding: 2px 4px 1px;
-    border-radius: 3px;
     z-index: 2;
 }
 
@@ -410,7 +412,8 @@
 }
 
 .cl-tabs .cl-pro .cl-switcher .pro-tag {
-    right: 48px;
+    right: -14px;
+    top: -22px;
 }
 
 .cl-tabs .cl-alert-modal {
@@ -599,6 +602,19 @@
     flex-flow: column;
     align-items: center;
     justify-content: center;
+
+    .cl-btn {
+        background-color: transparent;
+        border: 1px solid #6E42D3;
+        color: #363b4e;
+        box-shadow: none;
+
+        &:hover {
+            background-color: #6E42D3;
+            color: #fff;
+        }
+    }
+
 }
 
 .ui-widget-header .ui-icon {
@@ -1173,7 +1189,7 @@
 .cl-campaigns .campaign-header .add-campaign-btn {
     height: 50px;
     line-height: 50px;
-    border-radius: 8px;
+    border-radius: 5px;
     padding: 0 27px;
     position: relative;
 }
@@ -1184,23 +1200,20 @@
     margin-right: 3px;
 }
 
-.cl-campaigns .campaign-header .add-campaign-btn.disabled {
-    border-top-right-radius: 0;
-}
-
 .cl-campaigns .campaign-header .add-campaign-btn.disabled:before {
     content: "pro";
     position: absolute;
-    right: 0;
-    top: -18px;
-    color: #fff;
-    background: #ee8134;
-    line-height: normal;
-    text-transform: uppercase;
-    font-weight: normal;
-    font-size: 11px;
+    right: -5px;
+    top: -22px;
+    color: #6E42D3;
+    border-radius: 6px 6px 6px 0px;
+    border: 1px solid #6E42D3;
+    background-color: #FFF;
+    line-height: 1;
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 13px;
     padding: 3px 5px 2px;
-    border-radius: 3px 3px 0 0;
 }
 
 .cl-campaigns .campaign-wrapper {
@@ -1301,7 +1314,8 @@
 
 .cl-campaigns .single-campaign li.status .pro-tag {
     right: inherit;
-    left: 50px;
+    left: 25px;
+    top: -19px;
 }
 
 .cl-campaigns .single-campaign li.status .disabled {
@@ -1528,8 +1542,17 @@
     padding: 9px 10px 7px 0;
 }
 
+.cl-add-campaign-form .form-table .coupon-fields.custom-padding td {
+    padding: 16px 10px 6px;
+}
+
 .cl-add-campaign-form .form-table td {
     padding: 6px 10px;
+}
+
+.cl-add-campaign-form .form-table .enable-twilio-fields td {
+    padding: 20px 10px 6px;
+
 }
 
 .cl-add-campaign-form .form-table th label {
@@ -1684,7 +1707,8 @@
 }
 
 .cl-add-campaign-form .form-table .coupon-fields .discount-pro .pro-tag {
-    right: -40px;
+    right: -16px;
+    top: -18px;
 }
 
 .cl-add-campaign-form .form-table .coupon-fields .discount-pro label {
@@ -1808,6 +1832,7 @@
     font-size: 14px;
     color: #a8a7be;
     font-weight: normal;
+    margin-left: 20px;
 }
 
 .cl-add-campaign-form .form-table .send-email {
@@ -1879,9 +1904,6 @@
     top: 0px;
 }
 
-.cl-add-campaign-form .form-table .coupon-field-switcher.switcher-pro .tooltip {
-    margin-left: 40px;
-}
 
 .cl-add-campaign-form .form-table .coupon-field-switcher.switcher-pro .tooltip .icon {
     padding: 2px 10px;
@@ -2035,7 +2057,7 @@
 
 .cl-cart .cart-header .report-download.disabled {
     background: #6e42d3;
-    border-radius: 5px 0 5px 5px;
+    border-radius: 5px;
 }
 
 .cl-cart .cart-header .report-download.disabled:hover {
@@ -2043,10 +2065,8 @@
 }
 
 .cl-cart .cart-header .report-download.disabled .pro-tag {
-    right: 0;
-    top: -17px;
-    background: #ee8134;
-    border-radius: 3px 3px 0 0;
+    right: -5px;
+    top: -20px;
 }
 
 
@@ -2060,7 +2080,7 @@
   
   .cl-cart .manually-recovered-button.disabled {
     background: #6e42d3;
-    border-radius: 5px 0px 5px 5px;
+    border-radius: 5px;
     margin-right: 0px;
   }
   
@@ -2069,11 +2089,8 @@
   }
   
   .cl-cart .manually-recovered-button.disabled .pro-tag {
-    right: 0px;
-    top: -17px;
-    background: #ee8134 !important;
-    border-radius: 3px 3px 0 0;
-    width: 37px;
+    right: -1px;
+    top: -20px;
   }
 
 
@@ -2257,6 +2274,7 @@
 .cl-cart-modal.show {
     opacity: 1;
     visibility: visible;
+    z-index: 1;
 }
 
 .cl-cart-modal .modal-wrapper {
@@ -2425,6 +2443,10 @@
     right: inherit;
     top: 20px;
     padding: 8px 15px;
+    border-radius: 3px;
+    color:#fff;
+    background-color: #6e41d3;
+    text-transform: uppercase;
 }
 
 .cl-cart-modal .modal-body .email-info,
@@ -2629,15 +2651,17 @@
     content: "pro";
     position: absolute;
     right: -1px;
-    top: -18px;
-    color: #fff;
-    background: #6e41d3;
+    top: -24px;
     line-height: normal;
-    text-transform: uppercase;
-    font-weight: normal;
-    font-size: 11px;
-    padding: 3px 5px 2px;
-    border-radius: 3px 3px 0 0;
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 13px;
+    padding: 2px 5px 2px;
+    border-radius: 6px 6px 6px 0px;
+    border: 1px solid #6E42D3;
+    background-color: #FFF;
+    color: #6e41d3;
+
 }
 
 @media only screen and (max-width: 1400px) {
@@ -3314,8 +3338,8 @@
 
 .cl-tabs .twilio-pro-disabled-container .pro-tag {
     right: inherit;
-    left: 36px;
-    top: 5px;
+    left: 16px;
+    top: -20px;
 }
 
 .cl-tabs .twilio-pro-disabled-container .tooltip .icon {
@@ -3323,9 +3347,6 @@
     top: 2px;
 }
 
-.cl-tabs .twilio-pro-disabled-container .tooltip {
-    margin-left: 50px;
-}
 
 /*Twilio campaign enabler*/
 
