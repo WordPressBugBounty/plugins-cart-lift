@@ -51,30 +51,66 @@
             return date;
         },
 
+
         initDatePicker: function () {
             var dateFormat = "M d, yy",
-                from = $( "#from" )
-                    .datepicker( {
-                        dateFormat: "M d, yy",
+                from = $("#from")
+                    .datepicker({
+                        dateFormat: dateFormat,
                         numberOfMonths: 1,
                         changeMonth: true,
                         changeYear: true,
                         yearRange: "2020:2040"
-                    } ).datepicker( "setDate", '-7d' )
-                    .on( "change", function () {
-                        to.datepicker( "option", "minDate", AnalyticsAction.getDate( this ) );
-                    } ),
+                    })
+                    .datepicker("setDate", '-7d')
+                    .on("change", function () {
+                        let date_start = $('#from').val();
+                        let date_end = $('#to').val();
 
-                to = $( "#to" ).datepicker( {
-                    dateFormat: "M d, yy",
-                    numberOfMonths: 1,
-                    changeMonth: true,
-                    changeYear: true,
-                    yearRange: "2020:2040"
-                } ).datepicker( "setDate", new Date() )
-                    .on( "change", function () {
-                        from.datepicker( "option", "maxDate", AnalyticsAction.getDate( this ) );
-                    } );
+                        let fromDate = new Date(date_start);
+                        let toDate = new Date(date_end);
+
+                        if (fromDate > toDate) {
+                            alert("Start date cannot be later than end date.");
+                            $('#from').datepicker('setDate', new Date()); // Reset start date to today
+                            to.datepicker("option", "minDate", AnalyticsAction.getDate(this));
+                            setTimeout(function() {
+                                from.datepicker("hide").blur();
+                                to.datepicker("hide").blur();
+                            }, 10);
+                            return;
+                        }
+                        to.datepicker("option", "minDate", AnalyticsAction.getDate(this));
+                    }),
+
+                to = $("#to")
+                    .datepicker({
+                        dateFormat: dateFormat,
+                        numberOfMonths: 1,
+                        changeMonth: true,
+                        changeYear: true,
+                        yearRange: "2020:2040"
+                    })
+                    .datepicker("setDate", new Date())
+                    .on("change", function () {
+                        let date_start = $('#from').val();
+                        let date_end = $('#to').val();
+
+                        let fromDate = new Date(date_start);
+                        let toDate = new Date(date_end);
+
+                        if (fromDate > toDate) {
+                            alert("End date cannot be earlier than start date.");
+                            $('#to').datepicker('setDate', new Date()); // Reset end date to today
+                            from.datepicker("option", "maxDate", AnalyticsAction.getDate(this)).datepicker("hide");
+                            setTimeout(function() {
+                                from.datepicker("hide").blur();
+                                to.datepicker("hide").blur();
+                            }, 10);
+                            return;
+                        }
+                        from.datepicker("option", "maxDate", AnalyticsAction.getDate(this));
+                    });
         },
 
         set_value: function ( element, val ) {
@@ -119,7 +155,7 @@
                     var label = chart_data.labels;
                     var datasets_abandoned = chart_data.abandoned;
                     var datasets_recovered = chart_data.recovered;
-                
+
                     let direction = 'yes' === data.isRTL ? 'rtl' : 'ltr';
 
                     var config = {
@@ -521,6 +557,10 @@
             if ( name == 'enable_recaptcha_v3' ) {
                 if ( value == 0 ) {
                     $( '#cl_recaptcha_v3' ).fadeIn();
+                    $('#cl_recaptcha_v3_btn').css({
+                        'pointer-events': '',
+                        'opacity': ''
+                    }).attr('disabled', false);
                 } else {
                     $( '#cl_recaptcha_v3' ).fadeOut();
                 }
@@ -802,11 +842,12 @@
                 recaptcha_secret_key: recaptcha_secret_key,
                 recaptcha_score: recaptcha_score,
             };
-            $( '.cl-recovery-loader' ).fadeIn();
+            console.log('payload', payload);
+            $('#cl-loader' ).fadeIn();
 
             wpAjaxHelperRequest( 'cl-recaptcha-v3', payload )
                 .success( function ( response ) {
-                    $( '.cl-recovery-loader' ).fadeOut();
+                    $('#cl-loader' ).fadeOut();
                     $("#recaptcha_v3_settings_notice").addClass( 'cl-success' ).fadeIn();
                     $("#recaptcha_v3_settings_notice").html( response.message )
                     setTimeout(function(){
@@ -814,7 +855,7 @@
                     }, 3000);
                 } )
                 .error( function ( response ) {
-                    $( '.cl-recovery-loader' ).fadeOut();
+                    $( '#cl-loader' ).fadeOut();
                 } );
         }
     };

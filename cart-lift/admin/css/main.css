@@ -216,6 +216,7 @@
   color: #721c24;
   background-color: #f8d7da;
   border-color: #f5c6cb;
+  margin-top: 10px;
 }
 
 .cl-tabs .cl-notice.cl-warning {
@@ -3221,16 +3222,12 @@
   margin-bottom: 20px;
 }
 
-.cl-recaptcha-input {
-  width: 30% !important;
-}
-
 #cl_recaptcha_v3 .cl-recaptcha-error-messge {
   position: relative;
-  top: -10px;
+  top: -22px;
   color: red;
   display: none;
-  margin-left: 300px;
+  margin-left: 28px;
 }
 
 .cl-form-group .select2-container.select2-container--default {
@@ -3949,6 +3946,8 @@
   max-width: 440px;
 }
 .cl-settings .popup-settings-wrapper-area .popup-settings-wrapper .cl-atc-popup-preview .modal-body .popup-logo {
+  width: 70px;
+  height: 70px;
   margin-bottom: 20px;
 }
 .cl-settings .popup-settings-wrapper-area .popup-settings-wrapper .cl-atc-popup-preview .modal-body .popup-logo img {

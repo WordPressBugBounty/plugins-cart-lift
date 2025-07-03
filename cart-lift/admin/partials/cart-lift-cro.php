@@ -42,13 +42,13 @@
                 <div class="cartlift-cro-modal__btn-area">
                     <?php
                         $current_date = date('Y-m-d H:i:s');
-                        $start_date = '2025-06-04 00:00:00';
-                        $end_date = '2025-06-15 23:59:59';
+                        $start_date = '2025-07-04 00:00:00';
+                        $end_date = '2025-07-14 23:59:59';
                         $discount_percentage = '';
                         $discount_price = '';
                         if ($current_date >= $start_date && $current_date <= $end_date) {
-                            $discount_percentage = "Save 20%";
-                            $discount_price = "$39.99";
+                            $discount_percentage = "Save 25%";
+                            $discount_price = "$37.49";
                         }  else {
                             $discount_percentage = "Save 15%";
                             $discount_price = "$42.49";

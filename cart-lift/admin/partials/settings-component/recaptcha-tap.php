@@ -187,16 +187,16 @@
             <span id="cl-recaptcha-error-message-score" class="cl-recaptcha-error-messge"><?php echo __('Please enter score', 'cart-lift'); ?></span>
 
             <!-- ----------Recaptcha end--------->
-            <div class="btn-area">
-                <button class="cl-btn" id="cl_recaptcha_v3_btn"><?php echo __('Save Settings', 'cart-lift'); ?></button>
-                <p id="recaptcha_v3_settings_notice" class="cl-notice" style="display:none"></p>
-            </div>
-
         </div>
         <?php
     }
     ?>
-    
+    <div class="btn-area">
+        <button class="cl-btn" id="cl_recaptcha_v3_btn" <?php echo ($enable_recaptcha_v3 == '1') ? '' : 'disabled style="pointer-events: none; opacity: 0.5;"'; ?>>
+            <?php echo __('Save Settings', 'cart-lift'); ?>
+        </button>
+        <p id="recaptcha_v3_settings_notice" class="cl-notice" style="display:none"></p>
+    </div>
 </div>
 
 

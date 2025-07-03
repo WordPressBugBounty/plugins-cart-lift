@@ -140,22 +140,22 @@ class Rex_CartLift_Special_Occasion_Banner
             echo '<input type="hidden" id="rex_cl_special_occasion" name="rex_cl_special_occasion" value="' . $this->occasion . '">';
             ?>
 
-            <!-- Name: Eid Mubarak Notification Banner -->
+            <!-- Name: 4th of July  Notification Banner -->
             <div class="rex-feed-tb__notification cartlift-banner" id="rex_cl_deal_notification">
                 <div class="banner-overflow">
                     <div class="rex-notification-counter">
                         <div class="rex-notification-counter__container">
                             <div class="rex-notification-counter__content">
                                 <figure class="rex-notification-counter__figure-logo">
-                                    <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '/images/banner-images/eid-mubarak.webp'); ?>" alt="<?php esc_attr_e('Eid Ul Adha offer logo', 'cart-lift'); ?>" class="rex-notification-counter__img" >
+                                    <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '/images/banner-images/4th-of-july.webp'); ?>" alt="<?php esc_attr_e('4th of July offer logo', 'cart-lift'); ?>" class="rex-notification-counter__img" >
                                 </figure>
 
                                 <figure class="rex-notification-counter__biggest-sale">
-                                    <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '/images/banner-images/eid-adha-twenty-percent-discount.webp'); ?>" alt="<?php esc_attr_e('Biggest sale of the year!', 'cart-lift'); ?>" class="rex-notification-counter__img" >
+                                    <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '/images/banner-images/twenty-five-discount.webp'); ?>" alt="<?php esc_attr_e('Biggest sale of the year!', 'cart-lift'); ?>" class="rex-notification-counter__img" >
                                 </figure>
 
                                 <figure class="rex-notification-counter__figure-percentage">
-                                    <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '/images/banner-images/cartlift-logo.webp'); ?>" alt="<?php esc_attr_e('Eid Mubarak special discount', 'cart-lift'); ?>" class="rex-notification-counter__img" >
+                                    <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '/images/banner-images/cartlift-logo.webp'); ?>" alt="<?php esc_attr_e('4th of July special discount', 'cart-lift'); ?>" class="rex-notification-counter__img" >
                                 </figure>
 
                                 <div id="rex-halloween-countdown" class="rex-notification-counter__countdown" aria-live="polite">
@@ -177,11 +177,11 @@ class Rex_CartLift_Special_Occasion_Banner
                                 </div>
 
                                 <div class="rex-notification-counter__btn-area">
-                                    <a href="<?php echo esc_url('https://rextheme.com/cart-lift/?utm_source=plugin-notification-bar-CTA&utm_medium=free-plugin-notification-bar&utm_campaign=eid25adha#pricing' ); ?>" class="rex-notification-counter__btn" target="_blank">
+                                    <a href="<?php echo esc_url('https://rextheme.com/cart-lift/?utm_source=plugin-notification-bar-CTA&utm_medium=free-plugin-notification-bar&utm_campaign=4thofjuly#pricing' ); ?>" class="rex-notification-counter__btn" target="_blank">
                                     <span class="screen-reader-text">
-                                        <?php esc_html_e('Click to view Eid Mubarak sale products', 'cart-lift'); ?>
+                                        <?php esc_html_e('Click to view 4th of July  sale products', 'cart-lift'); ?>
                                     </span>
-                                        <?php esc_html_e('Get The Deal Now', 'cart-lift'); ?>
+                                        <?php esc_html_e('Get The Deal', 'cart-lift'); ?>
                                     </a>
                                 </div>
                             </div>
@@ -300,8 +300,8 @@ class Rex_CartLift_Special_Occasion_Banner
                 background-color: #00B4FF;
                 width: calc(100% - 20px);
                 margin: 50px 0 20px;
-                background-image: url(<?php echo "{$plugin_dir_url}/images/banner-images/eid-adha-banner-bg.webp"; ?>);
-                background-position: center;
+                background-image: url(<?php echo "{$plugin_dir_url}/images/banner-images/independence-day-bg.webp"; ?>);
+                background-position: 24%;
                 background-repeat: no-repeat;
                 background-size: cover;
                 position: relative;
@@ -337,10 +337,10 @@ class Rex_CartLift_Special_Occasion_Banner
                 gap: 20px;
             }
             .cartlift-banner .rex-notification-counter__biggest-sale {
-                max-width: 228px;
+                max-width: 219px;
             }
             .cartlift-banner .rex-notification-counter__figure-logo {
-                max-width: 175px;
+                max-width: 218px;
             }
             .cartlift-banner .rex-notification-counter__figure-percentage {
                 max-width: 108px;
@@ -382,7 +382,7 @@ class Rex_CartLift_Special_Occasion_Banner
                 letter-spacing: 0.75px;
                 text-transform: uppercase;
                 text-align: center;
-                color: #111827;
+                color: #fff;
                 margin: 0;
             }
             @media only screen and (max-width: 1199px) {
@@ -407,50 +407,23 @@ class Rex_CartLift_Special_Occasion_Banner
             }
 
             .cartlift-banner .rex-notification-counter__time {
-                    position: relative;
-                    font-size: 28px;
-                    font-family: "Inter";
-                    font-weight: 600;
-                    line-height: normal;
-                    letter-spacing: -.56px;
-                    color: #211cfd;
-                    text-align: center;
-                    height: 40px;
-                    padding: 1px 1px 0;
-                    display: -webkit-box;
-                    display: -moz-box;
-                    display: -ms-flexbox;
-                    display: flex;
-                    -webkit-box-align: center;
-                    -moz-box-align: center;
-                    -ms-flex-align: center;
-                    align-items: center;
-                    -webkit-box-pack: center;
-                    -moz-box-pack: center;
-                    -ms-flex-pack: center;
-                    justify-content: center;
-                    margin-bottom: 10px;
-                    border-radius: 10px;
-                    background: -moz-linear-gradient(117deg, #cccbff -2.66%, #fff 85.82%);
-                    background: -o-linear-gradient(117deg, #cccbff -2.66%, #fff 85.82%);
-                    background: linear-gradient(333deg, #cccbff -2.66%, #fff 85.82%);
-                    -webkit-box-shadow: 0 3px 0 0 #211cfd;
-                    box-shadow: 0 3px 0 0 #211cfd;
-                    background-origin: border-box;
-                    background-clip: content-box, border-box;
-            }
-
-
-            .cartlift-banner .rex-notification-counter__time:before {
-                content: "";
-                position: absolute;
-                inset: 0;
-                border-radius: 9px;
-                padding: 1px;
-                background: linear-gradient(180deg, #00B4FF 0%, #211CFD 99%);
-                -webkit-mask: linear-gradient(white 0 0) content-box, linear-gradient(white 0 0);
-                -webkit-mask-composite: xor;
-                mask-composite: exclude;
+                position: relative;
+                font-size: 28px;
+                font-family: "Inter";
+                font-weight: 600;
+                line-height: normal;
+                letter-spacing: -0.56px;
+                color: #211CFD;
+                text-align: center;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 10px;
+                border-radius: 10px;
+                background: linear-gradient(#fff, #fff) padding-box, linear-gradient(0deg, #00B4FF, #211CFD 100%) border-box;
+                border: 1px solid transparent;
+                box-shadow: 0px 3px 0px 0px #00B4FF;
             }
 
             @media only screen and (max-width: 1199px) {
@@ -473,25 +446,30 @@ class Rex_CartLift_Special_Occasion_Banner
 
             .cartlift-banner .rex-notification-counter__btn {
                 position: relative;
-                background-color: #6746D0;
                 font-family: "Inter";
-                font-weight: 500;
                 font-size: 18px;
+                font-weight: 600;
                 line-height: 1;
-                color: #fff;
+                color: #FFF;
                 text-align: center;
-                filter: drop-shadow(0px 30px 60px rgba(21, 19, 119, 0.20));
+                letter-spacing: -0.36px;
+                box-shadow: 0px 10px 30px 0px rgba(12, 10, 81, 0.25);
                 padding: 19px 33px;
                 display: inline-block;
-                border-radius: 50px;
                 cursor: pointer;
-                transition: all 0.3s ease;
+                text-transform: capitalize;
                 text-decoration: none;
-                box-shadow: none;
+                border-radius: 30px;
+                transition: all 0.3s ease;
+                border: 2px solid #24EC2C;
+                background: linear-gradient(96deg, #201CFE 39.04%, #00B4FF 115.96%);
             }
             .cartlift-banner .rex-notification-counter__btn:hover {
-                background-color: #fff;
-                color: #6746D0;
+                background: linear-gradient(96deg, #00b4ff 39.04%, #201cfe 115.96%);
+                color: #fff; 
+                box-shadow: 0 12px 35px 0 rgba(12, 10, 81, .35);
+                transform: translateY(-2px);
+                border-color: #00b4ff; 
             }
             .cartlift-banner .rex-notification-counter__stroke-font {
                 font-size: 26px;
@@ -518,24 +496,28 @@ class Rex_CartLift_Special_Occasion_Banner
             
 
             @media only screen and (max-width: 1599px) {
-
-                .cartlift-banner .rex-notification-counter__container {
-                    max-width: 1170px;
+                .rex-feed-tb__notification.cartlift-banner {
+                    background-position: 14%;
                 }
-
+                .cartlift-banner .rex-notification-counter__container {
+                    max-width: 1010px;
+                }
+                .cartlift-banner .rex-notification-counter__biggest-sale {
+                    max-width: 200px;
+                }
+                .cartlift-banner .rex-notification-counter__figure-logo {
+                    max-width: 180px;
+                }
                 .cartlift-banner .rex-notification-counter__btn {
                     font-size: 16px;
-                }
-
-                .cartlift-banner .rex-notification-counter__stroke-font {
-                    font-size: 22px;
+                    padding: 15px 25px;
                 }
 
             }
 
             @media only screen and (max-width: 1399px) {
-                .cartlift-banner .rex-feed-tb__notification {
-                    background-position: left center;
+                .rex-feed-tb__notification.cartlift-banner  {
+                    background-position: center;
                 }
 
                 .cartlift-banner .rex-notification-counter__figure-logo {
@@ -543,7 +525,7 @@ class Rex_CartLift_Special_Occasion_Banner
                 }
 
                 .cartlift-banner .rex-notification-counter__container {
-                    max-width: 1140px;
+                    max-width: 1000px;
                 }
                 .cartlift-banner .rex-notification-counter__biggest-sale {
                     max-width: 210px;
@@ -579,15 +561,14 @@ class Rex_CartLift_Special_Occasion_Banner
                     width: 10px;
                     height: 10px;
                 }
-
                 .cartlift-banner .rex-notification-counter__container {
-                    max-width: 820px;
+                    max-width: 780px;
                 }
                 .cartlift-banner .rex-notification-counter__biggest-sale {
                     max-width: 140px;
                 }
                 .cartlift-banner .rex-notification-counter__figure-logo {
-                    max-width: 105px;
+                    max-width: 140px;
                 }
                 .cartlift-banner .rex-notification-counter__figure-percentage {
                     max-width: 60px;
@@ -621,7 +602,7 @@ class Rex_CartLift_Special_Occasion_Banner
                     max-width: 130px;
                 }
                 .cartlift-banner .rex-notification-counter__figure-logo {
-                    max-width: 100px;
+                    max-width: 120px;
                 }
 
                 .rex-feed-tb__notification.cartlift-banner {

@@ -5,7 +5,7 @@ Donate link: https://rextheme.com/cart-lift/
 Requires at least: 5.0
 Tested up to: 6.8.1
 Requires PHP: 7.4
-Stable tag: 3.1.40
+Stable tag: 3.1.41
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -184,6 +184,12 @@ Follow the steps in this guide: [How to upgrade to Cart Lift Pro](https://rexthe
 8. Analytics
 
 == Changelog ==
+
+= 3.1.41 (2025-07-03) =
+* Fix: "Let's create your first campaign" button now opens the correct page in a new tab
+* Enhancement: first_name and last_name to CartLift webhook payload for better CRM and email campaign integration
+* Fix: reCAPTCHA toggle issue in the settings page
+* Fix: Validated and corrected date range selection in report section to ensure "From" date is not after "To" date
 
 = 3.1.40 (2025-06-19) =
 * Enhancement: Add CRO in cart-lift 

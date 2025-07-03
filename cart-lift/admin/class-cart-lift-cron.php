@@ -252,18 +252,44 @@ class Cart_Lift_Cron
                     $webhook = cl_get_general_settings_data( 'enable_webhook' );
                     if ( $webhook ) {
                         $cart_contents = isset( $item->cart_contents ) ? $item->cart_contents : '';
-                        $cart_total = isset( $item->cart_total ) ? $item->cart_total : '';
-                        $provider = isset( $item->provider ) ? $item->provider : '';
+                        $cart_total    = isset( $item->cart_total ) ? $item->cart_total : '';
+                        $provider      = isset( $item->provider ) ? $item->provider : '';
+                        $first_name = '';
+                        $last_name  = '';
+                        if ( isset( $item->cart_meta ) && ! empty( $item->cart_meta ) ) {
+                            $cart_meta = maybe_unserialize( $item->cart_meta );
+                            if ( is_array( $cart_meta ) ) {
+                                $first_name = isset( $cart_meta['first_name'] ) ? sanitize_text_field( $cart_meta['first_name'] ) : '';
+                                $last_name  = isset( $cart_meta['last_name'] )  ? sanitize_text_field( $cart_meta['last_name'] )  : '';
+                            }
+                        }
+
+                        if ( ( empty( $first_name ) || empty( $last_name ) ) && ! empty( $email ) ) {
+                            $user = get_user_by( 'email', $email );
+                            if ( $user && $user instanceof WP_User ) {
+                                if ( empty( $first_name ) ) {
+                                    $first_name = get_user_meta( $user->ID, 'first_name', true );
+                                    $first_name = sanitize_text_field( $first_name );
+                                }
+                                if ( empty( $last_name ) ) {
+                                    $last_name = get_user_meta( $user->ID, 'last_name', true );
+                                    $last_name = sanitize_text_field( $last_name );
+                                }
+                            }
+                        }
 
                         $webhook_data = array(
+                            'first_name'    => $first_name,
+                            'last_name'     => $last_name,
                             'email'         => isset( $item->email ) ? $item->email : '',
                             'status'        => 'abandoned',
-                            'cart_total'   => isset( $item->cart_total ) ? $item->cart_total : '',
-                            'provider'      => isset( $item->provider ) ? $item->provider : '',
+                            'cart_total'    => $cart_total,
+                            'provider'      => $provider,
                             'product_table' => cl_get_email_product_table( $cart_contents, $cart_total, $provider, false, false ),
                         );
                         cl_trigger_webhook( $webhook_data );
                     }
+
 
                     $wpdb->update(
                         $cl_cart_table,
