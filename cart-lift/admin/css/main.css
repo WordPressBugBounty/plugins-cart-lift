@@ -245,7 +245,7 @@
   font-size: 15px;
   line-height: 24px;
   color: #363b4e;
-  z-index: 1;
+  z-index: 3;
   font-weight: normal;
   background: #f8f5fd;
   padding: 10px 15px;
@@ -1096,7 +1096,8 @@
     padding: 0 10px;
   }
   .cl-tabs .documentation .cl-btn {
-    padding: 0 20px;
+    padding: 9px 18px;
+    line-height: 1;
   }
   .cl-tabs .reports-wrapper .filter-datepicker .filter-wrapper .filter-icon {
     height: 42px;
@@ -1106,6 +1107,9 @@
   }
   .cl-tabs .cl-analytics {
     padding: 18px 15px 0px;
+  }
+  .cl-tabs .cl-btn {
+    padding: 12px 35px;
   }
 }
 @media only screen and (max-width: 991px) {
@@ -1506,6 +1510,10 @@
   text-transform: capitalize;
 }
 
+.cl-add-campaign-form .form-table th .cl-global-tooltip-area {
+  display: flex;
+}
+
 .cl-add-campaign-form .form-table .cl-switcher {
   margin-bottom: 4px;
   display: inline-block;
@@ -1518,6 +1526,7 @@
   align-items: center;
 }
 
+.cl-form-weekly-report-area-right .wp-editor-wrap .add_media,
 .cl-add-campaign-form .form-table .tinymce-editor .add_media {
   font-size: 14px;
   color: #6e42d3;
@@ -1531,6 +1540,7 @@
   margin-bottom: 0;
 }
 
+.cl-form-weekly-report-area-right .wp-editor-wrap .add_media:focus,
 .cl-add-campaign-form .form-table .tinymce-editor .add_media:focus {
   box-shadow: none;
   outline: none;
@@ -3265,7 +3275,6 @@
   border: 1px solid #EBE8F5;
   border-radius: 3px;
   padding-bottom: 0;
-  padding-top: 15px;
   padding-right: 0;
   padding-left: 10px;
   line-height: 1;
@@ -3542,6 +3551,70 @@
 }
 .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-select-area #enable_weekly_report .cl-form-weekly-report-area-right, .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-cart-expiration-area #enable_weekly_report .cl-form-weekly-report-area-right, .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-gdpr-integration #enable_weekly_report .cl-form-weekly-report-area-right, .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-weekly #enable_weekly_report .cl-form-weekly-report-area-right, .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-webhook #enable_weekly_report .cl-form-weekly-report-area-right {
   margin-right: -30px;
+}
+.cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-select-area #enable_weekly_report .cl-form-weekly-report-area-right .wp-editor-container, .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-cart-expiration-area #enable_weekly_report .cl-form-weekly-report-area-right .wp-editor-container, .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-gdpr-integration #enable_weekly_report .cl-form-weekly-report-area-right .wp-editor-container, .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-weekly #enable_weekly_report .cl-form-weekly-report-area-right .wp-editor-container, .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-webhook #enable_weekly_report .cl-form-weekly-report-area-right .wp-editor-container {
+  margin-top: 10px;
+}
+.cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-select-area #enable_weekly_report .cl-form-weekly-report-area-right div.mce-toolbar-grp > div, .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-cart-expiration-area #enable_weekly_report .cl-form-weekly-report-area-right div.mce-toolbar-grp > div, .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-gdpr-integration #enable_weekly_report .cl-form-weekly-report-area-right div.mce-toolbar-grp > div, .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-weekly #enable_weekly_report .cl-form-weekly-report-area-right div.mce-toolbar-grp > div, .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-webhook #enable_weekly_report .cl-form-weekly-report-area-right div.mce-toolbar-grp > div {
+  padding: 6px 8px;
+}
+.cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-select-area #enable_weekly_report .cl-form-weekly-report-area-right textarea.wp-editor-area, .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-cart-expiration-area #enable_weekly_report .cl-form-weekly-report-area-right textarea.wp-editor-area, .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-gdpr-integration #enable_weekly_report .cl-form-weekly-report-area-right textarea.wp-editor-area, .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-weekly #enable_weekly_report .cl-form-weekly-report-area-right textarea.wp-editor-area, .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-webhook #enable_weekly_report .cl-form-weekly-report-area-right textarea.wp-editor-area {
+  box-shadow: none;
+  border-radius: 0 0 5px 5px;
+  border: none;
+}
+.cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-select-area #enable_weekly_report .cl-form-weekly-report-area-right .quicktags-toolbar, .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-cart-expiration-area #enable_weekly_report .cl-form-weekly-report-area-right .quicktags-toolbar, .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-gdpr-integration #enable_weekly_report .cl-form-weekly-report-area-right .quicktags-toolbar, .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-weekly #enable_weekly_report .cl-form-weekly-report-area-right .quicktags-toolbar, .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-webhook #enable_weekly_report .cl-form-weekly-report-area-right .quicktags-toolbar {
+  padding: 8px 8px;
+  background: #f6f6f8;
+  min-height: 50px;
+  box-shadow: none;
+}
+.cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-select-area #enable_weekly_report .cl-form-weekly-report-area-right .wp-switch-editor, .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-cart-expiration-area #enable_weekly_report .cl-form-weekly-report-area-right .wp-switch-editor, .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-gdpr-integration #enable_weekly_report .cl-form-weekly-report-area-right .wp-switch-editor, .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-weekly #enable_weekly_report .cl-form-weekly-report-area-right .wp-switch-editor, .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-webhook #enable_weekly_report .cl-form-weekly-report-area-right .wp-switch-editor {
+  height: 30px;
+  border-radius: 5px;
+  background-color: #f0ecfb;
+  font-size: 14px;
+  color: #6e42d3;
+  font-weight: 500;
+  width: 60px;
+  margin: 0 0 0 10px;
+  box-sizing: border-box;
+  border: none;
+}
+.cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-select-area #enable_weekly_report .cl-form-weekly-report-area-right .wp-switch-editor::before, .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-cart-expiration-area #enable_weekly_report .cl-form-weekly-report-area-right .wp-switch-editor::before, .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-gdpr-integration #enable_weekly_report .cl-form-weekly-report-area-right .wp-switch-editor::before, .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-weekly #enable_weekly_report .cl-form-weekly-report-area-right .wp-switch-editor::before, .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-webhook #enable_weekly_report .cl-form-weekly-report-area-right .wp-switch-editor::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -4px;
+  transform: translateX(-50%) rotate(45deg);
+  width: 10px;
+  height: 10px;
+  background: #f0ecfb;
+  opacity: 0;
+  visibility: hidden;
+}
+.cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-select-area #enable_weekly_report .cl-form-weekly-report-area-right .wp-switch-editor:focus, .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-cart-expiration-area #enable_weekly_report .cl-form-weekly-report-area-right .wp-switch-editor:focus, .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-gdpr-integration #enable_weekly_report .cl-form-weekly-report-area-right .wp-switch-editor:focus, .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-weekly #enable_weekly_report .cl-form-weekly-report-area-right .wp-switch-editor:focus, .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-webhook #enable_weekly_report .cl-form-weekly-report-area-right .wp-switch-editor:focus {
+  box-shadow: none;
+  outline: none;
+}
+.cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-select-area #enable_weekly_report .cl-form-weekly-report-area-right .html-active .switch-html,
+.cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-select-area #enable_weekly_report .cl-form-weekly-report-area-right .tmce-active .switch-tmce, .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-cart-expiration-area #enable_weekly_report .cl-form-weekly-report-area-right .html-active .switch-html,
+.cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-cart-expiration-area #enable_weekly_report .cl-form-weekly-report-area-right .tmce-active .switch-tmce, .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-gdpr-integration #enable_weekly_report .cl-form-weekly-report-area-right .html-active .switch-html,
+.cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-gdpr-integration #enable_weekly_report .cl-form-weekly-report-area-right .tmce-active .switch-tmce, .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-weekly #enable_weekly_report .cl-form-weekly-report-area-right .html-active .switch-html,
+.cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-weekly #enable_weekly_report .cl-form-weekly-report-area-right .tmce-active .switch-tmce, .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-webhook #enable_weekly_report .cl-form-weekly-report-area-right .html-active .switch-html,
+.cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-webhook #enable_weekly_report .cl-form-weekly-report-area-right .tmce-active .switch-tmce {
+  background-color: #6e42d3;
+  color: #fff;
+}
+.cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-select-area #enable_weekly_report .cl-form-weekly-report-area-right .html-active .switch-html::before,
+.cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-select-area #enable_weekly_report .cl-form-weekly-report-area-right .tmce-active .switch-tmce::before, .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-cart-expiration-area #enable_weekly_report .cl-form-weekly-report-area-right .html-active .switch-html::before,
+.cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-cart-expiration-area #enable_weekly_report .cl-form-weekly-report-area-right .tmce-active .switch-tmce::before, .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-gdpr-integration #enable_weekly_report .cl-form-weekly-report-area-right .html-active .switch-html::before,
+.cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-gdpr-integration #enable_weekly_report .cl-form-weekly-report-area-right .tmce-active .switch-tmce::before, .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-weekly #enable_weekly_report .cl-form-weekly-report-area-right .html-active .switch-html::before,
+.cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-weekly #enable_weekly_report .cl-form-weekly-report-area-right .tmce-active .switch-tmce::before, .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-webhook #enable_weekly_report .cl-form-weekly-report-area-right .html-active .switch-html::before,
+.cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-webhook #enable_weekly_report .cl-form-weekly-report-area-right .tmce-active .switch-tmce::before {
+  background: #6e42d3;
+  opacity: 1;
+  visibility: visible;
 }
 .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-select-area #enable_weekly_report .cl-form-weekly-report-area-right .cl-form-group-weekly-email-body, .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-cart-expiration-area #enable_weekly_report .cl-form-weekly-report-area-right .cl-form-group-weekly-email-body, .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-gdpr-integration #enable_weekly_report .cl-form-weekly-report-area-right .cl-form-group-weekly-email-body, .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-weekly #enable_weekly_report .cl-form-weekly-report-area-right .cl-form-group-weekly-email-body, .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-webhook #enable_weekly_report .cl-form-weekly-report-area-right .cl-form-group-weekly-email-body {
   display: grid;
@@ -4285,13 +4358,19 @@
   .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-select-area .cl-form-select-product {
     grid-template-columns: 158px 1fr;
   }
+  .cl-settings .cl-settings__content--recaptcha-v3 {
+    border-top: 1px solid #EBE8F5;
+  }
+  .cl-settings .cl-settings__content .inner-wrapper.cl-integrations-area {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 @media (max-width: 991px) {
   .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group .cl-gdpr-message {
     grid-template-columns: auto 100%;
   }
   .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-weekly #enable_weekly_report .cl-form-group-weekly {
-    grid-template-columns: 125px 300px auto;
+    grid-template-columns: 145px 300px auto;
   }
   .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-webhook #cart_webhook {
     gap: 50px;
@@ -4323,7 +4402,7 @@
     grid-template-columns: auto 315px;
   }
   .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-select-area .cl-form-select-product {
-    grid-template-columns: 128px 1fr;
+    grid-template-columns: 176px 1fr;
   }
   .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group .cl-form-expiration {
     grid-template-columns: 130px 213px auto;

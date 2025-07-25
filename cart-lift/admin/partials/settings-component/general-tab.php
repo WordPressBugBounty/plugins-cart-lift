@@ -456,9 +456,9 @@ $get_wc_and_edd_countries = get_wc_and_edd_countries();
 
                     </div>
                     <div class="cl-form-group-weekly">
-                        <span class="title"><?php echo __('Email To:', 'cart-lift'); ?></span>
-                        <div class="cl-form-group-weekly-area">
-                            <input type="text" id="weekly_report_email" name="weekly_report_email" value="<?php echo isset($weekly_report_admin_email) ? $weekly_report_admin_email : ''; ?>">
+                        <div class="cl-global-tooltip-area">
+                            <span class="title"><?php echo __('Email To:', 'cart-lift'); ?></span>
+
                             <div class="tooltip">
                                 <span class="icon">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -469,22 +469,33 @@ $get_wc_and_edd_countries = get_wc_and_edd_countries();
                                 </span>
                                 <p><?php echo __('Enter recipients (comma separated) for this email.', 'cart-lift'); ?></p>
                             </div>
+                        </div>
+
+                        <div class="cl-form-group-weekly-area">
+                            <input type="text" id="weekly_report_email" name="weekly_report_email" value="<?php echo isset($weekly_report_admin_email) ? $weekly_report_admin_email : ''; ?>">
+                           
                        </div>
                     </div>
-                    <div class="cl-form-group-weekly">
-                        <span class="title"><?php echo __('Email From:', 'cart-lift'); ?></span>
+                    
+                        <div class="cl-form-group-weekly">
+                          <div class="cl-global-tooltip-area">
+                                <span class="title"><?php echo __('Email From:', 'cart-lift'); ?></span>
+
+                                <div class="tooltip">
+                                    <span class="icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                        <rect x="1" y="1.1925" width="14" height="14" rx="7" stroke="#535963"/>
+                                        <path d="M6 5.69543C6.0741 4.80132 6.85381 4.13315 7.74894 4.19668H8.24864C9.14377 4.13315 9.92347 4.80132 9.99758 5.69543C10.0354 6.36175 9.62793 6.97278 8.99818 7.19418C8.30536 7.60992 7.91577 8.38893 7.99879 9.1925" stroke="#535963" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M8.5 12.19V12.195" stroke="#535963" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </span>
+
+                                    <p><?php echo __('Enter sender this email.', 'cart-lift'); ?></p>
+                                </div>
+                            </div>
+
                         <div class="cl-form-group-weekly-area">
                             <input type="text" id="weekly_report_email_form" name="weekly_report_email_from" value="<?php echo isset($weekly_report_email_from) ? $weekly_report_email_from : ''; ?>">
-                            <div class="tooltip">
-                                <span class="icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                    <rect x="1" y="1.1925" width="14" height="14" rx="7" stroke="#535963"/>
-                                    <path d="M6 5.69543C6.0741 4.80132 6.85381 4.13315 7.74894 4.19668H8.24864C9.14377 4.13315 9.92347 4.80132 9.99758 5.69543C10.0354 6.36175 9.62793 6.97278 8.99818 7.19418C8.30536 7.60992 7.91577 8.38893 7.99879 9.1925" stroke="#535963" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M8.5 12.19V12.195" stroke="#535963" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </span>
-                                <p><?php echo __('Enter sender email.', 'cart-lift'); ?></p>
-                            </div>
                         </div>
                     </div>
                 </div>

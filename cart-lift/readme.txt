@@ -3,9 +3,9 @@ Contributors: rextheme, coderexltd, coderexco
 Tags: woocommerce abandoned cart, abandoned cart recovery, exit popup, edd abandoned cart, abandoned cart email, cart abandonment, woocommerce abandoned cart email, woocommerce abandoned cart recovery, easy digital downloads, woocommerce, recover abandoned cart, abandoned cart emails woocommerce, cart abandonment recovery
 Donate link: https://rextheme.com/cart-lift/
 Requires at least: 5.0
-Tested up to: 6.8.1
+Tested up to: 6.8.2
 Requires PHP: 7.4
-Stable tag: 3.1.41
+Stable tag: 3.1.42
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -184,6 +184,10 @@ Follow the steps in this guide: [How to upgrade to Cart Lift Pro](https://rexthe
 8. Analytics
 
 == Changelog ==
+
+= 3.1.42 (2025-07-25) =
+* Fix: Matched visual and code structure of Enable Weekly Report section with Edit Campaign page for consistent UI
+* Fix: Uploaded logos now auto‑scale to match default logo size in popup
 
 = 3.1.41 (2025-07-03) =
 * Fix: "Let's create your first campaign" button now opens the correct page in a new tab

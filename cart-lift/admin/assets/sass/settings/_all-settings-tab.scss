@@ -236,7 +236,6 @@
 
 .cl-tabs .tooltip .icon {
     display: inline-block;
-    // padding: 10px;
     cursor: pointer;
     position: relative;
     top: 2px;
@@ -250,7 +249,7 @@
     font-size: 15px;
     line-height: 24px;
     color: #363b4e;
-    z-index: 1;
+    z-index: 3;
     font-weight: normal;
     background: #f8f5fd;
     padding: 10px 15px;
@@ -808,6 +807,7 @@
     .cl-alert-modal {
         width: 100%;
     }
+
 }
 
 .cl-tabs .reports-wrapper {
@@ -1131,7 +1131,8 @@
     }
 
     .cl-tabs .documentation .cl-btn {
-        padding: 0 20px;
+        padding: 9px 18px;
+        line-height: 1;
     }
 
     .cl-tabs .reports-wrapper .filter-datepicker .filter-wrapper .filter-icon {
@@ -1144,6 +1145,10 @@
 
     .cl-tabs .cl-analytics {
         padding: 18px 15px 0px;
+    }
+
+    .cl-tabs .cl-btn {
+        padding: 12px 35px;
     }
 }
 
@@ -1167,6 +1172,8 @@
     .cl-tabs .reports-wrapper .single-report {
         width: calc(100% / 2 - 20px);
     }
+
+   
 }
 
 .cl-campaigns {
@@ -1563,6 +1570,10 @@
     text-transform: capitalize;
 }
 
+.cl-add-campaign-form .form-table th .cl-global-tooltip-area {
+    display: flex;
+}
+
 .cl-add-campaign-form .form-table .cl-switcher {
     margin-bottom: 4px;
     display: inline-block;
@@ -1575,6 +1586,7 @@
     align-items: center;
 }
 
+.cl-form-weekly-report-area-right .wp-editor-wrap .add_media,
 .cl-add-campaign-form .form-table .tinymce-editor .add_media {
     font-size: 14px;
     color: #6e42d3;
@@ -1588,6 +1600,7 @@
     margin-bottom: 0;
 }
 
+.cl-form-weekly-report-area-right .wp-editor-wrap .add_media:focus,
 .cl-add-campaign-form .form-table .tinymce-editor .add_media:focus {
     box-shadow: none;
     outline: none;
@@ -3403,7 +3416,6 @@
     border: 1px solid #EBE8F5;
     border-radius: 3px;
     padding-bottom: 0;
-    padding-top: 15px;
     padding-right: 0;
     padding-left: 10px;
     line-height: 1;

@@ -292,6 +292,77 @@
                 .cl-form-weekly-report-area-right {
                   margin-right: -30px;
 
+                  .wp-editor-container {
+                    margin-top: 10px;
+                  }
+
+                  div.mce-toolbar-grp > div {
+                    padding: 6px 8px;
+                  }
+
+                  textarea.wp-editor-area {
+                    box-shadow: none;
+                    border-radius: 0 0 5px 5px;
+                    border: none;
+                  }
+
+
+                  .quicktags-toolbar {
+                    padding: 8px 8px;
+                    background: #f6f6f8;
+                    min-height: 50px;
+                    box-shadow: none;
+                  }
+                 
+
+                  .wp-switch-editor {
+                    height: 30px;
+                    border-radius: 5px;
+                    background-color: #f0ecfb;
+                    font-size: 14px;
+                    color: #6e42d3;
+                    font-weight: 500;
+                    width: 60px;
+                    margin: 0 0 0 10px;
+                    box-sizing: border-box;
+                    border: none;
+
+                    &::before {
+                      content: "";
+                      position: absolute;
+                      left: 50%;
+                      bottom: -4px;
+                      transform: translateX(-50%) rotate(45deg);
+                      width: 10px;
+                      height: 10px;
+                      background: #f0ecfb;
+                      opacity: 0;
+                      visibility: hidden;
+                    }
+
+                    &:focus {
+                      box-shadow: none;
+                      outline: none;
+                    }
+
+                    
+
+                  }
+
+                  .html-active .switch-html, 
+                  .tmce-active .switch-tmce {
+                    background-color: #6e42d3;
+                    color: #fff;
+
+                    &::before{
+                      background: #6e42d3;
+                      opacity: 1;
+                      visibility: visible;
+                    }
+                  }
+
+                 
+
                   .cl-form-group-weekly-email-body {
 
                     .wp-editor-tabs {
@@ -1256,6 +1327,15 @@
     grid-template-columns: 158px 1fr;
   }
 
+
+  .cl-settings .cl-settings__content--recaptcha-v3 {
+    border-top: 1px solid #EBE8F5;
+  }
+
+  .cl-settings .cl-settings__content .inner-wrapper.cl-integrations-area {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
 }
 
 @media (max-width: 991px) {
@@ -1265,7 +1345,7 @@
     }
 
     .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-weekly #enable_weekly_report .cl-form-group-weekly {
-      grid-template-columns: 125px 300px auto;
+      grid-template-columns: 145px 300px auto;
     }
 
     .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-webhook #cart_webhook {
@@ -1285,6 +1365,9 @@
     .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group .cl-cut-off-time {
       grid-template-columns: auto 225px auto;
     }
+
+
+    
 
    
 
@@ -1309,7 +1392,7 @@
   } 
 
   .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group.cl-select-area .cl-form-select-product {
-    grid-template-columns: 128px 1fr;
+    grid-template-columns: 176px 1fr;
   }
 
   .cl-settings__tab-wrapper .cl-settings__content-wrapper .inner-wrapper .cl-form-group .cl-form-expiration {
