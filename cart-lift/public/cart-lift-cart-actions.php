@@ -55,7 +55,10 @@ class Cart_Lift_Cart_Actions
         global $wpdb;
         $cl_cart_table = $wpdb->prefix . CART_LIFT_CART_TABLE;
         $result        = $wpdb->get_row(
-            $wpdb->prepare( 'SELECT * FROM `' . $cl_cart_table . '` WHERE email = %s AND status in ("processing", "abandoned") LIMIT 1', $user_email ) // phpcs:ignore
+            $wpdb->prepare(
+                'SELECT * FROM `' . $cl_cart_table . '` WHERE email = %s AND status in ("processing", "abandoned") ORDER BY time DESC LIMIT 1',
+                $user_email
+            )
         );
         return $result;
     }
@@ -67,88 +70,134 @@ class Cart_Lift_Cart_Actions
      * @param $user_email
      * @since 1.0.0
      */
-    public function save_cart_infos( $user_email, $provider = 'wc' )
-    {
+    public function save_cart_infos( $user_email, $provider = 'wc' ) {
         $cart_tracking = cl_get_general_settings_data( 'cart_tracking' );
         $cart_tracking = apply_filters( 'cl_cart_tracking_status', $cart_tracking );
-        $general_settings = get_option('cl_general_settings');
-	    $excluded_products = $general_settings['cl_excluded_products'] ?? [];
+        $general_settings = get_option( 'cl_general_settings' );
+        $excluded_products   = $general_settings['cl_excluded_products']   ?? [];
         $excluded_categories = $general_settings['cl_excluded_categories'] ?? [];
-        $excluded_countries = $general_settings['cl_excluded_countries'] ?? [];
+        $excluded_countries  = $general_settings['cl_excluded_countries']  ?? [];
 
-        if( $cart_tracking ) {
-            $user          = wp_get_current_user();
-            $roles         = $user->roles;
+        if ( $cart_tracking ) {
+            $user = wp_get_current_user();
+            $roles = $user->roles;
 
-            if( is_user_logged_in() ) {
-                $restricted = cl_restricted_users( $roles[ 0 ] );
-            } else {
-                $restricted = false;
-            }
+            $restricted = is_user_logged_in() ? cl_restricted_users( $roles[0] ) : false;
 
-            if( !$restricted ) {
-
+            if ( !$restricted ) {
                 $remove_guest_tracking = cl_get_general_settings_data( 'remove_carts_for_guest' );
 
-                if( $remove_guest_tracking == '0' || $user_email != '' ) {
-
+                if ( $remove_guest_tracking == '0' || $user_email != '' ) {
                     global $wpdb;
-                    $cl_cart_table        = $wpdb->prefix . CART_LIFT_CART_TABLE;
-                    $session_cart_details = null;
+                    $cl_cart_table = $wpdb->prefix . CART_LIFT_CART_TABLE;
+                    $existing_cart_details_in_abandoned = null;
                     $session_id = '';
-                    if( $provider === 'wc' && cl_is_wc_active() && !empty( WC()->session ) ) {
+
+                    // First, prepare the cart data for comparison
+                    $current_cart_contents = $this->prepare_cart_data( $user_email, $provider );
+
+                    if (!$current_cart_contents) {
+                        return; // No cart contents to process
+                    }
+
+                    // Check if there's a session ID in the provider
+                    if ( $provider === 'wc' && cl_is_wc_active() && !empty( WC()->session ) ) {
                         $session_id = WC()->session->get( 'cl_wc_session_id' );
-                        if( empty( $session_id ) ) {
-                            $session_id = md5( uniqid( wp_rand(), true ) );
-                            WC()->session->set( 'cl_wc_session_id', $session_id );
-                        }
-                        $session_cart_details = $this->get_cart_details( $session_id );
+                    } elseif ( $provider === 'edd' && cl_is_edd_active() ) {
+                        $session_id = EDD()->session->get( 'cl_edd_session_id' );
+                    } elseif ( $provider === 'lp' && cl_is_lp_active() ) {
+                        $session_id = LP()->session->get( 'cl_lp_session_id' );
+                    }
 
-                        if( is_null( $session_cart_details ) ) {
-                            $session_id = md5( uniqid( wp_rand(), true ) );
-                            WC()->session->set( 'cl_wc_session_id', $session_id );
-                        } else {
-                            $user_email = $session_cart_details->email ? $session_cart_details->email : $user_email;
+                    $found_identical_cart = false;
+                    $existing_cart_id = '';
+                    $user_email_changed = false;
+
+                    // If we have a session ID, try to find the cart by session ID first
+                    if (!empty($session_id)) {
+                        $existing_cart_details_in_abandoned = $this->get_cart_details($session_id);
+
+                        // Check if cart exists and if the email has changed
+                        if (!is_null($existing_cart_details_in_abandoned)) {
+                            // Check if the user email has changed (user switched)
+                            if (!empty($user_email) && !empty($existing_cart_details_in_abandoned->email) &&
+                                $existing_cart_details_in_abandoned->email !== $user_email) {
+                                // Email has changed, create new session ID for the new user
+                                $user_email_changed = true;
+                                $session_id = md5(uniqid(wp_rand(), true));
+                            } else if ($existing_cart_details_in_abandoned->cart_contents === $current_cart_contents['cart_contents'] &&
+                                floatval($existing_cart_details_in_abandoned->cart_total) === floatval($current_cart_contents['cart_total'])) {
+                                $found_identical_cart = true;
+                                $existing_cart_id = $session_id;
+                            }
                         }
                     }
 
-                    if( $provider === 'edd' && cl_is_edd_active() && !empty( EDD()->session ) ) {
-                        $session_id           = EDD()->session->get( 'cl_edd_session_id' );
-                        if( empty( $session_id ) ) {
-                            $session_id = md5( uniqid( wp_rand(), true ) );
-                            EDD()->session->set( 'cl_edd_session_id', $session_id );
-                        }
-                        $session_cart_details = $this->get_cart_details( $session_id );
+                    // If email changed, don't look for existing carts by email
+                    // Otherwise, if no identical cart found by session ID, try to find by email
+                    if (!$user_email_changed && !$found_identical_cart && !empty($user_email)) {
+                        $existing_carts = $wpdb->get_results(
+                            $wpdb->prepare(
+                                "SELECT * FROM `{$cl_cart_table}` WHERE email = %s AND status IN ('processing', 'abandoned') ORDER BY time DESC",
+                                $user_email
+                            )
+                        );
 
-                        if( is_null( $session_cart_details ) ) {
-                            $session_id = md5( uniqid( wp_rand(), true ) );
-                            EDD()->session->set( 'cl_edd_session_id', $session_id );
+                        if (!empty($existing_carts)) {
+                            foreach ($existing_carts as $existing_cart) {
+                                if ($existing_cart->cart_contents === $current_cart_contents['cart_contents'] &&
+                                    floatval($existing_cart->cart_total) === floatval($current_cart_contents['cart_total'])) {
+                                    $found_identical_cart = true;
+                                    $existing_cart_details_in_abandoned = $existing_cart;
+                                    $existing_cart_id = $existing_cart->session_id;
+                                    break;
+                                }
+                            }
+
+                            // If no identical cart found but we have existing carts, determine what to do
+                            if (!$found_identical_cart && !empty($session_id) && !$user_email_changed) {
+                                // Keep using current session ID
+                            } elseif (!$found_identical_cart) {
+                                // No identical cart and no session ID, create a new one
+                                $session_id = md5(uniqid(wp_rand(), true));
+                            } else {
+                                // We found an identical cart, use that session ID
+                                $session_id = $existing_cart_id;
+                            }
                         } else {
-                            $user_email = $session_cart_details->email ? $session_cart_details->email : $user_email;
+                            // No existing carts for this email, create a new session ID
+                            if (empty($session_id)) {
+                                $session_id = md5(uniqid(wp_rand(), true));
+                            }
                         }
                     }
 
-                    if( $provider === 'lp' && cl_is_lp_active() && !empty( LP()->session ) ) {
-                        $session_id           = LP()->session->get( 'cl_lp_session_id' );
-                        if( empty( $session_id ) ) {
-                            $session_id = md5( uniqid( wp_rand(), true ) );
-                            LP()->session->set( 'cl_lp_session_id', $session_id, true );
-                        }
-
-                        $session_cart_details = $this->get_cart_details( $session_id );
-                        if( is_null( $session_cart_details )  ) {
-                            $session_id = md5( uniqid( wp_rand(), true ) );
-                            LP()->session->set( 'cl_lp_session_id', $session_id, true );
-                        } else {
-                            $user_email = $session_cart_details->email ? $session_cart_details->email : $user_email;
-                        }
+                    // If still no session ID, generate a new one
+                    if (empty($session_id)) {
+                        $session_id = md5(uniqid(wp_rand(), true));
                     }
 
-                    $cart_details = $this->prepare_cart_data( $user_email, $provider );
+                    // Update session ID in provider
+                    if ($provider === 'wc' && cl_is_wc_active() && !empty(WC()->session)) {
+                        WC()->session->set('cl_wc_session_id', $session_id);
+                    } elseif ($provider === 'edd' && cl_is_edd_active()) {
+                        EDD()->session->set('cl_edd_session_id', $session_id);
+                    } elseif ($provider === 'lp' && cl_is_lp_active()) {
+                        LP()->session->set('cl_lp_session_id', $session_id, true);
+                    }
 
-                    //check excluded products
-                    if ( !empty( $excluded_products ) && $general_settings[ 'enable_cl_exclude_products' ] == '1' ) {
-                        $cart_products    = !empty( $cart_details[ 'cart_contents' ] ) ? unserialize( $cart_details[ 'cart_contents' ] ) : [];
+                    // If user email changed, existing cart details should be reset
+                    if ($user_email_changed) {
+                        $existing_cart_details_in_abandoned = null;
+                    }
+                    // If no session cart details set yet, get it now
+                    else if (is_null($existing_cart_details_in_abandoned) && !empty($session_id)) {
+                        $existing_cart_details_in_abandoned = $this->get_cart_details($session_id);
+                    }
+
+                    // Exclude certain products
+                    if ( !empty( $excluded_products ) && ( $general_settings['enable_cl_exclude_products'] ?? '0' ) === '1' ) {
+                        $cart_products = !empty( $current_cart_contents['cart_contents'] ) ? unserialize( $current_cart_contents['cart_contents'] ) : [];
                         $cart_products_id = array_column( $cart_products, 'id' );
                         foreach ( $cart_products_id as $id ) {
                             if ( in_array( strval( $id ), $excluded_products, true ) ) {
@@ -158,60 +207,64 @@ class Cart_Lift_Cart_Actions
                         }
                     }
 
-                    if( !empty( $excluded_categories ) && !empty( $general_settings['enable_cl_exclude_categories' ] ) && $general_settings['enable_cl_exclude_categories' ] == '1'){
-                        $cart_products = !empty( $cart_details['cart_contents'] ) ? unserialize( $cart_details['cart_contents'] ) : [];
-                        $cart_product_ids = array_column($cart_products, 'id');
-                        $cart_product_category_ids = get_products_category_id( $cart_product_ids );
-                        foreach ( $cart_product_category_ids as $id){
-                            if( in_array( strval( $id ), $excluded_categories, true) ){
+                    // Exclude certain categories
+                    if ( !empty( $excluded_categories ) && ( $general_settings['enable_cl_exclude_categories'] ?? '0' ) === '1' ) {
+                        $cart_products = !empty( $current_cart_contents['cart_contents'] ) ? unserialize( $current_cart_contents['cart_contents'] ) : [];
+                        $cart_product_ids = array_column( $cart_products, 'id' );
+                        $cart_category_ids = get_products_category_id( $cart_product_ids );
+                        foreach ( $cart_category_ids as $id ) {
+                            if ( in_array( strval( $id ), $excluded_categories, true ) ) {
                                 cl_remove_abandoned_cart_record( $user_email, $session_id );
                                 return;
                             }
                         }
                     }
 
-                    if( !empty( $excluded_countries ) && !empty( $general_settings['enable_cl_exclude_countries' ] ) && $general_settings['enable_cl_exclude_countries' ] == '1'){
-                        $result = apply_filters('cl_exclude_countries', $user_email, $session_id, $excluded_countries);
-                        if( !empty( $result ) ){
+                    // Exclude countries (via hook)
+                    if ( !empty( $excluded_countries ) && ( $general_settings['enable_cl_exclude_countries'] ?? '0' ) === '1' ) {
+                        $result = apply_filters( 'cl_exclude_countries', $user_email, $session_id, $excluded_countries );
+                        if ( !empty( $result ) ) {
                             return;
                         }
                     }
 
-                    $cart_details = apply_filters( 'cl_cart_details_before_update', $cart_details, $session_id );
+                    // Final filter before update/insert
+                    $current_cart_contents = apply_filters( 'cl_cart_details_before_update', $current_cart_contents, $session_id );
 
-                    if( $cart_details ) {
-                        if( $provider === 'edd' && cl_is_edd_active() ) {
+                    if ( $current_cart_contents ) {
+                        if ( $provider === 'edd' && cl_is_edd_active() ) {
                             setcookie( 'cl_edd_session_id', $session_id, time() + 3600, '/' );
                         }
 
-                        if( !is_null( $session_cart_details ) ) {
-                            unset( $cart_details[ 'time' ] );
-                            $wpdb->update(
-                                $cl_cart_table,
-                                $cart_details,
-                                array( 'session_id' => $session_id )
-                            );
-                        } else {
-                            $cart_details[ 'session_id' ] = $session_id;
-                            if( $session_id ) {
-                                $wpdb->insert(
+                        if ( !is_null( $existing_cart_details_in_abandoned ) ) {
+                            if (!$found_identical_cart) {
+                                // Cart exists but content is different, update it
+                                unset( $current_cart_contents['time'] ); // Keep original timestamp
+                                $wpdb->update(
                                     $cl_cart_table,
-                                    $cart_details
+                                    [
+                                        'cart_contents' => $current_cart_contents['cart_contents'],
+                                        'cart_total'    => $current_cart_contents['cart_total'],
+                                    ],
+                                    [ 'session_id' => $session_id ]
                                 );
                             }
+                            // If content is identical, do nothing (keep existing cart)
+                        } else {
+                            // No existing cart found, insert a new one
+                            $current_cart_contents['session_id'] = $session_id;
+                            $wpdb->insert( $cl_cart_table, $current_cart_contents );
                         }
                     } else {
-                        $wpdb->delete(
-                            $cl_cart_table,
-                            array( 'session_id' => $session_id )
-                        );
-                        if( $provider === 'wc' && cl_is_wc_active() && !empty( WC()->session ) ) {
+                        // Cleanup if cart is empty
+                        $wpdb->delete( $cl_cart_table, [ 'session_id' => $session_id ] );
+                        if ( $provider === 'wc' && cl_is_wc_active() ) {
                             WC()->session->__unset( 'cl_wc_session_id' );
                         }
-                        if( $provider === 'edd' && cl_is_edd_active() && !empty( EDD()->session ) ) {
+                        if ( $provider === 'edd' && cl_is_edd_active() ) {
                             EDD()->session->set( 'cl_edd_session_id', '' );
                         }
-                        if( $provider === 'lp' && cl_is_lp_active() && !empty( LP()->session ) ) {
+                        if ( $provider === 'lp' && cl_is_lp_active() ) {
                             LP()->session->set( 'cl_lp_session_id', '', true );
                         }
                     }
@@ -219,6 +272,7 @@ class Cart_Lift_Cart_Actions
             }
         }
     }
+
 
     /**
      * Get cart details from cart table
@@ -493,128 +547,218 @@ class Cart_Lift_Cart_Actions
      */
     public function save_abandon_cart_data()
     {
-        check_ajax_referer( 'cart-lift', 'security' );
+        check_ajax_referer('cart-lift', 'security');
 
-        $cart_tracking = cl_get_general_settings_data( 'cart_tracking' );
-        $cart_tracking = apply_filters( 'cl_cart_tracking_status_ajax', $cart_tracking );
+        $cart_tracking = cl_get_general_settings_data('cart_tracking');
+        $cart_tracking = apply_filters('cl_cart_tracking_status_ajax', $cart_tracking);
 
-        if( $cart_tracking ) {
-            $user          = wp_get_current_user();
-            $roles         = $user->roles;
+        if ($cart_tracking) {
+            $user = wp_get_current_user();
+            $roles = $user->roles;
 
-            if( is_user_logged_in() ) {
-                $restricted = cl_restricted_users( $roles[ 0 ] );
+            if (is_user_logged_in()) {
+                $restricted = cl_restricted_users($roles[0]);
             } else {
                 $restricted = false;
             }
-            if( !$restricted ) {
-                $post_data  = $this->sanitize_cart_post_data();
-                $user_email = $post_data[ 'email' ];
-                $provider   = $post_data[ 'provider' ];
 
-                if( isset( $post_data[ 'email' ] ) ) {
+            if (!$restricted) {
+                $post_data = $this->sanitize_cart_post_data();
+                $user_email = $post_data['email'];
+                $provider = $post_data['provider'];
+
+                if (isset($post_data['email'])) {
                     global $wpdb;
-                    $cl_cart_table        = $wpdb->prefix . CART_LIFT_CART_TABLE;
+                    $cl_cart_table = $wpdb->prefix . CART_LIFT_CART_TABLE;
                     $session_cart_details = null;
-
-                    if( $provider === 'wc' && cl_is_wc_active() && !empty( WC()->session ) ) {
-                        $session_id = WC()->session->get( 'cl_wc_session_id' );
-                        if( empty( $session_id ) ) {
-                            $session_id = md5( uniqid( wp_rand(), true ) );
-                            WC()->session->set( 'cl_wc_session_id', $session_id );
-                        }
-                        $session_cart_details = $this->get_cart_details( $session_id );
-                        if ( is_null( $session_cart_details )  ) {
-                            $session_id = md5( uniqid( wp_rand(), true ) );
-                            WC()->session->set( 'cl_wc_session_id', $session_id );
-                        }
-                    }
-
-                    if( $provider === 'edd' && cl_is_edd_active() && !empty( EDD()->session ) ) {
-                        $session_id = EDD()->session->get( 'cl_edd_session_id' );
-                        if( empty( $session_id ) ) {
-                            $session_id = md5( uniqid( wp_rand(), true ) );
-                            EDD()->session->set( 'cl_edd_session_id', $session_id );
-                        }
-                        $session_cart_details = $this->get_cart_details( $session_id );
-                        if ( is_null( $session_cart_details )  ) {
-                            $session_id = md5( uniqid( wp_rand(), true ) );
-                            EDD()->session->set( 'cl_edd_session_id', $session_id );
-                        }
-                    }
-
-                    if( $provider === 'lp' && cl_is_lp_active() && !empty( LP()->session ) ) {
-                        $session_id = LP()->session->get( 'cl_lp_session_id' );
-                        if( empty( $session_id ) ) {
-                            $session_id = md5( uniqid( wp_rand(), true ) );
-                            LP()->session->set( 'cl_lp_session_id', $session_id, true );
-                        }
-                        $session_cart_details = $this->get_cart_details( $session_id );
-                        if( is_null( $session_cart_details )  ) {
-                            $session_id = md5( uniqid( wp_rand(), true ) );
-                            LP()->session->set( 'cl_lp_session_id', $session_id, true );
-                        }
-                    }
-
-                    /**
-                     * save cart data to the cart table
-                     */
-                    $cart_details = $this->prepare_cart_data( $user_email, $provider );
-
-                    $cart_meta = array(
-                        'first_name' => $post_data[ 'first_name' ],
-                        'last_name'  => $post_data[ 'last_name' ],
-                        'phone'      => $post_data[ 'phone' ],
-                        'country'    => $post_data[ 'country' ],
-                        'address'    => $post_data[ 'address' ],
-                        'city'       => $post_data[ 'city' ],
-                        'postcode'   => $post_data[ 'postcode' ],
-                    );
-
-                    if( isset( $post_data[ 'wpfunnels_checkout_id' ] ) ) {
-                        $wpfunnels_checkout_id = $post_data[ 'wpfunnels_checkout_id' ];
-                        $wpfunnel_id = WPFunnels\Wpfnl_functions::get_funnel_id_from_step( $wpfunnels_checkout_id );
-
-                        if( $wpfunnel_id != 0 ) {
-                            $cart_meta['wpfunnel_id'] = $wpfunnel_id;
-                            $cart_meta['wpfunnels_checkout_id'] = $wpfunnels_checkout_id;
-                        }
-                    }
-
-                    $cart_meta    = apply_filters( 'cl_cart_meta', $cart_meta );
-
-                    $cart_details[ 'cart_meta' ] = serialize( $cart_meta );
-
-                    $cart_details = apply_filters( 'cl_cart_details_before_update_ajax', $cart_details, $session_id );
-
-                    if( $cart_details ) {
-                        if( !is_null( $session_cart_details ) ) {
-                            unset( $cart_details[ 'time' ] );
-                            $wpdb->update(
+                    $session_id = '';
+                    
+                    // Prepare cart data first to use for comparison
+                    $cart_details = $this->prepare_cart_data($user_email, $provider);
+                    
+                    if (!$cart_details) {
+                        // No cart details to save, clean up any existing session
+                        if (!empty($session_id)) {
+                            $wpdb->delete(
                                 $cl_cart_table,
-                                $cart_details,
-                                array( 'session_id' => $session_id )
+                                array('session_id' => $session_id)
                             );
+                            
+                            if ($provider === 'wc' && cl_is_wc_active() && !empty(WC()->session)) {
+                                WC()->session->__unset('cl_wc_session_id');
+                            }
+                            if ($provider === 'edd' && cl_is_edd_active() && !empty(EDD()->session)) {
+                                EDD()->session->set('cl_edd_session_id', '');
+                            }
+                            if ($provider === 'lp' && cl_is_lp_active() && !empty(LP()->session)) {
+                                LP()->session->set('cl_lp_session_id', '', true);
+                            }
+                        }
+                        wp_send_json_success();
+                        return;
+                    }
+                    
+                    // First check if there's a session ID in the provider
+                    if ($provider === 'wc' && cl_is_wc_active() && !empty(WC()->session)) {
+                        $session_id = WC()->session->get('cl_wc_session_id');
+                    } elseif ($provider === 'edd' && cl_is_edd_active() && !empty(EDD()->session)) {
+                        $session_id = EDD()->session->get('cl_edd_session_id');
+                    } elseif ($provider === 'lp' && cl_is_lp_active() && !empty(LP()->session)) {
+                        $session_id = LP()->session->get('cl_lp_session_id');
+                    }
+                    
+                    $found_identical_cart = false;
+                    $existing_cart_id = '';
+                    $user_email_changed = false;
+
+                    // If we have a session ID, try to find the cart by session ID first
+                    if (!empty($session_id)) {
+                        $session_cart_details = $this->get_cart_details($session_id);
+                        
+                        // Check if cart exists and if the email has changed
+                        if (!is_null($session_cart_details)) {
+                            // Check if the user email has changed (user switched)
+                            if (!empty($user_email) && !empty($session_cart_details->email) &&
+                                $session_cart_details->email !== $user_email) {
+                                // Email has changed, create new session ID for the new user
+                                $user_email_changed = true;
+                                $session_id = md5(uniqid(wp_rand(), true));
+                            } else if ($session_cart_details->cart_contents === $cart_details['cart_contents'] &&
+                                floatval($session_cart_details->cart_total) === floatval($cart_details['cart_total'])) {
+                                $found_identical_cart = true;
+                                $existing_cart_id = $session_id;
+                            }
+                        }
+                    }
+                    
+                    // If email changed, don't look for existing carts by email
+                    // Otherwise, if no identical cart found by session ID, try to find by email
+                    if (!$user_email_changed && !$found_identical_cart && !empty($user_email)) {
+                        $existing_carts = $wpdb->get_results(
+                            $wpdb->prepare(
+                                "SELECT * FROM `{$cl_cart_table}` WHERE email = %s AND status IN ('processing', 'abandoned') ORDER BY time DESC",
+                                $user_email
+                            )
+                        );
+                        
+                        if (!empty($existing_carts)) {
+                            foreach ($existing_carts as $existing_cart) {
+                                if ($existing_cart->cart_contents === $cart_details['cart_contents'] && 
+                                    floatval($existing_cart->cart_total) === floatval($cart_details['cart_total'])) {
+                                    $found_identical_cart = true;
+                                    $session_cart_details = $existing_cart;
+                                    $existing_cart_id = $existing_cart->session_id;
+                                    break;
+                                }
+                            }
+                            
+                            // If no identical cart found but we have existing carts, get the most recent one
+                            if (!$found_identical_cart && !empty($session_id) && !$user_email_changed) {
+                                // Keep using the current session ID
+                            } elseif (!$found_identical_cart) {
+                                // No identical cart and no session ID, create a new one
+                                $session_id = md5(uniqid(wp_rand(), true));
+                            } else {
+                                // We found an identical cart, use that session ID
+                                $session_id = $existing_cart_id;
+                            }
                         } else {
-                            $cart_details[ 'session_id' ] = $session_id;
+                            // No existing carts for this email, create a new session ID
+                            if (empty($session_id)) {
+                                $session_id = md5(uniqid(wp_rand(), true));
+                            }
+                        }
+                    }
+                    
+                    // If still no session ID, generate a new one
+                    if (empty($session_id)) {
+                        $session_id = md5(uniqid(wp_rand(), true));
+                    }
+                    
+                    // Update session ID in provider
+                    if ($provider === 'wc' && cl_is_wc_active() && !empty(WC()->session)) {
+                        WC()->session->set('cl_wc_session_id', $session_id);
+                    } elseif ($provider === 'edd' && cl_is_edd_active() && !empty(EDD()->session)) {
+                        EDD()->session->set('cl_edd_session_id', $session_id);
+                    } elseif ($provider === 'lp' && cl_is_lp_active() && !empty(LP()->session)) {
+                        LP()->session->set('cl_lp_session_id', $session_id, true);
+                    }
+                    
+                    // If user email changed, existing cart details should be reset
+                    if ($user_email_changed) {
+                        $session_cart_details = null;
+                    }
+                    // If no session cart details set yet, get it now
+                    else if (is_null($session_cart_details) && !empty($session_id)) {
+                        $session_cart_details = $this->get_cart_details($session_id);
+                    }
+
+                    if ($cart_details) {
+                        // Prepare cart meta
+                        $cart_meta = array(
+                            'first_name' => $post_data['first_name'],
+                            'last_name'  => $post_data['last_name'],
+                            'phone'      => $post_data['phone'],
+                            'country'    => $post_data['country'],
+                            'address'    => $post_data['address'],
+                            'city'       => $post_data['city'],
+                            'postcode'   => $post_data['postcode'],
+                        );
+
+                        if (isset($post_data['wpfunnels_checkout_id'])) {
+                            $wpfunnels_checkout_id = $post_data['wpfunnels_checkout_id'];
+                            $wpfunnel_id = WPFunnels\Wpfnl_functions::get_funnel_id_from_step($wpfunnels_checkout_id);
+
+                            if ($wpfunnel_id != 0) {
+                                $cart_meta['wpfunnel_id'] = $wpfunnel_id;
+                                $cart_meta['wpfunnels_checkout_id'] = $wpfunnels_checkout_id;
+                            }
+                        }
+
+                        $cart_meta = apply_filters('cl_cart_meta', $cart_meta);
+                        $cart_details['cart_meta'] = serialize($cart_meta);
+                        $cart_details = apply_filters('cl_cart_details_before_update_ajax', $cart_details, $session_id);
+
+                        // Check if we need to update an existing cart or insert a new one
+                        if (!is_null($session_cart_details) && !$user_email_changed) {
+                            if (!$found_identical_cart) {
+                                // Cart exists but content is different, update it
+                                unset($cart_details['time']); // Keep original timestamp
+                                $wpdb->update(
+                                    $cl_cart_table,
+                                    [
+                                        'cart_contents' => $cart_details['cart_contents'],
+                                        'cart_total'    => $cart_details['cart_total'],
+                                        'cart_meta'     => $cart_details['cart_meta'],
+                                        'email'         => $user_email // Update email in case it changed
+                                    ],
+                                    ['session_id' => $session_id]
+                                );
+                            }
+                            // If content is identical, do nothing (keep existing cart)
+                        } else {
+                            // No existing cart or user email changed, insert a new one
+                            $cart_details['session_id'] = $session_id;
                             $wpdb->insert(
                                 $cl_cart_table,
                                 $cart_details
                             );
                         }
                     } else {
+                        // No cart details, clean up
                         $wpdb->delete(
                             $cl_cart_table,
-                            array( 'session_id' => $session_id )
+                            array('session_id' => $session_id)
                         );
-                        if( $provider === 'wc' && cl_is_wc_active() && !empty( WC()->session ) ) {
-                            WC()->session->__unset( 'cl_wc_session_id' );
+
+                        if ($provider === 'wc' && cl_is_wc_active() && !empty(WC()->session)) {
+                            WC()->session->__unset('cl_wc_session_id');
                         }
-                        if( $provider === 'edd' && cl_is_edd_active() && !empty( EDD()->session ) ) {
-                            EDD()->session->set( 'cl_edd_session_id', '' );
+                        if ($provider === 'edd' && cl_is_edd_active() && !empty(EDD()->session)) {
+                            EDD()->session->set('cl_edd_session_id', '');
                         }
-                        if( $provider === 'lp' && cl_is_lp_active() && !empty( LP()->session ) ) {
-                            LP()->session->set( 'cl_lp_session_id', '', true );
+                        if ($provider === 'lp' && cl_is_lp_active() && !empty(LP()->session)) {
+                            LP()->session->set('cl_lp_session_id', '', true);
                         }
                     }
                 }

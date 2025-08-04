@@ -5,7 +5,7 @@ Donate link: https://rextheme.com/cart-lift/
 Requires at least: 5.0
 Tested up to: 6.8.2
 Requires PHP: 7.4
-Stable tag: 3.1.42
+Stable tag: 3.1.43
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -184,6 +184,10 @@ Follow the steps in this guide: [How to upgrade to Cart Lift Pro](https://rexthe
 8. Analytics
 
 == Changelog ==
+
+= 3.1.43 (2025-08-04) =
+* Fix: Prevented duplicate abandoned cart entries for logged-in users revisiting unchanged carts after login
+
 
 = 3.1.42 (2025-07-25) =
 * Fix: Matched visual and code structure of Enable Weekly Report section with Edit Campaign page for consistent UI
