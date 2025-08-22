@@ -5,7 +5,7 @@ Donate link: https://rextheme.com/cart-lift/
 Requires at least: 5.0
 Tested up to: 6.8.2
 Requires PHP: 7.4
-Stable tag: 3.1.43
+Stable tag: 3.1.44
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -184,6 +184,9 @@ Follow the steps in this guide: [How to upgrade to Cart Lift Pro](https://rexthe
 8. Analytics
 
 == Changelog ==
+
+= 3.1.44 (2025-08-22) =
+* Enhancement: Translation update for German, Dutch, French, Italian, Spanish, Arabic, Croatian, Czech, Danish, Finnish, German (Switzerland), Japanese, Polish, Portuguese (Portugal), Russian, Swedish, Chinese (China), Greek, Hebrew, Portuguese (Brazil)
 
 = 3.1.43 (2025-08-04) =
 * Fix: Prevented duplicate abandoned cart entries for logged-in users revisiting unchanged carts after login

@@ -11,17 +11,17 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2024-03-27T09:45:58+00:00\n"
-"PO-Revision-Date: 2024-09-04 09:52+0000\n"
+"PO-Revision-Date: 2025-08-20 10:11+0000\n"
 "X-Generator: Loco https://localise.biz/\n"
 "X-Domain: cart-lift\n"
 "Language: ar\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100 >= 3 "
 "&& n%100<=10 ? 3 : n%100 >= 11 && n%100<=99 ? 4 : 5;\n"
-"X-Loco-Version: 2.6.11; wp-6.6.1"
+"X-Loco-Version: 2.8.0; wp-6.8.2; php-8.3.8"
 
 #: admin/class-cart-lift-sales-notification-bar.php:49
 msgid " 15% "
-msgstr ""
+msgstr "15٪"
 
 #: includes/class-cart-lift-dependency-checker.php:277
 #: includes/class-cart-lift-dependency-checker.php:302
@@ -125,7 +125,7 @@ msgstr "واحسرتاه. فقط لإعلامك &mdash; تم التخلي عن �
 
 #: admin/partials/cart-lift-setup-wizard.php:134
 msgid "Ale320"
-msgstr ""
+msgstr "320"
 
 #: admin/partials/cart-lift-carts-tab.php:35
 #: admin/partials/cart-lift-analytics-tab.php:61
@@ -430,7 +430,6 @@ msgid "Details"
 msgstr "تفاصيل"
 
 #: admin/partials/cart-lift-setup-wizard.php:97
-#, fuzzy
 #| msgid "Disable branding:"
 msgid "Disable Branding"
 msgstr "تعطيل العلامة التجارية:"
@@ -828,7 +827,6 @@ msgid "None"
 msgstr "لا أحد"
 
 #: admin/partials/cart-lift-setup-wizard.php:95
-#, fuzzy
 #| msgid "Notify admin for recovered cart:"
 msgid "Notification For Recovered Cart"
 msgstr "قم بإخطار المشرف بشأن سلة التسوق المستردة:"

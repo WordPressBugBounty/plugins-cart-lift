@@ -1,19 +1,21 @@
+# Copyright (C) 2024 RexTheme
+# This file is distributed under the GPL-2.0+.
 msgid ""
 msgstr ""
 "Project-Id-Version: Cart Lift - Abandoned Cart Recovery for WooCommerce and "
-"EDD\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-17 04:15+0000\n"
-"PO-Revision-Date: 2025-08-20 10:12+0000\n"
+"EDD 3.1.12\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/cart-lift\n"
 "Last-Translator: \n"
-"Language-Team: Croatian\n"
-"Language: hr\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10 >= 2 && "
-"n%10<=4 &&(n%100<10||n%100 >= 20)? 1 : 2;\n"
+"Language-Team: Japanese\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2024-09-04 09:23+0000\n"
+"PO-Revision-Date: 2025-08-20 10:28+0000\n"
 "X-Generator: Loco https://localise.biz/\n"
+"X-Domain: cart-lift\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "X-Loco-Version: 2.8.0; wp-6.8.2; php-8.3.8"
 
 #: admin/class-cart-lift-sales-notification-bar.php:49
@@ -25,34 +27,32 @@ msgstr "15%"
 #, php-format
 msgid ""
 " any of the following plugins : %s. Please activate any of these plugins."
-msgstr ""
-"bilo koji od sljedećih dodataka :%s. Aktivirajte bilo koji od ovih dodataka."
+msgstr "次のプラグインのいずれか: %s. これらのプラグインのいずれかを有効にしてください。"
 
 #: admin/class-cart-lift-sales-notification-bar.php:49
 msgid " Discount On "
-msgstr "spustiti se na"
+msgstr "割引"
 
 #: admin/partials/cart-lift-setup-wizard.php:113
 msgid " License Key"
-msgstr "izložitičjamstven"
+msgstr "ライセンスキー"
 
 #: admin/partials/cart-lift-carts-tab.php:360
 msgid " Product"
-msgstr "Proizvod"
+msgstr "製品"
 
 #: admin/partials/cart-lift-carts-tab.php:360
 msgid " Products"
-msgstr "proizvodi"
+msgstr "製品"
 
 #: admin/partials/cart-lift-carts-tab.php:398
 msgid " Upgrade to Pro"
-msgstr "Nadogradi na pro"
+msgstr "Pro にアップグレードする"
 
 #: admin/partials/cart-lift-email-templates-tab.php:146
 #, php-format
 msgid "<span class=\"text\">Send %s %s after cart is abandoned</span>"
-msgstr ""
-"<span class = \"text\"> Pošaljite %s %s nakon napuštanja košarice </span>"
+msgstr "<span class=\"text\">カートを放棄した後に %s %s を送信</span>"
 
 #: admin/partials/cart-lift-edit-email-template.php:25
 msgid ""
@@ -60,58 +60,57 @@ msgid ""
 "the email, tell us how long to wait before we send it, and we'll do the rest."
 " You can change all these edit later if you need to."
 msgstr ""
-"Kampanja je jednostavno automatizirana e-pošta. Dajete nam osnovne detalje e-"
-"pošte, recite nam koliko dugo čekati prije nego što ga pošaljemo, a mi ćemo "
-"obaviti ostatak. Sve ove izmjene možete kasnije promijeniti ako trebate."
+"キャンペーンは、自動メールにすぎません。 メールの基本的な詳細を教えていただき、メールを送信するまでの時間を教えてください。残りは私たちが行います。 "
+"必要に応じて、これらすべての編集を後で変更できます。"
 
 #: admin/class-cart-lift-admin.php:164
 #: admin/partials/cart-lift-analytics.php:16
 #: admin/partials/cart-lift-analytics.php:22
 #: admin/partials/cart-lift-carts-tab.php:37
 msgid "Abandoned"
-msgstr "polabavljen"
+msgstr "放置"
 
 #: includes/wc-email/class-cart-lift-abandoned-email-template.php:26
 msgid "Abandoned cart to admin"
-msgstr "Napuštena košarica administratoru"
+msgstr "管理する放棄されたカート"
 
 #: admin/partials/cart-lift-carts-tab.php:292
 msgid "Abandoned Date:"
-msgstr "Napušteni datum:"
+msgstr "放棄日:"
 
 #: admin/partials/cart-lift-email-templates-tab.php:92
 msgid "ACTION"
-msgstr "RADNJA"
+msgstr "行動"
 
 #: admin/partials/cart-lift-carts-tab.php:100
 msgid "Action"
-msgstr "Radnja"
+msgstr "行動"
 
 #: admin/partials/cart-lift-email-templates-tab.php:179
 #: admin/partials/cart-lift-carts-tab.php:156
 msgid "Action :"
-msgstr "DJELOVANJE:"
+msgstr "アクション:"
 
 #: admin/partials/cart-lift-dashboard-templates-tab.php:273
 msgid "Actionable Abandoned Carts"
-msgstr "Napuštena kolica"
+msgstr "実行可能な放棄されたカート"
 
 #: admin/partials/cart-lift-setup-wizard.php:115
 msgid "Activate License"
-msgstr "aktivirati licencu"
+msgstr "ライセンスをアクティブにする"
 
 #: admin/class-cart-lift-ajax.php:119
 msgid "Activated"
-msgstr "aktiviran"
+msgstr "活性化された"
 
 #: admin/partials/cart-lift-email-templates-tab.php:50
 #: admin/partials/cart-lift-email-templates-tab.php:76
 msgid "add campaign"
-msgstr "dodaj kampanju"
+msgstr "キャンペーンを追加"
 
 #: admin/partials/cart-lift-edit-email-template.php:619
 msgid "After cart is abandoned."
-msgstr "Nakon što je košarica napuštena."
+msgstr "カートが放棄された後。"
 
 #: includes/actions.php:158
 #: includes/wc-email/templates/emails/cl-admin-abandoned-cart.php:14
@@ -119,8 +118,7 @@ msgstr "Nakon što je košarica napuštena."
 #, php-format
 msgid ""
 "Alas. Just to let you know &mdash; cart belonging to %1$s has been abandoned:"
-msgstr ""
-"Jao. Samo da vas obavijestimo da je košarica koja pripada %1$s napuštena:"
+msgstr "ああ、残念。 %1$s に属するカートは放棄されたことを知らせるために &mdash; カートは放棄されました:"
 
 #: admin/partials/cart-lift-setup-wizard.php:134
 msgid "Ale320"
@@ -129,192 +127,184 @@ msgstr "ALE320"
 #: admin/partials/cart-lift-carts-tab.php:35
 #: admin/partials/cart-lift-analytics-tab.php:61
 msgid "All"
-msgstr "svi"
+msgstr "全部"
 
 #: admin/class-cart-lift-admin.php:288 admin/class-cart-lift-admin.php:289
 msgid "All Carts"
-msgstr "Sva kolica"
+msgstr "すべてのカート"
 
 #: admin/partials/settings-component/email-tab.php:47
 msgid "Allows you to connect SMTP using Cart Lift."
-msgstr "Omogućuje vam povezivanje SMTP pomoću Lift Cart."
+msgstr "Cart Lift を使用して SMTP を接続できます。"
 
 #: admin/partials/cart-lift-edit-email-template.php:315
 msgid ""
 "Allows you to grant free shipping. A free shipping method must be enabled in "
 "your shipping zone and be set to require \"a valid free shipping coupon\""
-msgstr ""
-"Omogućuje vam besplatnu dostavu. Besplatna metoda dostave mora biti "
-"omogućena u vašoj zoni dostave i trebate postaviti \"važeći kupon za "
-"besplatnu dostavu\""
+msgstr "送料無料を許可します。 配送ゾーンで送料無料を有効にし、「有効な送料無料クーポン」が必要になるように設定する必要があります。"
 
 #: admin/partials/cart-lift-edit-email-template.php:470
 #: admin/partials/cart-lift-edit-email-template.php:504
 msgid "Allows you to send mobile SMS through Twilio."
-msgstr "Omogućuje vam slanje mobilnih SMS-ova putem Twilia."
+msgstr "Twilio 経由でモバイル SMS を送信できます。"
 
 #: admin/partials/cart-lift-edit-email-template.php:157
 msgid "Allows you to send new coupon only for this template."
-msgstr "Omogućuje vam slanje novog kupona samo za ovaj predložak."
+msgstr "このテンプレートのみの新しいクーポンを送信できます。"
 
 #: admin/partials/cart-lift-carts-tab.php:96
 msgid "Amount"
-msgstr "Iznos"
+msgstr "金額"
 
 #: admin/partials/cart-lift-carts-tab.php:121
 msgid "Amount :"
-msgstr "Iznos:"
+msgstr "金額:"
 
 #: includes/wc-email/class-cart-lift-abandoned-email-template.php:27
 msgid "An email sent to the admin when a cart is abandoned."
-msgstr "E-poruka poslana administratoru kada je košarica napuštena."
+msgstr "カートが放棄されたときに管理者に送信された電子メール。"
 
 #: admin/partials/cart-lift-tabs-display.php:106
 msgid "Analytics"
-msgstr "Analitika"
+msgstr "分析"
 
 #: admin/partials/cart-lift-email-templates-tab.php:369
 #: admin/partials/cart-lift-carts-tab.php:470
 msgid "Are you sure?"
-msgstr "Jesi li siguran?"
+msgstr "えーん?"
 
 #: admin/partials/settings-component/smtp-tab.php:90
 msgid "Authentication:"
-msgstr "Ovjera:"
+msgstr "認証:"
 
 #: admin/partials/cart-lift-edit-email-template.php:404
 msgid "Auto apply coupon"
-msgstr "Automatski primijenite kupon"
+msgstr "自動適用クーポン"
 
 #: admin/partials/cart-lift-setup-wizard.php:72
 msgid "Automated recovery"
-msgstr "automatizac"
+msgstr "自動復旧"
 
 #: admin/partials/cart-lift-edit-email-template.php:22
 msgid "Back to Campaign"
-msgstr "Natrag na kampanju"
+msgstr "キャンペーンに戻る"
 
 #: admin/partials/cart-lift-setup-wizard.php:152
 msgid "Bing"
-msgstr "bančenje"
+msgstr "ビンビン"
 
 #: admin/class-cart-lift-admin.php:216 admin/class-cart-lift-admin.php:297
 #: admin/class-cart-lift-admin.php:298
 #: admin/partials/cart-lift-email-templates-tab.php:27
 #: admin/partials/cart-lift-tabs-display.php:138
 msgid "Campaigns"
-msgstr "kampanje"
+msgstr "キャンペーン"
 
 #: admin/partials/cart-lift-email-templates-tab.php:371
 #: admin/partials/cart-lift-carts-tab.php:472
 msgid "Cancel"
-msgstr "Otkazati"
+msgstr "キャンセル"
 
 #: includes/wc-email/class-cart-lift-abandoned-email-template.php:30
 msgid "Cart Abandoned"
-msgstr "Košarica napuštena"
+msgstr "カートは放棄されました"
 
 #: admin/partials/cart-lift-compare-templates-tab.php:44
 msgid ""
 "Cart Abandoned Cut-Off Time (Minimum time limit to consider a cart is "
 "abandoned)"
-msgstr ""
-"Vrijeme napuštanja košarice za kupovinu (minimalno vremensko ograničenje za "
-"razmatranje košarice je napušteno)"
+msgstr "カート放棄の時間（カゴを検討するための最小時間制限は放棄されます）"
 
 #: admin/partials/cart-lift-dashboard-templates-tab.php:237
-#| msgid "Cart Abandon Rate"
 msgid "Cart Abandoned Rate"
-msgstr "Stopa napuštanja košarice"
+msgstr "カート放棄率"
 
 #: admin/partials/cart-lift-carts-tab.php:357
 msgid "Cart Contents:"
-msgstr "Sadržaj košarice:"
+msgstr "カートの内容:"
 
 #: admin/class-cart-lift-tab-view.php:157
 #: admin/class-cart-lift-tab-view.php:169
 msgid "Cart data has been successfully deleted."
-msgstr "Podaci košarice uspješno su izbrisani."
+msgstr "カート データは正常に削除されました。"
 
 #: includes/wc-email/templates/emails/cl-admin-abandoned-cart.php:16
 msgid "Cart details: "
-msgstr "Detalji košarice:"
+msgstr "カートの詳細:"
 
 #: admin/partials/cart-lift-view-cart-data.php:11
 msgid "Cart items"
-msgstr "Predmeti u košarici"
+msgstr "カートのアイテム"
 
 #: admin/class-cart-lift-sales-notification-bar.php:49
 #: admin/class-cart-lift-admin.php:269
 #: admin/partials/cart-lift-setup-wizard.php:57
 msgid "Cart Lift"
-msgstr "Cart Lift"
+msgstr "カートリフト"
 
 #: admin/partials/cart-lift-setup-wizard.php:90
 msgid "Cart Lift "
-msgstr "kočijaš spuk na"
+msgstr "カートリフト"
 
 #. Name of the plugin
 msgid "Cart Lift - Abandoned Cart Recovery for WooCommerce and EDD"
-msgstr "Cart Lift - Abandoned Cart Recovery for WooCommerce and EDD"
+msgstr "Cart Lift - WooCommerce および EDD の放棄されたカートの回収"
 
 #: admin/partials/cart-lift-compare-templates-tab.php:3
 msgid "Cart Lift Feature Comparison"
-msgstr "Usporedba značajki Cart Lift"
+msgstr "カート リフト機能の比較"
 
 #: admin/partials/cart-lift-setup-wizard.php:67
 msgid "Cart Lift Features"
-msgstr "Značajke podizanja kolica"
+msgstr "カートリフトの特徴"
 
 #: admin/partials/cart-lift-setup-wizard.php:100
 msgid "Cart Lift Popup"
-msgstr "skočni prozor"
+msgstr "カートリフトポップアップ"
 
 #: admin/class-cart-lift-admin.php:166
 #: admin/partials/cart-lift-analytics.php:35
 msgid "Cart Overview"
-msgstr "Pregled košarice"
+msgstr "カートの概要"
 
 #: admin/partials/cart-lift-setup-wizard.php:68
 msgid "Cart Recovery Made Easy With Cart Lift!"
-msgstr "Oporavak kolica olakšan uz podizanje kolica!"
+msgstr "カートリフトでカートの回収が簡単になります。"
 
 #: admin/class-cart-lift-db.php:161
 msgid "Cart reminder"
-msgstr "šamar"
+msgstr "カートのリマインダー"
 
 #: admin/partials/cart-lift-view-cart-data.php:12
 msgid "Cart total"
-msgstr "Košarica ukupno"
+msgstr "カート合計"
 
 #: admin/partials/cart-lift-carts-tab.php:288
 msgid "Cart Total:"
-msgstr "Košarica ukupno:"
+msgstr "カートの合計:"
 
 #: admin/partials/cart-lift-setup-wizard.php:17
 msgid "Cart-lift - Setup Wizard"
-msgstr "čarobnjak za postavljanje kolica - čarobnjak za postavljanje"
+msgstr "カート-リフト - セットアップ ウィザード"
 
 #: admin/class-cart-lift-admin.php:214
 #: admin/partials/cart-lift-tabs-display.php:94
 msgid "Carts"
-msgstr "kolica"
+msgstr "カート"
 
 #: admin/partials/cart-lift-setup-wizard.php:64
 msgid "Check the guide"
-msgstr "Provjerite vodič"
+msgstr "ガイドを確認してください"
 
 #: admin/partials/cart-lift-edit-email-template.php:378
 msgid ""
 "Check this box if the coupon cannot be used in conjunction with other "
 "coupons."
-msgstr ""
-"Označite ovaj okvir ako se kupon ne može koristiti zajedno s ostalim "
-"kuponima."
+msgstr "クーポンが他のクーポンと併用できない場合は、このボックスにチェックを入れます。"
 
 #: admin/partials/cart-lift-analytics-tab.php:58
 msgid "Choose an option:"
-msgstr "Odaberite opciju:"
+msgstr "オプションを選択してください:"
 
 #: admin/partials/cart-lift-dashboard-templates-tab.php:79
 #: admin/partials/cart-lift-email-templates-tab.php:56
@@ -333,88 +323,86 @@ msgstr "Odaberite opciju:"
 #: admin/partials/settings-component/email-popup.php:15
 #: admin/partials/settings-component/twilio-sms.php:15
 msgid "Click to Upgrade Pro"
-msgstr "Kliknite za nadogradnju Pro"
+msgstr "クリックしてプロをアップグレード"
 
 #: admin/partials/cart-lift-carts-tab.php:38
 msgid "Completed"
-msgstr "dovršen"
+msgstr "完了しました"
 
 #: admin/partials/cart-lift-email-templates-tab.php:90
 msgid "CONVERSIONS"
-msgstr "broja konverzija"
+msgstr "変換"
 
 #: admin/partials/cart-lift-email-templates-tab.php:172
 msgid "Conversions :"
-msgstr "Pretvorbe:"
+msgstr "変換:"
 
 #: public/cart-lift-cart-actions.php:823
 msgid "Coupon"
-msgstr "kupon"
+msgstr "クーポン"
 
 #: admin/partials/cart-lift-edit-email-template.php:223
 msgid "Coupon amount"
-msgstr "Iznos kupona"
+msgstr "クーポン金額"
 
 #: admin/partials/cart-lift-edit-email-template.php:441
 msgid "Coupon code will be automatically applied to checkout."
-msgstr "Kôd kupona automatski se primjenjuje na naplatu."
+msgstr "クーポン コードはチェックアウトに自動的に適用されます。"
 
 #: admin/partials/cart-lift-edit-email-template.php:234
 msgid "Coupon expiration frequency"
-msgstr "Učestalost isteka kupona"
+msgstr "クーポンの有効期限"
 
 #: admin/partials/cart-lift-edit-email-template.php:163
 msgid "Coupon Type"
-msgstr "Vrsta kupona"
+msgstr "クーポンタイプ"
 
 #: admin/class-cart-lift-tab-view.php:510
 msgid "Create a New Campaign"
-msgstr "Izradite novu kampanju"
+msgstr "新しいキャンペーンを作成する"
 
 #: admin/partials/cart-lift-compare-templates-tab.php:282
 msgid ""
 "Create unlimited email templates to be sent at intervals that you set – "
 "Intervals start from 15 minutes after cart is abandoned. Free -- limit to 2."
 msgstr ""
-"Stvorite neograničene predloške e-pošte koje ćete slati u intervalima koje "
-"odredite - intervali počinju od 15 minuta nakon napuštanja košarice. "
-"Besplatno - ograničenje na 2."
+"設定した間隔で送信する無制限の電子メール テンプレートを作成します。間隔は、カートが放棄されてから 15 分後に開始されます。 無料 -- 2 まで。"
 
 #: admin/partials/cart-lift-setup-wizard.php:84
 msgid "Customize Compelling Product Titles With Combined Attributes"
-msgstr "Prilagodite uvjerljive naslove proizvoda s kombiniranim atributima"
+msgstr "組み合わせた属性を使用して、魅力的な製品タイトルをカスタマイズする"
 
 #: admin/class-cart-lift-admin.php:268 admin/class-cart-lift-admin.php:279
 #: admin/class-cart-lift-admin.php:280 admin/class-cart-lift-admin.php:359
 msgid "Dashboard"
-msgstr "kontrolna ploča"
+msgstr "ダッシュボード"
 
 #: admin/partials/cart-lift-carts-tab.php:99
 msgid "Date"
-msgstr "Datum"
+msgstr "日付"
 
 #: admin/partials/cart-lift-carts-tab.php:136
 msgid "Date :"
-msgstr "datum:"
+msgstr "日付:"
 
 #: admin/partials/cart-lift-edit-email-template.php:243
 msgid "Day (s)"
-msgstr "Dan (i)"
+msgstr "日 (s)"
 
 #: admin/partials/cart-lift-edit-email-template.php:582
 msgid "Day(s)"
-msgstr "Dan (a)"
+msgstr "日"
 
 #: admin/class-cart-lift-ajax.php:119
 msgid "Deactivated"
-msgstr "isključen"
+msgstr "非アクティブ化"
 
 #. placeholder is {blogname}, a variable that will be substituted when email is sent out
 #: includes/wc-email/class-cart-lift-abandoned-email-template.php:32
 #, php-format
 msgctxt "default email subject for abandoned emails sent to the admin"
 msgid "[%s] Cart abandoned"
-msgstr "[%s] Kolica napuštena"
+msgstr "[ %s] カートは放棄されました"
 
 #: admin/partials/cart-lift-email-templates-tab.php:275
 #: admin/partials/cart-lift-email-templates-tab.php:300
@@ -422,262 +410,259 @@ msgstr "[%s] Kolica napuštena"
 #: admin/partials/cart-lift-carts-tab.php:185
 #: admin/partials/cart-lift-carts-tab.php:486
 msgid "Delete"
-msgstr "Izbrisati"
+msgstr "削除"
 
 #: admin/partials/cart-lift-setup-wizard.php:74
 msgid "Detailed reports"
-msgstr "detaljna izvješća"
+msgstr "詳細レポート"
 
 #: admin/partials/cart-lift-carts-tab.php:157
 msgid "Details"
-msgstr "detalji"
+msgstr "詳細を"
 
 #: admin/partials/cart-lift-setup-wizard.php:97
-#| msgid "Disable branding:"
 msgid "Disable Branding"
-msgstr "Onemogući markiranje:"
+msgstr "ブランディングを無効にする"
 
 #: admin/partials/cart-lift-compare-templates-tab.php:241
 msgid "Disable Branding (From email footer)."
-msgstr "Onemogući markiranje (iz podnožja e-pošte)."
+msgstr "ブランド化を無効にする (メールフッターから)。"
 
 #: admin/class-cart-lift-admin.php:364
 msgid "Documentation"
-msgstr "Dokumentacija"
+msgstr "ドキュメン"
 
 #: admin/partials/cart-lift-tabs-display.php:257
 msgid "documentation"
-msgstr "dokumentacija"
+msgstr "ドキュメン"
 
 #: admin/partials/cart-lift-setup-wizard.php:124
 msgid "Done"
-msgstr "učinjen"
+msgstr "完了して"
 
 #: admin/partials/cart-lift-carts-tab.php:76
 #: admin/partials/cart-lift-carts-tab.php:82
 msgid "Download Report"
-msgstr "Preuzimanje izvješća"
+msgstr "レポートをダウンロード"
 
 #: admin/partials/cart-lift-email-templates-tab.php:182
 msgid "Duplicate"
-msgstr "duplikat"
+msgstr "重複"
 
 #: admin/partials/cart-lift-setup-wizard.php:153
 msgid "eBay"
-msgstr "ebajja"
+msgstr "ebay"
 
 #: admin/partials/cart-lift-email-templates-tab.php:209
 #: admin/partials/cart-lift-email-templates-tab.php:235
 msgid "Edit"
-msgstr "montirati"
+msgstr "編集"
 
 #: admin/class-cart-lift-tab-view.php:543 admin/class-cart-lift-admin.php:210
 msgid "Edit Campaign"
-msgstr "Uredi kampanju"
+msgstr "編集キャンペーン"
 
 #: admin/partials/cart-lift-view-cart-data.php:10
 #: admin/partials/cart-lift-carts-tab.php:94
 #: admin/partials/settings-component/email-tab.php:16
 msgid "Email"
-msgstr "E-mail"
+msgstr "メール"
 
 #: admin/partials/cart-lift-carts-tab.php:119
-#| msgid "Email Log:"
 msgid "Email :"
-msgstr "E-mail zapisnik:"
+msgstr "メール:"
 
 #: admin/partials/cart-lift-edit-email-template.php:125
 msgid "Email body"
-msgstr "Tijelo e-pošte"
+msgstr "メール本文"
 
 #: admin/partials/cart-lift-edit-email-template.php:562
 msgid "Email checkout button color"
-msgstr "Boja gumba za naplatu e-pošte"
+msgstr "メールチェックアウトボタンの色"
 
 #: admin/partials/cart-lift-edit-email-template.php:553
 msgid "Email checkout button text"
-msgstr "Tekst gumba za naplatu e-pošte"
+msgstr "メールチェックアウトボタンのテキスト"
 
 #: admin/class-cart-lift-ajax.php:457
 msgid "Email has been sent successfully."
-msgstr "E-mail je uspješno poslan."
+msgstr "メールは正常に送信されました。"
 
 #: admin/partials/cart-lift-edit-email-template.php:544
 msgid "Email header color"
-msgstr "Boja zaglavlja e-pošte"
+msgstr "メールヘッダーの色"
 
 #: admin/partials/cart-lift-edit-email-template.php:535
 msgid "Email header text"
-msgstr "Tekst zaglavlja e-pošte"
+msgstr "メール ヘッダー テキスト"
 
 #: admin/partials/cart-lift-dashboard-templates-tab.php:117
 #: admin/partials/cart-lift-email-templates-tab.php:86
 msgid "Email Sent"
-msgstr "E-mail poslan"
+msgstr "メール送った"
 
 #: admin/partials/cart-lift-email-templates-tab.php:150
 msgid "Email Sent :"
-msgstr "Poslano e-mail:"
+msgstr "メールで送信:"
 
 #: admin/partials/cart-lift-edit-email-template.php:88
 msgid "Email subject"
-msgstr "Predmet e-pošte"
+msgstr "メールの件名"
 
 #: admin/partials/cart-lift-carts-tab.php:281
 msgid "Email:"
-msgstr "E-mail:"
+msgstr "メール:"
 
 #: admin/partials/settings-component/email-popup.php:11
 msgid "Enable Cart Lift Popup:"
-msgstr "Omogući skočno podizanje košarice:"
+msgstr "カート リフト ポップアップを有効にします。"
 
 #: admin/partials/settings-component/email-tab.php:19
 msgid "Enable Cart Lift SMTP for this site:"
-msgstr "Omogući SMTP za podizanje košarice za ovu web lokaciju:"
+msgstr "このサイトでカート リフト SMTP を有効にします。"
 
 #: admin/partials/cart-lift-edit-email-template.php:184
 msgid "Enable conditional discount"
-msgstr "Omogući uvjetni popust"
+msgstr "条件付き割引を有効にする"
 
 #: admin/partials/cart-lift-edit-email-template.php:147
 msgid "Enable coupon?"
-msgstr "Želite li omogućiti kupon?"
+msgstr "クーポンを有効にしますか?"
 
 #: admin/partials/settings-component/recaptcha-tap.php:21
 msgid "Enable reCAPTCHA V3:"
-msgstr "Omogući ReCaptcha v3:"
+msgstr "再キャプチャ v3 を有効にします。"
 
 #: admin/partials/settings-component/twilio-sms.php:12
 msgid "Enable Twilio SMS Notification:"
-msgstr "Omogućite Twilio SMS obavijest:"
+msgstr "Twilio SMS 通知を有効にする:"
 
 #: admin/partials/cart-lift-edit-email-template.php:449
 msgid "Enable Twilio SMS?"
-msgstr "Omogućiti Twilio SMS?"
+msgstr "Twilio SMS を有効にしますか?"
 
 #: admin/partials/settings-component/recaptcha-tap.php:169
 #: admin/partials/settings-component/recaptcha-tap.php:287
 msgid "Enter score that will check with the reCAPTCHA score."
-msgstr "Unesite rezultat koji će provjeriti s rezultatom ReCaptcha."
+msgstr "ReCAPTCHA スコアで確認するスコアを入力します。"
 
 #: admin/partials/settings-component/smtp-tab.php:114
 msgid "Enter Your Email"
-msgstr "Unesite svoju e-poštu"
+msgstr "メールアドレスを入力してください"
 
 #: admin/partials/settings-component/recaptcha-tap.php:133
 #: admin/partials/settings-component/recaptcha-tap.php:248
 msgid "Enter your secret key."
-msgstr "Unesite svoj tajni ključ."
+msgstr "秘密鍵を入力します。"
 
 #: admin/partials/settings-component/recaptcha-tap.php:96
 #: admin/partials/settings-component/recaptcha-tap.php:210
 msgid "Enter your site key"
-msgstr "Unesite ključ svoje stranice"
+msgstr "サイト キーを入力してください"
 
 #: admin/partials/cart-lift-setup-wizard.php:151
 msgid "Etsy"
-msgstr "zivši"
+msgstr "エツィィ"
 
 #: admin/class-cart-lift-admin.php:415
-#| msgid "Every 15 Minutes"
 msgid "Every %d Minutes"
-msgstr "Svakih 15 minuta"
+msgstr "%d 分ごと"
 
 #: admin/partials/cart-lift-setup-wizard.php:77
 msgid "Exit intent popup"
-msgstr "Skočni prozor s namjeri izlaza"
+msgstr "終了インテントポップアップ"
 
 #: admin/partials/cart-lift-setup-wizard.php:81
 msgid "Extensive Filtering Options For Exporting A Precised Feed"
-msgstr "Opsežne opcije filtriranja za izvoz precizne hrane"
+msgstr "精密フィードをエクスポートするための広範なフィルタリング オプション"
 
 #: admin/partials/cart-lift-setup-wizard.php:150
 msgid "Facebook"
-msgstr "Facebook"
+msgstr "フェイス"
 
 #: admin/partials/cart-lift-setup-wizard.php:146
 msgid "Favourite Merchant"
-msgstr "omiljen trgovac"
+msgstr "お気に入りの商人"
 
 #: admin/partials/cart-lift-compare-templates-tab.php:12
 msgid "features"
-msgstr "značajke"
+msgstr "機能"
 
 #: admin/partials/cart-lift-carts-tab.php:30
 msgid "Filter:"
-msgstr "filter:"
+msgstr "フィルター:"
 
 #: admin/class-cart-lift-db.php:182
 msgid "Follow up"
-msgstr "pratiti"
+msgstr "フォローアップ"
 
 #: admin/partials/cart-lift-compare-templates-tab.php:13
 msgid "free"
-msgstr "besplatno"
+msgstr "無料"
 
 #: admin/partials/cart-lift-edit-email-template.php:278
 msgid "Free Shipping"
-msgstr "Besplatna dostava"
+msgstr "送料無料"
 
 #: admin/class-cart-lift-admin.php:220
 msgid "Free vs Pro"
-msgstr "Besplatno vs Pro"
+msgstr "無料対プロ"
 
 #: admin/partials/cart-lift-tabs-display.php:209
 msgid "free vs pro"
-msgstr "besplatno vs pro"
+msgstr "無料対プロ"
 
 #: admin/partials/settings-component/smtp-tab.php:52
 msgid "from"
-msgstr "iz"
+msgstr "から"
 
 #: admin/partials/cart-lift-dashboard-templates-tab.php:10
 msgid "From:"
-msgstr "Od:"
+msgstr "から:"
 
 #: admin/partials/cart-lift-setup-wizard.php:99
 msgid "GDPR Integration"
-msgstr "GDPR integracija"
+msgstr "GDPR 統合"
 
 #: admin/partials/cart-lift-settings-tab.php:29
 msgid "General"
-msgstr "Općenito"
+msgstr "一般"
 
 #: admin/class-cart-lift-ajax.php:555
 msgid "General setting data successfully saved."
-msgstr "Opće postavke Podaci o postavci uspješno spremljeni."
+msgstr "一般設定データが保存されました。"
 
 #: admin/partials/cart-lift-setup-wizard.php:125
 msgid "Get"
-msgstr "steći"
+msgstr "ゲット"
 
 #: admin/class-cart-lift-sales-notification-bar.php:49
 msgid "Get "
-msgstr "steći"
+msgstr "ゲット"
 
 #: admin/class-cart-lift-admin.php:318 admin/class-cart-lift-admin.php:371
 msgid "Go Pro"
-msgstr "Idi Pro"
+msgstr "プロになる"
 
 #: admin/partials/cart-lift-setup-wizard.php:149
 msgid "Google Shopping"
-msgstr "google shop"
+msgstr "グーグルショッピング"
 
 #: admin/partials/cart-lift-setup-wizard.php:133
 msgid "Graftype"
-msgstr "grafotil"
+msgstr "グラフタイプ"
 
 #: admin/partials/cart-lift-setup-wizard.php:55
 msgid "Hello, welcome to"
-msgstr "Pozdrav, dobrodošli"
+msgstr "こんにちは、ようこそ"
 
 #: admin/partials/cart-lift-edit-email-template.php:242
 msgid "Hour (s)"
-msgstr "Sati)"
+msgstr "時間 (s)"
 
 #: admin/partials/cart-lift-edit-email-template.php:581
 msgid "Hour(s)"
-msgstr "Sati)"
+msgstr "時間"
 
 #. URI of the plugin
 #. Author URI of the plugin
@@ -686,240 +671,234 @@ msgstr "https://rextheme.com/cart-lift"
 
 #: admin/partials/cart-lift-view-cart-data.php:8
 msgid "ID"
-msgstr "iskaznica"
+msgstr "id"
 
 #: admin/class-cart-lift-admin.php:463
 msgid ""
 "If you are using Paddle Payment Gateway, please ensure that you have "
 "disabled Abandoned Cart Recovery from there."
-msgstr ""
-"Ako koristite Paddle Payment Gateway, provjerite jeste li onemogućili "
-"oporavak napuštenih košarica od tamo."
+msgstr "Paddle Payment Gateway を使用している場合は、そこからの放棄されたカートの回復を無効にしていることを確認してください。"
 
 #: admin/partials/cart-lift-carts-tab.php:387
 msgid "Image"
-msgstr "Slika"
+msgstr "イメージ"
 
 #: admin/partials/cart-lift-compare-templates-tab.php:122
 msgid "Individual Campaign conversion"
-msgstr "Pojedinačna konverzija kampanje"
+msgstr "個々のキャンペーンのコンバージョン"
 
 #: admin/partials/cart-lift-compare-templates-tab.php:364
 msgid "Individual Campaign sent emails."
-msgstr "Pojedinačna kampanja poslala je e-poruke."
+msgstr "個別のキャンペーンからメールが送信されました。"
 
 #: admin/partials/cart-lift-compare-templates-tab.php:405
 msgid "Individual order items -- Email log, Cart Contents, Unsubscribe order."
-msgstr ""
-"Pojedinačne narudžbe - E-dnevnik, Sadržaj košarice, Otkazivanje pretplate."
+msgstr "個別の注文品目 -- メール ログ、カートの内容、購読解除の注文。"
 
 #: admin/partials/cart-lift-compare-templates-tab.php:148
 msgid "Individual order items -- User Details"
-msgstr "Pojedinačne narudžbe - Pojedinosti o korisniku"
+msgstr "個別注文品目 -- ユーザーの詳細"
 
 #: admin/partials/cart-lift-edit-email-template.php:341
 msgid "Individual use only"
-msgstr "Samo za pojedinačnu upotrebu"
+msgstr "個人使用のみ"
 
 #: admin/partials/cart-lift-compare-templates-tab.php:446
 msgid "Initiate popup to take email when guest user adds product to cart."
-msgstr ""
-"Pokrenite skočni prozor za preuzimanje e-pošte kada gostujući korisnik doda "
-"proizvod u košaricu."
+msgstr "ゲスト ユーザーが商品をカートに追加したときに、ポップアップを開始してメールを受け取ります。"
 
 #: admin/partials/cart-lift-settings-tab.php:41
 #: admin/partials/cart-lift-settings-tab.php:65
 msgid "Integration"
-msgstr "ugradnje"
+msgstr "統合"
 
 #: admin/partials/cart-lift-setup-wizard.php:119
 msgid "Invalid license key"
-msgstr "nevažeći licencni ključ"
+msgstr "ライセンスキーが無効です"
 
 #: admin/partials/cart-lift-analytics-tab.php:63
 msgid "Last 30 Days"
-msgstr "Zadnjih 30 dana"
+msgstr "過去30日間"
 
 #: admin/partials/cart-lift-analytics-tab.php:62
 msgid "Last 7 Days"
-msgstr "Zadnjih 7 dana"
+msgstr "過去7日間"
 
 #: admin/partials/cart-lift-setup-wizard.php:63
 msgid "Let’s create your first Campaign"
-msgstr "Kreirajmo vašu prvu kampanju"
+msgstr "初めてのキャンペーンを作成しましょう"
 
 #: admin/partials/cart-lift-setup-wizard.php:137
 msgid "Let’s create your first feed"
-msgstr "Kreirajmo vaš prvi feed"
+msgstr "初めてのフィードを作成しましょう"
 
 #: admin/partials/cart-lift-tabs-display.php:239
 msgid "License"
-msgstr "licenca"
+msgstr "ライセンス"
 
 #: admin/partials/settings-component/email-tab.php:115
 msgid "Mailchimp"
-msgstr "MailChimp"
+msgstr "メールチンパンプ"
 
 #: admin/class-cart-lift-admin.php:222
 msgid "Manage License"
-msgstr "Upravljanje licencom"
+msgstr "ライセンスの管理"
 
 #: admin/partials/cart-lift-setup-wizard.php:85
 msgid "Manipulate Your Product Price Using Dynamic Pricing"
-msgstr "Manipulirajte cijenom proizvoda koristeći dinamičku cijenu"
+msgstr "動的価格設定を使用して製品の価格を操作する"
 
 #: admin/partials/cart-lift-setup-wizard.php:96
 msgid "Manual Recovery Process"
-msgstr "manuelizlozi"
+msgstr "手動回復プロセス"
 
 #: admin/partials/cart-lift-edit-email-template.php:617
 msgid "Minimum time limit 15 minutes."
-msgstr "Minimalno vremensko ograničenje 15 minuta."
+msgstr "制限時間は 15 分です。"
 
 #: admin/partials/cart-lift-edit-email-template.php:580
 msgid "Minute(s)"
-msgstr "Minuta (e)"
+msgstr "分"
 
 #: admin/partials/cart-lift-view-cart-data.php:9
 #: admin/partials/cart-lift-email-templates-tab.php:85
 msgid "Name"
-msgstr "Ime"
+msgstr "名前"
 
 #: admin/partials/cart-lift-email-templates-tab.php:125
 msgid "Name :"
-msgstr "Ime:"
+msgstr "名前:"
 
 #: admin/partials/cart-lift-edit-email-template.php:81
 msgid "Name of the campaign."
-msgstr "Naziv kampanje."
+msgstr "キャンペーンの名前。"
 
 #: admin/partials/cart-lift-carts-tab.php:277
 msgid "Name:"
-msgstr "Ime:"
+msgstr "名前:"
 
 #: admin/partials/cart-lift-setup-wizard.php:109
 msgid "Necessary"
-msgstr "potreban"
+msgstr "必要"
 
 #: admin/partials/cart-lift-setup-wizard.php:116
 msgid "Next"
-msgstr "sljedeći"
+msgstr "つぎに"
 
 #: admin/partials/settings-component/smtp-tab.php:93
 msgid "No"
-msgstr "Ne"
+msgstr "いやー"
 
 #: admin/partials/cart-lift-email-templates-tab.php:398
 msgid "No Campaign Found"
-msgstr "Kampanja nije pronađena"
+msgstr "キャンペーンが見つかりません"
 
 #: admin/partials/cart-lift-carts-tab.php:500
 msgid "No Data Found"
-msgstr "Podaci nisu pronađeni"
+msgstr "データが見つかりません"
 
 #: admin/class-cart-lift-ajax.php:463
 msgid "No email found to send."
-msgstr "Nije pronađen e-mail za slanje."
+msgstr "送信するメールが見つかりません。"
 
 #: public/class-cart-lift-edd-actions.php:147
 #: public/class-cart-lift-public.php:132
 msgid "No thanks"
-msgstr "ne hvala"
+msgstr "いやありがとう"
 
 #: admin/partials/settings-component/smtp-tab.php:77
 msgid "None"
-msgstr "nijedan"
+msgstr "なし"
 
 #: admin/partials/cart-lift-setup-wizard.php:95
-#| msgid "Notify admin for recovered cart:"
 msgid "Notification For Recovered Cart"
-msgstr "Obavijestite administratora za oporavljenu košaricu:"
+msgstr "回収されたカートの通知"
 
 #: admin/partials/cart-lift-compare-templates-tab.php:18
 msgid "Notify Admin when a abandoned cart is abandoned"
-msgstr "Obavijesti administratora kada je napuštena kolica"
+msgstr "廃車したカートが放棄された場合に管理者に通知する"
 
 #: admin/partials/cart-lift-compare-templates-tab.php:200
 msgid "Notify Admin when a abandoned cart is recovered."
-msgstr "Obavijestite administratora kada se povučena napuštena kolica."
+msgstr "廃車したカートが回復したら、管理者に通知してください。"
 
 #: admin/partials/cart-lift-email-templates-tab.php:370
 msgid "Once deleted, you will not be able to recover this Campaign!"
-msgstr "Nakon brisanja nećete moći oporaviti ovu kampanju!"
+msgstr "削除すると、このキャンペーンを回復できなくなります。"
 
 #: admin/partials/cart-lift-carts-tab.php:471
 msgid "Once deleted, you will not be able to recover this Cart!"
-msgstr "Jednom izbrisano, nećete moći vratiti ovu košaricu!"
+msgstr "削除すると、このカートを回復できなくなります。"
 
 #: admin/partials/settings-component/email-tab.php:177
 msgid "Other SMTP"
-msgstr "Ostali SMTP"
+msgstr "その他のSMTP"
 
 #: admin/partials/cart-lift-carts-tab.php:98
 msgid "Paused/Active"
-msgstr "pauzirano/aktivno"
+msgstr "一時停止/アクティブ"
 
 #: admin/partials/cart-lift-carts-tab.php:123
 msgid "Paused/Active:"
-msgstr "pauzirano/aktivno:"
+msgstr "一時停止/アクティブ:"
 
 #: admin/class-cart-lift-db.php:175 admin/class-cart-lift-db.php:196
 #: admin/class-cart-lift-db.php:217
 msgid "Please consider this cart"
-msgstr "Molimo uzmite u obzir ovu košaricu"
+msgstr "このカートを検討してください"
 
 #: admin/class-cart-lift-tab-view.php:538
 #: admin/class-cart-lift-tab-view.php:758
 msgid "Please Consider Your Cart"
-msgstr "Molimo razmislite o svojoj košarici"
+msgstr "あなたのカートを検討してください"
 
 #: admin/partials/cart-lift-edit-email-template.php:472
 msgid "Please enable SMS notification from settings menu."
-msgstr "Omogućite SMS obavijest iz izbornika postavki."
+msgstr "設定メニューから SMS 通知を有効にしてください。"
 
 #: admin/partials/cart-lift-setup-wizard.php:118
 msgid "Please enter a valid one."
-msgstr "Molimo unesite valjanu."
+msgstr "有効なものを入力してください。"
 
 #: admin/partials/settings-component/recaptcha-tap.php:172
 #: admin/partials/settings-component/recaptcha-tap.php:290
 msgid "Please enter score"
-msgstr "Molimo unesite rezultat"
+msgstr "スコアを入力してください"
 
 #: admin/partials/settings-component/recaptcha-tap.php:137
 #: admin/partials/settings-component/recaptcha-tap.php:253
 msgid "Please enter secret key"
-msgstr "Molimo unesite tajni ključ"
+msgstr "秘密鍵を入力してください"
 
 #: admin/partials/settings-component/recaptcha-tap.php:100
 #: admin/partials/settings-component/recaptcha-tap.php:214
 msgid "Please enter site key"
-msgstr "Molimo unesite ključ stranice"
+msgstr "サイトキーを入力してください"
 
 #: includes/class-cart-lift-activator.php:70
 msgid "Please find the attached weekly report"
-msgstr "Molimo pronađite priloženo tjedno izvješće"
+msgstr "添付の週刊レポートを見つけてください"
 
 #: admin/partials/cart-lift-setup-wizard.php:111
 msgid "Plugins"
-msgstr "dodaci"
+msgstr "プラグイン"
 
 #: admin/partials/cart-lift-setup-wizard.php:108
 msgid "Plugins & Settings"
-msgstr "Dodaci i postavke"
+msgstr "プラグインと設定"
 
 #: admin/partials/cart-lift-settings-tab.php:35
 #: admin/partials/settings-component/email-popup.php:2
 msgid "Popup Editor"
-msgstr "Popup Editor"
+msgstr "ポップアップ エディタ"
 
 #: admin/partials/cart-lift-setup-wizard.php:61
 msgid "Preview video image "
-msgstr "Pregledajte video sliku"
+msgstr "ビデオ画像のプレビュー"
 
 #: admin/partials/cart-lift-carts-tab.php:389
 msgid "Price"
-msgstr "Cijena"
+msgstr "価格"
 
 #: admin/partials/cart-lift-dashboard-templates-tab.php:79
 #: admin/partials/cart-lift-compare-templates-tab.php:14
@@ -934,53 +913,52 @@ msgstr "Cijena"
 #: admin/partials/settings-component/email-popup.php:16
 #: admin/partials/settings-component/twilio-sms.php:16
 msgid "pro"
-msgstr "profesionalac"
+msgstr "プロ"
 
 #: admin/partials/cart-lift-setup-wizard.php:91
 msgid "Pro Features"
-msgstr "za osobine"
+msgstr "プロの機能"
 
 #: admin/partials/cart-lift-carts-tab.php:36
 msgid "Processing"
-msgstr "obrada"
+msgstr "処理"
 
 #: admin/partials/cart-lift-carts-tab.php:120
-#| msgid "Product"
 msgid "Product :"
-msgstr "Proizvod:"
+msgstr "製品:"
 
 #: admin/partials/cart-lift-setup-wizard.php:59
 msgid "Product Feed Manager for WooCommerce,"
-msgstr "Voditelj hrane za proizvode za WooCommerce,"
+msgstr "WooCommerce の製品フィード マネージャー、"
 
 #: admin/partials/cart-lift-carts-tab.php:388
 msgid "Product Name"
-msgstr "ime proizvoda"
+msgstr "製品名"
 
 #: admin/partials/cart-lift-carts-tab.php:95
 msgid "Products on Cart"
-msgstr "Proizvodi na košaricu"
+msgstr "カートに入っている製品"
 
 #: admin/class-cart-lift-db.php:203
 #: admin/partials/cart-lift-setup-wizard.php:102
 msgid "Promotional discount"
-msgstr "promotivni popust"
+msgstr "プロモーション割引"
 
 #: admin/partials/cart-lift-setup-wizard.php:73
 msgid "Proven email templates"
-msgstr "Provjereni predlošci e-pošte"
+msgstr "実証済みのメール テンプレート"
 
 #: admin/partials/cart-lift-view-cart-data.php:15
 msgid "Provider"
-msgstr "davatelj"
+msgstr "提供者"
 
 #: admin/partials/cart-lift-carts-tab.php:390
 msgid "Quantity"
-msgstr "Količina"
+msgstr "量"
 
 #: admin/partials/cart-lift-carts-tab.php:23
 msgid "Real Time Updates"
-msgstr "Ažuriranja u stvarnom vremenu"
+msgstr "リアルタイムの更新"
 
 #: admin/partials/cart-lift-setup-wizard.php:129
 msgid ""
@@ -990,54 +968,51 @@ msgid ""
 "distinguishes the team is that it listens to your suggestions and implements "
 "them, as well as listens to your problems and solves them"
 msgstr ""
-"Stvarno, kad bih vam mogao dati 1000 zvjezdica, a ne 5. Počeo sam s kupnjom "
-"kolica, a sada sam sretan što sam kupio plan agencije. Podizanje košarice i "
-"svi dodaci rade svoj posao, ali ono što razlikuje tim je to što sluša vaše "
-"prijedloge i implementira ih, kao i sluša vaše probleme i rješava ih"
+"本当に、5 つではなく 1000 スターをあなたにあげることができれば、カート リフトを購入することから始めましたが、エージェンシー "
+"プランを購入できたことに満足しています。 "
+"カートのリフトとすべてのプラグインが機能しますが、チームの特徴は、あなたの提案を聞き、実装するだけでなく、問題に耳を傾け、解決することです。"
 
 #: admin/partials/settings-component/recaptcha-tap.php:55
 msgid ""
 "reCAPTCHA V3 runs silently in the background to detect suspicious activity "
 "and verify user interactions without interrupting the user experience."
 msgstr ""
-"ReCaptcha v3 radi tiho u pozadini kako bi otkrio sumnjive aktivnosti i "
-"provjerio interakcije korisnika bez prekidanja korisničkog iskustva."
+"ReCAPTCHA V3 はバックグラウンドでサイレントに実行され、疑わしいアクティビティを検出し、ユーザー "
+"エクスペリエンスを中断することなくユーザーのやり取りを検証します。"
 
 #: admin/partials/settings-component/recaptcha-tap.php:2
 msgid "reCAPTCHA V3 Settings"
-msgstr "reCaptcha v3 postavke"
+msgstr "再キャプチャ v3 設定"
 
 #: public/class-cart-lift-public.php:192 public/class-cart-lift-public.php:210
 #: public/class-cart-lift-public.php:241 public/class-cart-lift-public.php:258
 msgid "reCAPTCHA verification failed."
-msgstr "ReCaptcha provjera nije uspjela."
+msgstr "再キャプチャの検証に失敗しました。"
 
 #: admin/partials/cart-lift-setup-wizard.php:60
 msgid ""
 "Recover over 15% of your abandoned cart customers with automated e-mail "
 "campaigns. Enjoy immediate increase in your ROI."
-msgstr ""
-"Oporavite više od 15% svojih napuštenih korisnika košarice s automatiziranim "
-"kampanjama e-pošte. Uživajte u trenutnom povećanju ROI."
+msgstr "自動メール キャンペーンを使用して、放棄されたカートの顧客の 15% 以上を回復します。 ROI を即座に増やしてください。"
 
 #: admin/partials/cart-lift-dashboard-templates-tab.php:70
 msgid "Recoverable Revenue"
-msgstr "Nadoknadivi prihod"
+msgstr "回収可能な収益"
 
 #: admin/class-cart-lift-admin.php:165
 #: admin/partials/cart-lift-analytics.php:16
 #: admin/partials/cart-lift-analytics.php:22
 #: admin/partials/cart-lift-carts-tab.php:39
 msgid "Recovered"
-msgstr "oporavljen"
+msgstr "回復しました"
 
 #: admin/partials/cart-lift-dashboard-templates-tab.php:149
 msgid "Recovered Revenue"
-msgstr "Povrat prihoda"
+msgstr "回収された収益"
 
 #: admin/partials/cart-lift-tabs-display.php:60
 msgid "Reports"
-msgstr "Izvještaji"
+msgstr "報告"
 
 #: admin/partials/cart-lift-compare-templates-tab.php:174
 msgid ""
@@ -1045,145 +1020,143 @@ msgid ""
 "Abandoned Carts, Total Abandoned Revenue, Cart Abandoned Rate, Actionable "
 "Abandoned Carts."
 msgstr ""
-"Izvješća: Kalendar, oporavljivi prihod, oporavljeni prihod, broj napuštenih "
-"kolica, ukupno napuštenih prihoda, napuštena stopa košarice, prihvatljiva "
-"napuštena kolica."
+"レポート: カレンダー、回収可能な収益、回収された収益、放棄されたカートの数、放棄された収益の合計、カート放棄率、実行可能な放棄されたカート。"
 
 #: admin/partials/cart-lift-compare-templates-tab.php:487
 msgid "Reports: Number of email sent."
-msgstr "Izvješća: Broj poslanih e-poruka."
+msgstr "レポート: 送信されたメールの数。"
 
 #: admin/partials/cart-lift-compare-templates-tab.php:70
 msgid "Restriction settings -- Disable tracking for specific user role"
-msgstr "Postavke ograničenja - onemogući praćenje za određene korisničke uloge"
+msgstr "制限設定 -- 特定のユーザー ロールのトラッキングを無効にする"
 
 #: admin/partials/cart-lift-email-templates-tab.php:91
 msgid "REVENUE"
-msgstr "PRIHOD"
+msgstr "収入"
 
 #: admin/partials/cart-lift-email-templates-tab.php:176
 msgid "Revenue :"
-msgstr "Prihod:"
+msgstr "収益:"
 
 #. Author of the plugin
 msgid "RexTheme"
-msgstr "RexTheme"
+msgstr "テーマを再設定する"
 
 #: admin/class-cart-lift-tab-view.php:512
 msgid "Save Campaign"
-msgstr "Spremi kampanju"
+msgstr "保存キャンペーン"
 
 #: admin/partials/settings-component/smtp-tab.php:104
 #: admin/partials/settings-component/recaptcha-tap.php:294
 msgid "Save Settings"
-msgstr "Spremi postavke"
+msgstr "設定を保存"
 
 #: admin/partials/settings-component/recaptcha-tap.php:139
 #: admin/partials/settings-component/recaptcha-tap.php:257
 msgid "Score:"
-msgstr "Rezultat:"
+msgstr "スコア:"
 
 #: admin/partials/cart-lift-carts-tab.php:52
 msgid "Search by customer email..."
-msgstr "Traži po e-pošti kupca ..."
+msgstr "お客様のメールで検索..."
 
 #: admin/partials/settings-component/recaptcha-tap.php:103
 #: admin/partials/settings-component/recaptcha-tap.php:218
 msgid "Secret Key:"
-msgstr "Tajni ključ:"
+msgstr "秘密鍵:"
 
 #: admin/partials/settings-component/smtp-tab.php:71
 msgid "security"
-msgstr "sigurnosti"
+msgstr "セキュリティ"
 
 #: admin/partials/settings-component/smtp-tab.php:74
 msgid "security:"
-msgstr "sigurnost:"
+msgstr "セキュリティ:"
 
 #: admin/partials/cart-lift-dashboard-templates-tab.php:41
 msgid "Select date range to show reports."
-msgstr "Odaberite datumski raspon za prikaz izvješća."
+msgstr "レポートを表示するには、日付範囲を選択します。"
 
 #: admin/partials/cart-lift-setup-wizard.php:143
 msgid "Select Merchant"
-msgstr "Odaberite Trgovac"
+msgstr "商人を選択"
 
 #: admin/partials/cart-lift-setup-wizard.php:144
 msgid "Select Your "
-msgstr "Odaberite Vaš"
+msgstr "あなたを選択してください"
 
 #: admin/partials/cart-lift-edit-email-template.php:630
 msgid "Send a test email"
-msgstr "Pošaljite testnu e-poštu"
+msgstr "テストメールを送る"
 
 #: admin/partials/settings-component/smtp-tab.php:139
 msgid "send a test email"
-msgstr "pošalji testnu e-poštu"
+msgstr "テストメールを送る"
 
 #: admin/partials/cart-lift-carts-tab.php:367
 #: admin/partials/cart-lift-carts-tab.php:377
 msgid "Send Recovery Email Now"
-msgstr "Pošaljite e-poštu za oporavak sada"
+msgstr "今すぐ回復メールを送る"
 
 #: admin/partials/cart-lift-edit-email-template.php:626
 msgid "Send Test Email To"
-msgstr "Pošalji testni e-mail na"
+msgstr "テストメールを送信する"
 
 #: admin/partials/cart-lift-edit-email-template.php:572
 msgid "Send this email"
-msgstr "Pošaljite ovaj email"
+msgstr "このメールを送って"
 
 #: admin/partials/settings-component/email-tab.php:86
 msgid "Sendgrid"
-msgstr "Sendgrid"
+msgstr "センドグリッド"
 
 #: admin/partials/settings-component/email-tab.php:148
 msgid "SES"
-msgstr "SES"
+msgstr "セス"
 
 #: admin/partials/cart-lift-compare-templates-tab.php:323
 msgid "Set Conditional Coupon -- Product or category based."
-msgstr "Postavite uvjetni kupon - na proizvodu ili kategoriji."
+msgstr "条件付きクーポンを設定します -- 製品またはカテゴリに基づいています。"
 
 #: admin/partials/cart-lift-compare-templates-tab.php:96
 msgid "Set Coupon for Individual templates"
-msgstr "Postavite kupon za pojedinačne predloške"
+msgstr "個々のテンプレートのクーポンを設定する"
 
 #: admin/class-cart-lift-admin.php:218 admin/class-cart-lift-admin.php:306
 #: admin/class-cart-lift-admin.php:307
 #: admin/partials/cart-lift-tabs-display.php:179
 msgid "Settings"
-msgstr "postavke"
+msgstr "設定"
 
 #: admin/class-cart-lift-admin.php:312
 msgid "Setup Wizard"
-msgstr "čarobnjak za postavljanje"
+msgstr "セットアップ ウィザード"
 
 #: admin/partials/settings-component/recaptcha-tap.php:66
 #: admin/partials/settings-component/recaptcha-tap.php:180
 msgid "Site Key:"
-msgstr "Ključ stranice:"
+msgstr "サイトキー:"
 
 #: admin/partials/cart-lift-email-templates-tab.php:101
 #: admin/partials/cart-lift-carts-tab.php:118
 msgid "SL No :"
-msgstr "SL NE:"
+msgstr "SL いいえ :"
 
 #: admin/partials/cart-lift-setup-wizard.php:76
 msgid "Smart discount coupons"
-msgstr "Pametni kuponi za popust"
+msgstr "スマート割引クーポン"
 
 #: admin/partials/settings-component/twilio-sms.php:2
 msgid "SMS"
-msgstr "smandman"
+msgstr "sms"
 
 #: admin/partials/cart-lift-email-templates-tab.php:88
 msgid "SMS Sent"
-msgstr "sals poslan"
+msgstr "SMS が送信されました"
 
 #: admin/partials/cart-lift-email-templates-tab.php:161
 msgid "SMS Sent :"
-msgstr "poslani sms:"
+msgstr "SMS 送信済み:"
 
 #: admin/partials/settings-component/smtp-tab.php:63
 msgid "SMTP"
@@ -1191,136 +1164,133 @@ msgstr "SMTP"
 
 #: admin/partials/settings-component/smtp-tab.php:81
 msgid "SSL"
-msgstr "SSL"
+msgstr "ssl"
 
 #: admin/partials/cart-lift-carts-tab.php:97
 msgid "Status"
-msgstr "Status"
+msgstr "ステータス"
 
 #: admin/partials/cart-lift-email-templates-tab.php:84
 msgid "status"
-msgstr "status"
+msgstr "ステータス"
 
 #: admin/partials/cart-lift-carts-tab.php:122
 msgid "Status :"
-msgstr "Status:"
+msgstr "ステータス:"
 
 #: admin/partials/cart-lift-email-templates-tab.php:102
 msgid "status :"
-msgstr "Status:"
+msgstr "ステータス:"
 
 #: admin/partials/cart-lift-setup-wizard.php:120
 msgid "Success"
-msgstr "uspjeh"
+msgstr "成功"
 
 #: admin/class-cart-lift-mailer.php:55
 msgid "Successfully Saved"
-msgstr "Uspješno sprem"
+msgstr "正常に保存されました"
 
 #: admin/class-cart-lift-ajax.php:253 admin/class-cart-lift-ajax.php:277
 #: admin/class-cart-lift-ajax.php:296 admin/class-cart-lift-ajax.php:313
 #: admin/class-cart-lift-ajax.php:497
 msgid "Successfully saved"
-msgstr "Uspješno sprem"
+msgstr "正常に保存されました"
 
 #: admin/partials/cart-lift-setup-wizard.php:82
 msgid "Tailor Your Product Feed to Perfection with Feed Rules"
-msgstr "Prilagodite svoj feed proizvoda do savršenstva s pravilima feeda"
+msgstr "フィード ルールで製品フィードを完全に調整する"
 
 #: admin/partials/cart-lift-edit-email-template.php:53
 msgid "Template name"
-msgstr "Naziv predloška"
+msgstr "テンプレート名"
 
 #: admin/partials/cart-lift-edit-email-template.php:31
 msgid "Template status"
-msgstr "Status predloška"
+msgstr "テンプレートのステータス"
 
 #: admin/class-cart-lift-tab-view.php:181
 msgid "The email template has been successfully created."
-msgstr "Predložak e-pošte uspješno je stvoren."
+msgstr "電子メール テンプレートが正常に作成されました。"
 
 #: admin/class-cart-lift-tab-view.php:207
 msgid "The email template has been successfully deleted."
-msgstr "Predložak e-pošte uspješno je obrisan."
+msgstr "電子メール テンプレートは正常に削除されました。"
 
 #: admin/class-cart-lift-tab-view.php:194
 msgid "The email template has been successfully updated."
-msgstr "Predložak e-pošte uspješno je ažuriran."
+msgstr "メール テンプレートが正常に更新されました。"
 
 #: admin/class-cart-lift-tab-view.php:220
 msgid "The email templates has been successfully deleted."
-msgstr "Predlošci e-pošte uspješno su izbrisani."
+msgstr "電子メール テンプレートは正常に削除されました。"
 
 #: admin/partials/settings-component/twilio-sms.php:53
 msgid "This will enable twilio sms notification."
-msgstr "To će omogućiti Twilio SMS obavijest."
+msgstr "これにより、Twilio SMS 通知が有効になります。"
 
 #: admin/partials/settings-component/email-popup.php:52
 msgid ""
 "This will initiate a pop-up and prompt users to provide email addresses when "
 "they intend to leave from the cart page."
-msgstr ""
-"Ovo će pokrenuti skočni prozor i zatražiti korisnike da daju adrese e-pošte "
-"kada namjeravaju otići sa stranice košarice."
+msgstr "これにより、ポップアップが開始され、ユーザーがカート ページから離れるときに電子メール アドレスを提供するように促されます。"
 
 #: admin/partials/cart-lift-view-cart-data.php:13
 msgid "Time"
-msgstr "Vrijeme"
+msgstr "の時"
 
 #: admin/partials/cart-lift-carts-tab.php:318
 msgid "Time Log:"
-msgstr "Dnevnik vremena:"
+msgstr "時間ログ:"
 
 #: admin/partials/settings-component/smtp-tab.php:85
 msgid "TLS"
-msgstr "TLS"
+msgstr "tls"
 
 #: admin/partials/cart-lift-dashboard-templates-tab.php:15
 msgid "To:"
-msgstr "do:"
+msgstr "する:"
 
 #: admin/partials/cart-lift-dashboard-templates-tab.php:179
 msgid "Total Abandoned Carts"
-msgstr "Ukupno napuštena kolica"
+msgstr "完全に放棄されたカート"
 
 #: admin/partials/cart-lift-dashboard-templates-tab.php:212
 msgid "Total Abandoned Revenue"
-msgstr "Ukupni napušteni prihod"
+msgstr "放棄された総収入"
 
 #: admin/partials/cart-lift-setup-wizard.php:75
 msgid "Track abandoned orders"
-msgstr "Pratite napuštene narudžbe"
+msgstr "放棄された注文を追跡する"
 
 #: admin/partials/cart-lift-setup-wizard.php:83
 msgid "Track Facebook Pixel To Measure Feed Performance"
-msgstr "Pratite Facebook Pixel za mjerenje performansi feeda"
+msgstr "Facebook ピクセルを追跡して、フィードのパフォーマンスを測定する"
 
 #: admin/partials/cart-lift-edit-email-template.php:513
 msgid "Twilio SMS body"
-msgstr "Twilio SMS tijelo"
+msgstr "ツイリオ SMS ボディ"
 
 #: admin/partials/cart-lift-setup-wizard.php:101
 msgid "Twilio SMS Notification"
-msgstr "Twilio SMS obavijest"
+msgstr "Twilio SMS 通知"
 
 #: admin/partials/cart-lift-setup-wizard.php:86
 msgid "Unleash Your Store's Global Potential with Multilingual Capabilities"
-msgstr ""
-"Oslobodite globalni potencijal svoje trgovine s višejezičnim mogućnostima"
+msgstr "多言語機能を備えた、ストアのグローバルな可能性を解き放ちます"
 
 #: admin/partials/cart-lift-carts-tab.php:420
 #: admin/partials/cart-lift-carts-tab.php:424
 msgid "unsubscribe"
-msgstr "odjaviti"
+msgstr "購読を解除"
 
 #: public/class-cart-lift-wc-actions.php:119
 #: admin/partials/cart-lift-view-cart-data.php:14
 msgid "Unsubscribed"
-msgstr "poništili pretplatu"
+msgstr "購読していない"
 
 #: admin/class-cart-lift-tab-view.php:545
 msgid "Update Campaign"
-msgstr "Ažuriraj kampanju"
+msgstr "キャンペーンを更新"
 
 #: admin/class-cart-lift-tab-view.php:544
 msgid "update_template"
@@ -1328,7 +1298,7 @@ msgstr "update_template"
 
 #: admin/partials/cart-lift-setup-wizard.php:138
 msgid "Upgrade To Pro"
-msgstr "Nadogradite na Pro"
+msgstr "Pro にアップグレードする"
 
 #: admin/partials/cart-lift-compare-templates-tab.php:5
 #: admin/partials/cart-lift-compare-templates-tab.php:6
@@ -1336,15 +1306,15 @@ msgstr "Nadogradite na Pro"
 #: admin/partials/cart-lift-compare-templates-tab.php:570
 #: admin/partials/cart-lift-carts-tab.php:324
 msgid "Upgrade to Pro"
-msgstr "Nadogradi na pro"
+msgstr "Pro にアップグレードする"
 
 #: admin/partials/cart-lift-edit-email-template.php:116
 msgid "Use an engaging subject line that is personalized."
-msgstr "Koristite privlačnu liniju predmeta koja je prilagođena osobama."
+msgstr "パーソナライズされた魅力的な件名を使用してください。"
 
 #: admin/partials/cart-lift-carts-tab.php:274
 msgid "User Details:"
-msgstr "Detalji o korisniku:"
+msgstr "ユーザーの詳細:"
 
 #: admin/partials/cart-lift-setup-wizard.php:127
 msgid ""
@@ -1354,32 +1324,30 @@ msgid ""
 "marketplace.\n"
 "                Graftype"
 msgstr ""
-"Dugo smo u potrazi za jednostavnim i čistim rješenjem i pronašli smo to "
-"rješenje. Kao potrošači licencnih licenci, možemo toplo preporučiti ovaj "
-"dodatak. Ovo je apsolutno neophodna značajka za tržište e-trgovine. grafotil"
+"シンプルでクリーンなソリューションを長い間探していて、その解決策を見つけました。 Pro ライセンスの消費者として、このプラグインを強くお勧めします。 "
+"これは、e コマース マーケットプレイスにとって絶対に必要な機能です。 グラフタイプ"
 
 #: admin/partials/cart-lift-setup-wizard.php:98
 msgid "Weekly Report"
-msgstr "tjedno izvješće"
+msgstr "週報"
 
 #: admin/partials/cart-lift-setup-wizard.php:54
 msgid "Welcome"
-msgstr "dobrodošao"
+msgstr "いってら"
 
 #. Description of the plugin
 msgid ""
 "Win back your abandoned cart customers with automated email recovery "
 "campaign."
-msgstr ""
-"Vratite napuštene kupce kolica s automatskom kampanjom za oporavak e-pošte."
+msgstr "自動メール回復キャンペーンで、Arading Cart の顧客を取り戻せます。"
 
 #: admin/partials/settings-component/smtp-tab.php:97
 msgid "Yes"
-msgstr "Da"
+msgstr "はいって"
 
 #: public/class-cart-lift-wc-actions.php:119
 msgid "You have successfully unsubscribed from our email list."
-msgstr "Uspješno ste odjavili pretplatu s našeg popisa e-pošte."
+msgstr "メールリストからの登録を解除しました。"
 
 #: includes/class-cart-lift-activator.php:72 admin/class-cart-lift-ajax.php:223
 #: admin/class-cart-lift-ajax.php:533
@@ -1388,10 +1356,9 @@ msgid ""
 "the site. Please check our Privacy Policy to see how we use your personal "
 "data."
 msgstr ""
-"Vaša e-adresa pomoći će nam da podržimo vaše iskustvo kupovine na cijelom "
-"web mjestu. Provjerite našu politiku privatnosti da biste vidjeli kako "
-"koristimo vaše osobne podatke."
+"あなたのメールアドレスは、サイト全体でのショッピング体験をサポートするのに役立ちます。 個人情報の使用方法を確認するには、プライバシー "
+"ポリシーを確認してください。"
 
 #: admin/partials/cart-lift-compare-templates-tab.php:528
 msgid "Zapier Integration."
-msgstr "Zapier integracija."
+msgstr "Zapier 統合。"

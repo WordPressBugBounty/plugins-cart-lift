@@ -4,7 +4,7 @@ msgstr ""
 "EDD\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-06-17 04:15+0000\n"
-"PO-Revision-Date: 2020-06-22 06:11+0000\n"
+"PO-Revision-Date: 2025-08-20 10:20+0000\n"
 "Last-Translator: \n"
 "Language-Team: Portuguese (Portugal)\n"
 "Language: pt_PT\n"
@@ -13,10 +13,14 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco https://localise.biz/\n"
-"X-Loco-Version: 2.4.0; wp-5.4.2"
+"X-Loco-Version: 2.8.0; wp-6.8.2; php-8.3.8"
 
-#: includes/class-cart-lift-dependency-checker.php:270
-#: includes/class-cart-lift-dependency-checker.php:295
+#: admin/class-cart-lift-sales-notification-bar.php:49
+msgid " 15% "
+msgstr "15%"
+
+#: includes/class-cart-lift-dependency-checker.php:277
+#: includes/class-cart-lift-dependency-checker.php:302
 #, php-format
 msgid ""
 " any of the following plugins : %s. Please activate any of these plugins."
@@ -24,36 +28,27 @@ msgstr ""
 "qualquer um dos seguintes plugins: %s. Por favor, ative qualquer um desses "
 "plugins."
 
-#: admin/partials/cart-lift-carts-tab.php:370
-msgid " Item"
-msgstr "Item"
+#: admin/class-cart-lift-sales-notification-bar.php:49
+msgid " Discount On "
+msgstr "desconto em"
 
-#: admin/partials/cart-lift-carts-tab.php:370
-msgid " Items"
-msgstr "Itens"
+#: admin/partials/cart-lift-setup-wizard.php:113
+msgid " License Key"
+msgstr "chave de licença"
 
-#: admin/partials/cart-lift-carts-tab.php:344
+#: admin/partials/cart-lift-carts-tab.php:360
 msgid " Product"
 msgstr "produtos"
 
-#: admin/partials/cart-lift-carts-tab.php:344
+#: admin/partials/cart-lift-carts-tab.php:360
 msgid " Products"
 msgstr "Produtos"
 
-#: admin/partials/cart-lift-carts-tab.php:359
+#: admin/partials/cart-lift-carts-tab.php:398
 msgid " Upgrade to Pro"
 msgstr "Atualize para o Pro"
 
-#: admin/partials/settings-component/general-tab.php:506
-msgid ""
-"<b>Hints:</b> It will ignore selected user roles from abandonment process "
-"when they logged in, so they will not receive mail for cart abandoned."
-msgstr ""
-"<b> Dicas: </b> Ele ignorará as funções de usuário selecionadas do processo "
-"de abandono ao fazer login, para que não recebam e-mails para o carrinho "
-"abandonado."
-
-#: admin/partials/cart-lift-email-templates-tab.php:143
+#: admin/partials/cart-lift-email-templates-tab.php:146
 #, php-format
 msgid "<span class=\"text\">Send %s %s after cart is abandoned</span>"
 msgstr ""
@@ -71,31 +66,43 @@ msgstr ""
 "faremos o resto. Você pode alterar todas essas edições mais tarde, se "
 "precisar."
 
+#: admin/class-cart-lift-admin.php:164
+#: admin/partials/cart-lift-analytics.php:16
+#: admin/partials/cart-lift-analytics.php:22
+#: admin/partials/cart-lift-carts-tab.php:37
+msgid "Abandoned"
+msgstr "abandonado"
+
 #: includes/wc-email/class-cart-lift-abandoned-email-template.php:26
 msgid "Abandoned cart to admin"
 msgstr "Carrinho abandonado para administrador"
 
-#: admin/partials/cart-lift-carts-tab.php:263
+#: admin/partials/cart-lift-carts-tab.php:292
 msgid "Abandoned Date:"
 msgstr "Data de Abandono:"
 
-#: admin/partials/settings-component/general-tab.php:436
-msgid "Abandoned orders will be deleted. Minimum time limit 7 Days."
-msgstr "Os pedidos abandonados serão excluídos. Prazo mínimo de 7 dias."
-
-#: admin/partials/cart-lift-email-templates-tab.php:89
+#: admin/partials/cart-lift-email-templates-tab.php:92
 msgid "ACTION"
 msgstr "AÇAO"
 
-#: admin/partials/cart-lift-carts-tab.php:78
+#: admin/partials/cart-lift-carts-tab.php:100
 msgid "Action"
 msgstr "Açao"
+
+#: admin/partials/cart-lift-email-templates-tab.php:179
+#: admin/partials/cart-lift-carts-tab.php:156
+msgid "Action :"
+msgstr "Ação:"
 
 #: admin/partials/cart-lift-dashboard-templates-tab.php:273
 msgid "Actionable Abandoned Carts"
 msgstr "Carrinhos abandonados acionáveis"
 
-#: admin/class-cart-lift-ajax.php:88
+#: admin/partials/cart-lift-setup-wizard.php:115
+msgid "Activate License"
+msgstr "Ativar licença"
+
+#: admin/class-cart-lift-ajax.php:119
 msgid "Activated"
 msgstr "Ativado"
 
@@ -104,23 +111,11 @@ msgstr "Ativado"
 msgid "add campaign"
 msgstr "adicionar campanha"
 
-#: admin/partials/settings-component/general-tab.php:164
-msgid "Admin will get an email notification when cart is abandoned."
-msgstr ""
-"O administrador receberá uma notificação por email quando o carrinho for "
-"abandonado."
-
-#: admin/partials/settings-component/general-tab.php:206
-msgid "Admin will get an email notification when cart is recovered."
-msgstr ""
-"O administrador receberá uma notificação por email quando o carrinho for "
-"recuperado."
-
-#: admin/partials/cart-lift-edit-email-template.php:511
+#: admin/partials/cart-lift-edit-email-template.php:619
 msgid "After cart is abandoned."
 msgstr "Depois que o carrinho é abandonado."
 
-#: includes/actions.php:47
+#: includes/actions.php:158
 #: includes/wc-email/templates/emails/cl-admin-abandoned-cart.php:14
 #: includes/wc-email/templates/emails/plain/cl-admin-abandoned-cart.php:25
 #, php-format
@@ -130,27 +125,24 @@ msgstr ""
 "Alas. Apenas para informar que o carrinho pertencente a% 1 $ s foi "
 "abandonado:"
 
-#: admin/partials/cart-lift-analytics-tab.php:62
+#: admin/partials/cart-lift-setup-wizard.php:134
+msgid "Ale320"
+msgstr "ale320"
+
+#: admin/partials/cart-lift-carts-tab.php:35
+#: admin/partials/cart-lift-analytics-tab.php:61
 msgid "All"
 msgstr "Todos"
 
-#: admin/class-cart-lift-admin.php:229 admin/class-cart-lift-admin.php:230
+#: admin/class-cart-lift-admin.php:288 admin/class-cart-lift-admin.php:289
 msgid "All Carts"
 msgstr "Todos os carrinhos"
-
-#: admin/partials/settings-component/general-tab.php:98
-msgid "Allow Cart Lift to track abandoned carts."
-msgstr "Permita que o Elevador do carrinho rastreie carrinhos abandonados."
-
-#: admin/partials/settings-component/general-tab.php:281
-msgid "Allows to connect with 3rd-party services."
-msgstr "Permite conectar-se a serviços de terceiros."
 
 #: admin/partials/settings-component/email-tab.php:47
 msgid "Allows you to connect SMTP using Cart Lift."
 msgstr "Permite conectar o SMTP usando o Elevador de carrinho."
 
-#: admin/partials/cart-lift-edit-email-template.php:312
+#: admin/partials/cart-lift-edit-email-template.php:315
 msgid ""
 "Allows you to grant free shipping. A free shipping method must be enabled in "
 "your shipping zone and be set to require \"a valid free shipping coupon\""
@@ -159,13 +151,22 @@ msgstr ""
 "ativado na sua zona de envio e ser definido para exigir \"um cupom de frete "
 "grátis válido\""
 
-#: admin/partials/cart-lift-edit-email-template.php:155
+#: admin/partials/cart-lift-edit-email-template.php:470
+#: admin/partials/cart-lift-edit-email-template.php:504
+msgid "Allows you to send mobile SMS through Twilio."
+msgstr "Permite enviar SMS para celular por meio do Twilio."
+
+#: admin/partials/cart-lift-edit-email-template.php:157
 msgid "Allows you to send new coupon only for this template."
 msgstr "Permite enviar novo cupom apenas para este modelo."
 
-#: admin/partials/cart-lift-carts-tab.php:75
+#: admin/partials/cart-lift-carts-tab.php:96
 msgid "Amount"
 msgstr "Montante"
+
+#: admin/partials/cart-lift-carts-tab.php:121
+msgid "Amount :"
+msgstr "Quantidade:"
 
 #: includes/wc-email/class-cart-lift-abandoned-email-template.php:27
 msgid "An email sent to the admin when a cart is abandoned."
@@ -175,44 +176,48 @@ msgstr "Um email enviado ao administrador quando um carrinho é abandonado."
 msgid "Analytics"
 msgstr "Google Analytics"
 
-#: admin/partials/cart-lift-email-templates-tab.php:352
-#: admin/partials/cart-lift-carts-tab.php:441
+#: admin/partials/cart-lift-email-templates-tab.php:369
+#: admin/partials/cart-lift-carts-tab.php:470
 msgid "Are you sure?"
 msgstr "Você tem certeza?"
-
-#: admin/partials/settings-component/general-tab.php:388
-msgid "Ask confirmation from the user/customer before tracking data."
-msgstr "Peça a confirmação do usuário / cliente antes de rastrear os dados."
 
 #: admin/partials/settings-component/smtp-tab.php:90
 msgid "Authentication:"
 msgstr "Autenticação:"
 
-#: admin/partials/cart-lift-edit-email-template.php:401
+#: admin/partials/cart-lift-edit-email-template.php:404
 msgid "Auto apply coupon"
 msgstr "Aplicar cupom automaticamente"
 
-#: admin/class-cart-lift-admin.php:157 admin/class-cart-lift-admin.php:238
-#: admin/class-cart-lift-admin.php:239
+#: admin/partials/cart-lift-setup-wizard.php:72
+msgid "Automated recovery"
+msgstr "Recuperação automatizada"
+
+#: admin/partials/cart-lift-edit-email-template.php:22
+msgid "Back to Campaign"
+msgstr "Voltar para a campanha"
+
+#: admin/partials/cart-lift-setup-wizard.php:152
+msgid "Bing"
+msgstr "bing"
+
+#: admin/class-cart-lift-admin.php:216 admin/class-cart-lift-admin.php:297
+#: admin/class-cart-lift-admin.php:298
 #: admin/partials/cart-lift-email-templates-tab.php:27
 #: admin/partials/cart-lift-tabs-display.php:138
 msgid "Campaigns"
 msgstr "Campanhas"
 
-#: admin/partials/cart-lift-email-templates-tab.php:354
-#: admin/partials/cart-lift-carts-tab.php:443
+#: admin/partials/cart-lift-email-templates-tab.php:371
+#: admin/partials/cart-lift-carts-tab.php:472
 msgid "Cancel"
 msgstr "Cancelar"
-
-#: admin/partials/cart-lift-dashboard-templates-tab.php:237
-msgid "Cart Abandon Rate"
-msgstr "Taxa de Abandono do Carrinho"
 
 #: includes/wc-email/class-cart-lift-abandoned-email-template.php:30
 msgid "Cart Abandoned"
 msgstr "Carrinho abandonado"
 
-#: admin/partials/cart-lift-compare-templates-tab.php:70
+#: admin/partials/cart-lift-compare-templates-tab.php:44
 msgid ""
 "Cart Abandoned Cut-Off Time (Minimum time limit to consider a cart is "
 "abandoned)"
@@ -220,16 +225,17 @@ msgstr ""
 "Tempo limite de abandono do carrinho (o prazo mínimo para considerar um "
 "carrinho foi abandonado)"
 
-#: admin/partials/settings-component/general-tab.php:441
-msgid "Cart abandoned cut-off time:"
-msgstr "Tempo de corte abandonado do carrinho:"
+#: admin/partials/cart-lift-dashboard-templates-tab.php:237
+#| msgid "Cart Abandon Rate"
+msgid "Cart Abandoned Rate"
+msgstr "Taxa de Abandono do Carrinho"
 
-#: admin/partials/cart-lift-carts-tab.php:341
+#: admin/partials/cart-lift-carts-tab.php:357
 msgid "Cart Contents:"
 msgstr "Conteúdo do carrinho:"
 
-#: admin/class-cart-lift-tab-view.php:173
-#: admin/class-cart-lift-tab-view.php:183
+#: admin/class-cart-lift-tab-view.php:157
+#: admin/class-cart-lift-tab-view.php:169
 msgid "Cart data has been successfully deleted."
 msgstr "Os dados do carrinho foram excluídos com sucesso."
 
@@ -237,17 +243,19 @@ msgstr "Os dados do carrinho foram excluídos com sucesso."
 msgid "Cart details: "
 msgstr "Detalhes do carrinho:"
 
-#: admin/partials/settings-component/general-tab.php:408
-msgid "Cart Expiration Time:"
-msgstr "Tempo de expiração do carrinho:"
-
 #: admin/partials/cart-lift-view-cart-data.php:11
 msgid "Cart items"
 msgstr "Itens do carrinho"
 
-#: admin/class-cart-lift-admin.php:210
+#: admin/class-cart-lift-sales-notification-bar.php:49
+#: admin/class-cart-lift-admin.php:269
+#: admin/partials/cart-lift-setup-wizard.php:57
 msgid "Cart Lift"
 msgstr "Cart Lift"
+
+#: admin/partials/cart-lift-setup-wizard.php:90
+msgid "Cart Lift "
+msgstr "elevador de carrinho"
 
 #. Name of the plugin
 msgid "Cart Lift - Abandoned Cart Recovery for WooCommerce and EDD"
@@ -257,20 +265,49 @@ msgstr "Cart Lift - Abandoned Cart Recovery for WooCommerce and EDD"
 msgid "Cart Lift Feature Comparison"
 msgstr "Comparação de recursos do Cart Lift"
 
+#: admin/partials/cart-lift-setup-wizard.php:67
+msgid "Cart Lift Features"
+msgstr "Características do elevador"
+
+#: admin/partials/cart-lift-setup-wizard.php:100
+msgid "Cart Lift Popup"
+msgstr "pop-up de elevador de carrinho"
+
+#: admin/class-cart-lift-admin.php:166
+#: admin/partials/cart-lift-analytics.php:35
+msgid "Cart Overview"
+msgstr "Visão geral do carrinho"
+
+#: admin/partials/cart-lift-setup-wizard.php:68
+msgid "Cart Recovery Made Easy With Cart Lift!"
+msgstr "A recuperação do carrinho facilitada com o elevador de carrinho!"
+
+#: admin/class-cart-lift-db.php:161
+msgid "Cart reminder"
+msgstr "lembrete de carrinho"
+
 #: admin/partials/cart-lift-view-cart-data.php:12
 msgid "Cart total"
 msgstr "Total do carrinho"
 
-#: admin/partials/cart-lift-carts-tab.php:259
+#: admin/partials/cart-lift-carts-tab.php:288
 msgid "Cart Total:"
 msgstr "Total do carrinho:"
 
-#: admin/class-cart-lift-admin.php:155
+#: admin/partials/cart-lift-setup-wizard.php:17
+msgid "Cart-lift - Setup Wizard"
+msgstr "Carrinho-Lift - assistente de configuração"
+
+#: admin/class-cart-lift-admin.php:214
 #: admin/partials/cart-lift-tabs-display.php:94
 msgid "Carts"
 msgstr "Carrinhos"
 
-#: admin/partials/cart-lift-edit-email-template.php:375
+#: admin/partials/cart-lift-setup-wizard.php:64
+msgid "Check the guide"
+msgstr "Verifique o guia"
+
+#: admin/partials/cart-lift-edit-email-template.php:378
 msgid ""
 "Check this box if the coupon cannot be used in conjunction with other "
 "coupons."
@@ -278,43 +315,66 @@ msgstr ""
 "Marque esta caixa se o cupom não puder ser usado em conjunto com outros "
 "cupons."
 
-#: includes/helper.php:141
-msgid "Checkout"
-msgstr "Verificação de saída"
-
-#: admin/partials/cart-lift-analytics-tab.php:59
+#: admin/partials/cart-lift-analytics-tab.php:58
 msgid "Choose an option:"
 msgstr "Escolha uma opção:"
 
-#: admin/partials/cart-lift-carts-tab.php:395
+#: admin/partials/cart-lift-dashboard-templates-tab.php:79
+#: admin/partials/cart-lift-email-templates-tab.php:56
+#: admin/partials/cart-lift-email-templates-tab.php:119
+#: admin/partials/cart-lift-email-templates-tab.php:154
+#: admin/partials/cart-lift-email-templates-tab.php:165
+#: admin/partials/cart-lift-carts-tab.php:81
+#: admin/partials/cart-lift-carts-tab.php:324
+#: admin/partials/cart-lift-carts-tab.php:376
+#: admin/partials/cart-lift-carts-tab.php:398
+#: admin/partials/cart-lift-carts-tab.php:424
+#: admin/partials/cart-lift-edit-email-template.php:285
+#: admin/partials/cart-lift-edit-email-template.php:348
+#: admin/partials/cart-lift-edit-email-template.php:411
+#: admin/partials/cart-lift-edit-email-template.php:480
+#: admin/partials/settings-component/email-popup.php:15
+#: admin/partials/settings-component/twilio-sms.php:15
 msgid "Click to Upgrade Pro"
 msgstr "Clique para atualizar Pro"
 
-#: admin/partials/cart-lift-email-templates-tab.php:87
+#: admin/partials/cart-lift-carts-tab.php:38
+msgid "Completed"
+msgstr "concluído"
+
+#: admin/partials/cart-lift-email-templates-tab.php:90
 msgid "CONVERSIONS"
 msgstr "CONVERSÕES"
 
-#: admin/partials/cart-lift-edit-email-template.php:221
+#: admin/partials/cart-lift-email-templates-tab.php:172
+msgid "Conversions :"
+msgstr "Conversões:"
+
+#: public/cart-lift-cart-actions.php:823
+msgid "Coupon"
+msgstr "cupom"
+
+#: admin/partials/cart-lift-edit-email-template.php:223
 msgid "Coupon amount"
 msgstr "Valor do cupom"
 
-#: admin/partials/cart-lift-edit-email-template.php:438
+#: admin/partials/cart-lift-edit-email-template.php:441
 msgid "Coupon code will be automatically applied to checkout."
 msgstr "O código do cupom será aplicado automaticamente ao checkout."
 
-#: admin/partials/cart-lift-edit-email-template.php:232
+#: admin/partials/cart-lift-edit-email-template.php:234
 msgid "Coupon expiration frequency"
 msgstr "Frequência de vencimento do cupom"
 
-#: admin/partials/cart-lift-edit-email-template.php:161
+#: admin/partials/cart-lift-edit-email-template.php:163
 msgid "Coupon Type"
 msgstr "Tipo de Cupom"
 
-#: admin/class-cart-lift-tab-view.php:508
+#: admin/class-cart-lift-tab-view.php:510
 msgid "Create a New Campaign"
 msgstr "Crie uma nova campanha"
 
-#: admin/partials/cart-lift-compare-templates-tab.php:308
+#: admin/partials/cart-lift-compare-templates-tab.php:282
 msgid ""
 "Create unlimited email templates to be sent at intervals that you set – "
 "Intervals start from 15 minutes after cart is abandoned. Free -- limit to 2."
@@ -323,28 +383,32 @@ msgstr ""
 "definir - Os intervalos começam 15 minutos depois que o carrinho é "
 "abandonado. Livre - limite para 2."
 
-#: admin/class-cart-lift-admin.php:209 admin/class-cart-lift-admin.php:220
-#: admin/class-cart-lift-admin.php:221 admin/class-cart-lift-admin.php:298
+#: admin/partials/cart-lift-setup-wizard.php:84
+msgid "Customize Compelling Product Titles With Combined Attributes"
+msgstr "Personalize títulos de produtos atraentes com atributos combinados"
+
+#: admin/class-cart-lift-admin.php:268 admin/class-cart-lift-admin.php:279
+#: admin/class-cart-lift-admin.php:280 admin/class-cart-lift-admin.php:359
 msgid "Dashboard"
 msgstr "painel de controle"
 
-#: admin/partials/cart-lift-carts-tab.php:77
+#: admin/partials/cart-lift-carts-tab.php:99
 msgid "Date"
 msgstr "Encontro"
 
-#: admin/partials/cart-lift-edit-email-template.php:241
+#: admin/partials/cart-lift-carts-tab.php:136
+msgid "Date :"
+msgstr "Data:"
+
+#: admin/partials/cart-lift-edit-email-template.php:243
 msgid "Day (s)"
 msgstr "Dias)"
 
-#: admin/partials/cart-lift-edit-email-template.php:474
+#: admin/partials/cart-lift-edit-email-template.php:582
 msgid "Day(s)"
 msgstr "Dias)"
 
-#: admin/partials/settings-component/general-tab.php:411
-msgid "Days"
-msgstr "Dias"
-
-#: admin/class-cart-lift-ajax.php:88
+#: admin/class-cart-lift-ajax.php:119
 msgid "Deactivated"
 msgstr "Desativado"
 
@@ -355,24 +419,32 @@ msgctxt "default email subject for abandoned emails sent to the admin"
 msgid "[%s] Cart abandoned"
 msgstr "[%s] Carrinho abandonado"
 
-#: admin/partials/cart-lift-email-templates-tab.php:368
-#: admin/partials/cart-lift-carts-tab.php:457
+#: admin/partials/cart-lift-email-templates-tab.php:275
+#: admin/partials/cart-lift-email-templates-tab.php:300
+#: admin/partials/cart-lift-email-templates-tab.php:385
+#: admin/partials/cart-lift-carts-tab.php:185
+#: admin/partials/cart-lift-carts-tab.php:486
 msgid "Delete"
 msgstr "Excluir"
 
-#: admin/partials/cart-lift-compare-templates-tab.php:267
+#: admin/partials/cart-lift-setup-wizard.php:74
+msgid "Detailed reports"
+msgstr "Relatórios detalhados"
+
+#: admin/partials/cart-lift-carts-tab.php:157
+msgid "Details"
+msgstr "detalhes"
+
+#: admin/partials/cart-lift-setup-wizard.php:97
+#| msgid "Disable branding:"
+msgid "Disable Branding"
+msgstr "Desativar marca:"
+
+#: admin/partials/cart-lift-compare-templates-tab.php:241
 msgid "Disable Branding (From email footer)."
 msgstr "Desativar marca (no rodapé do email)."
 
-#: admin/partials/settings-component/general-tab.php:211
-msgid "Disable branding:"
-msgstr "Desativar marca:"
-
-#: admin/partials/settings-component/general-tab.php:473
-msgid "Disable Tracking For:"
-msgstr "Desativar rastreamento para:"
-
-#: admin/class-cart-lift-admin.php:303
+#: admin/class-cart-lift-admin.php:364
 msgid "Documentation"
 msgstr "Documentação"
 
@@ -380,105 +452,177 @@ msgstr "Documentação"
 msgid "documentation"
 msgstr "documentação"
 
-#: admin/partials/cart-lift-carts-tab.php:55
-#: admin/partials/cart-lift-carts-tab.php:61
+#: admin/partials/cart-lift-setup-wizard.php:124
+msgid "Done"
+msgstr "exausto"
+
+#: admin/partials/cart-lift-carts-tab.php:76
+#: admin/partials/cart-lift-carts-tab.php:82
 msgid "Download Report"
 msgstr "Download do Relatório"
 
-#: admin/class-cart-lift-tab-view.php:539 admin/class-cart-lift-admin.php:151
+#: admin/partials/cart-lift-email-templates-tab.php:182
+msgid "Duplicate"
+msgstr "duplicado"
+
+#: admin/partials/cart-lift-setup-wizard.php:153
+msgid "eBay"
+msgstr "eBay"
+
+#: admin/partials/cart-lift-email-templates-tab.php:209
+#: admin/partials/cart-lift-email-templates-tab.php:235
+msgid "Edit"
+msgstr "editar"
+
+#: admin/class-cart-lift-tab-view.php:543 admin/class-cart-lift-admin.php:210
 msgid "Edit Campaign"
 msgstr "Editar campanha"
 
-#: admin/partials/cart-lift-settings-tab.php:16
 #: admin/partials/cart-lift-view-cart-data.php:10
-#: admin/partials/cart-lift-carts-tab.php:73
+#: admin/partials/cart-lift-carts-tab.php:94
 #: admin/partials/settings-component/email-tab.php:16
 msgid "Email"
 msgstr "O email"
 
-#: admin/partials/cart-lift-edit-email-template.php:123
+#: admin/partials/cart-lift-carts-tab.php:119
+#| msgid "Email Log:"
+msgid "Email :"
+msgstr "E-mail:"
+
+#: admin/partials/cart-lift-edit-email-template.php:125
 msgid "Email body"
 msgstr "Corpo do e-mail"
 
-#: admin/partials/cart-lift-edit-email-template.php:455
+#: admin/partials/cart-lift-edit-email-template.php:562
+msgid "Email checkout button color"
+msgstr "Cor do botão de check-out por e-mail"
+
+#: admin/partials/cart-lift-edit-email-template.php:553
+msgid "Email checkout button text"
+msgstr "Texto do botão de check-out por e"
+
+#: admin/class-cart-lift-ajax.php:457
+msgid "Email has been sent successfully."
+msgstr "O e-mail foi enviado com sucesso."
+
+#: admin/partials/cart-lift-edit-email-template.php:544
 msgid "Email header color"
 msgstr "Cor do cabeçalho do email"
 
-#: admin/partials/cart-lift-edit-email-template.php:446
+#: admin/partials/cart-lift-edit-email-template.php:535
 msgid "Email header text"
 msgstr "Texto do cabeçalho do email"
-
-#: admin/partials/cart-lift-carts-tab.php:294
-msgid "Email Log:"
-msgstr "E-mail:"
 
 #: admin/partials/cart-lift-dashboard-templates-tab.php:117
 #: admin/partials/cart-lift-email-templates-tab.php:86
 msgid "Email Sent"
 msgstr "E-mail enviado"
 
+#: admin/partials/cart-lift-email-templates-tab.php:150
+msgid "Email Sent :"
+msgstr "E-mail enviado:"
+
 #: admin/partials/cart-lift-edit-email-template.php:88
 msgid "Email subject"
 msgstr "Assunto do email"
 
-#: admin/partials/cart-lift-carts-tab.php:255
+#: admin/partials/cart-lift-carts-tab.php:281
 msgid "Email:"
 msgstr "O email:"
 
-#: admin/partials/settings-component/general-tab.php:70
-msgid "Enable abandon cart tracking:"
-msgstr "Ative o rastreamento do carrinho de abandono:"
-
-#: admin/partials/settings-component/email-popup.php:9
+#: admin/partials/settings-component/email-popup.php:11
 msgid "Enable Cart Lift Popup:"
 msgstr "Ativar pop-up de elevação do carrinho:"
-
-#: admin/partials/cart-lift-compare-templates-tab.php:44
-msgid "Enable Cart Lift SMTP For This Site"
-msgstr "Ativar SMTP de elevação de carrinho para este site"
 
 #: admin/partials/settings-component/email-tab.php:19
 msgid "Enable Cart Lift SMTP for this site:"
 msgstr "Ative o SMTP de elevação de carrinho para este site:"
 
-#: admin/partials/cart-lift-edit-email-template.php:182
+#: admin/partials/cart-lift-edit-email-template.php:184
 msgid "Enable conditional discount"
 msgstr "Ativar desconto condicional"
 
-#: admin/partials/cart-lift-edit-email-template.php:145
+#: admin/partials/cart-lift-edit-email-template.php:147
 msgid "Enable coupon?"
 msgstr "Ativar cupom?"
 
-#: admin/partials/settings-component/general-tab.php:253
-msgid "Enable external webhook:"
-msgstr "Ativar webhook externo:"
+#: admin/partials/settings-component/recaptcha-tap.php:21
+msgid "Enable reCAPTCHA V3:"
+msgstr "Ativar Recaptcha v3:"
 
-#: admin/partials/settings-component/general-tab.php:360
-msgid "Enable GDPR integration:"
-msgstr "Ative a integração GDPR:"
+#: admin/partials/settings-component/twilio-sms.php:12
+msgid "Enable Twilio SMS Notification:"
+msgstr "Ativar notificação de SMS do Twilio:"
 
-#: admin/partials/settings-component/general-tab.php:315
-#: admin/partials/settings-component/general-tab.php:350
-msgid "Enter url here."
-msgstr "Digite o URL aqui."
+#: admin/partials/cart-lift-edit-email-template.php:449
+msgid "Enable Twilio SMS?"
+msgstr "Ativar o SMS do Twilio?"
 
-#: admin/class-cart-lift-admin.php:326
-msgid "Every 15 Minutes"
+#: admin/partials/settings-component/recaptcha-tap.php:169
+#: admin/partials/settings-component/recaptcha-tap.php:287
+msgid "Enter score that will check with the reCAPTCHA score."
+msgstr "Insira a pontuação que irá verificar com a pontuação do reCAPTCHA."
+
+#: admin/partials/settings-component/smtp-tab.php:114
+msgid "Enter Your Email"
+msgstr "Digite seu e-mail"
+
+#: admin/partials/settings-component/recaptcha-tap.php:133
+#: admin/partials/settings-component/recaptcha-tap.php:248
+msgid "Enter your secret key."
+msgstr "Digite sua chave secreta."
+
+#: admin/partials/settings-component/recaptcha-tap.php:96
+#: admin/partials/settings-component/recaptcha-tap.php:210
+msgid "Enter your site key"
+msgstr "Digite a chave do seu site"
+
+#: admin/partials/cart-lift-setup-wizard.php:151
+msgid "Etsy"
+msgstr "ar"
+
+#: admin/class-cart-lift-admin.php:415
+#| msgid "Every 15 Minutes"
+msgid "Every %d Minutes"
 msgstr "A cada 15 minutos"
+
+#: admin/partials/cart-lift-setup-wizard.php:77
+msgid "Exit intent popup"
+msgstr "Sair do pop-up de intenção"
+
+#: admin/partials/cart-lift-setup-wizard.php:81
+msgid "Extensive Filtering Options For Exporting A Precised Feed"
+msgstr "Opções de filtragem extensas para exportar um feed preciso"
+
+#: admin/partials/cart-lift-setup-wizard.php:150
+msgid "Facebook"
+msgstr "Facebook"
+
+#: admin/partials/cart-lift-setup-wizard.php:146
+msgid "Favourite Merchant"
+msgstr "comerciante favorito"
 
 #: admin/partials/cart-lift-compare-templates-tab.php:12
 msgid "features"
 msgstr "recursos"
 
+#: admin/partials/cart-lift-carts-tab.php:30
+msgid "Filter:"
+msgstr "Filtro:"
+
+#: admin/class-cart-lift-db.php:182
+msgid "Follow up"
+msgstr "dar seguimento"
+
 #: admin/partials/cart-lift-compare-templates-tab.php:13
 msgid "free"
 msgstr "livre"
 
-#: admin/partials/cart-lift-edit-email-template.php:275
+#: admin/partials/cart-lift-edit-email-template.php:278
 msgid "Free Shipping"
 msgstr "Envio Grátis"
 
-#: admin/class-cart-lift-admin.php:161
+#: admin/class-cart-lift-admin.php:220
 msgid "Free vs Pro"
 msgstr "Grátis vs Pro"
 
@@ -490,32 +634,56 @@ msgstr "livre vs pro"
 msgid "from"
 msgstr "de"
 
-#: admin/partials/settings-component/general-tab.php:393
-msgid "GDPR message:"
-msgstr "Mensagem GDPR:"
+#: admin/partials/cart-lift-dashboard-templates-tab.php:10
+msgid "From:"
+msgstr "De:"
 
-#: admin/partials/cart-lift-settings-tab.php:15
-#: admin/partials/settings-component/general-tab.php:66
+#: admin/partials/cart-lift-setup-wizard.php:99
+msgid "GDPR Integration"
+msgstr "Integração GDPR"
+
+#: admin/partials/cart-lift-settings-tab.php:29
 msgid "General"
 msgstr "Geral"
 
-#: admin/class-cart-lift-admin.php:257 admin/class-cart-lift-admin.php:310
+#: admin/class-cart-lift-ajax.php:555
+msgid "General setting data successfully saved."
+msgstr "Dados de configuração geral salvos com sucesso."
+
+#: admin/partials/cart-lift-setup-wizard.php:125
+msgid "Get"
+msgstr "receber"
+
+#: admin/class-cart-lift-sales-notification-bar.php:49
+msgid "Get "
+msgstr "receber"
+
+#: admin/class-cart-lift-admin.php:318 admin/class-cart-lift-admin.php:371
 msgid "Go Pro"
 msgstr "Go Pro"
 
-#: admin/partials/cart-lift-edit-email-template.php:240
+#: admin/partials/cart-lift-setup-wizard.php:149
+msgid "Google Shopping"
+msgstr "Google Shopping"
+
+#: admin/partials/cart-lift-setup-wizard.php:133
+msgid "Graftype"
+msgstr "tipo de grafeta"
+
+#: admin/partials/cart-lift-setup-wizard.php:55
+msgid "Hello, welcome to"
+msgstr "Olá, bem-vindo a"
+
+#: admin/partials/cart-lift-edit-email-template.php:242
 msgid "Hour (s)"
 msgstr "Hora (s)"
 
-#: admin/partials/cart-lift-edit-email-template.php:473
+#: admin/partials/cart-lift-edit-email-template.php:581
 msgid "Hour(s)"
 msgstr "Hora (s)"
 
-#. Author URI of the plugin
-msgid "http://rextheme.com/"
-msgstr "http://rextheme.com/"
-
 #. URI of the plugin
+#. Author URI of the plugin
 msgid "https://rextheme.com/cart-lift"
 msgstr "https://rextheme.com/cart-lift"
 
@@ -523,39 +691,70 @@ msgstr "https://rextheme.com/cart-lift"
 msgid "ID"
 msgstr "EU IRIA"
 
-#: admin/partials/cart-lift-carts-tab.php:349
+#: admin/class-cart-lift-admin.php:463
+msgid ""
+"If you are using Paddle Payment Gateway, please ensure that you have "
+"disabled Abandoned Cart Recovery from there."
+msgstr ""
+"Se você estiver usando o Paddle Payment Gateway, certifique-se de que "
+"desativou a recuperação do carrinho abandonado a partir daí."
+
+#: admin/partials/cart-lift-carts-tab.php:387
 msgid "Image"
 msgstr "Imagem"
 
-#: admin/partials/cart-lift-compare-templates-tab.php:148
+#: admin/partials/cart-lift-compare-templates-tab.php:122
 msgid "Individual Campaign conversion"
 msgstr "Conversão de campanha individual"
 
-#: admin/partials/cart-lift-compare-templates-tab.php:390
+#: admin/partials/cart-lift-compare-templates-tab.php:364
 msgid "Individual Campaign sent emails."
 msgstr "A campanha individual enviou e-mails."
 
-#: admin/partials/cart-lift-compare-templates-tab.php:431
+#: admin/partials/cart-lift-compare-templates-tab.php:405
 msgid "Individual order items -- Email log, Cart Contents, Unsubscribe order."
 msgstr ""
 "Itens de pedidos individuais - Registro de e-mail, Conteúdo do carrinho, "
 "Pedido de cancelamento de inscrição."
 
-#: admin/partials/cart-lift-compare-templates-tab.php:174
+#: admin/partials/cart-lift-compare-templates-tab.php:148
 msgid "Individual order items -- User Details"
 msgstr "Itens de pedidos individuais - Detalhes do usuário"
 
-#: admin/partials/cart-lift-edit-email-template.php:338
+#: admin/partials/cart-lift-edit-email-template.php:341
 msgid "Individual use only"
 msgstr "Apenas uso individual"
 
-#: admin/partials/cart-lift-analytics-tab.php:64
+#: admin/partials/cart-lift-compare-templates-tab.php:446
+msgid "Initiate popup to take email when guest user adds product to cart."
+msgstr ""
+"Inicialmente, o pop-up pode ser enviado para receber e-mails quando o "
+"usuário convidado adiciona produtos ao carrinho."
+
+#: admin/partials/cart-lift-settings-tab.php:41
+#: admin/partials/cart-lift-settings-tab.php:65
+msgid "Integration"
+msgstr "integração"
+
+#: admin/partials/cart-lift-setup-wizard.php:119
+msgid "Invalid license key"
+msgstr "Chave de licença inválida"
+
+#: admin/partials/cart-lift-analytics-tab.php:63
 msgid "Last 30 Days"
 msgstr "Últimos 30 dias"
 
-#: admin/partials/cart-lift-analytics-tab.php:63
+#: admin/partials/cart-lift-analytics-tab.php:62
 msgid "Last 7 Days"
 msgstr "Últimos 7 dias"
+
+#: admin/partials/cart-lift-setup-wizard.php:63
+msgid "Let’s create your first Campaign"
+msgstr "Vamos criar sua primeira campanha"
+
+#: admin/partials/cart-lift-setup-wizard.php:137
+msgid "Let’s create your first feed"
+msgstr "Vamos criar seu primeiro feed"
 
 #: admin/partials/cart-lift-tabs-display.php:239
 msgid "License"
@@ -565,92 +764,95 @@ msgstr "Licença"
 msgid "Mailchimp"
 msgstr "Mailchimp"
 
-#: admin/class-cart-lift-admin.php:163
+#: admin/class-cart-lift-admin.php:222
 msgid "Manage License"
 msgstr "Gerenciar licença"
 
-#: admin/partials/cart-lift-edit-email-template.php:509
+#: admin/partials/cart-lift-setup-wizard.php:85
+msgid "Manipulate Your Product Price Using Dynamic Pricing"
+msgstr "Manipular o preço do produto usando preços dinâmicos"
+
+#: admin/partials/cart-lift-setup-wizard.php:96
+msgid "Manual Recovery Process"
+msgstr "Processo de recuperação manual"
+
+#: admin/partials/cart-lift-edit-email-template.php:617
 msgid "Minimum time limit 15 minutes."
 msgstr "Prazo mínimo de 15 minutos."
 
-#: admin/partials/settings-component/general-tab.php:468
-msgid ""
-"Minimum time to consider a cart as abandoned. Minimum time limit 15 minutes."
-msgstr ""
-"Tempo mínimo para considerar um carrinho como abandonado. Prazo mínimo de 15 "
-"minutos."
-
-#: admin/partials/cart-lift-edit-email-template.php:472
+#: admin/partials/cart-lift-edit-email-template.php:580
 msgid "Minute(s)"
 msgstr "Minutos)"
-
-#: admin/partials/settings-component/general-tab.php:443
-msgid "Minutes"
-msgstr "Minutos"
 
 #: admin/partials/cart-lift-view-cart-data.php:9
 #: admin/partials/cart-lift-email-templates-tab.php:85
 msgid "Name"
 msgstr "Nome"
 
+#: admin/partials/cart-lift-email-templates-tab.php:125
+msgid "Name :"
+msgstr "Nome:"
+
 #: admin/partials/cart-lift-edit-email-template.php:81
 msgid "Name of the campaign."
 msgstr "Nome da campanha."
 
-#: admin/partials/cart-lift-carts-tab.php:251
+#: admin/partials/cart-lift-carts-tab.php:277
 msgid "Name:"
 msgstr "Nome:"
+
+#: admin/partials/cart-lift-setup-wizard.php:109
+msgid "Necessary"
+msgstr "necessário"
+
+#: admin/partials/cart-lift-setup-wizard.php:116
+msgid "Next"
+msgstr "próximo"
 
 #: admin/partials/settings-component/smtp-tab.php:93
 msgid "No"
 msgstr "Não"
 
-#: admin/partials/cart-lift-email-templates-tab.php:381
+#: admin/partials/cart-lift-email-templates-tab.php:398
 msgid "No Campaign Found"
 msgstr "Nenhuma campanha encontrada"
 
-#: admin/partials/cart-lift-carts-tab.php:470
+#: admin/partials/cart-lift-carts-tab.php:500
 msgid "No Data Found"
 msgstr "Nenhum dado encontrado"
 
-#: admin/partials/cart-lift-carts-tab.php:310
-msgid "No scheduled email found"
-msgstr "Nenhum e-mail programado encontrado"
+#: admin/class-cart-lift-ajax.php:463
+msgid "No email found to send."
+msgstr "Nenhum e-mail encontrado para enviar."
+
+#: public/class-cart-lift-edd-actions.php:147
+#: public/class-cart-lift-public.php:132
+msgid "No thanks"
+msgstr "não obrigado"
 
 #: admin/partials/settings-component/smtp-tab.php:77
 msgid "None"
 msgstr "Nenhum"
 
-#: admin/partials/settings-component/general-tab.php:402
-msgid ""
-"Note: This confirmation message will show below the email field on checkout "
-"page."
-msgstr ""
-"Nota: Esta mensagem de confirmação será exibida abaixo do campo de e-mail na "
-"página de checkout."
-
-#: admin/partials/settings-component/general-tab.php:136
-msgid "Notify admin for abandon cart:"
-msgstr "Notifique o administrador sobre o abandono do carrinho:"
-
-#: admin/partials/settings-component/general-tab.php:169
-msgid "Notify admin for recovered cart:"
+#: admin/partials/cart-lift-setup-wizard.php:95
+#| msgid "Notify admin for recovered cart:"
+msgid "Notification For Recovered Cart"
 msgstr "Notifique o administrador sobre o carrinho recuperado:"
 
 #: admin/partials/cart-lift-compare-templates-tab.php:18
 msgid "Notify Admin when a abandoned cart is abandoned"
 msgstr "Notificar o administrador quando um carrinho abandonado for abandonado"
 
-#: admin/partials/cart-lift-compare-templates-tab.php:226
+#: admin/partials/cart-lift-compare-templates-tab.php:200
 msgid "Notify Admin when a abandoned cart is recovered."
 msgstr ""
 "Notifique o administrador quando um carrinho abandonado for recuperado."
 
-#: admin/partials/cart-lift-email-templates-tab.php:353
+#: admin/partials/cart-lift-email-templates-tab.php:370
 msgid "Once deleted, you will not be able to recover this Campaign!"
 msgstr "Depois de excluído, você não poderá recuperar esta campanha!"
 
-#: admin/partials/cart-lift-carts-tab.php:442
+#: admin/partials/cart-lift-carts-tab.php:471
 msgid "Once deleted, you will not be able to recover this Cart!"
 msgstr "Uma vez excluído, você não poderá recuperar este carrinho!"
 
@@ -658,82 +860,193 @@ msgstr "Uma vez excluído, você não poderá recuperar este carrinho!"
 msgid "Other SMTP"
 msgstr "Outro SMTP"
 
-#: admin/class-cart-lift-db.php:150 admin/class-cart-lift-db.php:167
-#: admin/class-cart-lift-db.php:184
+#: admin/partials/cart-lift-carts-tab.php:98
+msgid "Paused/Active"
+msgstr "Pausada/ativa"
+
+#: admin/partials/cart-lift-carts-tab.php:123
+msgid "Paused/Active:"
+msgstr "Pausada/ativa:"
+
+#: admin/class-cart-lift-db.php:175 admin/class-cart-lift-db.php:196
+#: admin/class-cart-lift-db.php:217
 msgid "Please consider this cart"
 msgstr "Por favor, considere este carrinho"
 
-#: admin/class-cart-lift-tab-view.php:533
-#: admin/class-cart-lift-tab-view.php:706
+#: admin/class-cart-lift-tab-view.php:538
+#: admin/class-cart-lift-tab-view.php:758
 msgid "Please Consider Your Cart"
 msgstr "Por favor, considere o seu carrinho"
 
-#: admin/partials/cart-lift-settings-tab.php:17
+#: admin/partials/cart-lift-edit-email-template.php:472
+msgid "Please enable SMS notification from settings menu."
+msgstr "Ative a notificação por SMS no menu Configurações."
+
+#: admin/partials/cart-lift-setup-wizard.php:118
+msgid "Please enter a valid one."
+msgstr "Insira um válido."
+
+#: admin/partials/settings-component/recaptcha-tap.php:172
+#: admin/partials/settings-component/recaptcha-tap.php:290
+msgid "Please enter score"
+msgstr "Por favor, insira a pontuação"
+
+#: admin/partials/settings-component/recaptcha-tap.php:137
+#: admin/partials/settings-component/recaptcha-tap.php:253
+msgid "Please enter secret key"
+msgstr "Por favor, digite a chave secreta"
+
+#: admin/partials/settings-component/recaptcha-tap.php:100
+#: admin/partials/settings-component/recaptcha-tap.php:214
+msgid "Please enter site key"
+msgstr "Por favor, digite a chave do site"
+
+#: includes/class-cart-lift-activator.php:70
+msgid "Please find the attached weekly report"
+msgstr "Por favor, encontre o relatório semanal em anexo"
+
+#: admin/partials/cart-lift-setup-wizard.php:111
+msgid "Plugins"
+msgstr "plugins"
+
+#: admin/partials/cart-lift-setup-wizard.php:108
+msgid "Plugins & Settings"
+msgstr "Plugins e configurações"
+
+#: admin/partials/cart-lift-settings-tab.php:35
+#: admin/partials/settings-component/email-popup.php:2
 msgid "Popup Editor"
 msgstr "Editor de pop-ups"
 
-#: includes/helper.php:599 admin/partials/cart-lift-carts-tab.php:351
+#: admin/partials/cart-lift-setup-wizard.php:61
+msgid "Preview video image "
+msgstr "Visualizar imagem de vídeo"
+
+#: admin/partials/cart-lift-carts-tab.php:389
 msgid "Price"
 msgstr "Preço"
 
 #: admin/partials/cart-lift-dashboard-templates-tab.php:79
 #: admin/partials/cart-lift-compare-templates-tab.php:14
-#: admin/partials/cart-lift-email-templates-tab.php:116
-#: admin/partials/cart-lift-email-templates-tab.php:151
-#: admin/partials/cart-lift-carts-tab.php:62
+#: admin/partials/cart-lift-email-templates-tab.php:119
+#: admin/partials/cart-lift-email-templates-tab.php:154
+#: admin/partials/cart-lift-email-templates-tab.php:165
+#: admin/partials/cart-lift-carts-tab.php:83
+#: admin/partials/cart-lift-carts-tab.php:378
+#: admin/partials/cart-lift-edit-email-template.php:348
+#: admin/partials/cart-lift-edit-email-template.php:411
+#: admin/partials/cart-lift-edit-email-template.php:480
+#: admin/partials/settings-component/email-popup.php:16
+#: admin/partials/settings-component/twilio-sms.php:16
 msgid "pro"
 msgstr "pró"
 
-#: includes/helper.php:597
-msgid "Product"
-msgstr "produtos"
+#: admin/partials/cart-lift-setup-wizard.php:91
+msgid "Pro Features"
+msgstr "Recursos do Pro"
 
-#: admin/partials/cart-lift-carts-tab.php:350
+#: admin/partials/cart-lift-carts-tab.php:36
+msgid "Processing"
+msgstr "processamento"
+
+#: admin/partials/cart-lift-carts-tab.php:120
+#| msgid "Product"
+msgid "Product :"
+msgstr "Produtos:"
+
+#: admin/partials/cart-lift-setup-wizard.php:59
+msgid "Product Feed Manager for WooCommerce,"
+msgstr "Gerente de feed de produtos para WooCommerce,"
+
+#: admin/partials/cart-lift-carts-tab.php:388
 msgid "Product Name"
 msgstr "Nome do Produto"
 
-#: admin/partials/cart-lift-carts-tab.php:74
+#: admin/partials/cart-lift-carts-tab.php:95
 msgid "Products on Cart"
 msgstr "Produtos no carrinho"
+
+#: admin/class-cart-lift-db.php:203
+#: admin/partials/cart-lift-setup-wizard.php:102
+msgid "Promotional discount"
+msgstr "desconto promocional"
+
+#: admin/partials/cart-lift-setup-wizard.php:73
+msgid "Proven email templates"
+msgstr "Modelos de e-mail comprovados"
 
 #: admin/partials/cart-lift-view-cart-data.php:15
 msgid "Provider"
 msgstr "Fornecedor"
 
-#: includes/helper.php:598 admin/partials/cart-lift-carts-tab.php:352
+#: admin/partials/cart-lift-carts-tab.php:390
 msgid "Quantity"
 msgstr "Quantidade"
 
-#: admin/partials/cart-lift-carts-tab.php:24
+#: admin/partials/cart-lift-carts-tab.php:23
 msgid "Real Time Updates"
 msgstr "Atualizações em tempo real"
+
+#: admin/partials/cart-lift-setup-wizard.php:129
+msgid ""
+"Really, if I could give you 1000 stars, not 5. I started with buying Cart "
+"Lift, and now I am happy that I bought the agency plan.\n"
+"                The Cart Lift and all the plugins do their job, but what "
+"distinguishes the team is that it listens to your suggestions and implements "
+"them, as well as listens to your problems and solves them"
+msgstr ""
+"Realmente, se eu pudesse lhe dar 1000 estrelas, não 5. Comecei comprando o "
+"Carrinho Lift, e agora estou feliz por ter comprado o plano da agência. O "
+"Cart Lift e todos os plugins fazem o seu trabalho, mas o que distingue a "
+"equipe é que ele ouve suas sugestões e os implementa, assim como ouve seus "
+"problemas e os resolve"
+
+#: admin/partials/settings-component/recaptcha-tap.php:55
+msgid ""
+"reCAPTCHA V3 runs silently in the background to detect suspicious activity "
+"and verify user interactions without interrupting the user experience."
+msgstr ""
+"O ReCAPTCHA v3 é executado silenciosamente em segundo plano para detectar "
+"atividades suspeitas e verificar as interações do usuário sem interromper a "
+"experiência do usuário."
+
+#: admin/partials/settings-component/recaptcha-tap.php:2
+msgid "reCAPTCHA V3 Settings"
+msgstr "Configurações do ReCAPTCHA v3"
+
+#: public/class-cart-lift-public.php:192 public/class-cart-lift-public.php:210
+#: public/class-cart-lift-public.php:241 public/class-cart-lift-public.php:258
+msgid "reCAPTCHA verification failed."
+msgstr "Falha na verificação do reCAPTCHA."
+
+#: admin/partials/cart-lift-setup-wizard.php:60
+msgid ""
+"Recover over 15% of your abandoned cart customers with automated e-mail "
+"campaigns. Enjoy immediate increase in your ROI."
+msgstr ""
+"Recupere mais de 15% dos clientes abandonados de seus carrinhos com "
+"campanhas automatizadas de e-mail. Desfrute de aumento imediato em seu ROI."
 
 #: admin/partials/cart-lift-dashboard-templates-tab.php:70
 msgid "Recoverable Revenue"
 msgstr "Receita recuperável"
 
+#: admin/class-cart-lift-admin.php:165
+#: admin/partials/cart-lift-analytics.php:16
+#: admin/partials/cart-lift-analytics.php:22
+#: admin/partials/cart-lift-carts-tab.php:39
+msgid "Recovered"
+msgstr "recuperado"
+
 #: admin/partials/cart-lift-dashboard-templates-tab.php:149
 msgid "Recovered Revenue"
 msgstr "Receita Recuperada"
-
-#: admin/partials/settings-component/general-tab.php:131
-msgid "Remove abandon cart information if no email is captured."
-msgstr ""
-"Remova as informações do carrinho de abandono se nenhum email for capturado."
-
-#: admin/partials/settings-component/general-tab.php:248
-msgid "Remove Cart Lift branding from footer."
-msgstr "Remova a marca de elevação do carrinho do rodapé."
-
-#: admin/partials/settings-component/general-tab.php:103
-msgid "Remove non-actionable carts:"
-msgstr "Remova os carrinhos não acionáveis:"
 
 #: admin/partials/cart-lift-tabs-display.php:60
 msgid "Reports"
 msgstr "Relatórios"
 
-#: admin/partials/cart-lift-compare-templates-tab.php:200
+#: admin/partials/cart-lift-compare-templates-tab.php:174
 msgid ""
 "Reports: Calendar, Recoverable Revenue, Recovered Revenue, Number of "
 "Abandoned Carts, Total Abandoned Revenue, Cart Abandoned Rate, Actionable "
@@ -743,36 +1056,50 @@ msgstr ""
 "carros abandonados, receita total abandonada, taxa de carrinho abandonado, "
 "carros abandonados acionáveis."
 
-#: admin/partials/cart-lift-compare-templates-tab.php:472
+#: admin/partials/cart-lift-compare-templates-tab.php:487
 msgid "Reports: Number of email sent."
 msgstr "Relatórios: Número de e-mails enviados."
 
-#: admin/partials/cart-lift-compare-templates-tab.php:96
+#: admin/partials/cart-lift-compare-templates-tab.php:70
 msgid "Restriction settings -- Disable tracking for specific user role"
 msgstr ""
 "Configurações de restrição - Desative o rastreamento para uma função de "
 "usuário específica"
 
-#: admin/partials/cart-lift-email-templates-tab.php:88
+#: admin/partials/cart-lift-email-templates-tab.php:91
 msgid "REVENUE"
 msgstr "RECEITA"
+
+#: admin/partials/cart-lift-email-templates-tab.php:176
+msgid "Revenue :"
+msgstr "Receita:"
 
 #. Author of the plugin
 msgid "RexTheme"
 msgstr "RexTheme"
 
-#: admin/class-cart-lift-tab-view.php:510
+#: admin/class-cart-lift-tab-view.php:512
 msgid "Save Campaign"
 msgstr "Salvar campanha"
 
 #: admin/partials/settings-component/smtp-tab.php:104
-#: admin/partials/settings-component/general-tab.php:513
-msgid "save change"
-msgstr "salvar as mudanças"
+#: admin/partials/settings-component/recaptcha-tap.php:294
+msgid "Save Settings"
+msgstr "Salvar configurações"
 
-#: admin/partials/cart-lift-carts-tab.php:31
+#: admin/partials/settings-component/recaptcha-tap.php:139
+#: admin/partials/settings-component/recaptcha-tap.php:257
+msgid "Score:"
+msgstr "Pontuação:"
+
+#: admin/partials/cart-lift-carts-tab.php:52
 msgid "Search by customer email..."
 msgstr "Pesquisar por email do cliente ..."
+
+#: admin/partials/settings-component/recaptcha-tap.php:103
+#: admin/partials/settings-component/recaptcha-tap.php:218
+msgid "Secret Key:"
+msgstr "Chave Secreta:"
 
 #: admin/partials/settings-component/smtp-tab.php:71
 msgid "security"
@@ -786,7 +1113,15 @@ msgstr "segurança:"
 msgid "Select date range to show reports."
 msgstr "Selecione o período para mostrar os relatórios."
 
-#: admin/partials/cart-lift-edit-email-template.php:522
+#: admin/partials/cart-lift-setup-wizard.php:143
+msgid "Select Merchant"
+msgstr "Selecione o comerciante"
+
+#: admin/partials/cart-lift-setup-wizard.php:144
+msgid "Select Your "
+msgstr "Selecione seu"
+
+#: admin/partials/cart-lift-edit-email-template.php:630
 msgid "Send a test email"
 msgstr "Envie um email de teste"
 
@@ -794,11 +1129,16 @@ msgstr "Envie um email de teste"
 msgid "send a test email"
 msgstr "envie um email de teste"
 
-#: admin/partials/cart-lift-edit-email-template.php:518
+#: admin/partials/cart-lift-carts-tab.php:367
+#: admin/partials/cart-lift-carts-tab.php:377
+msgid "Send Recovery Email Now"
+msgstr "Envie um e-mail de recuperação agora"
+
+#: admin/partials/cart-lift-edit-email-template.php:626
 msgid "Send Test Email To"
 msgstr "Enviar email de teste para"
 
-#: admin/partials/cart-lift-edit-email-template.php:464
+#: admin/partials/cart-lift-edit-email-template.php:572
 msgid "Send this email"
 msgstr "Envie este email"
 
@@ -810,19 +1150,49 @@ msgstr "Sendgrid"
 msgid "SES"
 msgstr "SES"
 
-#: admin/partials/cart-lift-compare-templates-tab.php:349
+#: admin/partials/cart-lift-compare-templates-tab.php:323
 msgid "Set Conditional Coupon -- Product or category based."
 msgstr "Definir cupom condicional - com base em produto ou categoria."
 
-#: admin/partials/cart-lift-compare-templates-tab.php:122
+#: admin/partials/cart-lift-compare-templates-tab.php:96
 msgid "Set Coupon for Individual templates"
 msgstr "Definir cupom para modelos individuais"
 
-#: admin/class-cart-lift-admin.php:159 admin/class-cart-lift-admin.php:247
-#: admin/class-cart-lift-admin.php:248
+#: admin/class-cart-lift-admin.php:218 admin/class-cart-lift-admin.php:306
+#: admin/class-cart-lift-admin.php:307
 #: admin/partials/cart-lift-tabs-display.php:179
 msgid "Settings"
 msgstr "Definições"
+
+#: admin/class-cart-lift-admin.php:312
+msgid "Setup Wizard"
+msgstr "Assistente de configuração"
+
+#: admin/partials/settings-component/recaptcha-tap.php:66
+#: admin/partials/settings-component/recaptcha-tap.php:180
+msgid "Site Key:"
+msgstr "Chave do site:"
+
+#: admin/partials/cart-lift-email-templates-tab.php:101
+#: admin/partials/cart-lift-carts-tab.php:118
+msgid "SL No :"
+msgstr "SL não:"
+
+#: admin/partials/cart-lift-setup-wizard.php:76
+msgid "Smart discount coupons"
+msgstr "Cupons de desconto inteligentes"
+
+#: admin/partials/settings-component/twilio-sms.php:2
+msgid "SMS"
+msgstr "SMS"
+
+#: admin/partials/cart-lift-email-templates-tab.php:88
+msgid "SMS Sent"
+msgstr "enviado por SMS"
+
+#: admin/partials/cart-lift-email-templates-tab.php:161
+msgid "SMS Sent :"
+msgstr "Enviado por SMS:"
 
 #: admin/partials/settings-component/smtp-tab.php:63
 msgid "SMTP"
@@ -832,13 +1202,39 @@ msgstr "SMTP"
 msgid "SSL"
 msgstr "SSL"
 
-#: admin/partials/cart-lift-carts-tab.php:76
+#: admin/partials/cart-lift-carts-tab.php:97
 msgid "Status"
 msgstr "Status"
 
 #: admin/partials/cart-lift-email-templates-tab.php:84
 msgid "status"
 msgstr "status"
+
+#: admin/partials/cart-lift-carts-tab.php:122
+msgid "Status :"
+msgstr "Status:"
+
+#: admin/partials/cart-lift-email-templates-tab.php:102
+msgid "status :"
+msgstr "Status:"
+
+#: admin/partials/cart-lift-setup-wizard.php:120
+msgid "Success"
+msgstr "sucesso"
+
+#: admin/class-cart-lift-mailer.php:55
+msgid "Successfully Saved"
+msgstr "salvo com sucesso"
+
+#: admin/class-cart-lift-ajax.php:253 admin/class-cart-lift-ajax.php:277
+#: admin/class-cart-lift-ajax.php:296 admin/class-cart-lift-ajax.php:313
+#: admin/class-cart-lift-ajax.php:497
+msgid "Successfully saved"
+msgstr "salvo com sucesso"
+
+#: admin/partials/cart-lift-setup-wizard.php:82
+msgid "Tailor Your Product Feed to Perfection with Feed Rules"
+msgstr "Adapte o feed do seu produto à perfeição com as regras do feed"
 
 #: admin/partials/cart-lift-edit-email-template.php:53
 msgid "Template name"
@@ -848,23 +1244,27 @@ msgstr "Nome do modelo"
 msgid "Template status"
 msgstr "Status do modelo"
 
-#: admin/class-cart-lift-tab-view.php:193
+#: admin/class-cart-lift-tab-view.php:181
 msgid "The email template has been successfully created."
 msgstr "O modelo de email foi criado com sucesso."
 
-#: admin/class-cart-lift-tab-view.php:215
+#: admin/class-cart-lift-tab-view.php:207
 msgid "The email template has been successfully deleted."
 msgstr "O modelo de email foi excluído com sucesso."
 
-#: admin/class-cart-lift-tab-view.php:204
+#: admin/class-cart-lift-tab-view.php:194
 msgid "The email template has been successfully updated."
 msgstr "O modelo de email foi atualizado com sucesso."
 
-#: admin/class-cart-lift-tab-view.php:226
+#: admin/class-cart-lift-tab-view.php:220
 msgid "The email templates has been successfully deleted."
 msgstr "Os modelos de email foram excluídos com sucesso."
 
-#: admin/partials/settings-component/email-popup.php:38
+#: admin/partials/settings-component/twilio-sms.php:53
+msgid "This will enable twilio sms notification."
+msgstr "Isso permitirá a notificação do Twilio SMS."
+
+#: admin/partials/settings-component/email-popup.php:52
 msgid ""
 "This will initiate a pop-up and prompt users to provide email addresses when "
 "they intend to leave from the cart page."
@@ -876,9 +1276,17 @@ msgstr ""
 msgid "Time"
 msgstr "Tempo"
 
+#: admin/partials/cart-lift-carts-tab.php:318
+msgid "Time Log:"
+msgstr "Registro de tempo:"
+
 #: admin/partials/settings-component/smtp-tab.php:85
 msgid "TLS"
 msgstr "TLS"
+
+#: admin/partials/cart-lift-dashboard-templates-tab.php:15
+msgid "To:"
+msgstr "para:"
 
 #: admin/partials/cart-lift-dashboard-templates-tab.php:179
 msgid "Total Abandoned Carts"
@@ -888,31 +1296,53 @@ msgstr "Total de carrinhos abandonados"
 msgid "Total Abandoned Revenue"
 msgstr "Receita Total Abandonada"
 
-#: includes/helper.php:143
-msgid "Unsubscribe"
-msgstr "Cancelar subscrição"
+#: admin/partials/cart-lift-setup-wizard.php:75
+msgid "Track abandoned orders"
+msgstr "Rastrear pedidos abandonados"
 
-#: admin/partials/cart-lift-carts-tab.php:391
-#: admin/partials/cart-lift-carts-tab.php:395
+#: admin/partials/cart-lift-setup-wizard.php:83
+msgid "Track Facebook Pixel To Measure Feed Performance"
+msgstr "Acompanhe o Facebook Pixel para medir o desempenho do feed"
+
+#: admin/partials/cart-lift-edit-email-template.php:513
+msgid "Twilio SMS body"
+msgstr "Corpo SMS de Twilio"
+
+#: admin/partials/cart-lift-setup-wizard.php:101
+msgid "Twilio SMS Notification"
+msgstr "notificação de sms twilio"
+
+#: admin/partials/cart-lift-setup-wizard.php:86
+msgid "Unleash Your Store's Global Potential with Multilingual Capabilities"
+msgstr "Liberte o potencial global da sua loja com recursos multilíngues"
+
+#: admin/partials/cart-lift-carts-tab.php:420
+#: admin/partials/cart-lift-carts-tab.php:424
 msgid "unsubscribe"
 msgstr "Cancelar subscrição"
 
-#: public/class-cart-lift-public.php:824
+#: public/class-cart-lift-wc-actions.php:119
 #: admin/partials/cart-lift-view-cart-data.php:14
 msgid "Unsubscribed"
 msgstr "Cancelar inscrição"
 
-#: admin/class-cart-lift-tab-view.php:541
+#: admin/class-cart-lift-tab-view.php:545
 msgid "Update Campaign"
 msgstr "Atualizar campanha"
 
-#: admin/class-cart-lift-tab-view.php:540
+#: admin/class-cart-lift-tab-view.php:544
 msgid "update_template"
 msgstr "update_template"
 
+#: admin/partials/cart-lift-setup-wizard.php:138
+msgid "Upgrade To Pro"
+msgstr "Atualize para Pro"
+
+#: admin/partials/cart-lift-compare-templates-tab.php:5
 #: admin/partials/cart-lift-compare-templates-tab.php:6
-#: admin/partials/cart-lift-compare-templates-tab.php:555
-#: admin/partials/cart-lift-carts-tab.php:299
+#: admin/partials/cart-lift-compare-templates-tab.php:569
+#: admin/partials/cart-lift-compare-templates-tab.php:570
+#: admin/partials/cart-lift-carts-tab.php:324
 msgid "Upgrade to Pro"
 msgstr "Atualize para o Pro"
 
@@ -920,14 +1350,30 @@ msgstr "Atualize para o Pro"
 msgid "Use an engaging subject line that is personalized."
 msgstr "Use uma linha de assunto envolvente personalizada."
 
-#: admin/partials/cart-lift-carts-tab.php:248
+#: admin/partials/cart-lift-carts-tab.php:274
 msgid "User Details:"
 msgstr "Detalhes do usuario:"
 
-#: admin/partials/settings-component/general-tab.php:289
-#: admin/partials/settings-component/general-tab.php:324
-msgid "Webhook URL:"
-msgstr "URL do Webhook:"
+#: admin/partials/cart-lift-setup-wizard.php:127
+msgid ""
+"We are searching for a simple and clean solution for a long time and we "
+"found that solution. As PRO license consumers we can highly recommend this "
+"plugin. This is absolutely a must-have feature for the e-commerce "
+"marketplace.\n"
+"                Graftype"
+msgstr ""
+"Estamos procurando uma solução simples e limpa há muito tempo e encontramos "
+"essa solução. Como consumidores de licenças Pro, podemos recomendar este "
+"plugin. Este é absolutamente um recurso obrigatório para o mercado de "
+"comércio eletrônico. tipo de grafeta"
+
+#: admin/partials/cart-lift-setup-wizard.php:98
+msgid "Weekly Report"
+msgstr "Relatório semanal"
+
+#: admin/partials/cart-lift-setup-wizard.php:54
+msgid "Welcome"
+msgstr "acolher bem"
 
 #. Description of the plugin
 msgid ""
@@ -941,13 +1387,12 @@ msgstr ""
 msgid "Yes"
 msgstr "sim"
 
-#: public/class-cart-lift-public.php:824
+#: public/class-cart-lift-wc-actions.php:119
 msgid "You have successfully unsubscribed from our email list."
 msgstr "Você cancelou sua inscrição em nossa lista de e-mails."
 
-#: includes/class-cart-lift-activator.php:64 includes/helper.php:1385
-#: includes/helper.php:1411 admin/class-cart-lift-tab-view.php:862
-#: admin/class-cart-lift-ajax.php:178
+#: includes/class-cart-lift-activator.php:72 admin/class-cart-lift-ajax.php:223
+#: admin/class-cart-lift-ajax.php:533
 msgid ""
 "Your email address will help us support your shopping experience throughout "
 "the site. Please check our Privacy Policy to see how we use your personal "
@@ -957,6 +1402,6 @@ msgstr ""
 "compra em todo o site. Por favor, verifique nossa Política de Privacidade "
 "para ver como usamos seus dados pessoais."
 
-#: admin/partials/cart-lift-compare-templates-tab.php:513
+#: admin/partials/cart-lift-compare-templates-tab.php:528
 msgid "Zapier Integration."
 msgstr "Integração Zapier."

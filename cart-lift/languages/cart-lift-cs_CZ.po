@@ -4,7 +4,7 @@ msgstr ""
 "EDD\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-06-17 04:15+0000\n"
-"PO-Revision-Date: 2020-06-22 06:14+0000\n"
+"PO-Revision-Date: 2025-08-20 10:13+0000\n"
 "Last-Translator: \n"
 "Language-Team: Czech\n"
 "Language: cs_CZ\n"
@@ -14,10 +14,14 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco https://localise.biz/\n"
-"X-Loco-Version: 2.4.0; wp-5.4.2"
+"X-Loco-Version: 2.8.0; wp-6.8.2; php-8.3.8"
 
-#: includes/class-cart-lift-dependency-checker.php:270
-#: includes/class-cart-lift-dependency-checker.php:295
+#: admin/class-cart-lift-sales-notification-bar.php:49
+msgid " 15% "
+msgstr "15 %"
+
+#: includes/class-cart-lift-dependency-checker.php:277
+#: includes/class-cart-lift-dependency-checker.php:302
 #, php-format
 msgid ""
 " any of the following plugins : %s. Please activate any of these plugins."
@@ -25,35 +29,27 @@ msgstr ""
 "některý z následujících pluginů: %s. Aktivujte prosím některý z těchto "
 "pluginů."
 
-#: admin/partials/cart-lift-carts-tab.php:370
-msgid " Item"
-msgstr "Položka"
+#: admin/class-cart-lift-sales-notification-bar.php:49
+msgid " Discount On "
+msgstr "slevit na"
 
-#: admin/partials/cart-lift-carts-tab.php:370
-msgid " Items"
-msgstr "Položky"
+#: admin/partials/cart-lift-setup-wizard.php:113
+msgid " License Key"
+msgstr "licenční klíč"
 
-#: admin/partials/cart-lift-carts-tab.php:344
+#: admin/partials/cart-lift-carts-tab.php:360
 msgid " Product"
 msgstr "Produkt"
 
-#: admin/partials/cart-lift-carts-tab.php:344
+#: admin/partials/cart-lift-carts-tab.php:360
 msgid " Products"
 msgstr "produkty"
 
-#: admin/partials/cart-lift-carts-tab.php:359
+#: admin/partials/cart-lift-carts-tab.php:398
 msgid " Upgrade to Pro"
 msgstr "Upgradujte na Pro"
 
-#: admin/partials/settings-component/general-tab.php:506
-msgid ""
-"<b>Hints:</b> It will ignore selected user roles from abandonment process "
-"when they logged in, so they will not receive mail for cart abandoned."
-msgstr ""
-"<b> Rady: </b> Bude ignorovat vybrané uživatelské role z procesu opuštění, "
-"když se přihlásí, takže nebudou dostávat e-maily pro opuštění košíku."
-
-#: admin/partials/cart-lift-email-templates-tab.php:143
+#: admin/partials/cart-lift-email-templates-tab.php:146
 #, php-format
 msgid "<span class=\"text\">Send %s %s after cart is abandoned</span>"
 msgstr "<span class = \"text\"> Odeslat %s %s po opuštění košíku </span>"
@@ -68,31 +64,43 @@ msgstr ""
 "mailu, řekněte nám, jak dlouho čekat, než jej odešleme, a my uděláme zbytek. "
 "V případě potřeby můžete všechny tyto úpravy změnit později."
 
+#: admin/class-cart-lift-admin.php:164
+#: admin/partials/cart-lift-analytics.php:16
+#: admin/partials/cart-lift-analytics.php:22
+#: admin/partials/cart-lift-carts-tab.php:37
+msgid "Abandoned"
+msgstr "opuštěný"
+
 #: includes/wc-email/class-cart-lift-abandoned-email-template.php:26
 msgid "Abandoned cart to admin"
 msgstr "Opuštěný vozík pro administraci"
 
-#: admin/partials/cart-lift-carts-tab.php:263
+#: admin/partials/cart-lift-carts-tab.php:292
 msgid "Abandoned Date:"
 msgstr "Datum opuštění:"
 
-#: admin/partials/settings-component/general-tab.php:436
-msgid "Abandoned orders will be deleted. Minimum time limit 7 Days."
-msgstr "Opuštěné objednávky budou smazány. Minimální lhůta 7 dnů."
-
-#: admin/partials/cart-lift-email-templates-tab.php:89
+#: admin/partials/cart-lift-email-templates-tab.php:92
 msgid "ACTION"
 msgstr "AKCE"
 
-#: admin/partials/cart-lift-carts-tab.php:78
+#: admin/partials/cart-lift-carts-tab.php:100
 msgid "Action"
 msgstr "Akce"
+
+#: admin/partials/cart-lift-email-templates-tab.php:179
+#: admin/partials/cart-lift-carts-tab.php:156
+msgid "Action :"
+msgstr "Akce:"
 
 #: admin/partials/cart-lift-dashboard-templates-tab.php:273
 msgid "Actionable Abandoned Carts"
 msgstr "Akční opuštěné vozíky"
 
-#: admin/class-cart-lift-ajax.php:88
+#: admin/partials/cart-lift-setup-wizard.php:115
+msgid "Activate License"
+msgstr "aktivovat licenci"
+
+#: admin/class-cart-lift-ajax.php:119
 msgid "Activated"
 msgstr "Aktivováno"
 
@@ -101,20 +109,11 @@ msgstr "Aktivováno"
 msgid "add campaign"
 msgstr "přidat kampaň"
 
-#: admin/partials/settings-component/general-tab.php:164
-msgid "Admin will get an email notification when cart is abandoned."
-msgstr "Správce obdrží e-mailové upozornění, když je vozík opuštěn."
-
-#: admin/partials/settings-component/general-tab.php:206
-msgid "Admin will get an email notification when cart is recovered."
-msgstr ""
-"Jakmile bude vozík obnoven, dostane administrátor e-mailové upozornění."
-
-#: admin/partials/cart-lift-edit-email-template.php:511
+#: admin/partials/cart-lift-edit-email-template.php:619
 msgid "After cart is abandoned."
 msgstr "Po opuštění košíku."
 
-#: includes/actions.php:47
+#: includes/actions.php:158
 #: includes/wc-email/templates/emails/cl-admin-abandoned-cart.php:14
 #: includes/wc-email/templates/emails/plain/cl-admin-abandoned-cart.php:25
 #, php-format
@@ -122,27 +121,24 @@ msgid ""
 "Alas. Just to let you know &mdash; cart belonging to %1$s has been abandoned:"
 msgstr "Běda. Pro informaci, že košík patřící uživateli %1$s byl zrušen:"
 
-#: admin/partials/cart-lift-analytics-tab.php:62
+#: admin/partials/cart-lift-setup-wizard.php:134
+msgid "Ale320"
+msgstr "Ale320"
+
+#: admin/partials/cart-lift-carts-tab.php:35
+#: admin/partials/cart-lift-analytics-tab.php:61
 msgid "All"
 msgstr "Všechno"
 
-#: admin/class-cart-lift-admin.php:229 admin/class-cart-lift-admin.php:230
+#: admin/class-cart-lift-admin.php:288 admin/class-cart-lift-admin.php:289
 msgid "All Carts"
 msgstr "Všechny vozíky"
-
-#: admin/partials/settings-component/general-tab.php:98
-msgid "Allow Cart Lift to track abandoned carts."
-msgstr "Nechte Cart Lift sledovat opuštěné vozíky."
-
-#: admin/partials/settings-component/general-tab.php:281
-msgid "Allows to connect with 3rd-party services."
-msgstr "Umožňuje spojení se službami třetích stran."
 
 #: admin/partials/settings-component/email-tab.php:47
 msgid "Allows you to connect SMTP using Cart Lift."
 msgstr "Umožňuje připojit SMTP pomocí košíku Lift."
 
-#: admin/partials/cart-lift-edit-email-template.php:312
+#: admin/partials/cart-lift-edit-email-template.php:315
 msgid ""
 "Allows you to grant free shipping. A free shipping method must be enabled in "
 "your shipping zone and be set to require \"a valid free shipping coupon\""
@@ -151,13 +147,22 @@ msgstr ""
 "bezplatný způsob dopravy a musí být nastaven tak, aby vyžadoval „platný "
 "přepravní kupón zdarma“"
 
-#: admin/partials/cart-lift-edit-email-template.php:155
+#: admin/partials/cart-lift-edit-email-template.php:470
+#: admin/partials/cart-lift-edit-email-template.php:504
+msgid "Allows you to send mobile SMS through Twilio."
+msgstr "Umožňuje posílat mobilní SMS přes Twilio."
+
+#: admin/partials/cart-lift-edit-email-template.php:157
 msgid "Allows you to send new coupon only for this template."
 msgstr "Umožňuje odeslat nový kupón pouze pro tuto šablonu."
 
-#: admin/partials/cart-lift-carts-tab.php:75
+#: admin/partials/cart-lift-carts-tab.php:96
 msgid "Amount"
 msgstr "Množství"
+
+#: admin/partials/cart-lift-carts-tab.php:121
+msgid "Amount :"
+msgstr "Částka:"
 
 #: includes/wc-email/class-cart-lift-abandoned-email-template.php:27
 msgid "An email sent to the admin when a cart is abandoned."
@@ -167,44 +172,48 @@ msgstr "E-mail zaslaný adminovi, když je vozík opuštěn."
 msgid "Analytics"
 msgstr "Analytics"
 
-#: admin/partials/cart-lift-email-templates-tab.php:352
-#: admin/partials/cart-lift-carts-tab.php:441
+#: admin/partials/cart-lift-email-templates-tab.php:369
+#: admin/partials/cart-lift-carts-tab.php:470
 msgid "Are you sure?"
 msgstr "Jsi si jistá?"
-
-#: admin/partials/settings-component/general-tab.php:388
-msgid "Ask confirmation from the user/customer before tracking data."
-msgstr "Před měřením dat požádejte uživatele / zákazníka o potvrzení."
 
 #: admin/partials/settings-component/smtp-tab.php:90
 msgid "Authentication:"
 msgstr "Ověřování:"
 
-#: admin/partials/cart-lift-edit-email-template.php:401
+#: admin/partials/cart-lift-edit-email-template.php:404
 msgid "Auto apply coupon"
 msgstr "Automaticky použít kupón"
 
-#: admin/class-cart-lift-admin.php:157 admin/class-cart-lift-admin.php:238
-#: admin/class-cart-lift-admin.php:239
+#: admin/partials/cart-lift-setup-wizard.php:72
+msgid "Automated recovery"
+msgstr "automatické obnovení"
+
+#: admin/partials/cart-lift-edit-email-template.php:22
+msgid "Back to Campaign"
+msgstr "Zpět ke kampani"
+
+#: admin/partials/cart-lift-setup-wizard.php:152
+msgid "Bing"
+msgstr "hlupák"
+
+#: admin/class-cart-lift-admin.php:216 admin/class-cart-lift-admin.php:297
+#: admin/class-cart-lift-admin.php:298
 #: admin/partials/cart-lift-email-templates-tab.php:27
 #: admin/partials/cart-lift-tabs-display.php:138
 msgid "Campaigns"
 msgstr "Kampaně"
 
-#: admin/partials/cart-lift-email-templates-tab.php:354
-#: admin/partials/cart-lift-carts-tab.php:443
+#: admin/partials/cart-lift-email-templates-tab.php:371
+#: admin/partials/cart-lift-carts-tab.php:472
 msgid "Cancel"
 msgstr "zrušení"
-
-#: admin/partials/cart-lift-dashboard-templates-tab.php:237
-msgid "Cart Abandon Rate"
-msgstr "Míra opuštění košíku"
 
 #: includes/wc-email/class-cart-lift-abandoned-email-template.php:30
 msgid "Cart Abandoned"
 msgstr "Košík Opuštěný"
 
-#: admin/partials/cart-lift-compare-templates-tab.php:70
+#: admin/partials/cart-lift-compare-templates-tab.php:44
 msgid ""
 "Cart Abandoned Cut-Off Time (Minimum time limit to consider a cart is "
 "abandoned)"
@@ -212,16 +221,17 @@ msgstr ""
 "Opuštěná doba ukončení košíku (minimální lhůta pro zvážení košíku je "
 "opuštěna)"
 
-#: admin/partials/settings-component/general-tab.php:441
-msgid "Cart abandoned cut-off time:"
-msgstr "Doba opuštění košíku:"
+#: admin/partials/cart-lift-dashboard-templates-tab.php:237
+#| msgid "Cart Abandon Rate"
+msgid "Cart Abandoned Rate"
+msgstr "Míra opuštění košíku"
 
-#: admin/partials/cart-lift-carts-tab.php:341
+#: admin/partials/cart-lift-carts-tab.php:357
 msgid "Cart Contents:"
 msgstr "Obsah košíku:"
 
-#: admin/class-cart-lift-tab-view.php:173
-#: admin/class-cart-lift-tab-view.php:183
+#: admin/class-cart-lift-tab-view.php:157
+#: admin/class-cart-lift-tab-view.php:169
 msgid "Cart data has been successfully deleted."
 msgstr "Data košíku byla úspěšně smazána."
 
@@ -229,17 +239,19 @@ msgstr "Data košíku byla úspěšně smazána."
 msgid "Cart details: "
 msgstr "Podrobnosti košíku:"
 
-#: admin/partials/settings-component/general-tab.php:408
-msgid "Cart Expiration Time:"
-msgstr "Čas vypršení platnosti košíku:"
-
 #: admin/partials/cart-lift-view-cart-data.php:11
 msgid "Cart items"
 msgstr "Položky košíku"
 
-#: admin/class-cart-lift-admin.php:210
+#: admin/class-cart-lift-sales-notification-bar.php:49
+#: admin/class-cart-lift-admin.php:269
+#: admin/partials/cart-lift-setup-wizard.php:57
 msgid "Cart Lift"
 msgstr "Cart Lift"
+
+#: admin/partials/cart-lift-setup-wizard.php:90
+msgid "Cart Lift "
+msgstr "vozík s výtahem"
 
 #. Name of the plugin
 msgid "Cart Lift - Abandoned Cart Recovery for WooCommerce and EDD"
@@ -249,63 +261,115 @@ msgstr "Cart Lift - Abandoned Cart Recovery for WooCommerce and EDD"
 msgid "Cart Lift Feature Comparison"
 msgstr "Cart Lift Porovnání funkcí"
 
+#: admin/partials/cart-lift-setup-wizard.php:67
+msgid "Cart Lift Features"
+msgstr "Vlastnosti výtahu vozíku"
+
+#: admin/partials/cart-lift-setup-wizard.php:100
+msgid "Cart Lift Popup"
+msgstr "Vyskakovací okno s výtahem vozíku"
+
+#: admin/class-cart-lift-admin.php:166
+#: admin/partials/cart-lift-analytics.php:35
+msgid "Cart Overview"
+msgstr "Přehled vozíku"
+
+#: admin/partials/cart-lift-setup-wizard.php:68
+msgid "Cart Recovery Made Easy With Cart Lift!"
+msgstr "Snadné obnovení vozíku pomocí vozíku!"
+
+#: admin/class-cart-lift-db.php:161
+msgid "Cart reminder"
+msgstr "Připomenutí vozíku"
+
 #: admin/partials/cart-lift-view-cart-data.php:12
 msgid "Cart total"
 msgstr "Košík celkem"
 
-#: admin/partials/cart-lift-carts-tab.php:259
+#: admin/partials/cart-lift-carts-tab.php:288
 msgid "Cart Total:"
 msgstr "Košík celkem:"
 
-#: admin/class-cart-lift-admin.php:155
+#: admin/partials/cart-lift-setup-wizard.php:17
+msgid "Cart-lift - Setup Wizard"
+msgstr "Cart-Lift - Průvodce nastavením"
+
+#: admin/class-cart-lift-admin.php:214
 #: admin/partials/cart-lift-tabs-display.php:94
 msgid "Carts"
 msgstr "Vozíky"
 
-#: admin/partials/cart-lift-edit-email-template.php:375
+#: admin/partials/cart-lift-setup-wizard.php:64
+msgid "Check the guide"
+msgstr "Zkontrolujte průvodce"
+
+#: admin/partials/cart-lift-edit-email-template.php:378
 msgid ""
 "Check this box if the coupon cannot be used in conjunction with other "
 "coupons."
 msgstr ""
 "Toto políčko zaškrtněte, pokud kupón nelze použít ve spojení s jinými kupony."
 
-#: includes/helper.php:141
-msgid "Checkout"
-msgstr "Překontrolovat"
-
-#: admin/partials/cart-lift-analytics-tab.php:59
+#: admin/partials/cart-lift-analytics-tab.php:58
 msgid "Choose an option:"
 msgstr "Vyberte možnost:"
 
-#: admin/partials/cart-lift-carts-tab.php:395
+#: admin/partials/cart-lift-dashboard-templates-tab.php:79
+#: admin/partials/cart-lift-email-templates-tab.php:56
+#: admin/partials/cart-lift-email-templates-tab.php:119
+#: admin/partials/cart-lift-email-templates-tab.php:154
+#: admin/partials/cart-lift-email-templates-tab.php:165
+#: admin/partials/cart-lift-carts-tab.php:81
+#: admin/partials/cart-lift-carts-tab.php:324
+#: admin/partials/cart-lift-carts-tab.php:376
+#: admin/partials/cart-lift-carts-tab.php:398
+#: admin/partials/cart-lift-carts-tab.php:424
+#: admin/partials/cart-lift-edit-email-template.php:285
+#: admin/partials/cart-lift-edit-email-template.php:348
+#: admin/partials/cart-lift-edit-email-template.php:411
+#: admin/partials/cart-lift-edit-email-template.php:480
+#: admin/partials/settings-component/email-popup.php:15
+#: admin/partials/settings-component/twilio-sms.php:15
 msgid "Click to Upgrade Pro"
 msgstr "Klepnutím upgradujte na"
 
-#: admin/partials/cart-lift-email-templates-tab.php:87
+#: admin/partials/cart-lift-carts-tab.php:38
+msgid "Completed"
+msgstr "dokončený"
+
+#: admin/partials/cart-lift-email-templates-tab.php:90
 msgid "CONVERSIONS"
 msgstr "PŘEVODY"
 
-#: admin/partials/cart-lift-edit-email-template.php:221
+#: admin/partials/cart-lift-email-templates-tab.php:172
+msgid "Conversions :"
+msgstr "Konverze:"
+
+#: public/cart-lift-cart-actions.php:823
+msgid "Coupon"
+msgstr "lístek"
+
+#: admin/partials/cart-lift-edit-email-template.php:223
 msgid "Coupon amount"
 msgstr "Částka kupónu"
 
-#: admin/partials/cart-lift-edit-email-template.php:438
+#: admin/partials/cart-lift-edit-email-template.php:441
 msgid "Coupon code will be automatically applied to checkout."
 msgstr "Kód kupónu bude automaticky použit k pokladně."
 
-#: admin/partials/cart-lift-edit-email-template.php:232
+#: admin/partials/cart-lift-edit-email-template.php:234
 msgid "Coupon expiration frequency"
 msgstr "Frekvence vypršení platnosti kupónu"
 
-#: admin/partials/cart-lift-edit-email-template.php:161
+#: admin/partials/cart-lift-edit-email-template.php:163
 msgid "Coupon Type"
 msgstr "Typ kupónu"
 
-#: admin/class-cart-lift-tab-view.php:508
+#: admin/class-cart-lift-tab-view.php:510
 msgid "Create a New Campaign"
 msgstr "Vytvořte novou kampaň"
 
-#: admin/partials/cart-lift-compare-templates-tab.php:308
+#: admin/partials/cart-lift-compare-templates-tab.php:282
 msgid ""
 "Create unlimited email templates to be sent at intervals that you set – "
 "Intervals start from 15 minutes after cart is abandoned. Free -- limit to 2."
@@ -314,28 +378,32 @@ msgstr ""
 "intervalech - Intervaly začínají 15 minut po opuštění košíku. Zdarma - limit "
 "na 2."
 
-#: admin/class-cart-lift-admin.php:209 admin/class-cart-lift-admin.php:220
-#: admin/class-cart-lift-admin.php:221 admin/class-cart-lift-admin.php:298
+#: admin/partials/cart-lift-setup-wizard.php:84
+msgid "Customize Compelling Product Titles With Combined Attributes"
+msgstr "Přizpůsobte působivé názvy produktů pomocí kombinovaných atributů"
+
+#: admin/class-cart-lift-admin.php:268 admin/class-cart-lift-admin.php:279
+#: admin/class-cart-lift-admin.php:280 admin/class-cart-lift-admin.php:359
 msgid "Dashboard"
 msgstr "Přístrojová deska"
 
-#: admin/partials/cart-lift-carts-tab.php:77
+#: admin/partials/cart-lift-carts-tab.php:99
 msgid "Date"
 msgstr "datum"
 
-#: admin/partials/cart-lift-edit-email-template.php:241
+#: admin/partials/cart-lift-carts-tab.php:136
+msgid "Date :"
+msgstr "Datum:"
+
+#: admin/partials/cart-lift-edit-email-template.php:243
 msgid "Day (s)"
 msgstr "Den (dny)"
 
-#: admin/partials/cart-lift-edit-email-template.php:474
+#: admin/partials/cart-lift-edit-email-template.php:582
 msgid "Day(s)"
 msgstr "Den (dny)"
 
-#: admin/partials/settings-component/general-tab.php:411
-msgid "Days"
-msgstr "Dny"
-
-#: admin/class-cart-lift-ajax.php:88
+#: admin/class-cart-lift-ajax.php:119
 msgid "Deactivated"
 msgstr "Deaktivováno"
 
@@ -346,24 +414,32 @@ msgctxt "default email subject for abandoned emails sent to the admin"
 msgid "[%s] Cart abandoned"
 msgstr "[%s] Košík byl opuštěn"
 
-#: admin/partials/cart-lift-email-templates-tab.php:368
-#: admin/partials/cart-lift-carts-tab.php:457
+#: admin/partials/cart-lift-email-templates-tab.php:275
+#: admin/partials/cart-lift-email-templates-tab.php:300
+#: admin/partials/cart-lift-email-templates-tab.php:385
+#: admin/partials/cart-lift-carts-tab.php:185
+#: admin/partials/cart-lift-carts-tab.php:486
 msgid "Delete"
 msgstr "Odstranit"
 
-#: admin/partials/cart-lift-compare-templates-tab.php:267
+#: admin/partials/cart-lift-setup-wizard.php:74
+msgid "Detailed reports"
+msgstr "Podrobné zprávy"
+
+#: admin/partials/cart-lift-carts-tab.php:157
+msgid "Details"
+msgstr "detaily"
+
+#: admin/partials/cart-lift-setup-wizard.php:97
+#| msgid "Disable branding:"
+msgid "Disable Branding"
+msgstr "Zakázat branding:"
+
+#: admin/partials/cart-lift-compare-templates-tab.php:241
 msgid "Disable Branding (From email footer)."
 msgstr "Zakázat branding (z patičky e-mailu)."
 
-#: admin/partials/settings-component/general-tab.php:211
-msgid "Disable branding:"
-msgstr "Zakázat branding:"
-
-#: admin/partials/settings-component/general-tab.php:473
-msgid "Disable Tracking For:"
-msgstr "Zakázat sledování pro:"
-
-#: admin/class-cart-lift-admin.php:303
+#: admin/class-cart-lift-admin.php:364
 msgid "Documentation"
 msgstr "Dokumentace"
 
@@ -371,105 +447,177 @@ msgstr "Dokumentace"
 msgid "documentation"
 msgstr "dokumentace"
 
-#: admin/partials/cart-lift-carts-tab.php:55
-#: admin/partials/cart-lift-carts-tab.php:61
+#: admin/partials/cart-lift-setup-wizard.php:124
+msgid "Done"
+msgstr "hotový"
+
+#: admin/partials/cart-lift-carts-tab.php:76
+#: admin/partials/cart-lift-carts-tab.php:82
 msgid "Download Report"
 msgstr "Stáhnout zprávu"
 
-#: admin/class-cart-lift-tab-view.php:539 admin/class-cart-lift-admin.php:151
+#: admin/partials/cart-lift-email-templates-tab.php:182
+msgid "Duplicate"
+msgstr "duplikát"
+
+#: admin/partials/cart-lift-setup-wizard.php:153
+msgid "eBay"
+msgstr "ebay"
+
+#: admin/partials/cart-lift-email-templates-tab.php:209
+#: admin/partials/cart-lift-email-templates-tab.php:235
+msgid "Edit"
+msgstr "vydat"
+
+#: admin/class-cart-lift-tab-view.php:543 admin/class-cart-lift-admin.php:210
 msgid "Edit Campaign"
 msgstr "Upravit kampaň"
 
-#: admin/partials/cart-lift-settings-tab.php:16
 #: admin/partials/cart-lift-view-cart-data.php:10
-#: admin/partials/cart-lift-carts-tab.php:73
+#: admin/partials/cart-lift-carts-tab.php:94
 #: admin/partials/settings-component/email-tab.php:16
 msgid "Email"
 msgstr "E-mailem"
 
-#: admin/partials/cart-lift-edit-email-template.php:123
+#: admin/partials/cart-lift-carts-tab.php:119
+#| msgid "Email Log:"
+msgid "Email :"
+msgstr "E-mailový deník:"
+
+#: admin/partials/cart-lift-edit-email-template.php:125
 msgid "Email body"
 msgstr "Tělo e-mailu"
 
-#: admin/partials/cart-lift-edit-email-template.php:455
+#: admin/partials/cart-lift-edit-email-template.php:562
+msgid "Email checkout button color"
+msgstr "E-mailová pokladna Barva tlačítka"
+
+#: admin/partials/cart-lift-edit-email-template.php:553
+msgid "Email checkout button text"
+msgstr "Text tlačítka e-mailové pokladny"
+
+#: admin/class-cart-lift-ajax.php:457
+msgid "Email has been sent successfully."
+msgstr "E-mail byl úspěšně odeslán."
+
+#: admin/partials/cart-lift-edit-email-template.php:544
 msgid "Email header color"
 msgstr "Barva hlavičky e-mailu"
 
-#: admin/partials/cart-lift-edit-email-template.php:446
+#: admin/partials/cart-lift-edit-email-template.php:535
 msgid "Email header text"
 msgstr "Text záhlaví e-mailu"
-
-#: admin/partials/cart-lift-carts-tab.php:294
-msgid "Email Log:"
-msgstr "E-mailový deník:"
 
 #: admin/partials/cart-lift-dashboard-templates-tab.php:117
 #: admin/partials/cart-lift-email-templates-tab.php:86
 msgid "Email Sent"
 msgstr "Email odeslán"
 
+#: admin/partials/cart-lift-email-templates-tab.php:150
+msgid "Email Sent :"
+msgstr "Odeslán e-mail:"
+
 #: admin/partials/cart-lift-edit-email-template.php:88
 msgid "Email subject"
 msgstr "Předmět emailu"
 
-#: admin/partials/cart-lift-carts-tab.php:255
+#: admin/partials/cart-lift-carts-tab.php:281
 msgid "Email:"
 msgstr "E-mailem:"
 
-#: admin/partials/settings-component/general-tab.php:70
-msgid "Enable abandon cart tracking:"
-msgstr "Povolit sledování košíku opuštění:"
-
-#: admin/partials/settings-component/email-popup.php:9
+#: admin/partials/settings-component/email-popup.php:11
 msgid "Enable Cart Lift Popup:"
 msgstr "Aktivovat vyskakovací okno košíku:"
-
-#: admin/partials/cart-lift-compare-templates-tab.php:44
-msgid "Enable Cart Lift SMTP For This Site"
-msgstr "Povolte SMTP pro zvedání košíku pro tento web"
 
 #: admin/partials/settings-component/email-tab.php:19
 msgid "Enable Cart Lift SMTP for this site:"
 msgstr "Povolte SMTP Lift pro tento web:"
 
-#: admin/partials/cart-lift-edit-email-template.php:182
+#: admin/partials/cart-lift-edit-email-template.php:184
 msgid "Enable conditional discount"
 msgstr "Povolte podmíněnou slevu"
 
-#: admin/partials/cart-lift-edit-email-template.php:145
+#: admin/partials/cart-lift-edit-email-template.php:147
 msgid "Enable coupon?"
 msgstr "Povolit kupón?"
 
-#: admin/partials/settings-component/general-tab.php:253
-msgid "Enable external webhook:"
-msgstr "Povolit externí webhook:"
+#: admin/partials/settings-component/recaptcha-tap.php:21
+msgid "Enable reCAPTCHA V3:"
+msgstr "Povolit reCaptcha v3:"
 
-#: admin/partials/settings-component/general-tab.php:360
-msgid "Enable GDPR integration:"
-msgstr "Povolit integraci GDPR:"
+#: admin/partials/settings-component/twilio-sms.php:12
+msgid "Enable Twilio SMS Notification:"
+msgstr "Povolte upozornění Twilio SMS:"
 
-#: admin/partials/settings-component/general-tab.php:315
-#: admin/partials/settings-component/general-tab.php:350
-msgid "Enter url here."
-msgstr "Sem zadejte adresu URL."
+#: admin/partials/cart-lift-edit-email-template.php:449
+msgid "Enable Twilio SMS?"
+msgstr "Povolit Twilio SMS?"
 
-#: admin/class-cart-lift-admin.php:326
-msgid "Every 15 Minutes"
+#: admin/partials/settings-component/recaptcha-tap.php:169
+#: admin/partials/settings-component/recaptcha-tap.php:287
+msgid "Enter score that will check with the reCAPTCHA score."
+msgstr "Zadejte skóre, které bude kontrolováno skóre recaptcha."
+
+#: admin/partials/settings-component/smtp-tab.php:114
+msgid "Enter Your Email"
+msgstr "Zadejte svůj e-mail"
+
+#: admin/partials/settings-component/recaptcha-tap.php:133
+#: admin/partials/settings-component/recaptcha-tap.php:248
+msgid "Enter your secret key."
+msgstr "Zadejte svůj tajný klíč."
+
+#: admin/partials/settings-component/recaptcha-tap.php:96
+#: admin/partials/settings-component/recaptcha-tap.php:210
+msgid "Enter your site key"
+msgstr "Zadejte svůj webový klíč"
+
+#: admin/partials/cart-lift-setup-wizard.php:151
+msgid "Etsy"
+msgstr "Etsy"
+
+#: admin/class-cart-lift-admin.php:415
+#| msgid "Every 15 Minutes"
+msgid "Every %d Minutes"
 msgstr "Každých 15 minut"
+
+#: admin/partials/cart-lift-setup-wizard.php:77
+msgid "Exit intent popup"
+msgstr "Vyskakovací okno s výstupem záměru"
+
+#: admin/partials/cart-lift-setup-wizard.php:81
+msgid "Extensive Filtering Options For Exporting A Precised Feed"
+msgstr "Rozsáhlé možnosti filtrování pro export přesného zdroje"
+
+#: admin/partials/cart-lift-setup-wizard.php:150
+msgid "Facebook"
+msgstr "Facebook"
+
+#: admin/partials/cart-lift-setup-wizard.php:146
+msgid "Favourite Merchant"
+msgstr "oblíbený obchodník"
 
 #: admin/partials/cart-lift-compare-templates-tab.php:12
 msgid "features"
 msgstr "funkce"
 
+#: admin/partials/cart-lift-carts-tab.php:30
+msgid "Filter:"
+msgstr "Filtr:"
+
+#: admin/class-cart-lift-db.php:182
+msgid "Follow up"
+msgstr "zabývat se"
+
 #: admin/partials/cart-lift-compare-templates-tab.php:13
 msgid "free"
 msgstr "volný, uvolnit"
 
-#: admin/partials/cart-lift-edit-email-template.php:275
+#: admin/partials/cart-lift-edit-email-template.php:278
 msgid "Free Shipping"
 msgstr "Doprava zdarma"
 
-#: admin/class-cart-lift-admin.php:161
+#: admin/class-cart-lift-admin.php:220
 msgid "Free vs Pro"
 msgstr "Zdarma vs Pro"
 
@@ -481,32 +629,56 @@ msgstr "zdarma vs pro"
 msgid "from"
 msgstr "z"
 
-#: admin/partials/settings-component/general-tab.php:393
-msgid "GDPR message:"
-msgstr "Zpráva GDPR:"
+#: admin/partials/cart-lift-dashboard-templates-tab.php:10
+msgid "From:"
+msgstr "z:"
 
-#: admin/partials/cart-lift-settings-tab.php:15
-#: admin/partials/settings-component/general-tab.php:66
+#: admin/partials/cart-lift-setup-wizard.php:99
+msgid "GDPR Integration"
+msgstr "Integrace GDPR"
+
+#: admin/partials/cart-lift-settings-tab.php:29
 msgid "General"
 msgstr "Všeobecné"
 
-#: admin/class-cart-lift-admin.php:257 admin/class-cart-lift-admin.php:310
+#: admin/class-cart-lift-ajax.php:555
+msgid "General setting data successfully saved."
+msgstr "Údaje o obecném nastavení byly úspěšně uloženy."
+
+#: admin/partials/cart-lift-setup-wizard.php:125
+msgid "Get"
+msgstr "zaskočit pro"
+
+#: admin/class-cart-lift-sales-notification-bar.php:49
+msgid "Get "
+msgstr "zaskočit pro"
+
+#: admin/class-cart-lift-admin.php:318 admin/class-cart-lift-admin.php:371
 msgid "Go Pro"
 msgstr "Staň se profesionálem"
 
-#: admin/partials/cart-lift-edit-email-template.php:240
+#: admin/partials/cart-lift-setup-wizard.php:149
+msgid "Google Shopping"
+msgstr "Nákupy Google"
+
+#: admin/partials/cart-lift-setup-wizard.php:133
+msgid "Graftype"
+msgstr "nákres"
+
+#: admin/partials/cart-lift-setup-wizard.php:55
+msgid "Hello, welcome to"
+msgstr "Dobrý den, vítejte"
+
+#: admin/partials/cart-lift-edit-email-template.php:242
 msgid "Hour (s)"
 msgstr "Hodiny"
 
-#: admin/partials/cart-lift-edit-email-template.php:473
+#: admin/partials/cart-lift-edit-email-template.php:581
 msgid "Hour(s)"
 msgstr "Hodiny"
 
-#. Author URI of the plugin
-msgid "http://rextheme.com/"
-msgstr "http://rextheme.com/"
-
 #. URI of the plugin
+#. Author URI of the plugin
 msgid "https://rextheme.com/cart-lift"
 msgstr "https://rextheme.com/cart-lift"
 
@@ -514,39 +686,70 @@ msgstr "https://rextheme.com/cart-lift"
 msgid "ID"
 msgstr "ID"
 
-#: admin/partials/cart-lift-carts-tab.php:349
+#: admin/class-cart-lift-admin.php:463
+msgid ""
+"If you are using Paddle Payment Gateway, please ensure that you have "
+"disabled Abandoned Cart Recovery from there."
+msgstr ""
+"Pokud používáte Paddle Payment Gateway, ujistěte se, že jste odtud zakázali "
+"obnovení opuštěného košíku."
+
+#: admin/partials/cart-lift-carts-tab.php:387
 msgid "Image"
 msgstr "obraz"
 
-#: admin/partials/cart-lift-compare-templates-tab.php:148
+#: admin/partials/cart-lift-compare-templates-tab.php:122
 msgid "Individual Campaign conversion"
 msgstr "Konverze jednotlivých kampaní"
 
-#: admin/partials/cart-lift-compare-templates-tab.php:390
+#: admin/partials/cart-lift-compare-templates-tab.php:364
 msgid "Individual Campaign sent emails."
 msgstr "Jednotlivá kampaň odeslala e-maily."
 
-#: admin/partials/cart-lift-compare-templates-tab.php:431
+#: admin/partials/cart-lift-compare-templates-tab.php:405
 msgid "Individual order items -- Email log, Cart Contents, Unsubscribe order."
 msgstr ""
 "Jednotlivé položky objednávky - e-mailový deník, obsah košíku, odhlásit "
 "odběr."
 
-#: admin/partials/cart-lift-compare-templates-tab.php:174
+#: admin/partials/cart-lift-compare-templates-tab.php:148
 msgid "Individual order items -- User Details"
 msgstr "Jednotlivé položky objednávky - podrobnosti o uživateli"
 
-#: admin/partials/cart-lift-edit-email-template.php:338
+#: admin/partials/cart-lift-edit-email-template.php:341
 msgid "Individual use only"
 msgstr "Pouze pro individuální použití"
 
-#: admin/partials/cart-lift-analytics-tab.php:64
+#: admin/partials/cart-lift-compare-templates-tab.php:446
+msgid "Initiate popup to take email when guest user adds product to cart."
+msgstr ""
+"Spusťte vyskakovací okno pro přijímání e-mailů, když uživatel host přidá "
+"produkt do košíku."
+
+#: admin/partials/cart-lift-settings-tab.php:41
+#: admin/partials/cart-lift-settings-tab.php:65
+msgid "Integration"
+msgstr "integrace"
+
+#: admin/partials/cart-lift-setup-wizard.php:119
+msgid "Invalid license key"
+msgstr "Neplatný licenční klíč"
+
+#: admin/partials/cart-lift-analytics-tab.php:63
 msgid "Last 30 Days"
 msgstr "Posledních 30 dní"
 
-#: admin/partials/cart-lift-analytics-tab.php:63
+#: admin/partials/cart-lift-analytics-tab.php:62
 msgid "Last 7 Days"
 msgstr "Posledních 7 dní"
+
+#: admin/partials/cart-lift-setup-wizard.php:63
+msgid "Let’s create your first Campaign"
+msgstr "Pojďme vytvořit vaši první kampaň"
+
+#: admin/partials/cart-lift-setup-wizard.php:137
+msgid "Let’s create your first feed"
+msgstr "Pojďme vytvořit váš první zdroj"
 
 #: admin/partials/cart-lift-tabs-display.php:239
 msgid "License"
@@ -556,91 +759,94 @@ msgstr "Licence"
 msgid "Mailchimp"
 msgstr "Mailchimp"
 
-#: admin/class-cart-lift-admin.php:163
+#: admin/class-cart-lift-admin.php:222
 msgid "Manage License"
 msgstr "Spravujte licenci"
 
-#: admin/partials/cart-lift-edit-email-template.php:509
+#: admin/partials/cart-lift-setup-wizard.php:85
+msgid "Manipulate Your Product Price Using Dynamic Pricing"
+msgstr "Manipulujte s cenou svého produktu pomocí dynamických cen"
+
+#: admin/partials/cart-lift-setup-wizard.php:96
+msgid "Manual Recovery Process"
+msgstr "Proces ruční obnovy"
+
+#: admin/partials/cart-lift-edit-email-template.php:617
 msgid "Minimum time limit 15 minutes."
 msgstr "Minimální časový limit 15 minut."
 
-#: admin/partials/settings-component/general-tab.php:468
-msgid ""
-"Minimum time to consider a cart as abandoned. Minimum time limit 15 minutes."
-msgstr ""
-"Minimální doba, po kterou lze vozík považovat za opuštěný. Minimální časový "
-"limit 15 minut."
-
-#: admin/partials/cart-lift-edit-email-template.php:472
+#: admin/partials/cart-lift-edit-email-template.php:580
 msgid "Minute(s)"
 msgstr "Minut)"
-
-#: admin/partials/settings-component/general-tab.php:443
-msgid "Minutes"
-msgstr "Minut"
 
 #: admin/partials/cart-lift-view-cart-data.php:9
 #: admin/partials/cart-lift-email-templates-tab.php:85
 msgid "Name"
 msgstr "název"
 
+#: admin/partials/cart-lift-email-templates-tab.php:125
+msgid "Name :"
+msgstr "Jméno:"
+
 #: admin/partials/cart-lift-edit-email-template.php:81
 msgid "Name of the campaign."
 msgstr "Název kampaně."
 
-#: admin/partials/cart-lift-carts-tab.php:251
+#: admin/partials/cart-lift-carts-tab.php:277
 msgid "Name:"
 msgstr "Název:"
+
+#: admin/partials/cart-lift-setup-wizard.php:109
+msgid "Necessary"
+msgstr "nutný"
+
+#: admin/partials/cart-lift-setup-wizard.php:116
+msgid "Next"
+msgstr "zase"
 
 #: admin/partials/settings-component/smtp-tab.php:93
 msgid "No"
 msgstr "Ne"
 
-#: admin/partials/cart-lift-email-templates-tab.php:381
+#: admin/partials/cart-lift-email-templates-tab.php:398
 msgid "No Campaign Found"
 msgstr "Nebyla nalezena žádná kampaň"
 
-#: admin/partials/cart-lift-carts-tab.php:470
+#: admin/partials/cart-lift-carts-tab.php:500
 msgid "No Data Found"
 msgstr "Nenalezena žádná data"
 
-#: admin/partials/cart-lift-carts-tab.php:310
-msgid "No scheduled email found"
-msgstr "Nebyl nalezen žádný naplánovaný e-mail"
+#: admin/class-cart-lift-ajax.php:463
+msgid "No email found to send."
+msgstr "Nebyl nalezen žádný e-mail k odeslání."
+
+#: public/class-cart-lift-edd-actions.php:147
+#: public/class-cart-lift-public.php:132
+msgid "No thanks"
+msgstr "ne díky"
 
 #: admin/partials/settings-component/smtp-tab.php:77
 msgid "None"
 msgstr "Žádný"
 
-#: admin/partials/settings-component/general-tab.php:402
-msgid ""
-"Note: This confirmation message will show below the email field on checkout "
-"page."
-msgstr ""
-"Poznámka: Tato potvrzovací zpráva se zobrazí pod e-mailovým polem na stránce "
-"pokladny."
-
-#: admin/partials/settings-component/general-tab.php:136
-msgid "Notify admin for abandon cart:"
-msgstr "Upozornit administrátora na opuštění košíku:"
-
-#: admin/partials/settings-component/general-tab.php:169
-msgid "Notify admin for recovered cart:"
+#: admin/partials/cart-lift-setup-wizard.php:95
+#| msgid "Notify admin for recovered cart:"
+msgid "Notification For Recovered Cart"
 msgstr "Upozornit správce na odebraný košík:"
 
 #: admin/partials/cart-lift-compare-templates-tab.php:18
 msgid "Notify Admin when a abandoned cart is abandoned"
 msgstr "Upozornit správce, když opustíte košík"
 
-#: admin/partials/cart-lift-compare-templates-tab.php:226
+#: admin/partials/cart-lift-compare-templates-tab.php:200
 msgid "Notify Admin when a abandoned cart is recovered."
 msgstr "Upozornit administrátora, když je opuštěný vozík vrácen."
 
-#: admin/partials/cart-lift-email-templates-tab.php:353
+#: admin/partials/cart-lift-email-templates-tab.php:370
 msgid "Once deleted, you will not be able to recover this Campaign!"
 msgstr "Po smazání již nebudete moci tuto kampaň obnovit!"
 
-#: admin/partials/cart-lift-carts-tab.php:442
+#: admin/partials/cart-lift-carts-tab.php:471
 msgid "Once deleted, you will not be able to recover this Cart!"
 msgstr "Po smazání již nebudete moci tento košík obnovit!"
 
@@ -648,82 +854,192 @@ msgstr "Po smazání již nebudete moci tento košík obnovit!"
 msgid "Other SMTP"
 msgstr "Další SMTP"
 
-#: admin/class-cart-lift-db.php:150 admin/class-cart-lift-db.php:167
-#: admin/class-cart-lift-db.php:184
+#: admin/partials/cart-lift-carts-tab.php:98
+msgid "Paused/Active"
+msgstr "Pozastaveno/aktivní"
+
+#: admin/partials/cart-lift-carts-tab.php:123
+msgid "Paused/Active:"
+msgstr "Pozastaveno/aktivní:"
+
+#: admin/class-cart-lift-db.php:175 admin/class-cart-lift-db.php:196
+#: admin/class-cart-lift-db.php:217
 msgid "Please consider this cart"
 msgstr "Zvažte prosím tento košík"
 
-#: admin/class-cart-lift-tab-view.php:533
-#: admin/class-cart-lift-tab-view.php:706
+#: admin/class-cart-lift-tab-view.php:538
+#: admin/class-cart-lift-tab-view.php:758
 msgid "Please Consider Your Cart"
 msgstr "Zvažte prosím svůj košík"
 
-#: admin/partials/cart-lift-settings-tab.php:17
+#: admin/partials/cart-lift-edit-email-template.php:472
+msgid "Please enable SMS notification from settings menu."
+msgstr "Povolte prosím upozornění SMS z nabídky Nastavení."
+
+#: admin/partials/cart-lift-setup-wizard.php:118
+msgid "Please enter a valid one."
+msgstr "Zadejte prosím platný."
+
+#: admin/partials/settings-component/recaptcha-tap.php:172
+#: admin/partials/settings-component/recaptcha-tap.php:290
+msgid "Please enter score"
+msgstr "Zadejte skóre"
+
+#: admin/partials/settings-component/recaptcha-tap.php:137
+#: admin/partials/settings-component/recaptcha-tap.php:253
+msgid "Please enter secret key"
+msgstr "Zadejte tajný klíč"
+
+#: admin/partials/settings-component/recaptcha-tap.php:100
+#: admin/partials/settings-component/recaptcha-tap.php:214
+msgid "Please enter site key"
+msgstr "Zadejte klíč stránky"
+
+#: includes/class-cart-lift-activator.php:70
+msgid "Please find the attached weekly report"
+msgstr "Najděte si přiloženou týdenní zprávu"
+
+#: admin/partials/cart-lift-setup-wizard.php:111
+msgid "Plugins"
+msgstr "pluginy"
+
+#: admin/partials/cart-lift-setup-wizard.php:108
+msgid "Plugins & Settings"
+msgstr "Pluginy a nastavení"
+
+#: admin/partials/cart-lift-settings-tab.php:35
+#: admin/partials/settings-component/email-popup.php:2
 msgid "Popup Editor"
 msgstr "Editor vyskakovacích oken"
 
-#: includes/helper.php:599 admin/partials/cart-lift-carts-tab.php:351
+#: admin/partials/cart-lift-setup-wizard.php:61
+msgid "Preview video image "
+msgstr "náhled video obrázku"
+
+#: admin/partials/cart-lift-carts-tab.php:389
 msgid "Price"
 msgstr "Cena"
 
 #: admin/partials/cart-lift-dashboard-templates-tab.php:79
 #: admin/partials/cart-lift-compare-templates-tab.php:14
-#: admin/partials/cart-lift-email-templates-tab.php:116
-#: admin/partials/cart-lift-email-templates-tab.php:151
-#: admin/partials/cart-lift-carts-tab.php:62
+#: admin/partials/cart-lift-email-templates-tab.php:119
+#: admin/partials/cart-lift-email-templates-tab.php:154
+#: admin/partials/cart-lift-email-templates-tab.php:165
+#: admin/partials/cart-lift-carts-tab.php:83
+#: admin/partials/cart-lift-carts-tab.php:378
+#: admin/partials/cart-lift-edit-email-template.php:348
+#: admin/partials/cart-lift-edit-email-template.php:411
+#: admin/partials/cart-lift-edit-email-template.php:480
+#: admin/partials/settings-component/email-popup.php:16
+#: admin/partials/settings-component/twilio-sms.php:16
 msgid "pro"
 msgstr "pro"
 
-#: includes/helper.php:597
-msgid "Product"
-msgstr "Produkt"
+#: admin/partials/cart-lift-setup-wizard.php:91
+msgid "Pro Features"
+msgstr "Pro funkce"
 
-#: admin/partials/cart-lift-carts-tab.php:350
+#: admin/partials/cart-lift-carts-tab.php:36
+msgid "Processing"
+msgstr "zpracování"
+
+#: admin/partials/cart-lift-carts-tab.php:120
+#| msgid "Product"
+msgid "Product :"
+msgstr "Produkt:"
+
+#: admin/partials/cart-lift-setup-wizard.php:59
+msgid "Product Feed Manager for WooCommerce,"
+msgstr "Product Feed Manager pro WooCommerce,"
+
+#: admin/partials/cart-lift-carts-tab.php:388
 msgid "Product Name"
 msgstr "jméno výrobku"
 
-#: admin/partials/cart-lift-carts-tab.php:74
+#: admin/partials/cart-lift-carts-tab.php:95
 msgid "Products on Cart"
 msgstr "Výrobky na košíku"
+
+#: admin/class-cart-lift-db.php:203
+#: admin/partials/cart-lift-setup-wizard.php:102
+msgid "Promotional discount"
+msgstr "reklamní sleva"
+
+#: admin/partials/cart-lift-setup-wizard.php:73
+msgid "Proven email templates"
+msgstr "Osvědčené e-mailové šablony"
 
 #: admin/partials/cart-lift-view-cart-data.php:15
 msgid "Provider"
 msgstr "Poskytovatel"
 
-#: includes/helper.php:598 admin/partials/cart-lift-carts-tab.php:352
+#: admin/partials/cart-lift-carts-tab.php:390
 msgid "Quantity"
 msgstr "Množství"
 
-#: admin/partials/cart-lift-carts-tab.php:24
+#: admin/partials/cart-lift-carts-tab.php:23
 msgid "Real Time Updates"
 msgstr "Aktualizace v reálném čase"
+
+#: admin/partials/cart-lift-setup-wizard.php:129
+msgid ""
+"Really, if I could give you 1000 stars, not 5. I started with buying Cart "
+"Lift, and now I am happy that I bought the agency plan.\n"
+"                The Cart Lift and all the plugins do their job, but what "
+"distinguishes the team is that it listens to your suggestions and implements "
+"them, as well as listens to your problems and solves them"
+msgstr ""
+"Opravdu, kdybych vám mohl dát 1000 hvězdiček, ne 5. Začal jsem s nákupem "
+"vozíku a teď jsem rád, že jsem si koupil plán agentury. Vozí výtah a všechny "
+"pluginy dělají svou práci, ale tým odlišuje to, že naslouchá vašim návrhům a "
+"implementuje je, stejně jako naslouchá vašim problémům a řeší je"
+
+#: admin/partials/settings-component/recaptcha-tap.php:55
+msgid ""
+"reCAPTCHA V3 runs silently in the background to detect suspicious activity "
+"and verify user interactions without interrupting the user experience."
+msgstr ""
+"Recaptcha v3 běží tiše na pozadí, aby detekoval podezřelou aktivitu a ověřil "
+"interakce uživatelů bez přerušení uživatelského zážitku."
+
+#: admin/partials/settings-component/recaptcha-tap.php:2
+msgid "reCAPTCHA V3 Settings"
+msgstr "Nastavení recaptcha v3"
+
+#: public/class-cart-lift-public.php:192 public/class-cart-lift-public.php:210
+#: public/class-cart-lift-public.php:241 public/class-cart-lift-public.php:258
+msgid "reCAPTCHA verification failed."
+msgstr "Ověření reCAPTCHA se nezdařilo."
+
+#: admin/partials/cart-lift-setup-wizard.php:60
+msgid ""
+"Recover over 15% of your abandoned cart customers with automated e-mail "
+"campaigns. Enjoy immediate increase in your ROI."
+msgstr ""
+"Obnovte více než 15 % vašich opuštěných zákazníků košíku pomocí "
+"automatických e-mailových kampaní. Užijte si okamžitý nárůst návratnosti "
+"investic."
 
 #: admin/partials/cart-lift-dashboard-templates-tab.php:70
 msgid "Recoverable Revenue"
 msgstr "Vratné výnosy"
 
+#: admin/class-cart-lift-admin.php:165
+#: admin/partials/cart-lift-analytics.php:16
+#: admin/partials/cart-lift-analytics.php:22
+#: admin/partials/cart-lift-carts-tab.php:39
+msgid "Recovered"
+msgstr "uzdravený"
+
 #: admin/partials/cart-lift-dashboard-templates-tab.php:149
 msgid "Recovered Revenue"
 msgstr "Obnovené příjmy"
-
-#: admin/partials/settings-component/general-tab.php:131
-msgid "Remove abandon cart information if no email is captured."
-msgstr ""
-"Pokud není zachycen žádný e-mail, odstraňte informace o košíku pro opuštění."
-
-#: admin/partials/settings-component/general-tab.php:248
-msgid "Remove Cart Lift branding from footer."
-msgstr "Odebrat značku Zvednutí vozíku z zápatí."
-
-#: admin/partials/settings-component/general-tab.php:103
-msgid "Remove non-actionable carts:"
-msgstr "Odstranit neaktivní vozíky:"
 
 #: admin/partials/cart-lift-tabs-display.php:60
 msgid "Reports"
 msgstr "Zprávy"
 
-#: admin/partials/cart-lift-compare-templates-tab.php:200
+#: admin/partials/cart-lift-compare-templates-tab.php:174
 msgid ""
 "Reports: Calendar, Recoverable Revenue, Recovered Revenue, Number of "
 "Abandoned Carts, Total Abandoned Revenue, Cart Abandoned Rate, Actionable "
@@ -733,34 +1049,48 @@ msgstr ""
 "vozíků, celkový počet opuštěných příjmů, míra opuštěných sazeb, akční "
 "opuštěné vozíky."
 
-#: admin/partials/cart-lift-compare-templates-tab.php:472
+#: admin/partials/cart-lift-compare-templates-tab.php:487
 msgid "Reports: Number of email sent."
 msgstr "Zprávy: Počet odeslaných e-mailů."
 
-#: admin/partials/cart-lift-compare-templates-tab.php:96
+#: admin/partials/cart-lift-compare-templates-tab.php:70
 msgid "Restriction settings -- Disable tracking for specific user role"
 msgstr "Nastavení omezení - Zakáže sledování pro konkrétní roli uživatele"
 
-#: admin/partials/cart-lift-email-templates-tab.php:88
+#: admin/partials/cart-lift-email-templates-tab.php:91
 msgid "REVENUE"
 msgstr "PŘÍJMY"
+
+#: admin/partials/cart-lift-email-templates-tab.php:176
+msgid "Revenue :"
+msgstr "Výnosy:"
 
 #. Author of the plugin
 msgid "RexTheme"
 msgstr "RexTheme"
 
-#: admin/class-cart-lift-tab-view.php:510
+#: admin/class-cart-lift-tab-view.php:512
 msgid "Save Campaign"
 msgstr "Uložit kampaň"
 
 #: admin/partials/settings-component/smtp-tab.php:104
-#: admin/partials/settings-component/general-tab.php:513
-msgid "save change"
-msgstr "uložit změny"
+#: admin/partials/settings-component/recaptcha-tap.php:294
+msgid "Save Settings"
+msgstr "Uložit nastavení"
 
-#: admin/partials/cart-lift-carts-tab.php:31
+#: admin/partials/settings-component/recaptcha-tap.php:139
+#: admin/partials/settings-component/recaptcha-tap.php:257
+msgid "Score:"
+msgstr "skóre:"
+
+#: admin/partials/cart-lift-carts-tab.php:52
 msgid "Search by customer email..."
 msgstr "Hledat e-mailem zákazníka ..."
+
+#: admin/partials/settings-component/recaptcha-tap.php:103
+#: admin/partials/settings-component/recaptcha-tap.php:218
+msgid "Secret Key:"
+msgstr "Tajný klíč:"
 
 #: admin/partials/settings-component/smtp-tab.php:71
 msgid "security"
@@ -774,7 +1104,15 @@ msgstr "bezpečnostní:"
 msgid "Select date range to show reports."
 msgstr "Vyberte časové období pro zobrazení přehledů."
 
-#: admin/partials/cart-lift-edit-email-template.php:522
+#: admin/partials/cart-lift-setup-wizard.php:143
+msgid "Select Merchant"
+msgstr "Vyberte obchodník"
+
+#: admin/partials/cart-lift-setup-wizard.php:144
+msgid "Select Your "
+msgstr "Vyberte si svůj"
+
+#: admin/partials/cart-lift-edit-email-template.php:630
 msgid "Send a test email"
 msgstr "Pošlete zkušební e-mail"
 
@@ -782,11 +1120,16 @@ msgstr "Pošlete zkušební e-mail"
 msgid "send a test email"
 msgstr "poslat zkušební e-mail"
 
-#: admin/partials/cart-lift-edit-email-template.php:518
+#: admin/partials/cart-lift-carts-tab.php:367
+#: admin/partials/cart-lift-carts-tab.php:377
+msgid "Send Recovery Email Now"
+msgstr "Odeslat e-mail pro obnovení"
+
+#: admin/partials/cart-lift-edit-email-template.php:626
 msgid "Send Test Email To"
 msgstr "Odeslat zkušební e-mail na adresu"
 
-#: admin/partials/cart-lift-edit-email-template.php:464
+#: admin/partials/cart-lift-edit-email-template.php:572
 msgid "Send this email"
 msgstr "Pošlete tento e-mail"
 
@@ -798,19 +1141,49 @@ msgstr "Sendgrid"
 msgid "SES"
 msgstr "SES"
 
-#: admin/partials/cart-lift-compare-templates-tab.php:349
+#: admin/partials/cart-lift-compare-templates-tab.php:323
 msgid "Set Conditional Coupon -- Product or category based."
 msgstr "Nastavit podmíněný kupón - založený na produktu nebo kategorii."
 
-#: admin/partials/cart-lift-compare-templates-tab.php:122
+#: admin/partials/cart-lift-compare-templates-tab.php:96
 msgid "Set Coupon for Individual templates"
 msgstr "Nastavit kupón pro jednotlivé šablony"
 
-#: admin/class-cart-lift-admin.php:159 admin/class-cart-lift-admin.php:247
-#: admin/class-cart-lift-admin.php:248
+#: admin/class-cart-lift-admin.php:218 admin/class-cart-lift-admin.php:306
+#: admin/class-cart-lift-admin.php:307
 #: admin/partials/cart-lift-tabs-display.php:179
 msgid "Settings"
 msgstr "Nastavení"
+
+#: admin/class-cart-lift-admin.php:312
+msgid "Setup Wizard"
+msgstr "Průvodce nastavením"
+
+#: admin/partials/settings-component/recaptcha-tap.php:66
+#: admin/partials/settings-component/recaptcha-tap.php:180
+msgid "Site Key:"
+msgstr "Klíč webu:"
+
+#: admin/partials/cart-lift-email-templates-tab.php:101
+#: admin/partials/cart-lift-carts-tab.php:118
+msgid "SL No :"
+msgstr "SL Ne:"
+
+#: admin/partials/cart-lift-setup-wizard.php:76
+msgid "Smart discount coupons"
+msgstr "Chytré slevové kupóny"
+
+#: admin/partials/settings-component/twilio-sms.php:2
+msgid "SMS"
+msgstr "skrov"
+
+#: admin/partials/cart-lift-email-templates-tab.php:88
+msgid "SMS Sent"
+msgstr "SMS odesláno"
+
+#: admin/partials/cart-lift-email-templates-tab.php:161
+msgid "SMS Sent :"
+msgstr "SMS odeslána:"
 
 #: admin/partials/settings-component/smtp-tab.php:63
 msgid "SMTP"
@@ -820,13 +1193,39 @@ msgstr "SMTP"
 msgid "SSL"
 msgstr "SSL"
 
-#: admin/partials/cart-lift-carts-tab.php:76
+#: admin/partials/cart-lift-carts-tab.php:97
 msgid "Status"
 msgstr "Postavení"
 
 #: admin/partials/cart-lift-email-templates-tab.php:84
 msgid "status"
 msgstr "postavení"
+
+#: admin/partials/cart-lift-carts-tab.php:122
+msgid "Status :"
+msgstr "Stav:"
+
+#: admin/partials/cart-lift-email-templates-tab.php:102
+msgid "status :"
+msgstr "Stav:"
+
+#: admin/partials/cart-lift-setup-wizard.php:120
+msgid "Success"
+msgstr "úspěch"
+
+#: admin/class-cart-lift-mailer.php:55
+msgid "Successfully Saved"
+msgstr "úspěšně uloženo"
+
+#: admin/class-cart-lift-ajax.php:253 admin/class-cart-lift-ajax.php:277
+#: admin/class-cart-lift-ajax.php:296 admin/class-cart-lift-ajax.php:313
+#: admin/class-cart-lift-ajax.php:497
+msgid "Successfully saved"
+msgstr "úspěšně uloženo"
+
+#: admin/partials/cart-lift-setup-wizard.php:82
+msgid "Tailor Your Product Feed to Perfection with Feed Rules"
+msgstr "Přizpůsobte svůj zdroj produktů k dokonalosti pomocí pravidel podávání"
 
 #: admin/partials/cart-lift-edit-email-template.php:53
 msgid "Template name"
@@ -836,23 +1235,27 @@ msgstr "Název šablony"
 msgid "Template status"
 msgstr "Stav šablony"
 
-#: admin/class-cart-lift-tab-view.php:193
+#: admin/class-cart-lift-tab-view.php:181
 msgid "The email template has been successfully created."
 msgstr "Šablona e-mailu byla úspěšně vytvořena."
 
-#: admin/class-cart-lift-tab-view.php:215
+#: admin/class-cart-lift-tab-view.php:207
 msgid "The email template has been successfully deleted."
 msgstr "Šablona e-mailu byla úspěšně odstraněna."
 
-#: admin/class-cart-lift-tab-view.php:204
+#: admin/class-cart-lift-tab-view.php:194
 msgid "The email template has been successfully updated."
 msgstr "Šablona e-mailu byla úspěšně aktualizována."
 
-#: admin/class-cart-lift-tab-view.php:226
+#: admin/class-cart-lift-tab-view.php:220
 msgid "The email templates has been successfully deleted."
 msgstr "E-mailové šablony byly úspěšně odstraněny."
 
-#: admin/partials/settings-component/email-popup.php:38
+#: admin/partials/settings-component/twilio-sms.php:53
+msgid "This will enable twilio sms notification."
+msgstr "Tím umožníte upozornění Twilio SMS."
+
+#: admin/partials/settings-component/email-popup.php:52
 msgid ""
 "This will initiate a pop-up and prompt users to provide email addresses when "
 "they intend to leave from the cart page."
@@ -864,9 +1267,17 @@ msgstr ""
 msgid "Time"
 msgstr "Čas"
 
+#: admin/partials/cart-lift-carts-tab.php:318
+msgid "Time Log:"
+msgstr "Časový protokol:"
+
 #: admin/partials/settings-component/smtp-tab.php:85
 msgid "TLS"
 msgstr "TLS"
+
+#: admin/partials/cart-lift-dashboard-templates-tab.php:15
+msgid "To:"
+msgstr "do:"
 
 #: admin/partials/cart-lift-dashboard-templates-tab.php:179
 msgid "Total Abandoned Carts"
@@ -876,31 +1287,54 @@ msgstr "Celkový počet opuštěných vozíků"
 msgid "Total Abandoned Revenue"
 msgstr "Celkové opuštěné příjmy"
 
-#: includes/helper.php:143
-msgid "Unsubscribe"
-msgstr "Odhlásit odběr"
+#: admin/partials/cart-lift-setup-wizard.php:75
+msgid "Track abandoned orders"
+msgstr "Sledujte opuštěné objednávky"
 
-#: admin/partials/cart-lift-carts-tab.php:391
-#: admin/partials/cart-lift-carts-tab.php:395
+#: admin/partials/cart-lift-setup-wizard.php:83
+msgid "Track Facebook Pixel To Measure Feed Performance"
+msgstr "Sledujte Facebook Pixel a měřte výkon kanálu"
+
+#: admin/partials/cart-lift-edit-email-template.php:513
+msgid "Twilio SMS body"
+msgstr "Twilio SMS tělo"
+
+#: admin/partials/cart-lift-setup-wizard.php:101
+msgid "Twilio SMS Notification"
+msgstr "Twilio SMS upozornění"
+
+#: admin/partials/cart-lift-setup-wizard.php:86
+msgid "Unleash Your Store's Global Potential with Multilingual Capabilities"
+msgstr ""
+"Uvolněte globální potenciál vašeho obchodu pomocí vícejazyčných možností"
+
+#: admin/partials/cart-lift-carts-tab.php:420
+#: admin/partials/cart-lift-carts-tab.php:424
 msgid "unsubscribe"
 msgstr "Odhlásit odběr"
 
-#: public/class-cart-lift-public.php:824
+#: public/class-cart-lift-wc-actions.php:119
 #: admin/partials/cart-lift-view-cart-data.php:14
 msgid "Unsubscribed"
 msgstr "Neodebíraný"
 
-#: admin/class-cart-lift-tab-view.php:541
+#: admin/class-cart-lift-tab-view.php:545
 msgid "Update Campaign"
 msgstr "Aktualizujte kampaň"
 
-#: admin/class-cart-lift-tab-view.php:540
+#: admin/class-cart-lift-tab-view.php:544
 msgid "update_template"
 msgstr "update_template"
 
+#: admin/partials/cart-lift-setup-wizard.php:138
+msgid "Upgrade To Pro"
+msgstr "upgradovat na pro"
+
+#: admin/partials/cart-lift-compare-templates-tab.php:5
 #: admin/partials/cart-lift-compare-templates-tab.php:6
-#: admin/partials/cart-lift-compare-templates-tab.php:555
-#: admin/partials/cart-lift-carts-tab.php:299
+#: admin/partials/cart-lift-compare-templates-tab.php:569
+#: admin/partials/cart-lift-compare-templates-tab.php:570
+#: admin/partials/cart-lift-carts-tab.php:324
 msgid "Upgrade to Pro"
 msgstr "Upgradujte na Pro"
 
@@ -908,14 +1342,29 @@ msgstr "Upgradujte na Pro"
 msgid "Use an engaging subject line that is personalized."
 msgstr "Použijte poutavý předmět, který je přizpůsobený."
 
-#: admin/partials/cart-lift-carts-tab.php:248
+#: admin/partials/cart-lift-carts-tab.php:274
 msgid "User Details:"
 msgstr "Detaily uživatele:"
 
-#: admin/partials/settings-component/general-tab.php:289
-#: admin/partials/settings-component/general-tab.php:324
-msgid "Webhook URL:"
-msgstr "Webhook URL:"
+#: admin/partials/cart-lift-setup-wizard.php:127
+msgid ""
+"We are searching for a simple and clean solution for a long time and we "
+"found that solution. As PRO license consumers we can highly recommend this "
+"plugin. This is absolutely a must-have feature for the e-commerce "
+"marketplace.\n"
+"                Graftype"
+msgstr ""
+"Dlouho hledáme jednoduché a čisté řešení a toto řešení jsme našli. Jako "
+"spotřebitelé licencí Pro můžeme tento plugin vřele doporučit. To je naprosto "
+"nezbytná funkce pro trh elektronického obchodu. nákres"
+
+#: admin/partials/cart-lift-setup-wizard.php:98
+msgid "Weekly Report"
+msgstr "týdenní zpráva"
+
+#: admin/partials/cart-lift-setup-wizard.php:54
+msgid "Welcome"
+msgstr "vítat"
 
 #. Description of the plugin
 msgid ""
@@ -929,13 +1378,12 @@ msgstr ""
 msgid "Yes"
 msgstr "Ano"
 
-#: public/class-cart-lift-public.php:824
+#: public/class-cart-lift-wc-actions.php:119
 msgid "You have successfully unsubscribed from our email list."
 msgstr "Úspěšně jste se odhlásili z našeho seznamu e-mailů."
 
-#: includes/class-cart-lift-activator.php:64 includes/helper.php:1385
-#: includes/helper.php:1411 admin/class-cart-lift-tab-view.php:862
-#: admin/class-cart-lift-ajax.php:178
+#: includes/class-cart-lift-activator.php:72 admin/class-cart-lift-ajax.php:223
+#: admin/class-cart-lift-ajax.php:533
 msgid ""
 "Your email address will help us support your shopping experience throughout "
 "the site. Please check our Privacy Policy to see how we use your personal "
@@ -945,6 +1393,6 @@ msgstr ""
 "Podívejte se na naše zásady ochrany osobních údajů, abyste zjistili, jak "
 "používáme vaše osobní údaje."
 
-#: admin/partials/cart-lift-compare-templates-tab.php:513
+#: admin/partials/cart-lift-compare-templates-tab.php:528
 msgid "Zapier Integration."
 msgstr "Integrace Zapier."
