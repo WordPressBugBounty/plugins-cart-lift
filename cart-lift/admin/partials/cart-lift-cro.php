@@ -51,16 +51,16 @@
                             $discount_price = "$37.49";
                         }  else {
                             $discount_percentage = "Save 15%";
-                            $discount_price = "$42.49";
+                            $discount_price = "$49.99";
                         }
                         $price = '$49.99';
                     ?>
 
                     <div class="cartlift-cro-modal__discount-price">
-                        <p class="cartlift-cro-modal__discount-price-label" data-discount="<?php echo $discount_percentage; ?>">
-                            <?php printf( esc_html__('Starting at %s/year', 'wpvr'), '<span style= "font-weight:600; color:#0F2F72;">' . esc_html( $discount_price ) . '</span>' ); ?>
+                        <p class="cartlift-cro-modal__discount-price-label" data-discount="<?php //echo $discount_percentage; ?>">
+                            <?php printf( esc_html__('Starting at %s/year', 'wpvr'), '<span style= "font-weight:600; color:#0F2F72; font-size:20px;">' . esc_html( $discount_price ) . '</span>' ); ?>
                         </p>
-                        <p><?php printf( esc_html__('Normally %s/year', 'wpvr'), esc_html( $price ) ); ?></p>
+                        <!-- <p><?php //printf( esc_html__('Normally %s/year', 'wpvr'), esc_html( $price ) ); ?></p> -->
                     </div>
 
                     <a href="https://rextheme.com/cart-lift/" class="cartlift-cro-modal__btn" target="_blank" role="button">
@@ -84,8 +84,8 @@
 </script>
 
 <style>
-    p.cartlift-cro-modal__discount-price-label:before {
-        content: var(--discount-content, "Save 15%"); /* Default to 15% */
-    }
+    /* p.cartlift-cro-modal__discount-price-label:before {
+        content: var(--discount-content, "Save 15%"); 
+    } */
 </style>
 

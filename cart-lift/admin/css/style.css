@@ -945,29 +945,6 @@
     padding: 29px 40px 18px;
   }
 }
-.wp-cart-lift-setup-wizard__container .setup-wizard__inner-container .setup-wizard__features-section-container .setup-wizard__pro-features-section-container .setup-wizard__pro-features-price .setup-wizard__discount-price-label {
-  position: relative;
-  font-size: 20px;
-}
-.wp-cart-lift-setup-wizard__container .setup-wizard__inner-container .setup-wizard__features-section-container .setup-wizard__pro-features-section-container .setup-wizard__pro-features-price .setup-wizard__discount-price-label::before {
-  content: var(--discount-content-value, "Save 15%");
-  position: absolute;
-  background: #EF7E32;
-  border-radius: 16px 16px 16px 0;
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 13px;
-  text-align: center;
-  color: #fff;
-  padding: 7px 11px;
-  top: -26px;
-  left: 74%;
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-  min-width: 82px;
-}
 @media (max-width: 768px) {
   .wp-cart-lift-setup-wizard__container .setup-wizard__inner-container .setup-wizard__features-section-container .setup-wizard__pro-features-section-container .setup-wizard__pro-features-price p {
     font-size: 18px;

@@ -60,7 +60,7 @@
         $discount_price = "$37.49";
     } else {
         $discount_percentage = "Save 15%";
-        $discount_price = "$42.49";
+        $discount_price = "$49.99";
     }
 
     $setup_wizard_price = array(
