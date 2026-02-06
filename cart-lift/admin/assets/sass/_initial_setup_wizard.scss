@@ -1162,29 +1162,30 @@
               padding: 29px 40px 18px;
             }
             
-            // .setup-wizard__discount-price-label {
-            //   position: relative;
-            //   font-size: 20px;
-            //   &::before {
-            //     content: var(--discount-content-value, "Save 15%");
-            //     position: absolute;
-            //     background: #EF7E32;
-            //     border-radius: 16px 16px 16px 0;
-            //     font-weight: 600;
-            //     font-size: 12px;
-            //     line-height: 13px;
-            //     text-align: center;
-            //     color: #fff;
-            //     padding: 7px 11px;
-            //     top: -26px;
-            //     left: 74%;
-            //     -webkit-transform: translateX(-50%);
-            //     -moz-transform: translateX(-50%);
-            //     -ms-transform: translateX(-50%);
-            //     transform: translateX(-50%);
-            //     min-width: 82px;
-            //   }
-            // }
+            .setup-wizard__discount-price-label {
+              position: relative;
+              font-size: 20px;
+              margin: 0;
+              // &::before {
+              //   content: var(--discount-content-value, "Save 25%");
+              //   position: absolute;
+              //   background: #EF7E32;
+              //   border-radius: 16px 16px 16px 0;
+              //   font-weight: 600;
+              //   font-size: 12px;
+              //   line-height: 13px;
+              //   text-align: center;
+              //   color: #fff;
+              //   padding: 7px 11px;
+              //   top: -26px;
+              //   left: 74%;
+              //   -webkit-transform: translateX(-50%);
+              //   -moz-transform: translateX(-50%);
+              //   -ms-transform: translateX(-50%);
+              //   transform: translateX(-50%);
+              //   min-width: 82px;
+              // }
+            }
 
             p {
   

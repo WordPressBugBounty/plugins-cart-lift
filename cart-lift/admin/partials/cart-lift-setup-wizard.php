@@ -51,15 +51,15 @@
     do_action('admin_footer');
 
     $current_date = date('Y-m-d H:i:s');
-    $start_date = '2025-07-04 00:00:00';
-    $end_date = '2025-07-14 23:59:59';
+    $start_date = '2025-12-31 00:00:00';
+    $end_date = '2026-01-11 23:59:59';
     $discount_percentage = '';
     $discount_price = '';
     if ($current_date >= $start_date && $current_date <= $end_date) {
         $discount_percentage = "Save 25%";
         $discount_price = "$37.49";
     } else {
-        $discount_percentage = "Save 15%";
+        $discount_percentage = "";
         $discount_price = "$49.99";
     }
 
@@ -192,7 +192,7 @@
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             var discountLabel = document.querySelector(".setup-wizard__discount-price-label");
-            if (discountLabel) discountLabel.style.setProperty("--discount-content-value", `"${discountLabel.getAttribute('data-discount') || "Save 15%"}"`);
+            if (discountLabel) discountLabel.style.setProperty("--discount-content-value", `"${discountLabel.getAttribute('data-discount') || ""}"`);
         });
     </script>
 

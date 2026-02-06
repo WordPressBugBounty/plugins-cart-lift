@@ -2,6 +2,7 @@
 $pro_url = add_query_arg( 'cl-dashboard', '1', 'https://rextheme.com/cart-lift' );
 ?>
 
+
 <div id="cl-email-templates" class="cl-email-templates">
     <form method="post" action="<?php echo $form_action; ?>" id="cl-email-template-edit-form">
         <input type="hidden" name="id" value="<?php echo $template_id ;?>" />
@@ -50,41 +51,53 @@ $pro_url = add_query_arg( 'cl-dashboard', '1', 'https://rextheme.com/cart-lift' 
 
                         <tr valign="center" class="template-name">
                             <th scope="row" class="titledesc">
-                                <label for="cl-template-name"><?php echo __('Template name', 'cart-lift'); ?></label>
+                                <div class="cl-global-tooltip-area">
+                                    <label for="cl-template-name"><?php echo __('Template name:', 'cart-lift'); ?></label>
+
+                                    <div class="tooltip">
+                                        <span class="icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                <rect x="1" y="1.1925" width="14" height="14" rx="7" stroke="#535963"/>
+                                                <path d="M6 5.69543C6.0741 4.80132 6.85381 4.13315 7.74894 4.19668H8.24864C9.14377 4.13315 9.92347 4.80132 9.99758 5.69543C10.0354 6.36175 9.62793 6.97278 8.99818 7.19418C8.30536 7.60992 7.91577 8.38893 7.99879 9.1925" stroke="#535963" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M8.5 12.19V12.195" stroke="#535963" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </span>
+                                        <p><?php echo __('Name your abandoned cart campaign.', 'cart-lift'); ?></p>
+                                    </div>
+
+                                </div>
+
                             </th>
                             <td>
                                 <?php print'<input type="text" name="cl_template_name" id="cl-template-name" value="'.$template_name.'" class="cl-widefat" >';?>
 
-                                <div class="tooltip">
-                                    <span class="icon">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                            <rect x="1" y="1.1925" width="14" height="14" rx="7" stroke="#535963"/>
-                            <path d="M6 5.69543C6.0741 4.80132 6.85381 4.13315 7.74894 4.19668H8.24864C9.14377 4.13315 9.92347 4.80132 9.99758 5.69543C10.0354 6.36175 9.62793 6.97278 8.99818 7.19418C8.30536 7.60992 7.91577 8.38893 7.99879 9.1925" stroke="#535963" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M8.5 12.19V12.195" stroke="#535963" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                                    </span>
-                                    <p><?php echo __('Name of the campaign.', 'cart-lift'); ?></p>
-                                </div>
+                               
                             </td>
                         </tr>
 
                         <tr valign="center"  class="template-subject">
                             <th scope="row" class="titledesc">
-                                <label for="cl-email-subject"><?php echo __('Email subject', 'cart-lift'); ?></label>
+                                <div class="cl-global-tooltip-area">
+                                    <label for="cl-email-subject"><?php echo __('Email subject:', 'cart-lift'); ?></label>
+
+                                    <div class="tooltip">
+                                        <span class="icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                <rect x="1" y="1.1925" width="14" height="14" rx="7" stroke="#535963"/>
+                                                <path d="M6 5.69543C6.0741 4.80132 6.85381 4.13315 7.74894 4.19668H8.24864C9.14377 4.13315 9.92347 4.80132 9.99758 5.69543C10.0354 6.36175 9.62793 6.97278 8.99818 7.19418C8.30536 7.60992 7.91577 8.38893 7.99879 9.1925" stroke="#535963" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M8.5 12.19V12.195" stroke="#535963" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </span>
+                                        <p><?php echo __('Write the subject line for your recovery email.', 'cart-lift'); ?></p>
+                                    </div>
+
+                                </div>
+
                             </th>
                             <td>
                                 <?php print'<input type="text" name="cl_email_subject" id="cl-email-subject" value="'.$email_subject.'" class="cl-widefat" >';?>
 
-                                <div class="tooltip">
-                                    <span class="icon">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                            <rect x="1" y="1.1925" width="14" height="14" rx="7" stroke="#535963"/>
-                            <path d="M6 5.69543C6.0741 4.80132 6.85381 4.13315 7.74894 4.19668H8.24864C9.14377 4.13315 9.92347 4.80132 9.99758 5.69543C10.0354 6.36175 9.62793 6.97278 8.99818 7.19418C8.30536 7.60992 7.91577 8.38893 7.99879 9.1925" stroke="#535963" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M8.5 12.19V12.195" stroke="#535963" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                                    </span>
-                                    <p><?php echo __('Use an engaging subject line that is personalized.', 'cart-lift'); ?></p>
-                                </div>
+                                
                             </td>
                         </tr>
 
@@ -373,7 +386,7 @@ $pro_url = add_query_arg( 'cl-dashboard', '1', 'https://rextheme.com/cart-lift' 
                             <th>
 
                             <div class="cl-global-tooltip-area">
-                                <label><?php esc_html_e( 'Enable Twilio SMS?', 'cart-lift' ); ?></label>
+                                <label><?php esc_html_e( 'Enable Twilio SMS?:', 'cart-lift' ); ?></label>
                                 <div class="tooltip">
                                     <span class="icon">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -382,7 +395,7 @@ $pro_url = add_query_arg( 'cl-dashboard', '1', 'https://rextheme.com/cart-lift' 
                                             <path d="M8.5 12.19V12.195" stroke="#535963" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                     </span>
-                                    <p><?php echo __('Allows you to send mobile SMS through Twilio.', 'cart-lift'); ?></p>
+                                    <p><?php echo __('Enable SMS campaigns using your Twilio account.', 'cart-lift'); ?></p>
                                 </div>
                             </div>
                                 
@@ -484,8 +497,23 @@ $pro_url = add_query_arg( 'cl-dashboard', '1', 'https://rextheme.com/cart-lift' 
 
                         <tr valign="top">
                             <th scope="row" class="titledesc">
-                                <label for="cl-email-frequency"><?php echo __('Send this email', 'cart-lift'); ?></label>
+                                <div class="cl-global-tooltip-area">
+                                    <label for="cl-email-frequency"><?php echo __('Send this email:', 'cart-lift'); ?></label>
+
+                                    <div class="tooltip">
+                                        <span class="icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                            <rect x="1" y="1.1925" width="14" height="14" rx="7" stroke="#535963"/>
+                                            <path d="M6 5.69543C6.0741 4.80132 6.85381 4.13315 7.74894 4.19668H8.24864C9.14377 4.13315 9.92347 4.80132 9.99758 5.69543C10.0354 6.36175 9.62793 6.97278 8.99818 7.19418C8.30536 7.60992 7.91577 8.38893 7.99879 9.1925" stroke="#535963" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M8.5 12.19V12.195" stroke="#535963" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </span>
+                                        <p><?php echo __('Schedule when recovery emails are sent after abandonment.', 'cart-lift'); ?></p>
+                                    </div>
+                                </div>
+
                             </th>
+
                             <td class="send-email-time">
                                 <?php print '<input type="number" name="cl_email_frequency" min="1" id="cl-email-frequency" value="' . esc_attr( $frequency ) . '">';
                                 ?>
@@ -506,16 +534,7 @@ $pro_url = add_query_arg( 'cl-dashboard', '1', 'https://rextheme.com/cart-lift' 
                                     ?>
                                 </select>
 
-                                <div class="tooltip">
-                                    <span class="icon">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                        <rect x="1" y="1.1925" width="14" height="14" rx="7" stroke="#535963"/>
-                                        <path d="M6 5.69543C6.0741 4.80132 6.85381 4.13315 7.74894 4.19668H8.24864C9.14377 4.13315 9.92347 4.80132 9.99758 5.69543C10.0354 6.36175 9.62793 6.97278 8.99818 7.19418C8.30536 7.60992 7.91577 8.38893 7.99879 9.1925" stroke="#535963" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M8.5 12.19V12.195" stroke="#535963" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                        </svg>
-                                    </span>
-                                    <p><?php echo __('Minimum time limit 15 minutes.', 'cart-lift'); ?></p>
-                                </div>
+                                
                                 <span class="hints"><?php echo __('After cart is abandoned.', 'cart-lift'); ?></span>
                             </td>
                         </tr>

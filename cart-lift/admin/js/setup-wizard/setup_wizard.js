@@ -333,9 +333,9 @@
 
                 </div>
 
-                  <div class="setup-wizard__pro-features-price">
-                      <p class="setup-wizard__discount-price-label" data-discount="${discountPrice?.discount_percentage_text}">Starting at <span style="font-weight:600; color:#6E42D3; font-size:20px;">${discountPrice?.discount_price}</span>/year</p>
-                  </div>
+                <div class="setup-wizard__pro-features-price">
+                    <p class="setup-wizard__discount-price-label" data-discount="${discountPrice?.discount_percentage_text}">Starting at <span style="font-weight:600; color:#6E42D3;">${discountPrice?.discount_price}</span>/year</p>
+                </div>
 
                 <div class="setup-wizard__pro-feature-list-button-container">
                   <a href="https://rextheme.com/cart-lift/#pricing" target="_blank" class="setup-wizard__pro-feature-list-button">

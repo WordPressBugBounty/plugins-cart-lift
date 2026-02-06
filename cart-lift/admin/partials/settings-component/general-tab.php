@@ -135,7 +135,7 @@ $get_wc_and_edd_countries = get_wc_and_edd_countries();
                         <path d="M8.5 12.19V12.195" stroke="#535963" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </span>
-                    <p><?php echo __('Allow Cart Lift to track abandoned carts.', 'cart-lift'); ?></p>
+                    <p><?php echo __('Automatically track abandoned carts to recover lost sales.', 'cart-lift'); ?></p>
                 </div>
             </div>
 
@@ -146,7 +146,7 @@ $get_wc_and_edd_countries = get_wc_and_edd_countries();
             
         </div>
 
-        <?php do_action('cl_after_abandoned_cart_tracking_field', $general_data); ?>
+        <?php do_action('cl_after_abandoned_cart_tracking_field', $general_data);?>
 
         <div class="cl-form-group">
 
@@ -161,7 +161,7 @@ $get_wc_and_edd_countries = get_wc_and_edd_countries();
                             <path d="M8.5 12.19V12.195" stroke="#535963" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                     </span>
-                    <p><?php echo __('Remove abandoned cart information if no email is captured.', 'cart-lift'); ?></p>
+                    <p><?php echo __('Remove carts without emails to keep data clean and useful.', 'cart-lift'); ?></p>
                 </div>
             </div>
 
@@ -185,7 +185,7 @@ $get_wc_and_edd_countries = get_wc_and_edd_countries();
                             <path d="M8.5 12.19V12.195" stroke="#535963" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                     </span>
-                    <p><?php echo __('Disable campaign emails if the abandoned product is already purchased by the user.', 'cart-lift'); ?></p>
+                    <p><?php echo __('Prevent duplicate emails when customers already purchased items.', 'cart-lift'); ?></p>
                 </div>
             </div>
 
@@ -208,7 +208,7 @@ $get_wc_and_edd_countries = get_wc_and_edd_countries();
                             <path d="M8.5 12.19V12.195" stroke="#535963" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                     </span>
-                    <p><?php echo __('Admin will get an email notification when cart is abandoned.', 'cart-lift'); ?></p>
+                    <p><?php echo __('Send an instant notification when a cart is abandoned.', 'cart-lift'); ?></p>
                 </div>
             </div>
 
@@ -230,7 +230,7 @@ $get_wc_and_edd_countries = get_wc_and_edd_countries();
                             <path d="M8.5 12.19V12.195" stroke="#535963" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                     </span>
-                    <p><?php echo __('Admin will get an email notification when cart is recovered.', 'cart-lift'); ?></p>
+                    <p><?php echo __('Send a quick alert when a cart is recovered.', 'cart-lift'); ?></p>
                 </div>
             </div>
 
@@ -261,7 +261,7 @@ $get_wc_and_edd_countries = get_wc_and_edd_countries();
                             <path d="M8.5 12.19V12.195" stroke="#535963" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                     </span>
-                    <p><?php echo __('This will enable the process of manually recovering abandoned carts in the cart view popup.', 'cart-lift'); ?></p>
+                    <p><?php echo __('Recover carts manually using the cart view popup.', 'cart-lift'); ?></p>
                 </div>
             </div>
 
@@ -291,7 +291,7 @@ $get_wc_and_edd_countries = get_wc_and_edd_countries();
                             <path d="M8.5 12.19V12.195" stroke="#535963" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                     </span>
-                    <p><?php echo __('Remove Cart Lift branding from footer.', 'cart-lift'); ?></p>
+                    <p><?php echo __('Hide Cart Lift branding for a cleaner customer experience.', 'cart-lift'); ?></p>
                 </div>
             </div>
             <span class="cl-switcher">
@@ -320,7 +320,7 @@ $get_wc_and_edd_countries = get_wc_and_edd_countries();
                             <path d="M8.5 12.19V12.195" stroke="#535963" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </span>
-                        <p><?php echo __('Allows to connect with 3rd-party services.', 'cart-lift'); ?></p>
+                        <p><?php echo __('Connect Cart Lift with external apps through a webhook.', 'cart-lift'); ?></p>
                     </div>
                 </div>
 
@@ -344,7 +344,7 @@ $get_wc_and_edd_countries = get_wc_and_edd_countries();
                                 <path d="M8.5 12.19V12.195" stroke="#535963" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
                             </span>
-                            <p><?php echo __('Enter url here.', 'cart-lift'); ?></p>
+                            <p><?php echo __('Enter your webhook URL to share cart recovery data.', 'cart-lift'); ?></p>
                         </div>
                     </div>
 
@@ -372,7 +372,7 @@ $get_wc_and_edd_countries = get_wc_and_edd_countries();
                                     <path d="M8.5 12.19V12.195" stroke="#535963" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>
                                 </span>
-                                <p><?php echo __('Enter url here.', 'cart-lift'); ?></p>
+                                <p><?php echo __('Enter your webhook URL to share cart recovery data.', 'cart-lift'); ?></p>
                             </div>
                         </div>
                         <div class="cl-cart-webhook-notice">
@@ -403,7 +403,7 @@ $get_wc_and_edd_countries = get_wc_and_edd_countries();
                             <path d="M8.5 12.19V12.195" stroke="#535963" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </span>
-                        <p><?php echo __('Allows you to get the weekly report.', 'cart-lift'); ?></p>
+                        <p><?php echo __('Get weekly reports summarizing cart recovery performance.', 'cart-lift'); ?></p>
                     </div>
                 </div>
 
@@ -438,7 +438,7 @@ $get_wc_and_edd_countries = get_wc_and_edd_countries();
                                     <path d="M8.5 12.19V12.195" stroke="#535963" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>
                                 </span>
-                                <p><?php echo __('Select week start day', 'cart-lift'); ?></p>
+                                <p><?php echo __('Select which day your weekly report should start.', 'cart-lift'); ?></p>
                             </div>
                         </div>
 
@@ -467,7 +467,7 @@ $get_wc_and_edd_countries = get_wc_and_edd_countries();
                                     <path d="M8.5 12.19V12.195" stroke="#535963" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>
                                 </span>
-                                <p><?php echo __('Enter recipients (comma separated) for this email.', 'cart-lift'); ?></p>
+                                <p><?php echo __('Add recipient email addresses, separated by commas.', 'cart-lift'); ?></p>
                             </div>
                         </div>
 
@@ -490,7 +490,7 @@ $get_wc_and_edd_countries = get_wc_and_edd_countries();
                                         </svg>
                                     </span>
 
-                                    <p><?php echo __('Enter sender this email.', 'cart-lift'); ?></p>
+                                    <p><?php echo __('Define the sender email address for recovery campaigns.', 'cart-lift'); ?></p>
                                 </div>
                             </div>
 
@@ -502,9 +502,26 @@ $get_wc_and_edd_countries = get_wc_and_edd_countries();
 
                 <div class="cl-form-weekly-report-area-right">
                     <div class="cl-form-group-weekly-email-body">
-                        <label class="title" for="weekly-report-email-body">
-                            <?php echo __('Email Body:', 'cart-lift'); ?>
-                        </label>
+                       
+                            <div class="cl-global-tooltip-area">
+                                <label class="title" for="weekly-report-email-body">
+                                    <?php echo __('Email Body:', 'cart-lift'); ?>
+                                </label>
+
+                                <div class="tooltip">
+                                    <span class="icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                        <rect x="1" y="1.1925" width="14" height="14" rx="7" stroke="#535963"></rect>
+                                        <path d="M6 5.69543C6.0741 4.80132 6.85381 4.13315 7.74894 4.19668H8.24864C9.14377 4.13315 9.92347 4.80132 9.99758 5.69543C10.0354 6.36175 9.62793 6.97278 8.99818 7.19418C8.30536 7.60992 7.91577 8.38893 7.99879 9.1925" stroke="#535963" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M8.5 12.19V12.195" stroke="#535963" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                    </span>
+
+                                    <p><?php echo __('Write the message customers will receive in recovery emails.', 'cart-lift'); ?></p>
+
+                                </div>
+
+                            </div>
                         <?php
                             wp_editor(
                                 $weekly_report_email_body,
@@ -541,7 +558,7 @@ $get_wc_and_edd_countries = get_wc_and_edd_countries();
                                         <path d="M8.5 12.19V12.195" stroke="#535963" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                     </span>
-                                    <p><?php echo __('Select week start day', 'cart-lift'); ?></p>
+                                    <p><?php echo __('Select which day your weekly report should start.', 'cart-lift'); ?></p>
                                 </div>
                             </div>
 
@@ -571,7 +588,7 @@ $get_wc_and_edd_countries = get_wc_and_edd_countries();
                                         <path d="M8.5 12.19V12.195" stroke="#535963" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                     </span>
-                                    <p><?php echo __('Enter recipients (comma separated) for this email.', 'cart-lift'); ?></p>
+                                    <p><?php echo __('Add recipient email addresses, separated by commas.', 'cart-lift'); ?></p>
                                 </div>
                             </div>
 
@@ -594,7 +611,7 @@ $get_wc_and_edd_countries = get_wc_and_edd_countries();
                                         </svg>
                                     </span>
 
-                                    <p><?php echo __('Enter sender this email.', 'cart-lift'); ?></p>
+                                    <p><?php echo __('Define the sender email address for recovery campaigns.', 'cart-lift'); ?></p>
                                 </div>
                             </div>
 
@@ -621,7 +638,7 @@ $get_wc_and_edd_countries = get_wc_and_edd_countries();
                                         </svg>
                                     </span>
 
-                                    <p><?php echo __('Compose your email message', 'cart-lift'); ?></p>
+                                    <p><?php echo __('Write the message customers will receive in recovery emails.', 'cart-lift'); ?></p>
 
                                 </div>
 
@@ -665,7 +682,7 @@ $get_wc_and_edd_countries = get_wc_and_edd_countries();
                             <path d="M8.5 12.19V12.195" stroke="#535963" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </span>
-                        <p><?php echo __('Ask confirmation from the user/customer before tracking data.', 'cart-lift'); ?></p>
+                        <p><?php echo __('Request user consent before tracking cart activity.', 'cart-lift'); ?></p>
                     </div>
                 </div>
 
@@ -699,7 +716,7 @@ $get_wc_and_edd_countries = get_wc_and_edd_countries();
                                 <path d="M8.5 12.19V12.195" stroke="#535963" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </span>
-                        <p><?php echo __('Lets you set cart expiration based on status', 'cart-lift'); ?></p>
+                        <p><?php echo __('Automatically expire old carts after a set time.', 'cart-lift'); ?></p>
                     </div>
                 </div>
 
@@ -728,7 +745,7 @@ $get_wc_and_edd_countries = get_wc_and_edd_countries();
                                 </svg>
 
                             </span>
-                            <p><?php echo __('Orders will be deleted with a minimum time limit of 7 days.', 'cart-lift'); ?></p>
+                            <p><?php echo __('Define how many days carts remain before deletion.', 'cart-lift'); ?></p>
                         </div>
                     </div>
 
@@ -789,7 +806,7 @@ $get_wc_and_edd_countries = get_wc_and_edd_countries();
                                 </svg>
 
                             </span>
-                            <p><?php echo __('Orders will be deleted with a minimum time limit of 7 days.', 'cart-lift'); ?></p>
+                            <p><?php echo __('Define how many days carts remain before deletion.', 'cart-lift'); ?></p>
                         </div>
                     </div>
 
@@ -857,7 +874,7 @@ $get_wc_and_edd_countries = get_wc_and_edd_countries();
                             <path d="M8.5 12.19V12.195" stroke="#535963" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </span>
-                        <p><?php echo __('Minimum time to consider a cart as abandoned. Minimum time limit 15 minutes.', 'cart-lift'); ?></p>
+                        <p><?php echo __('Set the minimum wait before marking a cart abandoned.', 'cart-lift'); ?></p>
                     </div>
                 </div>
 
@@ -885,7 +902,7 @@ $get_wc_and_edd_countries = get_wc_and_edd_countries();
                                 <path d="M8.5 12.19V12.195" stroke="#535963" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </span>
-                        <p><?php echo __('Add products that, if found in the cart, will prevent it from being tracked as abandoned.', 'cart-lift'); ?></p>
+                        <p><?php echo __('Exclude specific products from abandoned cart tracking.', 'cart-lift'); ?></p>
                     </div>
                 </div>
 
@@ -913,7 +930,7 @@ $get_wc_and_edd_countries = get_wc_and_edd_countries();
                                     <path d="M8.5 12.19V12.195" stroke="#535963" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>
                                 </span>
-                                <p><?php echo __('Select products to exclude from abandoned cart recovery', 'cart-lift'); ?></p>
+                                <p><?php echo __('Select products to exclude from cart recovery.', 'cart-lift'); ?></p>
                             </div>
 
                         </div>
@@ -961,7 +978,7 @@ $get_wc_and_edd_countries = get_wc_and_edd_countries();
                                     <path d="M8.5 12.19V12.195" stroke="#535963" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>
                                 </span>
-                                <p><?php echo __('Select products to exclude from abandoned cart recovery', 'cart-lift'); ?></p>
+                                <p><?php echo __('Select products to exclude from cart recovery.', 'cart-lift'); ?></p>
                             </div>
                         </div>
 
@@ -1012,7 +1029,7 @@ $get_wc_and_edd_countries = get_wc_and_edd_countries();
                                 <path d="M8.5 12.19V12.195" stroke="#535963" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </span>
-                        <p><?php echo __('Allows you to add categories to exclude carts from being tracked as abandoned if the products in those categories are found in the cart.', 'cart-lift'); ?></p>
+                        <p><?php echo __('Exclude entire product categories from recovery tracking.', 'cart-lift'); ?></p>
                     </div>
                 </div>
 
@@ -1040,7 +1057,7 @@ $get_wc_and_edd_countries = get_wc_and_edd_countries();
                                         <path d="M8.5 12.19V12.195" stroke="#535963" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>
                                 </span>
-                                <p><?php echo __('Select categories to exclude from abandoned cart recovery', 'cart-lift'); ?></p>
+                                <p><?php echo __('Select categories to exclude from cart recovery.', 'cart-lift'); ?></p>
                             </div>
                         </div>
 
@@ -1091,7 +1108,7 @@ $get_wc_and_edd_countries = get_wc_and_edd_countries();
                                 <path d="M8.5 12.19V12.195" stroke="#535963" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
                             </span>
-                            <p><?php echo __('Select categories to exclude from abandoned cart recovery', 'cart-lift'); ?></p>
+                            <p><?php echo __('Select categories to exclude from cart recovery.', 'cart-lift'); ?></p>
                         </div>
 
                     </div>
@@ -1146,7 +1163,7 @@ $get_wc_and_edd_countries = get_wc_and_edd_countries();
                                 <path d="M8.5 12.19V12.195" stroke="#535963" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </span>
-                        <p><?php echo __('Allows you to add countries to exclude carts from being tracked as abandoned.', 'cart-lift'); ?></p>
+                        <p><?php echo __('Exclude carts from specific countries in recovery tracking.', 'cart-lift'); ?></p>
                     </div>
 
                 </div>
@@ -1184,7 +1201,7 @@ $get_wc_and_edd_countries = get_wc_and_edd_countries();
                                 </svg>
 
                             </span>
-                            <p><?php echo __('Select countries to exclude from abandoned cart recovery', 'cart-lift'); ?></p>
+                            <p><?php echo __('Select countries to exclude from cart recovery.', 'cart-lift'); ?></p>
                         </div>
                     </div>
 
@@ -1217,7 +1234,7 @@ $get_wc_and_edd_countries = get_wc_and_edd_countries();
                                     </svg>
 
                                 </span>
-                                <p><?php echo __('Select countries to exclude from abandoned cart recovery', 'cart-lift'); ?></p>
+                                <p><?php echo __('Select countries to exclude from cart recovery.', 'cart-lift'); ?></p>
                             </div>
 
                         </div>

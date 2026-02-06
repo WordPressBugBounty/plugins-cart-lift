@@ -19,7 +19,7 @@
                                 <path d="M8.5 12.19V12.195" stroke="#535963" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </span>
-                        <p><?php echo __( 'This will initiate a pop-up and prompt users to provide email addresses when they intend to leave from the cart page.', 'cart-lift' ); ?></p>
+                        <p><?php echo __( 'Show a popup asking for emails before shoppers leave.', 'cart-lift' ); ?></p>
                     </div>
                 </div>
 

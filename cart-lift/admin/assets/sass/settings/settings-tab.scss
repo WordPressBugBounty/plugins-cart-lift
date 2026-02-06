@@ -365,6 +365,10 @@
 
                   .cl-form-group-weekly-email-body {
 
+                    .cl-global-tooltip-area {
+                      margin-bottom: 20px;
+                    }
+
                     .wp-editor-tabs {
 
                      button {
@@ -374,9 +378,9 @@
 
                     }
 
-                    label {
-                      margin-bottom: 20px;
-                    }
+                    // label {
+                    //   margin-bottom: 20px;
+                    // }
 
                     display: grid;
                     grid-template-columns: 1fr;

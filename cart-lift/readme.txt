@@ -1,11 +1,11 @@
 === Cart Lift - Abandoned Cart Recovery for WooCommerce and EDD ===
 Contributors: rextheme, coderexltd, coderexco
-Tags: woocommerce abandoned cart, abandoned cart recovery, exit popup, edd abandoned cart, abandoned cart email, cart abandonment, woocommerce abandoned cart email, woocommerce abandoned cart recovery, easy digital downloads, woocommerce, recover abandoned cart, abandoned cart emails woocommerce, cart abandonment recovery
+Tags: woocommerce abandoned cart, abandoned cart recovery, exit intent popup, woocommerce abandoned cart email, easy digital downloads,
 Donate link: https://rextheme.com/cart-lift/
-Requires at least: 5.0
-Tested up to: 6.8.2
+Requires at least: 6.7
+Tested up to: 6.9
 Requires PHP: 7.4
-Stable tag: 3.1.45
+Stable tag: 3.1.51
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -13,15 +13,13 @@ Track abandoned carts and send automated, customizable abandoned cart recovery e
 
 == Description ==
 
-<h4> 🙌  Easiest Abandoned Cart Recovery Plugin For WooCommerce & EDD 🙌 </h4>
+<h4> 🙌  #Easiest Abandoned Cart Recovery Plugin For WooCommerce & EDD 🙌 </h4>
 
 Are you concerned about the high abandoned rate on your site? Did you waste time and money trying to stop abandoned carts 🛒  or recover them?
 
 With Cart Lift, you can recover around **15% of your abandoned carts** without effort.
 
 No more wasted hours and unreasonable expenses on other tools. Grow 🚀 **your revenue** with a result-driven tool.
-
-<h4><a href="https://rextheme.com/cart-lift/?utm_source=Repo-CTA&utm_medium=CartLift-Repo&utm_campaign=CartLift-repo-to-pricing" target="_blank">🔥 Get Cart Lift - Abandoned Cart Recovery For WooCommerce & EDD (Pro) at a 15% Discount Now! 🔥</a> </h4>
 
 
 [youtube https://youtu.be/mIYQjLsIm04?si=n8TRxqid8IBjntvp]
@@ -184,6 +182,31 @@ Follow the steps in this guide: [How to upgrade to Cart Lift Pro](https://rexthe
 8. Analytics
 
 == Changelog ==
+
+= Cart Lift (Pro) =
+* [Visit to see what's new in pro version](https://rextheme.com/changelog/?plugin=cart-lift-pro)
+
+
+= Cart Lift (Free) =
+
+= 3.1.51 (2026-01-14) =
+* Enhancement: Update pricing on setup wizard
+
+= 3.1.50 (2025-12-31) =
+* Enhancement: Update pricing on setup wizard
+
+= 3.1.49 (2025-12-19) =
+* Enhancement: Update pricing on setup wizard
+
+= 3.1.48 (2025-11-19) =
+* Enhancement: Update pricing on setup wizard
+
+= 3.1.47 (2025-11-07) =
+* Enhancement: Update tooltips text
+* Fix: Fix translation issue
+
+= 3.1.46 (2025-10-14) =
+* Enhancement: Update discount price in CRO and setup wizard
 
 = 3.1.45 (2025-09-26) =
 * Enhancement: Update pricing on setup wizard
@@ -475,3 +498,7 @@ Follow the steps in this guide: [How to upgrade to Cart Lift Pro](https://rexthe
 
 = 1.0.0 (2020-06-16) =
 * Initial Release
+
+== Upgrade Notice ==
+
+Keep Cart Lift updated to the latest version. It makes sure that you get the improvements, new features, and bug fixes instantly.

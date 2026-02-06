@@ -28,7 +28,7 @@
                             <path d="M8.5 12.19V12.195" stroke="#535963" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </span>
-                    <p><?php echo __('reCAPTCHA V3 runs silently in the background to detect suspicious activity and verify user interactions without interrupting the user experience.', 'cart-lift'); ?></p>
+                    <p><?php echo __('Protect forms automatically with reCAPTCHA V3.', 'cart-lift'); ?></p>
                 </div>
             </div>
 
@@ -57,7 +57,7 @@
                             <path d="M8.5 12.19V12.195" stroke="#535963" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </span>
-                        <p><?php echo __('Enter your site key', 'cart-lift'); ?></p>
+                        <p><?php echo __('Enter the reCAPTCHA site key for verification.', 'cart-lift'); ?></p>
                     </div>
                 </div>
 
@@ -79,7 +79,7 @@
                                 <path d="M8.5 12.19V12.195" stroke="#535963" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </span>
-                        <p><?php echo __('Enter your secret key.', 'cart-lift'); ?></p>
+                        <p><?php echo __('Enter the reCAPTCHA secret key for validation.', 'cart-lift'); ?></p>
                     </div>
                     
                 </div>
@@ -102,7 +102,7 @@
                                     <path d="M8.5 12.19V12.195" stroke="#535963" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
                             </span>
-                            <p><?php echo __('Enter score that will check with the reCAPTCHA score.', 'cart-lift'); ?></p>
+                            <p><?php echo __('Define the reCAPTCHA score threshold for suspicious activity.', 'cart-lift'); ?></p>
                         </div>
                     </div>
 
@@ -128,7 +128,7 @@
                             <path d="M8.5 12.19V12.195" stroke="#535963" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </span>
-                        <p><?php echo __('Enter your site key', 'cart-lift'); ?></p>
+                        <p><?php echo __('Enter the reCAPTCHA site key for verification.', 'cart-lift'); ?></p>
                     </div>
                 </div>
 
@@ -151,7 +151,7 @@
                             <path d="M8.5 12.19V12.195" stroke="#535963" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </span>
-                        <p><?php echo __('Enter your secret key.', 'cart-lift'); ?></p>
+                        <p><?php echo __('Enter the reCAPTCHA secret key for validation.', 'cart-lift'); ?></p>
                     </div>
 
                 </div>
@@ -177,7 +177,7 @@
                                 <path d="M8.5 12.19V12.195" stroke="#535963" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
                         </span>
-                        <p><?php echo __('Enter score that will check with the reCAPTCHA score.', 'cart-lift'); ?></p>
+                        <p><?php echo __('Define the reCAPTCHA score threshold for suspicious activity.', 'cart-lift'); ?></p>
                     </div>
                 </div>
 

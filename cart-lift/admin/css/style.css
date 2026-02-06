@@ -945,6 +945,11 @@
     padding: 29px 40px 18px;
   }
 }
+.wp-cart-lift-setup-wizard__container .setup-wizard__inner-container .setup-wizard__features-section-container .setup-wizard__pro-features-section-container .setup-wizard__pro-features-price .setup-wizard__discount-price-label {
+  position: relative;
+  font-size: 20px;
+  margin: 0;
+}
 @media (max-width: 768px) {
   .wp-cart-lift-setup-wizard__container .setup-wizard__inner-container .setup-wizard__features-section-container .setup-wizard__pro-features-section-container .setup-wizard__pro-features-price p {
     font-size: 18px;
