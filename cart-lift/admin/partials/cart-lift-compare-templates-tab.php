@@ -87,8 +87,8 @@ if (!defined('ABSPATH')) exit; // Exit if accessed directly
                                 echo '<ul class="single-feature feature-list">';
 
                                     echo '<li class="comparison-tbl-col feature"><p>' . $feature . '</p></li>';
-                                    echo '<li class="comparison-tbl-col free"><span class="icon no"><img loading="lazy" src="' . WPVR_PLUGIN_DIR_URL . 'admin/icon/' . $free_icons[$index] . '.svg" alt="' . $free_icons[$index] . '"></span></li>';
-                                    echo '<li class="comparison-tbl-col pro"><span class="icon yes"><img loading="lazy" src="' . WPVR_PLUGIN_DIR_URL . 'admin/icon/' . $pro_icons[$index] . '.svg" alt="' . $pro_icons[$index] . '"></span></li>';
+                                    echo '<li class="comparison-tbl-col free"><span class="icon no"><img loading="lazy" src="' . CART_LIFT_URL . 'admin/icon/icon-svg/' . $free_icons[$index] . '.svg" alt="' . $free_icons[$index] . '"></span></li>';
+                                    echo '<li class="comparison-tbl-col pro"><span class="icon yes"><img loading="lazy" src="' . CART_LIFT_URL . 'admin/icon/icon-svg/' . $pro_icons[$index] . '.svg" alt="' . $pro_icons[$index] . '"></span></li>';
 
                                 echo '</ul>';
                             }

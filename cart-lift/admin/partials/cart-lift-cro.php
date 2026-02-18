@@ -42,28 +42,28 @@
                 <div class="cartlift-cro-modal__btn-area">
                     <?php
                         $current_date = date('Y-m-d H:i:s');
-                        $start_date = '2025-12-31 00:00:00';
-                        $end_date = '2026-01-11 23:59:59';
+                        $start_date = '2026-02-03 00:00:00';
+                        $end_date = '2026-02-18 23:59:59';
                         $discount_percentage = '';
                         $discount_price = '';
                         if ($current_date >= $start_date && $current_date <= $end_date) {
-                            $discount_percentage = "Save 25%";
-                            $discount_price = "$37.49";
+                            $discount_percentage = "Save 30%";
+                            $discount_price = "$34.99";
                         }  else {
                             $discount_percentage = "";
-                            $discount_price = "$37.49";
+                            $discount_price = "$34.99";
                         }
                         $price = '$49.99';
                     ?>
 
                     <div class="cartlift-cro-modal__discount-price">
-                        <p class="cartlift-cro-modal__discount-price-label" data-discount="<?php echo $price; ?>">
-                            <?php printf( esc_html__('Starting at %s/year', 'cart-lift'), '<span style= "font-weight:600; color:#0F2F72; font-size:20px;">' . esc_html( $price ) . '</span>' ); ?>
+                        <p class="cartlift-cro-modal__discount-price-label" data-discount="<?php echo $discount_percentage; ?>">
+                            <?php printf( esc_html__('Starting at %s/year', 'cart-lift'), '<span style= "font-weight:600; color:#0F2F72; font-size:20px;">' . esc_html( $discount_price ) . '</span>' ); ?>
                         </p>
-                        <!-- <p style="text-decoration: line-through; color: #999;"><?php //printf( esc_html__('Normally %s/year', 'cart-lift'), esc_html( $price ) ); ?></p> -->
+                        <p style="text-decoration: line-through; color: #999;"><?php printf( esc_html__('Normally %s/year', 'cart-lift'), esc_html( $price ) ); ?></p>
                     </div>
 
-                    <a href="https://rextheme.com/cart-lift/" class="cartlift-cro-modal__btn" target="_blank" role="button">
+                    <a href="https://rextheme.com/cart-lift/#pricing" class="cartlift-cro-modal__btn" target="_blank" role="button">
                         <svg xmlns="http://www.w3.org/2000/svg" width="17" height="21" viewBox="0 0 17 21" fill="none"><path d="M11.4548 7.28939H5.20673V5.20668C5.20764 4.37842 5.53706 3.58433 6.12274 2.99866C6.70841 2.41299 7.50249 2.08356 8.33076 2.08265C9.787 2.08265 11.1441 3.08942 11.4878 4.42465C11.5212 4.55781 11.5805 4.68306 11.6625 4.79319C11.7444 4.90332 11.8474 4.99616 11.9653 5.06636C12.0833 5.13657 12.214 5.18275 12.3498 5.20225C12.4857 5.22176 12.6241 5.2142 12.7571 5.18001C12.89 5.14582 13.0149 5.08568 13.1245 5.00304C13.2341 4.92041 13.3263 4.81691 13.3958 4.69851C13.4652 4.58011 13.5106 4.44914 13.5292 4.31314C13.5479 4.17714 13.5395 4.03879 13.5044 3.90606C12.9222 1.64285 10.7465 0 8.33076 0C6.95036 0.0016277 5.62696 0.550709 4.65086 1.5268C3.67476 2.50289 3.12567 3.82628 3.12403 5.20668V7.73075C2.19679 8.13589 1.4076 8.80227 0.852824 9.64851C0.298052 10.4948 0.0017136 11.4842 0 12.4961V15.6201C0.00164064 17.0006 0.550734 18.3239 1.52683 19.3C2.50293 20.2761 3.82633 20.8252 5.20673 20.8268H11.4548C12.8352 20.8252 14.1586 20.2761 15.1347 19.3C16.1108 18.3239 16.6599 17.0006 16.6615 15.6201V12.4961C16.6599 11.1157 16.1108 9.7923 15.1347 8.8162C14.1586 7.8401 12.8352 7.29101 11.4548 7.28939ZM14.5788 15.6201C14.5779 16.4484 14.2485 17.2425 13.6628 17.8282C13.0771 18.4138 12.2831 18.7433 11.4548 18.7442H5.20673C4.37847 18.7433 3.58438 18.4138 2.99871 17.8282C2.41303 17.2425 2.08361 16.4484 2.0827 15.6201V12.4961C2.08361 11.6679 2.41303 10.8738 2.99871 10.2881C3.58438 9.70242 4.37847 9.37299 5.20673 9.37209H11.4548C12.2831 9.37299 13.0771 9.70242 13.6628 10.2881C14.2485 10.8738 14.5779 11.6679 14.5788 12.4961V15.6201ZM9.37209 13.5374V14.5788C9.37209 14.8549 9.26238 15.1198 9.06709 15.3151C8.8718 15.5104 8.60694 15.6201 8.33076 15.6201C8.05458 15.6201 7.78972 15.5104 7.59443 15.3151C7.39915 15.1198 7.28944 14.8549 7.28944 14.5788V13.5374C7.28944 13.2613 7.39915 12.9964 7.59443 12.8011C7.78972 12.6058 8.05458 12.4961 8.33076 12.4961C8.60694 12.4961 8.8718 12.6058 9.06709 12.8011C9.26238 12.9964 9.37209 13.2613 9.37209 13.5374Z" fill="white"/></svg>
                         <?php esc_html_e( 'Upgrade to PRO Now', 'cart-lift' ); ?>
                     </a>
@@ -84,8 +84,8 @@
 </script>
 
 <style>
-    /* p.cartlift-cro-modal__discount-price-label:before {
-        content: var(--discount-content, "Save 25%"); 
-    } */
+    p.cartlift-cro-modal__discount-price-label:before {
+        content: var(--discount-content, "Save 30%"); 
+    }
 </style>
 

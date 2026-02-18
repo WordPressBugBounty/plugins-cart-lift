@@ -128,26 +128,26 @@ p.cartlift-cro-modal__discount-price-label {
     font-size: 16px;
 }
 
-// p.cartlift-cro-modal__discount-price-label:before {
-//     content: "";
-//     position: absolute;
-//     background: #EE8134;
-//     border-radius: 16px 16px 16px 0;
-//     font-weight: 600;
-//     font-size: 12px;
-//     line-height: 13px;
-//     text-align: center;
-//     color: #fff;
-//     padding: 7px 11px;
-//     top: -27px;
-//     left: 74%;
-//     -webkit-transform: translateX(-50%);
-//     -moz-transform: translateX(-50%);
-//     -ms-transform: translateX(-50%);
-//     transform: translateX(-50%);
-//     min-width: 69px;
-//     box-sizing: content-box;
-// }
+p.cartlift-cro-modal__discount-price-label:before {
+    content: "";
+    position: absolute;
+    background: #EE8134;
+    border-radius: 16px 16px 16px 0;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 13px;
+    text-align: center;
+    color: #fff;
+    padding: 7px 11px;
+    top: -27px;
+    left: 74%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    min-width: 69px;
+    box-sizing: content-box;
+}
 
 
 .cartlift-cro-modal__btn {

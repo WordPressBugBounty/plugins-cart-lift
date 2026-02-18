@@ -55,8 +55,7 @@ class Rex_CartLift_Sales_Notification_Bar
         $current_date_time = current_time('timestamp');
 
         if (
-            'yes' !== get_option($this->occasion, '')
-            && !defined('CART_LIFT_PRO_VERSION')
+            !defined('CART_LIFT_PRO_VERSION')
             && ($current_date_time >= $this->start_date && $current_date_time <= $this->end_date)
         ) {
             // Hook into the admin_notices action to display the banner
@@ -84,10 +83,24 @@ class Rex_CartLift_Sales_Notification_Bar
             return;
         }
 
+        if ( $screen->base === 'plugins' || $screen->base === 'dashboard' ) {
+            if ( defined( 'REX_SPECIAL_OCCASION_BANNER_SHOWN_GLOBAL' ) ) {
+                return;
+            }
+            define( 'REX_SPECIAL_OCCASION_BANNER_SHOWN_GLOBAL', true );
+        }
+
+        // Check if banner was dismissed within last 24 hours
+        $dismissed_option = $this->occasion . '_dismissed';
+        $dismissed_time = get_option($dismissed_option, 0);
+        if ($dismissed_time && (time() - $dismissed_time) < 86400) {
+            return; // Don't show if dismissed within last 24 hours
+        }
+
         $btn_link = esc_url( 'https://rextheme.com/cart-lift/#pricing' );
 
-        $img_url  = plugin_dir_url(__FILE__) . '/images/banner-images/happy-new-year.webp'; 
-        $img_path = plugin_dir_path(__FILE__) . '/images/banner-images/happy-new-year.webp';
+        $img_url  = plugin_dir_url(__FILE__) . '/images/banner-images/heart.webp'; 
+        $img_path = plugin_dir_path(__FILE__) . '/images/banner-images/heart.webp';
         $img_size = getimagesize($img_path);
         $img_width  = $img_size[0];
         $img_height = $img_size[1];
@@ -97,60 +110,86 @@ class Rex_CartLift_Sales_Notification_Bar
         <div class="cart-lift-promo-banner-area">
 
             <section class="cart-lift-promo-banner cart-lift-promo-banner--regular" aria-labelledby="cart-lift-promo-banner-title" id="cart-lift-promo-banner">
-                <div class="cart-lift-promo-banner__container">
+                  <div class="cart-lift-regular-promotional-banner" id="cart-lift-regular-promotional-banner" role="region" aria-labelledby="banner-flash-title">
 
-                    <div class="cart-lift-halloween-promotional-banner-content">
-                        <div class="cart-lift-banner-title">
+                <div class="cart-lift-regular-promotional-banner-container">
 
-                            <div class="cart-lift-spooktacular">
-                                <span><?php echo esc_html__('New Year Savings.', 'cart-lift'); ?></span>
+                    <div class="cart-lift-regular-promotional-banner-content" id="banner-flash">
+
+                        <!-- Close Button -->
+                        <button class="cart-lift-close-btn"
+                                type="button"
+                                aria-label="<?php esc_attr_e('Close banner', 'cart-lift'); ?>"
+                                id="cart-lift-promo-banner__cross-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="9" height="9" viewBox="0 0 9 9" fill="none">
+                                <path d="M7.77482 0.75L0.75 7.75" stroke="#C6C5FF" stroke-width="1.5" stroke-linecap="round"/>
+                                <path d="M7.77482 7.75L0.75 0.75" stroke="#C6C5FF" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                        </button>
+
+                        <!-- Banner Title + Timer -->
+                        <div class="cart-lift-regular-promotional-banner-title">
+
+                            <div class="cart-lift-badge-content">
+
+                                <div class="cart-lift-banner-title">
+                                    <div class="heart-icon">
+                                        <figure class="cart-lift-banner-img black-friday">
+                                            <img src="<?php echo esc_url($img_url); ?>" alt="valentines day"  width="<?php echo esc_attr($img_width); ?>"
+                                            height="<?php echo esc_attr($img_height); ?>" />
+                                        </figure>
+                                    </div>
+
+                                    <h2 id="banner-flash-title">
+                                        <?php echo esc_html__('Valentine\'s Day Discount', 'cart-lift'); ?>
+                                    </h2>
+                                </div>
+
+                                <div class="cart-lift-title cart-lift-banner-offer">
+                                    <?php echo esc_html__('Get 30% OFF', 'cart-lift'); ?>
+                                </div>
                             </div>
 
-                            <!-- Black Friday Logo -->
-                            <figure class="cart-lift-banner-img black-friday">
-                                <img src="<?php echo esc_url($img_url); ?>" alt="New Year 2025 Sale"  width="<?php echo esc_attr($img_width); ?>"
-                                height="<?php echo esc_attr($img_height); ?>" />
-                                <figcaption class="visually-hidden">Happy New Year 2025 Logo</figcaption>
-                            </figure>
-
-                            <div class="cart-lift-discount-text">
-                                <?php echo esc_html__('Get ', 'cart-lift'); ?>
-                                <span class="cart-lift-halloween-percentage"><?php echo esc_html__('25% OFF ', 'cart-lift'); ?></span>
-                                <?php echo esc_html__('on ', 'cart-lift'); ?>
-                                <span class="cart-lift-text-highlight">
-                                    <?php echo esc_html__('Cart Lift!', 'cart-lift'); ?>
-                                </span>
-                            </div>  
-
-                            <!-- Countdown -->
-                            <div id="cart-lift_bf_countdown-banner">
-                                <span id="cart-lift_bf_countdown-text"></span>
+                            <!-- Countdown Timer -->
+                            <div class="cart-lift-timer">
+                                <div class="cart-lift-timer-box">
+                                    <span class="cart-lift-timer-number" id="cl_days">12</span>
+                                    <span class="cart-lift-timer-label">DAY</span>
+                                </div>
+                                <div class="cart-lift-timer-box">
+                                    <span class="cart-lift-timer-number" id="cl_hours">10</span>
+                                    <span class="cart-lift-timer-label">HR</span>
+                                </div>
+                                <div class="cart-lift-timer-box">
+                                    <span class="cart-lift-timer-number" id="cl_minutes">45</span>
+                                    <span class="cart-lift-timer-label">MIN</span>
+                                </div>
+                                <div class="cart-lift-timer-box">
+                                    <span class="cart-lift-timer-number" id="cl_seconds">30</span>
+                                    <span class="cart-lift-timer-label">SEC</span>
+                                </div>
                             </div>
 
                         </div>
 
-                        <a href="<?php echo esc_url($btn_link); ?>"
+                        <!-- CTA Button -->
+                        <a href="<?php echo esc_url( $btn_link ); ?>"
                         target="_blank"
-                        class="cart-lift-halloween-banner-link"
-                        aria-label="<?php echo esc_attr__('Get 25% OFF on Cart Lift Pro', 'cart-lift'); ?>">
-                            <?php echo esc_html__('Get 25% OFF', 'cart-lift'); ?>
-                            <span class="cart-lift-arrow-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11" fill="none">
-                                    <path d="M9.71875 0.25C9.99225 0.25 10.2548 0.358366 10.4482 0.551758C10.6416 0.745155 10.75 1.00775 10.75 1.28125V9.71875C10.75 9.99225 10.6416 10.2548 10.4482 10.4482C10.2548 10.6416 9.99225 10.75 9.71875 10.75C9.44525 10.75 9.18265 10.6416 8.98926 10.4482C8.79587 10.2548 8.6875 9.99225 8.6875 9.71875V3.77051L2.01074 10.4482C1.81734 10.6416 1.55476 10.75 1.28125 10.75C1.00775 10.75 0.745155 10.6416 0.551758 10.4482C0.358365 10.2548 0.25 9.99225 0.25 9.71875C0.250003 9.44525 0.358362 9.18265 0.551758 8.98926L7.22949 2.3125H1.28125C1.00775 2.3125 0.745151 2.20414 0.551758 2.01074C0.358366 1.81735 0.25 1.55475 0.25 1.28125C0.25 1.00775 0.358366 0.745154 0.551758 0.551758C0.745151 0.358365 1.00775 0.250004 1.28125 0.25H9.71875Z" fill="#00B4FF" stroke="#00B4FF" stroke-width="0.5"/>
+                        class="cart-lift-regular-promotional-banner-link"
+                        role="button"
+                        aria-label="<?php esc_attr_e('Get 30% OFF on Valentine\'s Day', 'cart-lift'); ?>">
+                            <?php esc_html_e('Get 30% OFF', 'cart-lift'); ?>
+                            <span class="arrow-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10">
+                                    <path d="M10 0.78V9.22C10 9.65 9.65 10 9.22 10C8.79 10 8.44 9.65 8.44 9.22V2.66L1.33 9.77C1.19 9.92 0.99 10 0.78 10C0.35 10 0 9.65 0 9.22C0 9.01 0.08 8.81 0.23 8.67L7.33 1.56H0.78C0.35 1.56 0 1.21 0 0.78C0 0.35 0.35 0 0.78 0H9.22C9.65 0 10 0.35 10 0.78Z"
+                                        fill="#000"/>
                                 </svg>
                             </span>
                         </a>
+
                     </div>
-
-                    <a class="cart-lift-promo-banner__cross-icon" type="button" aria-label="close banner"
-                    id="cart-lift-promo-banner__cross-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
-                            <path d="M11 1L1 11" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M1 1L11 11" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </a>
-
                 </div>
+            </div>
 
             </section>
         </div>
@@ -166,55 +205,66 @@ class Rex_CartLift_Sales_Notification_Bar
                 }
             });
 
-
             (function () {
-                const cart_bf_text = document.getElementById("cart-lift_bf_countdown-text");
+                // Get timer elements
+                const daysEl = document.getElementById('cl_days');
+                const hoursEl = document.getElementById('cl_hours');
+                const minutesEl = document.getElementById('cl_minutes');
+                const secondsEl = document.getElementById('cl_seconds');
+                const banner = document.getElementById('cart-lift-promo-banner');
 
-                // === Configure start & end times ===
-                const cart_bf_start = new Date("2025-12-31T00:00:00"); // Deal start date
-                const cart_bf_end = new Date("2026-01-12T23:59:59");   // Deal end date
+                // Get labels (next siblings of timer numbers)
+                const daysLabel = daysEl ? daysEl.nextElementSibling : null;
+                const hoursLabel = hoursEl ? hoursEl.nextElementSibling : null;
+                const minutesLabel = minutesEl ? minutesEl.nextElementSibling : null;
+                const secondsLabel = secondsEl ? secondsEl.nextElementSibling : null;
 
-                // === Update countdown text ===
-                function cart_bf_updateCountdown() {
-                const now = new Date();
+                // Configure end time from PHP
+                const cart_end = new Date(<?php echo json_encode(date('Y-m-d H:i:s', $this->end_date)); ?>);
 
-                // Before deal starts
-                if (now < cart_bf_start) {
-                    cart_bf_text.textContent = "Deal coming soon!";
-                    return;
-                }
+                let cart_timer;
 
-                // After deal ends
-                if (now > cart_bf_end) {
-                    cart_bf_text.textContent = "Deal expired.";
-                    clearInterval(cart_bf_timer);
-                    return;
-                }
+                // Update countdown timer
+                function cart_updateCountdown() {
+                    const now = new Date();
 
-                // Calculate remaining time
-                const diff = cart_bf_end - now;
-                const minutes = Math.floor(diff / (1000 * 60));
-                const hours = Math.floor(diff / (1000 * 60 * 60));
-                const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-
-                    // Display message with <span> for styling numbers
-                    if (days > 1) {
-                        cart_bf_text.innerHTML = `<span>${days}</span> days left.`;
-                    } else if (days === 1) {
-                        cart_bf_text.innerHTML = `<span>1</span> day left.`;
-                    } else if (hours >= 1) {
-                        cart_bf_text.innerHTML = `<span>${hours}</span> hrs left.`;
-                    } else if (minutes >= 1) {
-                        cart_bf_text.innerHTML = `<span>${minutes}</span> mins left.`;
-                    } else {
-                        cart_bf_text.innerHTML = "Deal expired.";
-                        clearInterval(cart_bf_timer);
+                    // Check if deal expired
+                    if (now > cart_end) {
+                        if (daysEl) daysEl.textContent = '0';
+                        if (hoursEl) hoursEl.textContent = '0';
+                        if (minutesEl) minutesEl.textContent = '0';
+                        if (secondsEl) secondsEl.textContent = '0';
+                        clearInterval(cart_timer);
+                        // Auto-hide banner after countdown expires
+                        setTimeout(function() {
+                            if (banner) banner.style.display = 'none';
+                        }, 2000);
+                        return;
                     }
+
+                    // Calculate remaining time
+                    const diff = cart_end - now;
+                    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                    const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+                    // Update numbers
+                    if (daysEl) daysEl.textContent = days;
+                    if (hoursEl) hoursEl.textContent = hours;
+                    if (minutesEl) minutesEl.textContent = minutes;
+                    if (secondsEl) secondsEl.textContent = seconds;
+
+                    // Update labels (singular/plural)
+                    if (daysLabel) daysLabel.textContent = (days === 0 || days === 1) ? 'DAY' : 'DAYS';
+                    if (hoursLabel) hoursLabel.textContent = (hours === 0 || hours === 1) ? 'HR' : 'HRS';
+                    if (minutesLabel) minutesLabel.textContent = (minutes === 0 || minutes === 1) ? 'MIN' : 'MINS';
+                    if (secondsLabel) secondsLabel.textContent = (seconds === 0 || seconds === 1) ? 'SEC' : 'SECS';
                 }
 
-                // === Initialize countdown ===
-                cart_bf_updateCountdown(); // Run immediately
-                const cart_bf_timer = setInterval(cart_bf_updateCountdown, 30000); // Update every 30s
+                // Initialize countdown
+                cart_updateCountdown(); // Run immediately
+                cart_timer = setInterval(cart_updateCountdown, 1000); // Update every second
             })();
 
 
@@ -263,22 +313,36 @@ class Rex_CartLift_Sales_Notification_Bar
         $plugin_dir_url = plugin_dir_url(__FILE__ );
         ?>
          <style type="text/css">
-            :root {
-                --cart-lift-primary-color: #24EC2C;
-            }
+
 
             @font-face {
-                font-family: 'Roboto';
-                src: url(<?php echo "{$plugin_dir_url}assets/fonts/Roboto-Regular.woff2"; ?>) format('woff2');
-                font-weight: 400;
+                font-family: 'Grand Hotel';
+                src: url(<?php echo "{$plugin_dir_url}assets/fonts/campaign-font/GrandHotel-Regular.woff2"; ?>) format('woff2');
+                font-weight: normal;
                 font-style: normal;
                 font-display: swap;
             }
 
             @font-face {
-                font-family: 'Roboto';
-                src: url(<?php echo "{$plugin_dir_url}assets/fonts/Roboto-Bold.woff2"; ?>) format('woff2');
+                font-family: 'Inter';
+                src: url(<?php echo "{$plugin_dir_url}assets/fonts/campaign-font/Inter-Bold.woff2"; ?>) format('woff2');
                 font-weight: 700;
+                font-style: normal;
+                font-display: swap;
+            }
+
+            @font-face {
+                font-family: 'Inter';
+                src: url(<?php echo "{$plugin_dir_url}assets/fonts/campaign-font/Inter-SemiBold.woff2"; ?>) format('woff2');
+                font-weight: 600;
+                font-style: normal;
+                font-display: swap;
+            }
+
+            @font-face {
+                font-family: "Inter";
+                src: url(<?php echo "{$plugin_dir_url}assets/fonts/campaign-font/Inter-Regular.woff2"; ?>) format('woff2');
+                font-weight: 400;
                 font-style: normal;
                 font-display: swap;
             }
@@ -316,258 +380,283 @@ class Rex_CartLift_Sales_Notification_Bar
                 }
             }
 
-            .cart-lift-promo-banner {
-                margin-top: 40px;
-                padding: 17px 0;
-                text-align: center;
-                background: linear-gradient(90deg, #24EC2C 0%, #2022F8 16.24%, #1A1B9D 51.84%, #2022F8 99.14%);
-                width: calc(100% - 20px);
-            }
+            
+        .cart-lift-regular-promotional-banner {
+            background: #201CFE;
+            padding: 10px 0;
+            position: relative;
+            z-index: 2;
+            margin-top: 40px;
+            width: calc(100% - 20px);
+        }
 
-            .cart-lift-promo-banner__container {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                margin: 0 auto;
-                padding: 0 20px;
-                width: 100%;
-            }
+        .cart-lift-regular-promotional-banner-container {
+            max-width: 740px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
 
-            .cart-lift-spooktacular span {
-                font-weight: 900;
-            }
+        .cart-lift-regular-promotional-banner-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+        }
 
-            .cart-lift-banner-img  {
-                margin: 0;
-            }
+        .cart-lift-regular-promotional-banner-content .cart-lift-banner-title {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            margin-bottom: 5px;
+            line-height: 1.1;
+            animation: slideInLeft 0.8s ease-out;
+        }
 
-            .cart-lift-banner-img img {
-                max-width: 150px;
-                height: auto;
-            }
+        .cart-lift-regular-promotional-banner-content .heart-icon {
+            animation: heartbeat 1.5s infinite;
+        }
 
-            .cart-lift-halloween-promotional-banner-content .visually-hidden {
-                position: absolute;
-                width: 1px;
-                height: 1px;
-                padding: 0;
-                margin: -1px;
-                overflow: hidden;
-                clip: rect(0, 0, 0, 0);
-                border: 0;
-            }
+        .cart-lift-regular-promotional-banner-content .heart-icon figure{
+            margin: 0;
+        }
 
-            .cart-lift-halloween-promotional-banner-content {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                max-width: 1090px;
-                margin: 0 auto;
-                width: 100%;
-            }
+        .cart-lift-regular-promotional-banner-content .cart-lift-banner-title h2 {
+            font-family: 'Grand Hotel';
+            color: #FF6DE7;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 1.1;
+            margin: 0;
+        }
 
-            .cart-lift-halloween-promotional-banner-content .cart-lift-banner-title {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                gap: 20px;
-                color: #FFF;
-                font-size: 16px;
-                font-weight: 500;
-                line-height: 1;
-                text-transform: capitalize;
-            }
+        .cart-lift-regular-promotional-banner-content .cart-lift-regular-promotional-banner-title {
+            display: flex;
+            align-items: center;
+            gap: 80px;
+        }
 
-            .cart-lift-halloween-promotional-banner-content span.cart-lift-halloween-highlight {
-                font-size: 16px;
-                font-weight: 900;
-                color: #24EC2C;
-            }
+        .cart-lift-regular-promotional-banner-content .linno-banner.closing {
+            animation: linno-slideUp 0.5s ease-in forwards;
+        }
 
-            .cart-lift-halloween-percentage {
-                font-size: 16px;
-                font-weight: 900;
-                color: #24EC2C;
-            }
+    /* CLOSE BUTTON */
+    .cart-lift-regular-promotional-banner-content .cart-lift-close-btn {
+        position: absolute;
+        top: 38px;
+        right: 40px;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        background-color: transparent;
+        transition: all 0.3s ease-in-out;
+    }
 
-            .cart-lift-discount-text {
-                font-weight: 600;
-            }
+.cart-lift-regular-promotional-banner-content .cart-lift-close-btn:hover {
+    transform: rotate(90deg);
+}
 
-            .cart-lift-text-highlight {
-                font-size: 16px;
-                font-weight: 700;
-                color: #fff;
-            }
+/* TITLE, SUBTITLE, BADGE */
+.cart-lift-regular-promotional-banner-content .cart-lift-title {
+    font-family: "Inter", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.084px;
+    color: #FFF;
+    margin: 0;
+}
 
-            .cart-lift-halloween-banner-link {
-                position: relative;
-                font-family: 'Roboto';
-                font-size: 15px;
-                font-weight: 800;
-                color: var(--cart-lift-primary-color);
-                transition: all .3s ease;
-                text-decoration: none;
-                letter-spacing: -0.084px;
-            }
+.cart-lift-regular-promotional-banner-content span.arrow-icon {
+    margin-left: 10px;
+}
 
-            .cart-lift-halloween-banner-link:hover {
-                color: var(--cart-lift-primary-color);
-            }
+.cart-lift-regular-promotional-banner-content .cart-lift-badge {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #24EC2C;
+}
 
-            .cart-lift-halloween-banner-link:focus {
-                color: var(--cart-lift-primary-color);
-                box-shadow: none;
-                outline: 0px solid transparent;
-            }
+/* BUTTON */
+.cart-lift-regular-promotional-banner-content .cart-lift-regular-promotional-banner-link {
+    padding: 12px 16px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border-radius: 4px;
+    background: #FF6DE7;
+    color: #000;
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: -0.084px;
+    text-decoration: none;
+}
 
-            .cart-lift-halloween-banner-link::before {
-                content: "";
-                position: absolute;
-                left: 0;
-                bottom: 1px;
-                width: 100%;
-                height: 2px;
-                background-color: var(--cart-lift-primary-color);
-                transform: scaleX(1);
-                transform-origin: bottom left;
-                transition: transform .4s ease;
-            }
+.cart-lift-regular-promotional-banner-content .cart-lift-regular-promotional-banner-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
 
-            .cart-lift-halloween-banner-link:hover::before {
-                transform: scaleX(0);
-                transform-origin: bottom right;
-            }
+/* TIMER */
+.cart-lift-regular-promotional-banner-content .cart-lift-timer {
+    display: flex;
+    gap: 3px;
+}
 
-            .cart-lift-halloween-banner-link:hover svg {
-                animation: arrowMove .5s .4s linear forwards;
-            }
+.cart-lift-regular-promotional-banner-content .cart-lift-timer-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #1E1BC5;
+    padding: 6px 13px;
+    text-align: center;
+    color: #fff;
+}
 
-            .cart-lift-arrow-icon {
-                display: inline-block;
-                margin-left: 8px;
-                vertical-align: middle;
-                width: 12px;
-                height: 17px;
-                overflow: hidden;
-                line-height: 1;
-                position: relative;
-                top: 1px;
-            }
+    .cart-lift-regular-promotional-banner-content .cart-lift-timer-box:first-child {
+        border-radius: 4px 0 0 4px;
+    }
 
-            .cart-lift-arrow-icon svg path {
-                fill: var(--cart-lift-primary-color);
-            }
+    .cart-lift-regular-promotional-banner-content .cart-lift-timer-box:last-child {
+        border-radius: 0 4px 4px 0;
+    }
 
-            #cart-lift_bf_countdown-text {
-                font-weight: 500;
-                text-transform: capitalize;
-            }
+    .cart-lift-regular-promotional-banner-content .cart-lift-timer-number {
+        font-family: "Inter", sans-serif;
+        font-size: 20px;
+        font-weight: 800;
+        line-height: 1.5;
+        margin-bottom: 6px;
+        color: #FFF;
+    }
 
-            #cart-lift_bf_countdown-text  span {
-                color: #24ec2c;
-                font-weight: 900;
-            }
+    .cart-lift-regular-promotional-banner-content .cart-lift-timer-label {
+        font-family: "Inter", sans-serif;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 1;
+        letter-spacing: 0.24px;
+        text-transform: uppercase;
+        opacity: 0.8;
+    }
 
-            .cart-lift-promo-banner__svg {
-                fill: none;
-            }
+    /* ANIMATIONS */
+    @keyframes linno-slideDown {
+        from { transform: translateY(-100%); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; }
+    }
 
-            .cart-lift-promo-banner__cross-icon {
-                cursor: pointer;
-                transition: all .3s ease;
-            }
+    @keyframes linno-slideUp {
+        from { transform: translateY(0); opacity: 1; }
+        to { transform: translateY(-100%); opacity: 0; }
+    }
 
-            .cart-lift-promo-banner__cross-icon svg:hover path {
-                stroke: var(--cart-lift-primary-color);
-            }
+    @keyframes linno-pulse {
+        0%,100% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+    }
 
-            @media only screen and (max-width: 1399px) {
-                .cart-lift-promo-banner__cross-icon {
-                    margin-left: 10px;
-                }
-            }
+    @keyframes linno-float {
+        0%,100% { transform: translateY(0); }
+        50% { transform: translateY(-20px); }
+    }
 
+    @keyframes heartbeat {
+        0%,100% { transform: scale(1); }
+        25% { transform: scale(1.2); }
+        50% { transform: scale(1); }
+    }
 
-            @media only screen and (max-width: 1199px) {
+    /* REDUCED MOTION */
+    @media (prefers-reduced-motion: reduce) {
+        .cart-lift-regular-promotional-banner {
+            transition: none;
+        }
+    }
 
-                .cart-lift-text-highlight,
-                .cart-lift-halloween-promotional-banner-content .cart-lift-banner-title {
-                    font-size:15px;
-                }
+    /* RESPONSIVE */
 
-                .cart-lift-spooktacular {
-                    max-width: 102px;
-                    line-height: 1.2;
-                }
+    @media only screen and (max-width: 1199px) { 
+        .cart-lift-regular-promotional-banner {
+            margin-top: 55px;
+        }
 
-                .cart-lift-banner-img img {
-                    max-width: 130px;
-                }
-               
+        .cart-lift-regular-promotional-banner-container {
+            max-width: 650px;
+        }
 
-                .cart-lift-regular-promotional-banner .regular-promotional-banner-content img {
-                    max-width: 115px;
-                }
+        .cart-lift-regular-promotional-banner-content .cart-lift-regular-promotional-banner-title {
+            gap: 40px;
+        }
+    }   
 
-                .cart-lift-discount-text {
-                    max-width: 165px;
-                    line-height: 1.2;
-                }
+    @media only screen and (max-width: 991px) {
 
-                .cart-lift-halloween-promotional-banner-content span.cart-lift-halloween-highlight {
-                    font-size: 16px;
-                }
+        .cart-lift-regular-promotional-banner-container {
+            max-width: 600px;
+        }
 
-                .cart-lift-halloween-percentage {
-                    font-size: 16px;
-                }
+        .cart-lift-regular-promotional-banner-content .cart-lift-title {
+            font-size: 20px;
+        }
 
-                .cart-lift-halloween-promotional-banner-content {
-                    max-width: 760px;
-                }
+        .cart-lift-regular-promotional-banner-content .cart-lift-timer-number {
+            font-size: 18px;
+            line-height: 1.3;
+        }
 
-                .cart-lift-halloween-banner-link {
-                    font-size: 14px;
-                }
+        .cart-lift-regular-promotional-banner-content .cart-lift-close-btn {
+            top: 34px;
+            right: 20px;
+        }
 
-            }
+        .cart-lift-regular-promotional-banner-content .cart-lift-badge {
+            font-size: 14px;
+        }
 
-            @media only screen and (max-width: 991px) {
-                .cart-lift-promo-banner__container {
-                    padding: 0px 10px;
-                }
+        .cart-lift-regular-promotional-banner-content .cart-lift-regular-promotional-banner-title {
+            gap: 30px;
+        }
+    }
 
-                .cart-lift-promo-banner {
-                    margin-top: 66px;
-                    padding: 15px 0;
-                }
+    @media only screen and (max-width: 767px) {
 
-                .cart-lift-banner-img img {
-                    max-width: 115px;
-                }
+        .cart-lift-regular-promotional-banner-content {
+            flex-direction: column;
+            text-align: center;
+            gap: 30px;
+            padding: 30px 0;
+        }
 
-                .cart-lift-arrow-icon {
-                    margin-left: 5px;
-                }
-            }
+        .cart-lift-regular-promotional-banner-content .cart-lift-title {
+            font-size: 22px;
+        }
 
+        .cart-lift-regular-promotional-banner-content .cart-lift-regular-promotional-banner-title {
+            flex-direction: column;
+        }
 
-            @media only screen and (max-width: 767px) {
+        .cart-lift-regular-promotional-banner-content .cart-lift-timer-number {
+            font-size: 20px;
+        }
 
-                .cart-lift-promo-banner__container {
-                    align-items: flex-start;
-                }
+        .cart-lift-regular-promotional-banner-content .cart-lift-timer {
+            justify-content: center;
+            flex-wrap: wrap;
+        }
 
-                .cart-lift-halloween-promotional-banner-content .cart-lift-banner-title {
-                    flex-direction: column;
-                    gap: 0;
-                }
-
-                .cart-lift-halloween-promotional-banner-content {
-                   flex-direction: column;
-                }
-            }
+        .cart-lift-regular-promotional-banner-content .cart-lift-close-btn {
+            top: 15px;
+            right: 20px;
+        }
+    }
 
         </style>
 
@@ -582,9 +671,13 @@ class Rex_CartLift_Sales_Notification_Bar
     public function cart_lift_sales_notification_notice()
     {
         if ( !wp_verify_nonce( filter_input( INPUT_POST, 'nonce', FILTER_SANITIZE_FULL_SPECIAL_CHARS ), 'rex-cart-lift-global-security')) {
-            wp_die(__('Permission check failed', 'rex-product-feed'));
+            wp_die(__('Permission check failed', 'cart-lift'));
         }
-        update_option('rex_cl_hide_happy_new_year_deal_notification_bar', 'yes');
+        
+        // Store current timestamp for 24-hour dismissal
+        $dismissed_option = $this->occasion . '_dismissed';
+        update_option($dismissed_option, time());
+        
         echo json_encode(['success' => true,]);
         wp_die();
     }

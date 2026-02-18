@@ -161,11 +161,11 @@ class Cart_Lift
 		//    	'2025-12-07 23:59:59'
         // ); // Date format: YYYY-MM-DD HH:MM:SS 
 
-        if ( !defined( 'CART_LIFT_PRO_VERSION' ) && 'no' === get_option( 'rex_cl_hide_happy_new_year_deal_notification_bar', 'no' ) ) {
+        if ( !defined( 'CART_LIFT_PRO_VERSION' ) ) {
             new Rex_CartLift_Sales_Notification_Bar(
-                'christmas_deal_2025',
-                '2025-12-11 00:00:00',
-                '2026-01-04 23:59:59'
+                'valentines_deal_2026',
+                '2026-02-03 00:00:00',
+                '2026-02-18 23:59:59'
             );
         }
 
