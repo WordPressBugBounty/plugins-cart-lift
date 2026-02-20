@@ -163,9 +163,9 @@ class Cart_Lift
 
         if ( !defined( 'CART_LIFT_PRO_VERSION' ) ) {
             new Rex_CartLift_Sales_Notification_Bar(
-                'valentines_deal_2026',
-                '2026-02-03 00:00:00',
-                '2026-02-18 23:59:59'
+                'international_mother_language_day_2026',
+                '2026-02-20 00:00:00',
+                '2026-02-25 23:59:59'
             );
         }
 

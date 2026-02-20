@@ -5,7 +5,7 @@ Donate link: https://rextheme.com/cart-lift/
 Requires at least: 6.7
 Tested up to: 6.9
 Requires PHP: 7.4
-Stable tag: 3.1.52
+Stable tag: 3.1.53
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -21,6 +21,7 @@ With Cart Lift, you can recover around **15% of your abandoned carts** without e
 
 No more wasted hours and unreasonable expenses on other tools. Grow 🚀 **your revenue** with a result-driven tool.
 
+<a href="https://rextheme.com/cart-lift/">Upgrade to Pro with 30% OFF—limited-time International Mother Language Day offer!</a>
 
 [youtube https://youtu.be/mIYQjLsIm04?si=n8TRxqid8IBjntvp]
 
@@ -188,6 +189,9 @@ Follow the steps in this guide: [How to upgrade to Cart Lift Pro](https://rexthe
 
 
 = Cart Lift (Free) =
+
+= 3.1.53 (2026-02-20) =
+* Improvement: Update notification banner for international mother language day
 
 = 3.1.52 (2026-02-18) =
 * Bug Fix: Free vs Pro page fatal error due to wrong icons URL
