@@ -107,8 +107,8 @@ class Rex_CartLift_Sales_Notification_Bar
 
         $btn_link = add_query_arg( $utm_params, $base_url );
 
-        $img_url  = plugin_dir_url(__FILE__) . '/images/banner-images/in-mother-lan.webp'; 
-        $img_path = plugin_dir_path(__FILE__) . '/images/banner-images/in-mother-lan.webp';
+        $img_url  = plugin_dir_url(__FILE__) . '/images/banner-images/ramadan-kareem.webp'; 
+        $img_path = plugin_dir_path(__FILE__) . '/images/banner-images/ramadan-kareem.webp';
         $img_size = getimagesize($img_path);
         $img_width  = $img_size[0];
         $img_height = $img_size[1];
@@ -141,7 +141,7 @@ class Rex_CartLift_Sales_Notification_Bar
                             <div class="cart-lift-badge-content-img-area">
                                 <div class="heart-icon">
                                     <figure class="cart-lift-banner-img black-friday">
-                                        <img src="<?php echo esc_url($img_url); ?>" alt="Int. Mother Language Day"  width="<?php echo esc_attr($img_width); ?>"
+                                        <img src="<?php echo esc_url($img_url); ?>" alt="Ramadan Kareem Deal"  width="<?php echo esc_attr($img_width); ?>"
                                         height="<?php echo esc_attr($img_height); ?>" />
                                     </figure>
                                 </div>
@@ -151,12 +151,12 @@ class Rex_CartLift_Sales_Notification_Bar
                                     <div class="cart-lift-banner-title">
 
                                         <h2 id="banner-flash-title">
-                                            <?php echo esc_html__('Int. Mother Language Day', 'cart-lift'); ?>
+                                            <?php echo esc_html__('Ramadan Kareem, Save Big', 'cart-lift'); ?>
                                         </h2>
                                     </div>
 
                                     <div class="cart-lift-title cart-lift-banner-offer">
-                                        <?php echo esc_html__('Get 30% OFF', 'cart-lift'); ?>
+                                        <?php echo esc_html__('Up to 50% Off', 'cart-lift'); ?>
                                     </div>
                                 </div>
 
@@ -189,8 +189,8 @@ class Rex_CartLift_Sales_Notification_Bar
                         target="_blank"
                         class="cart-lift-regular-promotional-banner-link"
                         role="button"
-                        aria-label="<?php esc_attr_e('Get 30% OFF on International Mother Language Day', 'cart-lift'); ?>">
-                            <?php esc_html_e('Get 30% OFF', 'cart-lift'); ?>
+                        aria-label="<?php esc_attr_e('Claim Your Deal on Ramadan Kareem', 'cart-lift'); ?>">
+                            <?php esc_html_e('Claim Your Deal', 'cart-lift'); ?>
                             <span class="arrow-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10">
                                     <path d="M10 0.78V9.22C10 9.65 9.65 10 9.22 10C8.79 10 8.44 9.65 8.44 9.22V2.66L1.33 9.77C1.19 9.92 0.99 10 0.78 10C0.35 10 0 9.65 0 9.22C0 9.01 0.08 8.81 0.23 8.67L7.33 1.56H0.78C0.35 1.56 0 1.21 0 0.78C0 0.35 0.35 0 0.78 0H9.22C9.65 0 10 0.35 10 0.78Z"
@@ -387,7 +387,7 @@ class Rex_CartLift_Sales_Notification_Bar
 
             
         .cart-lift-regular-promotional-banner {
-            background: #000;
+            background: radial-gradient(41.22% 84.27% at 50.55% 15.73%, #1d3a10 0, #0e1b09 100%);
             padding: 10px 0;
             position: relative;
             z-index: 2;
@@ -412,6 +412,7 @@ class Rex_CartLift_Sales_Notification_Bar
             display: flex;
             align-items: center;
             gap: 33px;
+            line-height: 1;
         }
 
         .cart-lift-regular-promotional-banner-content .cart-lift-banner-title {
@@ -423,8 +424,10 @@ class Rex_CartLift_Sales_Notification_Bar
             animation: slideInLeft 0.8s ease-out;
         }
 
-        .cart-lift-regular-promotional-banner-content .heart-icon {
-            margin-bottom: -17px;
+        .cart-lift-regular-promotional-banner-content .heart-icon img {
+            width: 100%;
+            height: auto;
+            max-width: 53px;
         }
 
         .cart-lift-regular-promotional-banner-content .heart-icon figure{
@@ -476,7 +479,7 @@ class Rex_CartLift_Sales_Notification_Bar
     font-weight: 700;
     line-height: 1;
     letter-spacing: -0.084px;
-    color: #FFF;
+    color: #24EC2C;
     margin: 0;
 }
 
@@ -526,10 +529,11 @@ class Rex_CartLift_Sales_Notification_Bar
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #292929;
     padding: 6px 11px;
     text-align: center;
     color: #fff;
+    border: 1px solid #2d5d1a;
+    background: rgba(29, 58, 16, .4);
 }
 
     .cart-lift-regular-promotional-banner-content .cart-lift-timer-box:first-child {
@@ -601,7 +605,7 @@ class Rex_CartLift_Sales_Notification_Bar
         }
 
         .cart-lift-regular-promotional-banner-container {
-            max-width: 740px;
+            max-width: 770px;
         }
 
         .cart-lift-regular-promotional-banner-content .cart-lift-regular-promotional-banner-title {
@@ -621,11 +625,15 @@ class Rex_CartLift_Sales_Notification_Bar
     @media only screen and (max-width: 991px) {
 
         .cart-lift-regular-promotional-banner-container {
-            max-width: 685px;
+            max-width: 700px;
         }
 
         .cart-lift-regular-promotional-banner-content .cart-lift-banner-title h2 {
-            font-size: 14px;
+            font-size: 13px;
+        }
+
+        .cart-lift-regular-promotional-banner-content .cart-lift-timer-box {
+            padding: 5px 9px;
         }
 
         .cart-lift-regular-promotional-banner-content .cart-lift-title {
