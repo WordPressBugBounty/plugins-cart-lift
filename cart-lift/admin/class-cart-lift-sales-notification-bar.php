@@ -90,11 +90,11 @@ class Rex_CartLift_Sales_Notification_Bar
             define( 'REX_SPECIAL_OCCASION_BANNER_SHOWN_GLOBAL', true );
         }
 
-        // Check if banner was dismissed within last 24 hours
+        // Check if banner was dismissed within last 5 days
         $dismissed_option = $this->occasion . '_dismissed';
         $dismissed_time = get_option($dismissed_option, 0);
-        if ($dismissed_time && (time() - $dismissed_time) < 86400) {
-            return; // Don't show if dismissed within last 24 hours
+        if ($dismissed_time && (time() - $dismissed_time) < 432000) {
+            return; // Don't show if dismissed within last 5 days
         }
 
         $base_url = esc_url( 'https://rextheme.com/cart-lift/#pricing' );
@@ -102,7 +102,7 @@ class Rex_CartLift_Sales_Notification_Bar
         $utm_params = array(
             'utm_source'   => 'website',
             'utm_medium'   => 'plugin-ban-cl',
-            'utm_campaign' => 'mlday26',
+            'utm_campaign' => 'eidoffer2026',
         );
 
         $btn_link = add_query_arg( $utm_params, $base_url );
@@ -141,7 +141,7 @@ class Rex_CartLift_Sales_Notification_Bar
                             <div class="cart-lift-badge-content-img-area">
                                 <div class="heart-icon">
                                     <figure class="cart-lift-banner-img black-friday">
-                                        <img src="<?php echo esc_url($img_url); ?>" alt="Ramadan Kareem Deal"  width="<?php echo esc_attr($img_width); ?>"
+                                        <img src="<?php echo esc_url($img_url); ?>" alt="Eid Mubarak Deal"  width="<?php echo esc_attr($img_width); ?>"
                                         height="<?php echo esc_attr($img_height); ?>" />
                                     </figure>
                                 </div>
@@ -151,7 +151,7 @@ class Rex_CartLift_Sales_Notification_Bar
                                     <div class="cart-lift-banner-title">
 
                                         <h2 id="banner-flash-title">
-                                            <?php echo esc_html__('Ramadan Kareem, Save Big', 'cart-lift'); ?>
+                                            <?php echo esc_html__('Eid Mubarak, Save Big', 'cart-lift'); ?>
                                         </h2>
                                     </div>
 
@@ -189,7 +189,7 @@ class Rex_CartLift_Sales_Notification_Bar
                         target="_blank"
                         class="cart-lift-regular-promotional-banner-link"
                         role="button"
-                        aria-label="<?php esc_attr_e('Claim Your Deal on Ramadan Kareem', 'cart-lift'); ?>">
+                        aria-label="<?php esc_attr_e('Claim Your Deal on Eid Mubarak', 'cart-lift'); ?>">
                             <?php esc_html_e('Claim Your Deal', 'cart-lift'); ?>
                             <span class="arrow-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10">
@@ -707,7 +707,7 @@ class Rex_CartLift_Sales_Notification_Bar
             wp_die(__('Permission check failed', 'cart-lift'));
         }
         
-        // Store current timestamp for 24-hour dismissal
+        // Store current timestamp for 5-day dismissal
         $dismissed_option = $this->occasion . '_dismissed';
         update_option($dismissed_option, time());
         

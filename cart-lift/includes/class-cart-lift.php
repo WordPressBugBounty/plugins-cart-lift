@@ -163,9 +163,9 @@ class Cart_Lift
 
         if ( !defined( 'CART_LIFT_PRO_VERSION' ) ) {
             new Rex_CartLift_Sales_Notification_Bar(
-                'ramadan_kareem_deal_2026',
-                '2026-03-04 00:00:00',
-                '2026-03-16 23:59:59'
+                'eid_ul_fitr_deal_2026',
+                '2026-03-16 00:00:00',
+                '2026-03-24 23:59:59'
             );
         }
 

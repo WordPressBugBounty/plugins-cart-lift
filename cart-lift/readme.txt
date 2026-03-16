@@ -5,7 +5,7 @@ Donate link: https://rextheme.com/cart-lift/
 Requires at least: 6.7
 Tested up to: 6.9
 Requires PHP: 7.4
-Stable tag: 3.1.54
+Stable tag: 3.1.55
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -189,6 +189,9 @@ Follow the steps in this guide: [How to upgrade to Cart Lift Pro](https://rexthe
 
 
 = Cart Lift (Free) =
+
+= 3.1.55 (2026-03-16) =
+* Improvement: Update notification banner for Eid-Ul-fitr
 
 = 3.1.54 (2026-03-06) =
 * Improvement: Update notification banner for Ramadan kareem
