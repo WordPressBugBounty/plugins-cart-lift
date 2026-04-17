@@ -64,6 +64,10 @@ class Cart_Lift_Ajax
         wp_ajax_helper()->handle( 'cl-update-schedular-status' )
 			            ->with_callback( array( 'Cart_Lift_Ajax', 'cl_update_schedular_status' ) )
 			            ->with_validation( $validations );
+
+        wp_ajax_helper()->handle( 'cl-hide-cross-promo-banner' )
+                        ->with_callback( array( 'Cart_Lift_Ajax', 'hide_cross_promo_banner' ) )
+                        ->with_validation( $validations );
 	}
 
 	/**
@@ -314,6 +318,19 @@ class Cart_Lift_Ajax
 		return array(
 			'success' => true,
 		);
+	}
+
+	/**
+	 * Dismiss the cross-promotional WPFunnels banner for 7 days.
+	 *
+	 * @param $payload
+	 * @return array
+	 */
+	public static function hide_cross_promo_banner( $payload ) {
+		update_option( 'cl_cross_promo_banner', array(
+			'dismissed_at' => time(),
+		) );
+		return array( 'success' => true );
 	}
 
 	/**

@@ -61,6 +61,11 @@
     });
 
 
+    $(document).on('click', '#cl-cross-promo-banner-close', function () {
+        $('#cl-cross-promo-banner').remove();
+        wpAjaxHelperRequest( 'cl-hide-cross-promo-banner', {} );
+    });
+
     $(document).on("click", ".twilio-disabled,.cl-btn.unsubscribe.cl-free,.cl-btn.disabled,.cl-switcher .disabled,.email-info .pro-tag,.cart-info .pro-tag,.cl-switcher .pro-tag ~ label", function (event) {
         event.preventDefault();
         $("#cartlift_premium_feature_popup").show();

@@ -259,6 +259,26 @@ $tab_view->show_messages();
         
     </div>
 
+    <?php if ( $action == 'dashboard' || $action == '' || $action === null ) :
+        global $wpdb;
+        $cl_cart_table       = $wpdb->prefix . CART_LIFT_CART_TABLE;
+        $cl_total_recovered  = (int) $wpdb->get_var( "SELECT COUNT(*) FROM {$cl_cart_table} WHERE status = 'recovered'" );
+        $cl_banner_option    = get_option( 'cl_cross_promo_banner', array() );
+        $cl_dismissed_at     = isset( $cl_banner_option['dismissed_at'] ) ? (int) $cl_banner_option['dismissed_at'] : 0;
+        $cl_show_cross_promo = $cl_total_recovered >= 10 && ( ! $cl_dismissed_at || ( time() - $cl_dismissed_at ) > 7 * DAY_IN_SECONDS );
+        if ( $cl_show_cross_promo ) : ?>
+    <div class="cl-cross-promo-banner" id="cl-cross-promo-banner">
+        <div class="cl-cross-promo-banner__body">
+            <p class="cl-cross-promo-banner__headline"><?php esc_html_e( 'Recovering Carts, But Low Profit?', 'cart-lift' ); ?></p>
+            <p class="cl-cross-promo-banner__text"><?php esc_html_e( "You're bringing visitors back, but are you maximizing their spend? See how to add a 'Cashier' to your checkout.", 'cart-lift' ); ?></p>
+            <a href="https://rextheme.com/amazons-secrect-to-profitability/?utm_source=cl_dashboard&utm_medium=banner&utm_campaign=pfm_crosspromo" target="_blank" rel="noopener noreferrer" class="cl-cross-promo-banner__btn">
+                <?php esc_html_e( 'Learn the Strategy', 'cart-lift' ); ?> &rarr;
+            </a>
+        </div>
+        <button type="button" class="cl-cross-promo-banner__close" id="cl-cross-promo-banner-close" aria-label="<?php esc_attr_e( 'Dismiss', 'cart-lift' ); ?>">&#x2715;</button>
+    </div>
+    <?php endif; endif; ?>
+
     <div id="content" style="margin-top: 20px; ">
         <?php
             if($action == 'analytics') {
