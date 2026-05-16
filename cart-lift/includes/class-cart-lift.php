@@ -161,13 +161,13 @@ class Cart_Lift
 		//    	'2025-12-07 23:59:59'
         // ); // Date format: YYYY-MM-DD HH:MM:SS 
 
-        if ( !defined( 'CART_LIFT_PRO_VERSION' ) ) {
+        // if ( !defined( 'CART_LIFT_PRO_VERSION' ) ) {
             new Rex_CartLift_Sales_Notification_Bar(
                 'eid_ul_fitr_deal_2026',
                 '2026-03-16 00:00:00',
                 '2026-03-24 23:59:59'
             );
-        }
+        // }
 
         // $this->loader->add_action('admin_init', $special_banner, 'init');
 

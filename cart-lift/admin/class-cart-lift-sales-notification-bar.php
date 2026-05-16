@@ -54,10 +54,10 @@ class Rex_CartLift_Sales_Notification_Bar
 
         $current_date_time = current_time('timestamp');
 
-        if (
-            !defined('CART_LIFT_PRO_VERSION')
-            && ($current_date_time >= $this->start_date && $current_date_time <= $this->end_date)
-        ) {
+        // if (
+        //     !defined('CART_LIFT_PRO_VERSION')
+        //     && ($current_date_time >= $this->start_date && $current_date_time <= $this->end_date)
+        // ) {
             // Hook into the admin_notices action to display the banner
             add_action( 'admin_notices', [ $this, 'display_banner' ] );
             // Add styles
@@ -65,7 +65,7 @@ class Rex_CartLift_Sales_Notification_Bar
 
 	        add_action( 'wp_ajax_cart_lift_sales_notification_notice', [ $this, 'cart_lift_sales_notification_notice' ] );
             add_action( 'wp_ajax_nopriv_cart_lift_sales_notification_notice', [ $this, 'cart_lift_sales_notification_notice' ] );
-        }
+        // }
         
     }
 
@@ -97,12 +97,12 @@ class Rex_CartLift_Sales_Notification_Bar
             return; // Don't show if dismissed within last 5 days
         }
 
-        $base_url = esc_url( 'https://rextheme.com/cart-lift/#pricing' );
+        $base_url = esc_url( 'https://rextheme.com/ugc-for-woocommerce-ugcify/' );
 
         $utm_params = array(
-            'utm_source'   => 'website',
-            'utm_medium'   => 'plugin-ban-cl',
-            'utm_campaign' => 'eidoffer2026',
+            'utm_source'   => 'plugin',
+            'utm_medium'   => 'dashboard-banner-cl',
+            'utm_campaign' => 'ugcify-early-access',
         );
 
         $btn_link = add_query_arg( $utm_params, $base_url );
@@ -138,32 +138,18 @@ class Rex_CartLift_Sales_Notification_Bar
                         <!-- Banner Title + Timer -->
                         <div class="cart-lift-regular-promotional-banner-title">
 
-                            <div class="cart-lift-badge-content-img-area">
-                                <div class="heart-icon">
-                                    <figure class="cart-lift-banner-img black-friday">
-                                        <img src="<?php echo esc_url($img_url); ?>" alt="Eid Mubarak Deal"  width="<?php echo esc_attr($img_width); ?>"
-                                        height="<?php echo esc_attr($img_height); ?>" />
-                                    </figure>
-                                </div>
+                            <div class="banner-logo-area">
+                                <span class="new-tool-text"><?php echo __('New Tool Coming:', 'cart-lift'); ?></span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="23" height="20" viewBox="0 0 23 20" fill="none"><path d="M1.06618 12.1359C8.90142 22.3152 17.4084 17.0302 21.0104 12.1256C21.0976 12.0069 21.286 12.1052 21.2364 12.2439C17.5346 22.5755 4.52336 22.5942 0.84551 12.2448C0.797424 12.1095 0.97859 12.0221 1.06618 12.1359Z" fill="#201cfe"/><path d="M3.38441 14.7801C7.55671 19.3578 14.4767 19.3577 18.6683 14.7962L19.2305 18.0621C19.4048 19.0746 18.6283 20 17.6009 20H4.4095C3.37407 20 2.59495 19.0608 2.78274 18.0425L3.38441 14.7801ZM18.4936 13.7809C14.7261 17.1915 8.66183 18.7568 3.58106 13.7132L5.28946 4.4507H16.8876L18.4936 13.7809ZM11.4455 8.30703C11.1791 7.76715 10.7417 7.76715 10.4726 8.30703L9.97917 9.30214C9.91189 9.44065 9.73246 9.57354 9.58387 9.59899L8.68947 9.74872C8.11753 9.84484 7.98578 10.2633 8.39511 10.676L9.09037 11.377C9.20812 11.4957 9.27268 11.7247 9.23624 11.8887L9.0371 12.7566C8.88013 13.4406 9.24466 13.7091 9.84463 13.3502L10.6829 12.8498C10.8371 12.7594 11.0866 12.7593 11.238 12.8498L12.0763 13.3502C12.679 13.7091 13.0407 13.4435 12.8837 12.7566L12.6847 11.8887C12.6482 11.7247 12.7127 11.4957 12.8304 11.377L13.5258 10.676C13.9379 10.2633 13.8032 9.84483 13.2313 9.74872L12.337 9.59899C12.1856 9.57355 12.0062 9.44065 11.9389 9.30214L11.4455 8.30703Z" fill="#201cfe"/><path d="M2.13955 12.1528C1.65099 12.0253 0.571895 12.1146 0.164049 13.491C-0.473269 12.5989 0.864968 10.942 2.13955 12.1528Z" fill="#201cfe"/><path d="M21.652 13.492C21.5932 12.9905 21.118 12.0176 19.6874 12.1378C20.287 11.2198 22.3169 11.8646 21.652 13.492Z" fill="#201cfe"/><path d="M14.02 3.50497C14.02 2.57539 13.6977 1.68389 13.1241 1.02658C12.5504 0.369272 11.7724 7.01809e-08 10.9611 0C10.1499 -7.01809e-08 9.37184 0.369272 8.7982 1.02658C8.22455 1.68389 7.90228 2.57539 7.90228 3.50496H8.7852C8.7852 2.84371 9.01445 2.20953 9.42252 1.74195C9.83058 1.27437 10.384 1.01169 10.9611 1.01169C11.5382 1.01169 12.0917 1.27437 12.4997 1.74195C12.9078 2.20953 13.1371 2.84371 13.1371 3.50497H14.02Z" fill="#201cfe"/></svg>
+                                <span class="tool-name">UGCify</span>
+                            </div>
 
-                                <div class="cart-lift-badge-content">
-
-                                    <div class="cart-lift-banner-title">
-
-                                        <h2 id="banner-flash-title">
-                                            <?php echo esc_html__('Eid Mubarak, Save Big', 'cart-lift'); ?>
-                                        </h2>
-                                    </div>
-
-                                    <div class="cart-lift-title cart-lift-banner-offer">
-                                        <?php echo esc_html__('Up to 50% Off', 'cart-lift'); ?>
-                                    </div>
-                                </div>
-
+                            <div class="banner-text">
+                                <?php echo __('Build trust and increase conversions with UGC for WooCommerce!', 'cart-lift'); ?>
                             </div>
 
                             <!-- Countdown Timer -->
-                            <div class="cart-lift-timer">
+                            <div class="cart-lift-timer" style="display: none;">
                                 <div class="cart-lift-timer-box">
                                     <span class="cart-lift-timer-number" id="cl_days">12</span>
                                     <span class="cart-lift-timer-label">DAY</span>
@@ -189,13 +175,10 @@ class Rex_CartLift_Sales_Notification_Bar
                         target="_blank"
                         class="cart-lift-regular-promotional-banner-link"
                         role="button"
-                        aria-label="<?php esc_attr_e('Claim Your Deal on Eid Mubarak', 'cart-lift'); ?>">
-                            <?php esc_html_e('Claim Your Deal', 'cart-lift'); ?>
+                        aria-label="<?php esc_attr_e('Request Early Access for UGCify', 'cart-lift'); ?>">
+                            <?php esc_html_e('Request Early Access', 'cart-lift'); ?>
                             <span class="arrow-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10">
-                                    <path d="M10 0.78V9.22C10 9.65 9.65 10 9.22 10C8.79 10 8.44 9.65 8.44 9.22V2.66L1.33 9.77C1.19 9.92 0.99 10 0.78 10C0.35 10 0 9.65 0 9.22C0 9.01 0.08 8.81 0.23 8.67L7.33 1.56H0.78C0.35 1.56 0 1.21 0 0.78C0 0.35 0.35 0 0.78 0H9.22C9.65 0 10 0.35 10 0.78Z"
-                                        fill="#fff"/>
-                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="8" height="9" viewBox="0 0 8 9" fill="none"><path d="M8 0.703124V8.29686C8 8.48334 7.93415 8.66218 7.81694 8.79405C7.69973 8.92591 7.54076 8.99999 7.375 8.99999C7.20924 8.99999 7.05027 8.92591 6.93306 8.79405C6.81585 8.66218 6.75 8.48334 6.75 8.29686V2.40061L1.06695 8.79406C0.949738 8.92592 0.790765 9 0.625004 9C0.459243 9 0.30027 8.92592 0.183059 8.79406C0.0658485 8.6622 0 8.48335 0 8.29687C0 8.11039 0.0658485 7.93155 0.183059 7.79968L5.86613 1.40625H0.625012C0.459252 1.40625 0.300281 1.33217 0.183071 1.20031C0.0658608 1.06845 1.28672e-05 0.889604 1.28672e-05 0.703124C1.28672e-05 0.516644 0.0658608 0.337802 0.183071 0.20594C0.300281 0.0740789 0.459252 0 0.625012 0L7.375 0C7.54076 0 7.69973 0.0740789 7.81694 0.20594C7.93415 0.337802 8 0.516644 8 0.703124Z" fill="#201cfe"/></svg>
                             </span>
                         </a>
 
@@ -248,9 +231,9 @@ class Rex_CartLift_Sales_Notification_Bar
                         if (secondsEl) secondsEl.textContent = '0';
                         clearInterval(cart_timer);
                         // Auto-hide banner after countdown expires
-                        setTimeout(function() {
+                        /*setTimeout(function() {
                             if (banner) banner.style.display = 'none';
-                        }, 2000);
+                        }, 2000);*/
                         return;
                     }
 
@@ -277,8 +260,8 @@ class Rex_CartLift_Sales_Notification_Bar
                 }
 
                 // Initialize countdown
-                cart_updateCountdown(); // Run immediately
-                cart_timer = setInterval(cart_updateCountdown, 1000); // Update every second
+                // cart_updateCountdown(); // Run immediately
+                // cart_timer = setInterval(cart_updateCountdown, 1000); // Update every second
             })();
 
 
@@ -356,25 +339,6 @@ class Rex_CartLift_Sales_Notification_Bar
                 box-sizing: border-box;
             }
 
-            @keyframes arrowMove {
-                0% {
-                    transform: translate(0, 0);
-                }
-                50% {
-                    transform: translate(18px, -18px);
-                }
-                55% {
-                    opacity: 0;
-                    visibility: hidden;
-                    transform: translate(-18px, 18px);
-                }
-                100% {
-                    opacity: 1;
-                    visibility: visible;
-                    transform: translate(0, 0);
-                }
-            }
-
             .toplevel_page_cart_lift .cart-lift-promo-banner-area {
                 margin: 0 32px 0 25px;
             }
@@ -387,16 +351,18 @@ class Rex_CartLift_Sales_Notification_Bar
 
             
         .cart-lift-regular-promotional-banner {
-            background: radial-gradient(41.22% 84.27% at 50.55% 15.73%, #1d3a10 0, #0e1b09 100%);
             padding: 10px 0;
             position: relative;
             z-index: 2;
             margin-top: 40px;
             width: calc(100% - 20px);
+            border-radius: 10px;
+            background: #FFF;
+            box-shadow: 0 1px 1px 0 rgba(32, 28, 254, 0.10);
         }
 
         .cart-lift-regular-promotional-banner-container {
-            max-width: 830px;
+            /* max-width: 830px; */
             margin: 0 auto;
             padding: 0 15px;
         }
@@ -404,137 +370,129 @@ class Rex_CartLift_Sales_Notification_Bar
         .cart-lift-regular-promotional-banner-content {
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            flex-wrap: wrap;
+            justify-content: center;
             gap: 24px;
-        }
-
-        .cart-lift-regular-promotional-banner-content .cart-lift-badge-content-img-area {
-            display: flex;
-            align-items: center;
-            gap: 33px;
-            line-height: 1;
-        }
-
-        .cart-lift-regular-promotional-banner-content .cart-lift-banner-title {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            margin-bottom: 3px;
-            line-height: 1.1;
-            animation: slideInLeft 0.8s ease-out;
-        }
-
-        .cart-lift-regular-promotional-banner-content .heart-icon img {
-            width: 100%;
-            height: auto;
-            max-width: 53px;
-        }
-
-        .cart-lift-regular-promotional-banner-content .heart-icon figure{
-            margin: 0;
-        }
-
-        .cart-lift-regular-promotional-banner-content .cart-lift-banner-title h2 {
-            font-family: 'Inter', sans-serif;
-            font-size: 16px;
-            font-weight: 500;
-            line-height: 1.7;
-            letter-spacing: -0.32px;
-            color: #FFF;
-            margin: 0;
+            row-gap: 8px;
         }
 
         .cart-lift-regular-promotional-banner-content .cart-lift-regular-promotional-banner-title {
             display: flex;
             align-items: center;
-            gap: 65px;
+            gap: 30px;
         }
 
-        .cart-lift-regular-promotional-banner-content .linno-banner.closing {
-            animation: linno-slideUp 0.5s ease-in forwards;
+        .cart-lift-regular-promotional-banner-content .new-tool-text {
+            color: #666;
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 1;
+            display: block;
+        }
+        .cart-lift-regular-promotional-banner-content .tool-name {
+            color: #090939;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 1;
+            display: block;
+        }
+        .cart-lift-regular-promotional-banner-content .banner-logo-area {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .cart-lift-regular-promotional-banner-content .banner-text {
+            font-size: 15px;
+            color: #100627;
+            font-weight: 400;
+            line-height: 1.4;
+            text-transform: capitalize;
+            letter-spacing: 0;
         }
 
-    /* CLOSE BUTTON */
-    .cart-lift-regular-promotional-banner-content .cart-lift-close-btn {
-        position: absolute;
-        top: 36px;
-        right: 40px;
-        border: none;
+        /* CLOSE BUTTON */
+        .cart-lift-regular-promotional-banner-content .cart-lift-close-btn {
+            position: absolute;
+            top: 50%;
+            right: 16px;
+            transform: translateY(-50%);
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            background-color: transparent;
+            transition: all 0.3s ease-in-out;
+        }
+
+
+        /* TITLE, SUBTITLE, BADGE */
+        .cart-lift-regular-promotional-banner-content .cart-lift-title {
+            font-family: "Inter", sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 1;
+            letter-spacing: -0.084px;
+            color: #24EC2C;
+            margin: 0;
+        }
+
+        .cart-lift-regular-promotional-banner-content .cart-lift-badge {
+            font-family: "Inter", sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #24EC2C;
+        }
+
+        /* BUTTON */
+        .cart-lift-regular-promotional-banner-content .cart-lift-regular-promotional-banner-link {
+            color: #201CFE;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 1;
+            text-decoration: underline;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 5px;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            transition: all 0.2s ease;
+            background: #fff;
+            padding: 9px 14px;
+        }
+
+        .cart-lift-regular-promotional-banner-content .cart-lift-regular-promotional-banner-link:hover {
+            text-decoration: none;
+        }
+        .cart-lift-regular-promotional-banner-content .cart-lift-regular-promotional-banner-link svg {
+            transition: all 0.3s ease;
+        }
+        .cart-lift-regular-promotional-banner-content .cart-lift-regular-promotional-banner-link:hover svg {
+            transform: translateX(3px);
+        }
+
+
+    /* TIMER */
+    .cart-lift-regular-promotional-banner-content .cart-lift-timer {
         display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        background-color: transparent;
-        transition: all 0.3s ease-in-out;
+        gap: 3px;
     }
 
-.cart-lift-regular-promotional-banner-content .cart-lift-close-btn:hover {
-    transform: rotate(90deg);
-}
-
-/* TITLE, SUBTITLE, BADGE */
-.cart-lift-regular-promotional-banner-content .cart-lift-title {
-    font-family: "Inter", sans-serif;
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 1;
-    letter-spacing: -0.084px;
-    color: #24EC2C;
-    margin: 0;
-}
-
-.cart-lift-regular-promotional-banner-content span.arrow-icon {
-    margin-left: 10px;
-}
-
-.cart-lift-regular-promotional-banner-content .cart-lift-badge {
-    font-family: "Inter", sans-serif;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 12px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: #24EC2C;
-}
-
-/* BUTTON */
-.cart-lift-regular-promotional-banner-content .cart-lift-regular-promotional-banner-link {
-    padding: 12px 16px;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    border-radius: 4px;
-    background: #211cfd;
-    color: #fff;
-    font-family: "Inter", sans-serif;
-    font-size: 15px;
-    font-weight: 600;
-    line-height: 1;
-    letter-spacing: -0.084px;
-    text-decoration: none;
-}
-
-.cart-lift-regular-promotional-banner-content .cart-lift-regular-promotional-banner-link:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
-}
-
-/* TIMER */
-.cart-lift-regular-promotional-banner-content .cart-lift-timer {
-    display: flex;
-    gap: 3px;
-}
-
-.cart-lift-regular-promotional-banner-content .cart-lift-timer-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 6px 11px;
-    text-align: center;
-    color: #fff;
-    border: 1px solid #2d5d1a;
-    background: rgba(29, 58, 16, .4);
-}
+    .cart-lift-regular-promotional-banner-content .cart-lift-timer-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 6px 11px;
+        text-align: center;
+        color: #fff;
+        border: 1px solid #2d5d1a;
+        background: rgba(29, 58, 16, .4);
+    }
 
     .cart-lift-regular-promotional-banner-content .cart-lift-timer-box:first-child {
         border-radius: 4px 0 0 4px;
@@ -563,33 +521,6 @@ class Rex_CartLift_Sales_Notification_Bar
         opacity: 0.8;
     }
 
-    /* ANIMATIONS */
-    @keyframes linno-slideDown {
-        from { transform: translateY(-100%); opacity: 0; }
-        to { transform: translateY(0); opacity: 1; }
-    }
-
-    @keyframes linno-slideUp {
-        from { transform: translateY(0); opacity: 1; }
-        to { transform: translateY(-100%); opacity: 0; }
-    }
-
-    @keyframes linno-pulse {
-        0%,100% { transform: scale(1); }
-        50% { transform: scale(1.05); }
-    }
-
-    @keyframes linno-float {
-        0%,100% { transform: translateY(0); }
-        50% { transform: translateY(-20px); }
-    }
-
-    @keyframes heartbeat {
-        0%,100% { transform: scale(1); }
-        25% { transform: scale(1.2); }
-        50% { transform: scale(1); }
-    }
-
     /* REDUCED MOTION */
     @media (prefers-reduced-motion: reduce) {
         .cart-lift-regular-promotional-banner {
@@ -598,98 +529,19 @@ class Rex_CartLift_Sales_Notification_Bar
     }
 
     /* RESPONSIVE */
-
     @media only screen and (max-width: 1199px) { 
         .cart-lift-regular-promotional-banner {
             margin-top: 55px;
         }
 
         .cart-lift-regular-promotional-banner-container {
-            max-width: 770px;
+            max-width: 760px;
         }
 
-        .cart-lift-regular-promotional-banner-content .cart-lift-regular-promotional-banner-title {
-            gap: 40px;
+        .cart-lift-regular-promotional-banner-content .cart-lift-regular-promotional-banner-link {
+            padding-top: 0;
         }
-
-        .cart-lift-regular-promotional-banner-content .cart-lift-badge-content-img-area {
-            gap: 20px;
-        }
-
-        .cart-lift-regular-promotional-banner-content .cart-lift-close-btn {
-            top: 32px;
-            right: 14px;
-        } 
-    }   
-
-    @media only screen and (max-width: 991px) {
-
-        .cart-lift-regular-promotional-banner-container {
-            max-width: 700px;
-        }
-
-        .cart-lift-regular-promotional-banner-content .cart-lift-banner-title h2 {
-            font-size: 13px;
-        }
-
-        .cart-lift-regular-promotional-banner-content .cart-lift-timer-box {
-            padding: 5px 9px;
-        }
-
-        .cart-lift-regular-promotional-banner-content .cart-lift-title {
-            font-size: 20px;
-        }
-
-        .cart-lift-regular-promotional-banner-content .cart-lift-timer-number {
-            font-size: 18px;
-            line-height: 1.3;
-        }
-
-        .cart-lift-regular-promotional-banner-content .cart-lift-close-btn {
-            top: 32px;
-            right: 3px;
-        }
-
-        .cart-lift-regular-promotional-banner-content .cart-lift-badge {
-            font-size: 14px;
-        }
-
-        .cart-lift-regular-promotional-banner-content .cart-lift-regular-promotional-banner-title {
-            gap: 30px;
-        }
-    }
-
-    @media only screen and (max-width: 767px) {
-
-        .cart-lift-regular-promotional-banner-content {
-            flex-direction: column;
-            text-align: center;
-            gap: 30px;
-            padding: 30px 0;
-        }
-
-        .cart-lift-regular-promotional-banner-content .cart-lift-title {
-            font-size: 22px;
-        }
-
-        .cart-lift-regular-promotional-banner-content .cart-lift-regular-promotional-banner-title {
-            flex-direction: column;
-        }
-
-        .cart-lift-regular-promotional-banner-content .cart-lift-timer-number {
-            font-size: 20px;
-        }
-
-        .cart-lift-regular-promotional-banner-content .cart-lift-timer {
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .cart-lift-regular-promotional-banner-content .cart-lift-close-btn {
-            top: 15px;
-            right: 20px;
-        }
-    }
+    }  
 
         </style>
 
