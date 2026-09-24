@@ -116,7 +116,7 @@ $manually_recovered_cart = isset($general_settings['manually_recovered_cart']) ?
                     <div class="single-cart-wrapper">
                         <ul class="single-cart-list">
                             <li class="sl" data-title="<?php _e( 'SL No :', 'cart-lift' ); ?>"><?php echo sprintf("%02d", $i); ?></li>
-                            <li class="email" data-title="<?php _e( 'Email :', 'cart-lift' ); ?>"><?php echo $data['email']; ?></li>
+                            <li class="email" data-title="<?php _e( 'Email :', 'cart-lift' ); ?>"><?php echo esc_html( $data['email'] ); ?></li>
                             <li class="product" data-title="<?php _e( 'Product :', 'cart-lift' ); ?>"><span><?php echo $quantity; ?></span></li>
                             <li class="amount" data-title="<?php _e( 'Amount :', 'cart-lift' ); ?>"><?php echo $data['cart_total']; ?></li>
                             <li class="status" data-title="<?php _e( 'Status :', 'cart-lift' ); ?>"><span class="<?php echo $status_cls; ?>"><?php echo $data['status']; ?></span></li>
@@ -279,7 +279,7 @@ $manually_recovered_cart = isset($general_settings['manually_recovered_cart']) ?
                                             </li>
                                             <li>
                                                 <span class="label"><?php echo __( 'Email:', 'cart-lift' ); ?></span>
-                                                <span class="content"><?php echo $data['email']; ?></span>
+                                                <span class="content"><?php echo esc_html( $data['email'] ); ?></span>
                                             </li>
 
                                             <?php do_action( 'cl_cart_tab_after_email', $data );?>
@@ -364,7 +364,7 @@ $manually_recovered_cart = isset($general_settings['manually_recovered_cart']) ?
                                             if(  '1' === $manually_recovered_cart ){
                                                 if(apply_filters('is_cl_premium', false) ) {
                                         ?>
-                                                <a class="cl-btn manually-recovered-button" id="cl_manually_recovered" data-session-id="<?php echo isset($data['session_id'] ) ? $data['session_id'] : '' ?>" data-cart-id="<?php  echo isset($data['id'] ) ? $data['id'] : ''  ?>" data-user-email="<?php echo isset($data['email'] ) ? $data['email'] : ''   ?>"  href="#"><?php echo __( 'Send Recovery Email Now', 'cart-lift' ); ?></a>
+                                                <a class="cl-btn manually-recovered-button" id="cl_manually_recovered" data-session-id="<?php echo isset($data['session_id'] ) ? $data['session_id'] : '' ?>" data-cart-id="<?php  echo isset($data['id'] ) ? $data['id'] : ''  ?>" data-user-email="<?php echo isset( $data['email'] ) ? esc_attr( $data['email'] ) : '' ?>"  href="#"><?php echo __( 'Send Recovery Email Now', 'cart-lift' ); ?></a>
                                                 <div class="cl-recovery-loader">
                                                     <div class="ring"></div>
                                                 </div>

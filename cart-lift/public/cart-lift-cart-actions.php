@@ -71,6 +71,9 @@ class Cart_Lift_Cart_Actions
      * @since 1.0.0
      */
     public function save_cart_infos( $user_email, $provider = 'wc' ) {
+        $normalized_user_email = sanitize_email( wp_unslash( (string) $user_email ) );
+        $user_email            = is_email( $normalized_user_email ) ? $normalized_user_email : '';
+
         $cart_tracking = cl_get_general_settings_data( 'cart_tracking' );
         $cart_tracking = apply_filters( 'cl_cart_tracking_status', $cart_tracking );
         $general_settings = get_option( 'cl_general_settings' );
@@ -300,6 +303,9 @@ class Cart_Lift_Cart_Actions
      */
     public function prepare_cart_data( $email, $provider = 'wc' )
     {
+        $normalized_email = sanitize_email( wp_unslash( (string) $email ) );
+        $email            = is_email( $normalized_email ) ? $normalized_email : '';
+
         $current_time = current_time( CART_LIFT_DATETIME_FORMAT );
         if( 'wc' === $provider && cl_is_wc_active() ) {
             $cart_contents = array();

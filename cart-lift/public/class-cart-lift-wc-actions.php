@@ -12,7 +12,9 @@ class Cart_Lift_WC_Actions extends Cart_Lift_Cart_Actions {
 		    $user_info = get_userdata($user_id);
 		    $user_email = $user_info->user_email;
 	    }else {
-		    $user_email = isset( $_COOKIE['cart_lift_user_email']) ? $_COOKIE['cart_lift_user_email'] : '';
+            $cookie_email = isset( $_COOKIE['cart_lift_user_email']) ? wp_unslash( $_COOKIE['cart_lift_user_email'] ) : '';
+            $cookie_email = sanitize_email( $cookie_email );
+            $user_email  = is_email( $cookie_email ) ? $cookie_email : '';
 	    }
 	    $this->save_cart_infos($user_email, $this->provider);
     }
